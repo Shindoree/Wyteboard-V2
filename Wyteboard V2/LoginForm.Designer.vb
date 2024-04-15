@@ -37,8 +37,15 @@ Partial Class LoginForm
         Me.picLogo = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lblEmail = New System.Windows.Forms.Label()
         Me.txtEmail = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.picBlue = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.lblWelcome = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel2.SuspendLayout()
+        CType(Me.picBlue, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2BorderlessForm1
@@ -61,6 +68,7 @@ Partial Class LoginForm
         Me.Guna2Panel1.Controls.Add(Me.picLogo)
         Me.Guna2Panel1.Controls.Add(Me.lblEmail)
         Me.Guna2Panel1.Controls.Add(Me.txtEmail)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2Panel3)
         Me.Guna2Panel1.Location = New System.Drawing.Point(12, 11)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(607, 697)
@@ -185,7 +193,7 @@ Partial Class LoginForm
         Me.picLogo.FillColor = System.Drawing.Color.Transparent
         Me.picLogo.Image = CType(resources.GetObject("picLogo.Image"), System.Drawing.Image)
         Me.picLogo.ImageRotate = 0!
-        Me.picLogo.Location = New System.Drawing.Point(102, 119)
+        Me.picLogo.Location = New System.Drawing.Point(102, 55)
         Me.picLogo.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.picLogo.Name = "picLogo"
         Me.picLogo.Size = New System.Drawing.Size(368, 91)
@@ -229,11 +237,68 @@ Partial Class LoginForm
         Me.txtEmail.Size = New System.Drawing.Size(355, 48)
         Me.txtEmail.TabIndex = 13
         '
+        'Guna2Panel2
+        '
+        Me.Guna2Panel2.Controls.Add(Me.Label1)
+        Me.Guna2Panel2.Controls.Add(Me.lblWelcome)
+        Me.Guna2Panel2.Controls.Add(Me.picBlue)
+        Me.Guna2Panel2.Location = New System.Drawing.Point(635, 11)
+        Me.Guna2Panel2.Name = "Guna2Panel2"
+        Me.Guna2Panel2.Size = New System.Drawing.Size(633, 697)
+        Me.Guna2Panel2.TabIndex = 14
+        '
+        'picBlue
+        '
+        Me.picBlue.BorderRadius = 20
+        Me.picBlue.FillColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.picBlue.ImageRotate = 0!
+        Me.picBlue.Location = New System.Drawing.Point(74, 55)
+        Me.picBlue.Name = "picBlue"
+        Me.picBlue.Size = New System.Drawing.Size(556, 639)
+        Me.picBlue.TabIndex = 0
+        Me.picBlue.TabStop = False
+        '
+        'lblWelcome
+        '
+        Me.lblWelcome.AutoSize = True
+        Me.lblWelcome.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.lblWelcome.Font = New System.Drawing.Font("Montserrat", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblWelcome.ForeColor = System.Drawing.Color.White
+        Me.lblWelcome.Location = New System.Drawing.Point(92, 186)
+        Me.lblWelcome.Name = "lblWelcome"
+        Me.lblWelcome.Size = New System.Drawing.Size(593, 48)
+        Me.lblWelcome.TabIndex = 1
+        Me.lblWelcome.Text = "Your All-in-One Gradebook and"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Label1.Font = New System.Drawing.Font("Montserrat", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(131, 279)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(407, 48)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Performance Tracker"
+        '
+        'Guna2Panel3
+        '
+        Me.Guna2Panel3.BackColor = System.Drawing.Color.White
+        Me.Guna2Panel3.Location = New System.Drawing.Point(64, 201)
+        Me.Guna2Panel3.Name = "Guna2Panel3"
+        Me.Guna2Panel3.ShadowDecoration.Enabled = True
+        Me.Guna2Panel3.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(3)
+        Me.Guna2Panel3.Size = New System.Drawing.Size(479, 461)
+        Me.Guna2Panel3.TabIndex = 24
+        '
         'LoginForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1280, 720)
+        Me.Controls.Add(Me.Guna2Panel2)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -245,6 +310,9 @@ Partial Class LoginForm
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel2.ResumeLayout(False)
+        Me.Guna2Panel2.PerformLayout()
+        CType(Me.picBlue, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -261,4 +329,9 @@ Partial Class LoginForm
     Friend WithEvents picLogo As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents lblEmail As Label
     Friend WithEvents txtEmail As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents picBlue As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents lblWelcome As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
 End Class

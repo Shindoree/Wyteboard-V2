@@ -54,7 +54,7 @@ Partial Class LoginForm
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("Montserrat", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(131, 279)
+        Me.Label1.Location = New System.Drawing.Point(139, 253)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(407, 48)
         Me.Label1.TabIndex = 2
@@ -65,7 +65,7 @@ Partial Class LoginForm
         Me.picBlue.BorderRadius = 20
         Me.picBlue.FillColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.picBlue.ImageRotate = 0!
-        Me.picBlue.Location = New System.Drawing.Point(74, 55)
+        Me.picBlue.Location = New System.Drawing.Point(33, 32)
         Me.picBlue.Name = "picBlue"
         Me.picBlue.Size = New System.Drawing.Size(556, 639)
         Me.picBlue.TabIndex = 0
@@ -176,11 +176,11 @@ Partial Class LoginForm
         '
         Me.lblWelcome.AutoSize = True
         Me.lblWelcome.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.lblWelcome.Font = New System.Drawing.Font("Montserrat", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblWelcome.Font = New System.Drawing.Font("Montserrat", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblWelcome.ForeColor = System.Drawing.Color.White
-        Me.lblWelcome.Location = New System.Drawing.Point(92, 186)
+        Me.lblWelcome.Location = New System.Drawing.Point(100, 213)
         Me.lblWelcome.Name = "lblWelcome"
-        Me.lblWelcome.Size = New System.Drawing.Size(593, 48)
+        Me.lblWelcome.Size = New System.Drawing.Size(489, 40)
         Me.lblWelcome.TabIndex = 1
         Me.lblWelcome.Text = "Your All-in-One Gradebook and"
         '

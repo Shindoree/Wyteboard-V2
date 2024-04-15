@@ -264,7 +264,7 @@ Partial Class ForgotPasswordForm
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Montserrat", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(186, 92)
+        Me.Label1.Location = New System.Drawing.Point(171, 92)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(429, 66)
         Me.Label1.TabIndex = 4

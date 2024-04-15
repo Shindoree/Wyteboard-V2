@@ -48,10 +48,10 @@ Partial Class LoginForm
         Me.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtEmail.Font = New System.Drawing.Font("FSP DEMO - Biennale", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.Font = New System.Drawing.Font("Inter", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmail.ForeColor = System.Drawing.Color.DimGray
         Me.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtEmail.Location = New System.Drawing.Point(307, 368)
+        Me.txtEmail.Location = New System.Drawing.Point(117, 318)
         Me.txtEmail.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -94,21 +94,21 @@ Partial Class LoginForm
         'lblLogin
         '
         Me.lblLogin.AutoSize = True
-        Me.lblLogin.Font = New System.Drawing.Font("Montserrat", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLogin.Location = New System.Drawing.Point(226, 184)
+        Me.lblLogin.Font = New System.Drawing.Font("Inter SemiBold", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLogin.Location = New System.Drawing.Point(242, 185)
         Me.lblLogin.Name = "lblLogin"
-        Me.lblLogin.Size = New System.Drawing.Size(170, 55)
+        Me.lblLogin.Size = New System.Drawing.Size(152, 49)
         Me.lblLogin.TabIndex = 3
         Me.lblLogin.Text = "Sign In"
         '
         'lblPassword
         '
         Me.lblPassword.AutoSize = True
-        Me.lblPassword.Font = New System.Drawing.Font("Montserrat", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPassword.Font = New System.Drawing.Font("FSP DEMO - Biennale Book", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPassword.ForeColor = System.Drawing.SystemColors.ActiveBorder
         Me.lblPassword.Location = New System.Drawing.Point(113, 385)
         Me.lblPassword.Name = "lblPassword"
-        Me.lblPassword.Size = New System.Drawing.Size(111, 27)
+        Me.lblPassword.Size = New System.Drawing.Size(141, 39)
         Me.lblPassword.TabIndex = 4
         Me.lblPassword.Text = "Password"
         '

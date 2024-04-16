@@ -46,10 +46,9 @@ Partial Class ForgotPasswordForm
         '
         'Guna2TextBox7
         '
-        Me.Guna2TextBox7.AutoRoundedCorners = True
         Me.Guna2TextBox7.BackColor = System.Drawing.Color.Transparent
         Me.Guna2TextBox7.BorderColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Guna2TextBox7.BorderRadius = 17
+        Me.Guna2TextBox7.BorderRadius = 5
         Me.Guna2TextBox7.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Guna2TextBox7.DefaultText = ""
         Me.Guna2TextBox7.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -58,6 +57,7 @@ Partial Class ForgotPasswordForm
         Me.Guna2TextBox7.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2TextBox7.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox7.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2TextBox7.ForeColor = System.Drawing.Color.Black
         Me.Guna2TextBox7.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox7.Location = New System.Drawing.Point(101, 334)
         Me.Guna2TextBox7.Name = "Guna2TextBox7"
@@ -71,10 +71,9 @@ Partial Class ForgotPasswordForm
         '
         'Guna2TextBox6
         '
-        Me.Guna2TextBox6.AutoRoundedCorners = True
         Me.Guna2TextBox6.BackColor = System.Drawing.Color.Transparent
         Me.Guna2TextBox6.BorderColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Guna2TextBox6.BorderRadius = 17
+        Me.Guna2TextBox6.BorderRadius = 5
         Me.Guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Guna2TextBox6.DefaultText = ""
         Me.Guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -82,7 +81,7 @@ Partial Class ForgotPasswordForm
         Me.Guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox6.Font = New System.Drawing.Font("Montserrat", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2TextBox6.Font = New System.Drawing.Font("Montserrat", 8.999999!)
         Me.Guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox6.Location = New System.Drawing.Point(436, 281)
         Me.Guna2TextBox6.Name = "Guna2TextBox6"
@@ -184,10 +183,9 @@ Partial Class ForgotPasswordForm
         '
         'Guna2ComboBox2
         '
-        Me.Guna2ComboBox2.AutoRoundedCorners = True
         Me.Guna2ComboBox2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2ComboBox2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Guna2ComboBox2.BorderRadius = 17
+        Me.Guna2ComboBox2.BorderRadius = 5
         Me.Guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.Guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -203,10 +201,9 @@ Partial Class ForgotPasswordForm
         '
         'Guna2TextBox8
         '
-        Me.Guna2TextBox8.AutoRoundedCorners = True
         Me.Guna2TextBox8.BackColor = System.Drawing.Color.Transparent
         Me.Guna2TextBox8.BorderColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Guna2TextBox8.BorderRadius = 17
+        Me.Guna2TextBox8.BorderRadius = 5
         Me.Guna2TextBox8.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Guna2TextBox8.DefaultText = ""
         Me.Guna2TextBox8.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -227,10 +224,9 @@ Partial Class ForgotPasswordForm
         '
         'Guna2TextBox5
         '
-        Me.Guna2TextBox5.AutoRoundedCorners = True
         Me.Guna2TextBox5.BackColor = System.Drawing.Color.Transparent
         Me.Guna2TextBox5.BorderColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Guna2TextBox5.BorderRadius = 17
+        Me.Guna2TextBox5.BorderRadius = 5
         Me.Guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Guna2TextBox5.DefaultText = ""
         Me.Guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -238,7 +234,7 @@ Partial Class ForgotPasswordForm
         Me.Guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox5.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2TextBox5.Font = New System.Drawing.Font("Montserrat", 8.249999!)
         Me.Guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox5.Location = New System.Drawing.Point(436, 220)
         Me.Guna2TextBox5.Name = "Guna2TextBox5"
@@ -273,10 +269,9 @@ Partial Class ForgotPasswordForm
         '
         'Guna2TextBox1
         '
-        Me.Guna2TextBox1.AutoRoundedCorners = True
         Me.Guna2TextBox1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Guna2TextBox1.BorderRadius = 17
+        Me.Guna2TextBox1.BorderRadius = 5
         Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Guna2TextBox1.DefaultText = ""
         Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -298,6 +293,7 @@ Partial Class ForgotPasswordForm
         '
         'Guna2Panel2
         '
+        Me.Guna2Panel2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Guna2Panel2.BackColor = System.Drawing.Color.White
         Me.Guna2Panel2.Controls.Add(Me.Guna2TextBox7)
         Me.Guna2Panel2.Controls.Add(Me.Guna2TextBox6)
@@ -328,6 +324,7 @@ Partial Class ForgotPasswordForm
         '
         'pnlOverview
         '
+        Me.pnlOverview.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.pnlOverview.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.pnlOverview.BorderRadius = 10
         Me.pnlOverview.BorderThickness = 1

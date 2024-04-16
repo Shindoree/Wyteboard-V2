@@ -54,6 +54,7 @@ Partial Class RegistrationForm
         '
         'pnlOverview
         '
+        Me.pnlOverview.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.pnlOverview.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.pnlOverview.BorderRadius = 10
         Me.pnlOverview.BorderThickness = 1
@@ -70,6 +71,7 @@ Partial Class RegistrationForm
         '
         'Guna2Panel2
         '
+        Me.Guna2Panel2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Guna2Panel2.BackColor = System.Drawing.Color.White
         Me.Guna2Panel2.Controls.Add(Me.Guna2TextBox7)
         Me.Guna2Panel2.Controls.Add(Me.Guna2TextBox6)
@@ -102,10 +104,9 @@ Partial Class RegistrationForm
         '
         'Guna2TextBox7
         '
-        Me.Guna2TextBox7.AutoRoundedCorners = True
         Me.Guna2TextBox7.BackColor = System.Drawing.Color.Transparent
         Me.Guna2TextBox7.BorderColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Guna2TextBox7.BorderRadius = 17
+        Me.Guna2TextBox7.BorderRadius = 5
         Me.Guna2TextBox7.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Guna2TextBox7.DefaultText = ""
         Me.Guna2TextBox7.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -113,7 +114,7 @@ Partial Class RegistrationForm
         Me.Guna2TextBox7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2TextBox7.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2TextBox7.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox7.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2TextBox7.Font = New System.Drawing.Font("Montserrat", 8.249999!)
         Me.Guna2TextBox7.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox7.Location = New System.Drawing.Point(452, 392)
         Me.Guna2TextBox7.Name = "Guna2TextBox7"
@@ -127,10 +128,9 @@ Partial Class RegistrationForm
         '
         'Guna2TextBox6
         '
-        Me.Guna2TextBox6.AutoRoundedCorners = True
         Me.Guna2TextBox6.BackColor = System.Drawing.Color.Transparent
         Me.Guna2TextBox6.BorderColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Guna2TextBox6.BorderRadius = 17
+        Me.Guna2TextBox6.BorderRadius = 5
         Me.Guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Guna2TextBox6.DefaultText = ""
         Me.Guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -138,7 +138,7 @@ Partial Class RegistrationForm
         Me.Guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox6.Font = New System.Drawing.Font("Montserrat", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2TextBox6.Font = New System.Drawing.Font("Montserrat", 8.999999!)
         Me.Guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox6.Location = New System.Drawing.Point(452, 278)
         Me.Guna2TextBox6.Name = "Guna2TextBox6"
@@ -240,10 +240,9 @@ Partial Class RegistrationForm
         '
         'Guna2ComboBox2
         '
-        Me.Guna2ComboBox2.AutoRoundedCorners = True
         Me.Guna2ComboBox2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2ComboBox2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Guna2ComboBox2.BorderRadius = 17
+        Me.Guna2ComboBox2.BorderRadius = 5
         Me.Guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.Guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -259,10 +258,9 @@ Partial Class RegistrationForm
         '
         'Guna2TextBox8
         '
-        Me.Guna2TextBox8.AutoRoundedCorners = True
         Me.Guna2TextBox8.BackColor = System.Drawing.Color.Transparent
         Me.Guna2TextBox8.BorderColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Guna2TextBox8.BorderRadius = 17
+        Me.Guna2TextBox8.BorderRadius = 5
         Me.Guna2TextBox8.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Guna2TextBox8.DefaultText = ""
         Me.Guna2TextBox8.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -283,10 +281,9 @@ Partial Class RegistrationForm
         '
         'Guna2TextBox5
         '
-        Me.Guna2TextBox5.AutoRoundedCorners = True
         Me.Guna2TextBox5.BackColor = System.Drawing.Color.Transparent
         Me.Guna2TextBox5.BorderColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Guna2TextBox5.BorderRadius = 17
+        Me.Guna2TextBox5.BorderRadius = 5
         Me.Guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Guna2TextBox5.DefaultText = ""
         Me.Guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -294,7 +291,7 @@ Partial Class RegistrationForm
         Me.Guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox5.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2TextBox5.Font = New System.Drawing.Font("Montserrat", 8.249999!)
         Me.Guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox5.Location = New System.Drawing.Point(452, 219)
         Me.Guna2TextBox5.Name = "Guna2TextBox5"
@@ -308,10 +305,9 @@ Partial Class RegistrationForm
         '
         'Guna2ComboBox1
         '
-        Me.Guna2ComboBox1.AutoRoundedCorners = True
         Me.Guna2ComboBox1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2ComboBox1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Guna2ComboBox1.BorderRadius = 17
+        Me.Guna2ComboBox1.BorderRadius = 5
         Me.Guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.Guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -388,10 +384,9 @@ Partial Class RegistrationForm
         '
         'Guna2TextBox4
         '
-        Me.Guna2TextBox4.AutoRoundedCorners = True
         Me.Guna2TextBox4.BackColor = System.Drawing.Color.Transparent
         Me.Guna2TextBox4.BorderColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Guna2TextBox4.BorderRadius = 17
+        Me.Guna2TextBox4.BorderRadius = 5
         Me.Guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Guna2TextBox4.DefaultText = ""
         Me.Guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -399,7 +394,7 @@ Partial Class RegistrationForm
         Me.Guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox4.Font = New System.Drawing.Font("Montserrat", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2TextBox4.Font = New System.Drawing.Font("Montserrat", 8.999999!)
         Me.Guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox4.Location = New System.Drawing.Point(86, 333)
         Me.Guna2TextBox4.Name = "Guna2TextBox4"
@@ -413,10 +408,9 @@ Partial Class RegistrationForm
         '
         'Guna2TextBox3
         '
-        Me.Guna2TextBox3.AutoRoundedCorners = True
         Me.Guna2TextBox3.BackColor = System.Drawing.Color.Transparent
         Me.Guna2TextBox3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Guna2TextBox3.BorderRadius = 17
+        Me.Guna2TextBox3.BorderRadius = 5
         Me.Guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Guna2TextBox3.DefaultText = ""
         Me.Guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -438,10 +432,9 @@ Partial Class RegistrationForm
         '
         'Guna2TextBox2
         '
-        Me.Guna2TextBox2.AutoRoundedCorners = True
         Me.Guna2TextBox2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2TextBox2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Guna2TextBox2.BorderRadius = 17
+        Me.Guna2TextBox2.BorderRadius = 5
         Me.Guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Guna2TextBox2.DefaultText = ""
         Me.Guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -449,7 +442,7 @@ Partial Class RegistrationForm
         Me.Guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox2.Font = New System.Drawing.Font("Montserrat", 8.999999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2TextBox2.Font = New System.Drawing.Font("Montserrat", 8.999999!)
         Me.Guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox2.Location = New System.Drawing.Point(86, 274)
         Me.Guna2TextBox2.Name = "Guna2TextBox2"
@@ -463,10 +456,9 @@ Partial Class RegistrationForm
         '
         'Guna2TextBox1
         '
-        Me.Guna2TextBox1.AutoRoundedCorners = True
         Me.Guna2TextBox1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Guna2TextBox1.BorderRadius = 17
+        Me.Guna2TextBox1.BorderRadius = 5
         Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Guna2TextBox1.DefaultText = ""
         Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))

@@ -264,6 +264,12 @@
     <Compile Include="StudentForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SummaryForm.Designer.vb">
+      <DependentUpon>SummaryForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SummaryForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Account.resx">

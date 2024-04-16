@@ -98,4 +98,7 @@ Public Class LoginForm
         ForgotPasswordForm.Show()
     End Sub
 
+    Private Sub Guna2Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel4.Paint
+
+    End Sub
 End Class

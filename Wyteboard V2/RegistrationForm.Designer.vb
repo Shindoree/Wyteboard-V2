@@ -744,14 +744,14 @@ Partial Class RegistrationForm
         Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button2.FillColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.Guna2Button2.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Guna2Button2.Font = New System.Drawing.Font("Montserrat SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2Button2.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button2.Location = New System.Drawing.Point(63, 604)
+        Me.Guna2Button2.Location = New System.Drawing.Point(70, 604)
         Me.Guna2Button2.Name = "Guna2Button2"
         Me.Guna2Button2.Size = New System.Drawing.Size(180, 45)
         Me.Guna2Button2.TabIndex = 24
-        Me.Guna2Button2.Text = "Back"
+        Me.Guna2Button2.Text = "Cancel"
         Me.Guna2Button2.UseTransparentBackground = True
         '
         'Guna2Button1
@@ -766,11 +766,11 @@ Partial Class RegistrationForm
         Me.Guna2Button1.FillColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.Guna2Button1.Font = New System.Drawing.Font("Montserrat SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(322, 604)
+        Me.Guna2Button1.Location = New System.Drawing.Point(329, 604)
         Me.Guna2Button1.Name = "Guna2Button1"
         Me.Guna2Button1.Size = New System.Drawing.Size(180, 45)
         Me.Guna2Button1.TabIndex = 23
-        Me.Guna2Button1.Text = "Enter"
+        Me.Guna2Button1.Text = "Sign Up"
         Me.Guna2Button1.UseTransparentBackground = True
         '
         'lblCreateAcc

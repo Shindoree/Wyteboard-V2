@@ -205,6 +205,12 @@
     <Compile Include="Account.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CourseForm.Designer.vb">
+      <DependentUpon>CourseForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CourseForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ForgotPasswordForm.Designer.vb">
       <DependentUpon>ForgotPasswordForm.vb</DependentUpon>
     </Compile>
@@ -262,6 +268,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Account.resx">
       <DependentUpon>Account.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseForm.resx">
+      <DependentUpon>CourseForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForgotPasswordForm.resx">
       <DependentUpon>ForgotPasswordForm.vb</DependentUpon>

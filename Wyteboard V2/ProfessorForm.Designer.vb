@@ -25,14 +25,7 @@ Partial Class ProfessorForm
         Me.components = New System.ComponentModel.Container()
         Me.pnlMenu = New Guna.UI2.WinForms.Guna2Panel()
         Me.pnlControl = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.btnLogout = New System.Windows.Forms.Button()
-        Me.btnSummary = New System.Windows.Forms.Button()
-        Me.btnCourse = New System.Windows.Forms.Button()
-        Me.btnAccount = New System.Windows.Forms.Button()
-        Me.btnHome = New System.Windows.Forms.Button()
         Me.pnlSidebarTop = New Guna.UI2.WinForms.Guna2Panel()
-        Me.btnSlider = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         Me.pnlDisplay = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
@@ -41,6 +34,13 @@ Partial Class ProfessorForm
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnLogout = New System.Windows.Forms.Button()
+        Me.btnSummary = New System.Windows.Forms.Button()
+        Me.btnCourse = New System.Windows.Forms.Button()
+        Me.btnAccount = New System.Windows.Forms.Button()
+        Me.btnHome = New System.Windows.Forms.Button()
+        Me.btnSlider = New Guna.UI2.WinForms.Guna2Button()
         Me.pnlMenu.SuspendLayout()
         Me.pnlControl.SuspendLayout()
         Me.pnlSidebarTop.SuspendLayout()
@@ -75,6 +75,93 @@ Partial Class ProfessorForm
         Me.pnlControl.Name = "pnlControl"
         Me.pnlControl.Size = New System.Drawing.Size(183, 647)
         Me.pnlControl.TabIndex = 1
+        '
+        'pnlSidebarTop
+        '
+        Me.pnlSidebarTop.Controls.Add(Me.btnSlider)
+        Me.pnlSidebarTop.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlSidebarTop.Location = New System.Drawing.Point(0, 0)
+        Me.pnlSidebarTop.Name = "pnlSidebarTop"
+        Me.pnlSidebarTop.Size = New System.Drawing.Size(183, 73)
+        Me.pnlSidebarTop.TabIndex = 0
+        '
+        'Guna2BorderlessForm1
+        '
+        Me.Guna2BorderlessForm1.ContainerControl = Me
+        Me.Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
+        Me.Guna2BorderlessForm1.ResizeForm = False
+        Me.Guna2BorderlessForm1.TransparentWhileDrag = True
+        '
+        'pnlDisplay
+        '
+        Me.pnlDisplay.Controls.Add(Me.Guna2Panel3)
+        Me.pnlDisplay.Controls.Add(Me.Guna2Panel1)
+        Me.pnlDisplay.Controls.Add(Me.Guna2Panel2)
+        Me.pnlDisplay.Controls.Add(Me.Label1)
+        Me.pnlDisplay.Location = New System.Drawing.Point(189, 73)
+        Me.pnlDisplay.Name = "pnlDisplay"
+        Me.pnlDisplay.Size = New System.Drawing.Size(1079, 635)
+        Me.pnlDisplay.TabIndex = 13
+        '
+        'Guna2Panel3
+        '
+        Me.Guna2Panel3.BackColor = System.Drawing.Color.White
+        Me.Guna2Panel3.Location = New System.Drawing.Point(12, 179)
+        Me.Guna2Panel3.Name = "Guna2Panel3"
+        Me.Guna2Panel3.Size = New System.Drawing.Size(788, 440)
+        Me.Guna2Panel3.TabIndex = 9
+        '
+        'Guna2Panel1
+        '
+        Me.Guna2Panel1.BackColor = System.Drawing.Color.White
+        Me.Guna2Panel1.Controls.Add(Me.MonthCalendar1)
+        Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Guna2Panel1.Location = New System.Drawing.Point(809, 0)
+        Me.Guna2Panel1.Name = "Guna2Panel1"
+        Me.Guna2Panel1.ShadowDecoration.Enabled = True
+        Me.Guna2Panel1.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(3)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(270, 635)
+        Me.Guna2Panel1.TabIndex = 8
+        '
+        'MonthCalendar1
+        '
+        Me.MonthCalendar1.BackColor = System.Drawing.Color.White
+        Me.MonthCalendar1.Location = New System.Drawing.Point(25, 73)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 0
+        '
+        'Guna2Panel2
+        '
+        Me.Guna2Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.Guna2Panel2.BorderColor = System.Drawing.Color.Transparent
+        Me.Guna2Panel2.BorderRadius = 10
+        Me.Guna2Panel2.BorderThickness = 1
+        Me.Guna2Panel2.Location = New System.Drawing.Point(12, 73)
+        Me.Guna2Panel2.Name = "Guna2Panel2"
+        Me.Guna2Panel2.Size = New System.Drawing.Size(788, 100)
+        Me.Guna2Panel2.TabIndex = 7
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Montserrat ExtraBold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(3, 19)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(223, 51)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Good Day,"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.Image = Global.Wyteboard_V2.My.Resources.Resources.Wyteboard_Logo_01
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(189, 5)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(800, 68)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox1.TabIndex = 12
+        Me.Guna2PictureBox1.TabStop = False
         '
         'Button1
         '
@@ -184,15 +271,6 @@ Partial Class ProfessorForm
         Me.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnHome.UseVisualStyleBackColor = True
         '
-        'pnlSidebarTop
-        '
-        Me.pnlSidebarTop.Controls.Add(Me.btnSlider)
-        Me.pnlSidebarTop.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlSidebarTop.Location = New System.Drawing.Point(0, 0)
-        Me.pnlSidebarTop.Name = "pnlSidebarTop"
-        Me.pnlSidebarTop.Size = New System.Drawing.Size(183, 73)
-        Me.pnlSidebarTop.TabIndex = 0
-        '
         'btnSlider
         '
         Me.btnSlider.BackColor = System.Drawing.Color.Transparent
@@ -211,84 +289,6 @@ Partial Class ProfessorForm
         Me.btnSlider.Size = New System.Drawing.Size(65, 73)
         Me.btnSlider.TabIndex = 1
         Me.btnSlider.UseTransparentBackground = True
-        '
-        'Guna2BorderlessForm1
-        '
-        Me.Guna2BorderlessForm1.ContainerControl = Me
-        Me.Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
-        Me.Guna2BorderlessForm1.ResizeForm = False
-        Me.Guna2BorderlessForm1.TransparentWhileDrag = True
-        '
-        'pnlDisplay
-        '
-        Me.pnlDisplay.Controls.Add(Me.Guna2Panel3)
-        Me.pnlDisplay.Controls.Add(Me.Guna2Panel1)
-        Me.pnlDisplay.Controls.Add(Me.Guna2Panel2)
-        Me.pnlDisplay.Controls.Add(Me.Label1)
-        Me.pnlDisplay.Location = New System.Drawing.Point(189, 73)
-        Me.pnlDisplay.Name = "pnlDisplay"
-        Me.pnlDisplay.Size = New System.Drawing.Size(1079, 635)
-        Me.pnlDisplay.TabIndex = 13
-        '
-        'Guna2Panel3
-        '
-        Me.Guna2Panel3.BackColor = System.Drawing.Color.White
-        Me.Guna2Panel3.Location = New System.Drawing.Point(12, 179)
-        Me.Guna2Panel3.Name = "Guna2Panel3"
-        Me.Guna2Panel3.Size = New System.Drawing.Size(788, 440)
-        Me.Guna2Panel3.TabIndex = 9
-        '
-        'Guna2Panel1
-        '
-        Me.Guna2Panel1.BackColor = System.Drawing.Color.White
-        Me.Guna2Panel1.Controls.Add(Me.MonthCalendar1)
-        Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Guna2Panel1.Location = New System.Drawing.Point(809, 0)
-        Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.ShadowDecoration.Enabled = True
-        Me.Guna2Panel1.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(3)
-        Me.Guna2Panel1.Size = New System.Drawing.Size(270, 635)
-        Me.Guna2Panel1.TabIndex = 8
-        '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.BackColor = System.Drawing.Color.White
-        Me.MonthCalendar1.Location = New System.Drawing.Point(25, 73)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 0
-        '
-        'Guna2Panel2
-        '
-        Me.Guna2Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Guna2Panel2.BorderColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel2.BorderRadius = 10
-        Me.Guna2Panel2.BorderThickness = 1
-        Me.Guna2Panel2.Location = New System.Drawing.Point(12, 73)
-        Me.Guna2Panel2.Name = "Guna2Panel2"
-        Me.Guna2Panel2.Size = New System.Drawing.Size(788, 100)
-        Me.Guna2Panel2.TabIndex = 7
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Montserrat ExtraBold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 19)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(223, 51)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Good Day,"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.Image = Global.Wyteboard_V2.My.Resources.Resources.Wyteboard_Logo_01
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(189, 5)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(800, 68)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Guna2PictureBox1.TabIndex = 12
-        Me.Guna2PictureBox1.TabStop = False
         '
         'ProfessorForm
         '

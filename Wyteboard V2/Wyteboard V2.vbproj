@@ -346,5 +346,14 @@
   <ItemGroup>
     <None Include="Resources\icons8-add-32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lock-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-unlocked-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lock-32 %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

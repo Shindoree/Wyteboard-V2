@@ -25,7 +25,6 @@ Partial Class LoginForm
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.picBlue = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.btnSignIn = New Guna.UI2.WinForms.Guna2Button()
         Me.lblEnterCred = New System.Windows.Forms.Label()
         Me.lnklblForgotPassword = New System.Windows.Forms.LinkLabel()
@@ -35,17 +34,18 @@ Partial Class LoginForm
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.lblWelcome = New System.Windows.Forms.Label()
         Me.lblPassword = New System.Windows.Forms.Label()
-        Me.picLogo = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lblEmail = New System.Windows.Forms.Label()
         Me.txtEmail = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.lblSignIn = New System.Windows.Forms.Label()
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
-        CType(Me.picBlue, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.picBlue = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.picLogo = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel2.SuspendLayout()
-        CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel1.SuspendLayout()
+        CType(Me.picBlue, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -59,17 +59,6 @@ Partial Class LoginForm
         Me.Label1.Size = New System.Drawing.Size(407, 48)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Performance Tracker"
-        '
-        'picBlue
-        '
-        Me.picBlue.BorderRadius = 20
-        Me.picBlue.FillColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.picBlue.ImageRotate = 0!
-        Me.picBlue.Location = New System.Drawing.Point(38, 32)
-        Me.picBlue.Name = "picBlue"
-        Me.picBlue.Size = New System.Drawing.Size(556, 639)
-        Me.picBlue.TabIndex = 0
-        Me.picBlue.TabStop = False
         '
         'btnSignIn
         '
@@ -201,19 +190,6 @@ Partial Class LoginForm
         Me.lblPassword.TabIndex = 17
         Me.lblPassword.Text = "Password"
         '
-        'picLogo
-        '
-        Me.picLogo.FillColor = System.Drawing.Color.Transparent
-        Me.picLogo.Image = CType(resources.GetObject("picLogo.Image"), System.Drawing.Image)
-        Me.picLogo.ImageRotate = 0!
-        Me.picLogo.Location = New System.Drawing.Point(119, 75)
-        Me.picLogo.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.picLogo.Name = "picLogo"
-        Me.picLogo.Size = New System.Drawing.Size(368, 91)
-        Me.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picLogo.TabIndex = 15
-        Me.picLogo.TabStop = False
-        '
         'lblEmail
         '
         Me.lblEmail.AutoSize = True
@@ -300,6 +276,30 @@ Partial Class LoginForm
         Me.Guna2BorderlessForm1.ResizeForm = False
         Me.Guna2BorderlessForm1.TransparentWhileDrag = True
         '
+        'picBlue
+        '
+        Me.picBlue.BorderRadius = 20
+        Me.picBlue.FillColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.picBlue.ImageRotate = 0!
+        Me.picBlue.Location = New System.Drawing.Point(38, 32)
+        Me.picBlue.Name = "picBlue"
+        Me.picBlue.Size = New System.Drawing.Size(556, 639)
+        Me.picBlue.TabIndex = 0
+        Me.picBlue.TabStop = False
+        '
+        'picLogo
+        '
+        Me.picLogo.FillColor = System.Drawing.Color.Transparent
+        Me.picLogo.Image = CType(resources.GetObject("picLogo.Image"), System.Drawing.Image)
+        Me.picLogo.ImageRotate = 0!
+        Me.picLogo.Location = New System.Drawing.Point(119, 75)
+        Me.picLogo.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.picLogo.Name = "picLogo"
+        Me.picLogo.Size = New System.Drawing.Size(368, 91)
+        Me.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picLogo.TabIndex = 15
+        Me.picLogo.TabStop = False
+        '
         'LoginForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -311,12 +311,12 @@ Partial Class LoginForm
         Me.Name = "LoginForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "LoginForm"
-        CType(Me.picBlue, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel2.ResumeLayout(False)
         Me.Guna2Panel2.PerformLayout()
-        CType(Me.picLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
+        CType(Me.picBlue, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

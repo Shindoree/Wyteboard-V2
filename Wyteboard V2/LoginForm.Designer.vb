@@ -44,6 +44,7 @@ Partial Class LoginForm
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         Me.Guna2Panel2.SuspendLayout()
         CType(Me.picBlue, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel3.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -144,14 +145,14 @@ Partial Class LoginForm
         Me.txtPassword.Font = New System.Drawing.Font("Inter", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassword.ForeColor = System.Drawing.Color.DimGray
         Me.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtPassword.Location = New System.Drawing.Point(125, 445)
-        Me.txtPassword.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
+        Me.txtPassword.Location = New System.Drawing.Point(61, 241)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtPassword.PlaceholderText = "Include special characters"
         Me.txtPassword.SelectedText = ""
-        Me.txtPassword.Size = New System.Drawing.Size(356, 48)
+        Me.txtPassword.Size = New System.Drawing.Size(342, 47)
         Me.txtPassword.TabIndex = 18
         '
         'Guna2Panel2
@@ -192,12 +193,12 @@ Partial Class LoginForm
         '
         Me.lblPassword.AutoSize = True
         Me.lblPassword.BackColor = System.Drawing.Color.White
-        Me.lblPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPassword.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPassword.ForeColor = System.Drawing.SystemColors.ActiveBorder
         Me.lblPassword.Location = New System.Drawing.Point(122, 421)
         Me.lblPassword.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblPassword.Name = "lblPassword"
-        Me.lblPassword.Size = New System.Drawing.Size(69, 17)
+        Me.lblPassword.Size = New System.Drawing.Size(68, 16)
         Me.lblPassword.TabIndex = 17
         Me.lblPassword.Text = "Password"
         '
@@ -205,12 +206,12 @@ Partial Class LoginForm
         '
         Me.lblEmail.AutoSize = True
         Me.lblEmail.BackColor = System.Drawing.Color.White
-        Me.lblEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmail.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblEmail.ForeColor = System.Drawing.SystemColors.ActiveBorder
         Me.lblEmail.Location = New System.Drawing.Point(122, 328)
         Me.lblEmail.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Size = New System.Drawing.Size(42, 17)
+        Me.lblEmail.Size = New System.Drawing.Size(39, 16)
         Me.lblEmail.TabIndex = 14
         Me.lblEmail.Text = "Email"
         '
@@ -228,19 +229,21 @@ Partial Class LoginForm
         Me.txtEmail.Font = New System.Drawing.Font("Inter", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmail.ForeColor = System.Drawing.Color.DimGray
         Me.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtEmail.Location = New System.Drawing.Point(126, 352)
-        Me.txtEmail.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
+        Me.txtEmail.Location = New System.Drawing.Point(61, 149)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtEmail.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtEmail.PlaceholderText = "johnsmith@lpulaguna.edu.ph"
         Me.txtEmail.SelectedText = ""
-        Me.txtEmail.Size = New System.Drawing.Size(355, 48)
+        Me.txtEmail.Size = New System.Drawing.Size(343, 47)
         Me.txtEmail.TabIndex = 13
         '
         'Guna2Panel3
         '
         Me.Guna2Panel3.BackColor = System.Drawing.Color.White
+        Me.Guna2Panel3.Controls.Add(Me.txtEmail)
+        Me.Guna2Panel3.Controls.Add(Me.txtPassword)
         Me.Guna2Panel3.Location = New System.Drawing.Point(64, 201)
         Me.Guna2Panel3.Name = "Guna2Panel3"
         Me.Guna2Panel3.ShadowDecoration.Enabled = True
@@ -256,12 +259,10 @@ Partial Class LoginForm
         Me.Guna2Panel1.Controls.Add(Me.lnklblForgotPassword)
         Me.Guna2Panel1.Controls.Add(Me.lblKeepSigned)
         Me.Guna2Panel1.Controls.Add(Me.tglKeepSigned)
-        Me.Guna2Panel1.Controls.Add(Me.txtPassword)
         Me.Guna2Panel1.Controls.Add(Me.lblPassword)
         Me.Guna2Panel1.Controls.Add(Me.lblSignIn)
         Me.Guna2Panel1.Controls.Add(Me.picLogo)
         Me.Guna2Panel1.Controls.Add(Me.lblEmail)
-        Me.Guna2Panel1.Controls.Add(Me.txtEmail)
         Me.Guna2Panel1.Controls.Add(Me.Guna2Panel3)
         Me.Guna2Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Guna2Panel1.Name = "Guna2Panel1"
@@ -314,6 +315,7 @@ Partial Class LoginForm
         Me.Guna2Panel2.ResumeLayout(False)
         Me.Guna2Panel2.PerformLayout()
         CType(Me.picBlue, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel3.ResumeLayout(False)
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).EndInit()

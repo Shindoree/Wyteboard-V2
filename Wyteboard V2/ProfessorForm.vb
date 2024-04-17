@@ -74,6 +74,10 @@
         LoginForm.Show()
     End Sub
     Private Sub pnlDisplay_Paint(sender As Object, e As PaintEventArgs) Handles pnlDisplay.Paint
-        lblUser.Text = "Welcome, " & FirstName & " !"
+        lblUser.Text = "Welcome, " & FirstName & " 🍆"
+    End Sub
+
+    Private Sub lblUser_Click(sender As Object, e As EventArgs) Handles lblUser.Click
+
     End Sub
 End Class

@@ -9,6 +9,6 @@
     End Sub
 
     Private Sub HomeForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lblUser.Text = "Welcome, " & FirstName & " !"
+        lblUser.Text = "Welcome, " & FirstName & " 🍆"
     End Sub
 End Class

@@ -11,7 +11,7 @@ Public Class Account
         txtConfirmAnswer.UseSystemPasswordChar = True
     End Sub
     Public Sub LoadUserData(email As String)
-        Dim connectionString As String = "Database=wyteboard;Data Source=localhost;User id=root;Password=An2022-10653;Port=3306;Command Timeout=600"
+        Dim connectionString As String = "Database=wyteboard;Data Source=localhost;User id=admin;Password=IamFinal0904;Port=3306;Command Timeout=600"
         Dim query As String = "SELECT * FROM wyteboard.tb_users WHERE email = @email"
 
         Try

@@ -51,6 +51,7 @@ Public Class LoginForm
             LoginForm.Username = txtEmail.Text ' Set the username property in the LoginForm
             professorForm.Show()
         ElseIf userType = "Student" Then
+            Console.WriteLine("Redirecting to Student Form") ' Debug: Output redirection to console
             Me.Hide()
             Dim studentForm As New StudentForm()
             studentForm.Username = txtEmail.Text ' Pass the username to StudentForm
@@ -99,6 +100,10 @@ Public Class LoginForm
     End Sub
 
     Private Sub Guna2Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel4.Paint
+
+    End Sub
+
+    Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
 
     End Sub
 End Class

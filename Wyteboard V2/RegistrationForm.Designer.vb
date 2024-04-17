@@ -96,9 +96,10 @@ Partial Class RegistrationForm
         Me.pnlOverview.Controls.Add(Me.Label9)
         Me.pnlOverview.Controls.Add(Me.Guna2TextBox2)
         Me.pnlOverview.Controls.Add(Me.Guna2TextBox1)
-        Me.pnlOverview.Location = New System.Drawing.Point(612, 12)
+        Me.pnlOverview.Location = New System.Drawing.Point(918, 18)
+        Me.pnlOverview.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlOverview.Name = "pnlOverview"
-        Me.pnlOverview.Size = New System.Drawing.Size(656, 696)
+        Me.pnlOverview.Size = New System.Drawing.Size(984, 1071)
         Me.pnlOverview.TabIndex = 0
         '
         'Guna2TextBox7
@@ -115,15 +116,15 @@ Partial Class RegistrationForm
         Me.Guna2TextBox7.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox7.Font = New System.Drawing.Font("Montserrat", 8.249999!)
         Me.Guna2TextBox7.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox7.Location = New System.Drawing.Point(324, 332)
-        Me.Guna2TextBox7.Margin = New System.Windows.Forms.Padding(4)
+        Me.Guna2TextBox7.Location = New System.Drawing.Point(486, 511)
+        Me.Guna2TextBox7.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.Guna2TextBox7.Name = "Guna2TextBox7"
         Me.Guna2TextBox7.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.Guna2TextBox7.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2TextBox7.PlaceholderText = "Calamba"
         Me.Guna2TextBox7.SelectedText = ""
         Me.Guna2TextBox7.ShadowDecoration.BorderRadius = 2
-        Me.Guna2TextBox7.Size = New System.Drawing.Size(236, 36)
+        Me.Guna2TextBox7.Size = New System.Drawing.Size(354, 55)
         Me.Guna2TextBox7.TabIndex = 26
         '
         'Guna2TextBox6
@@ -140,15 +141,15 @@ Partial Class RegistrationForm
         Me.Guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox6.Font = New System.Drawing.Font("Montserrat", 8.999999!)
         Me.Guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox6.Location = New System.Drawing.Point(324, 218)
-        Me.Guna2TextBox6.Margin = New System.Windows.Forms.Padding(5)
+        Me.Guna2TextBox6.Location = New System.Drawing.Point(486, 335)
+        Me.Guna2TextBox6.Margin = New System.Windows.Forms.Padding(8, 8, 8, 8)
         Me.Guna2TextBox6.Name = "Guna2TextBox6"
         Me.Guna2TextBox6.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.Guna2TextBox6.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2TextBox6.PlaceholderText = ""
         Me.Guna2TextBox6.SelectedText = ""
         Me.Guna2TextBox6.ShadowDecoration.BorderRadius = 2
-        Me.Guna2TextBox6.Size = New System.Drawing.Size(236, 36)
+        Me.Guna2TextBox6.Size = New System.Drawing.Size(354, 55)
         Me.Guna2TextBox6.TabIndex = 25
         '
         'Guna2ComboBox1
@@ -164,9 +165,10 @@ Partial Class RegistrationForm
         Me.Guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.Guna2ComboBox1.ItemHeight = 30
         Me.Guna2ComboBox1.Items.AddRange(New Object() {"Professor", "Student"})
-        Me.Guna2ComboBox1.Location = New System.Drawing.Point(82, 398)
+        Me.Guna2ComboBox1.Location = New System.Drawing.Point(123, 612)
+        Me.Guna2ComboBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2ComboBox1.Name = "Guna2ComboBox1"
-        Me.Guna2ComboBox1.Size = New System.Drawing.Size(236, 36)
+        Me.Guna2ComboBox1.Size = New System.Drawing.Size(352, 36)
         Me.Guna2ComboBox1.TabIndex = 11
         '
         'Guna2TextBox5
@@ -183,24 +185,25 @@ Partial Class RegistrationForm
         Me.Guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox5.Font = New System.Drawing.Font("Montserrat", 8.249999!)
         Me.Guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox5.Location = New System.Drawing.Point(324, 159)
-        Me.Guna2TextBox5.Margin = New System.Windows.Forms.Padding(4)
+        Me.Guna2TextBox5.Location = New System.Drawing.Point(486, 245)
+        Me.Guna2TextBox5.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.Guna2TextBox5.Name = "Guna2TextBox5"
         Me.Guna2TextBox5.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.Guna2TextBox5.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2TextBox5.PlaceholderText = "Include special characters"
         Me.Guna2TextBox5.SelectedText = ""
         Me.Guna2TextBox5.ShadowDecoration.BorderRadius = 2
-        Me.Guna2TextBox5.Size = New System.Drawing.Size(236, 36)
+        Me.Guna2TextBox5.Size = New System.Drawing.Size(354, 55)
         Me.Guna2TextBox5.TabIndex = 12
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Montserrat Medium", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(79, 382)
+        Me.Label6.Location = New System.Drawing.Point(118, 588)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(88, 15)
+        Me.Label6.Size = New System.Drawing.Size(139, 24)
         Me.Label6.TabIndex = 9
         Me.Label6.Text = "Account Type?"
         '
@@ -218,23 +221,24 @@ Partial Class RegistrationForm
         Me.Guna2TextBox8.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox8.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2TextBox8.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox8.Location = New System.Drawing.Point(324, 391)
-        Me.Guna2TextBox8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Guna2TextBox8.Location = New System.Drawing.Point(486, 602)
+        Me.Guna2TextBox8.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.Guna2TextBox8.Name = "Guna2TextBox8"
         Me.Guna2TextBox8.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.Guna2TextBox8.PlaceholderText = ""
         Me.Guna2TextBox8.SelectedText = ""
         Me.Guna2TextBox8.ShadowDecoration.BorderRadius = 2
-        Me.Guna2TextBox8.Size = New System.Drawing.Size(236, 36)
+        Me.Guna2TextBox8.Size = New System.Drawing.Size(354, 55)
         Me.Guna2TextBox8.TabIndex = 15
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Montserrat Medium", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(79, 323)
+        Me.Label5.Location = New System.Drawing.Point(118, 497)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(70, 15)
+        Me.Label5.Size = New System.Drawing.Size(103, 24)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Last Name"
         '
@@ -251,18 +255,20 @@ Partial Class RegistrationForm
         Me.Guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.Guna2ComboBox2.ItemHeight = 30
         Me.Guna2ComboBox2.Items.AddRange(New Object() {"What was the name of your first pet?", "In what city were you born?"})
-        Me.Guna2ComboBox2.Location = New System.Drawing.Point(324, 273)
+        Me.Guna2ComboBox2.Location = New System.Drawing.Point(486, 420)
+        Me.Guna2ComboBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2ComboBox2.Name = "Guna2ComboBox2"
-        Me.Guna2ComboBox2.Size = New System.Drawing.Size(236, 36)
+        Me.Guna2ComboBox2.Size = New System.Drawing.Size(352, 36)
         Me.Guna2ComboBox2.TabIndex = 17
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Montserrat Medium", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(79, 265)
+        Me.Label4.Location = New System.Drawing.Point(118, 408)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(71, 15)
+        Me.Label4.Size = New System.Drawing.Size(106, 24)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "First Name"
         '
@@ -270,9 +276,10 @@ Partial Class RegistrationForm
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Montserrat Medium", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(321, 375)
+        Me.Label11.Location = New System.Drawing.Point(482, 577)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(99, 15)
+        Me.Label11.Size = New System.Drawing.Size(151, 24)
         Me.Label11.TabIndex = 22
         Me.Label11.Text = "Confirm Answer"
         '
@@ -280,9 +287,10 @@ Partial Class RegistrationForm
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Montserrat Medium", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(79, 205)
+        Me.Label3.Location = New System.Drawing.Point(118, 315)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(59, 15)
+        Me.Label3.Size = New System.Drawing.Size(94, 24)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "School ID"
         '
@@ -290,9 +298,10 @@ Partial Class RegistrationForm
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Montserrat Medium", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(321, 143)
+        Me.Label7.Location = New System.Drawing.Point(482, 220)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(64, 15)
+        Me.Label7.Size = New System.Drawing.Size(95, 24)
         Me.Label7.TabIndex = 18
         Me.Label7.Text = "Password"
         '
@@ -300,9 +309,10 @@ Partial Class RegistrationForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Montserrat Medium", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(79, 143)
+        Me.Label2.Location = New System.Drawing.Point(118, 220)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 15)
+        Me.Label2.Size = New System.Drawing.Size(59, 24)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Email"
         '
@@ -310,9 +320,10 @@ Partial Class RegistrationForm
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Montserrat Medium", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(321, 316)
+        Me.Label10.Location = New System.Drawing.Point(482, 486)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(50, 15)
+        Me.Label10.Size = New System.Drawing.Size(75, 24)
         Me.Label10.TabIndex = 21
         Me.Label10.Text = "Answer"
         '
@@ -320,9 +331,10 @@ Partial Class RegistrationForm
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Montserrat Medium", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(321, 198)
+        Me.Label8.Location = New System.Drawing.Point(482, 305)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(113, 15)
+        Me.Label8.Size = New System.Drawing.Size(171, 24)
         Me.Label8.TabIndex = 19
         Me.Label8.Text = "Confirm Password"
         '
@@ -340,15 +352,15 @@ Partial Class RegistrationForm
         Me.Guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox4.Font = New System.Drawing.Font("Montserrat", 8.999999!)
         Me.Guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox4.Location = New System.Drawing.Point(82, 280)
-        Me.Guna2TextBox4.Margin = New System.Windows.Forms.Padding(5)
+        Me.Guna2TextBox4.Location = New System.Drawing.Point(123, 431)
+        Me.Guna2TextBox4.Margin = New System.Windows.Forms.Padding(8, 8, 8, 8)
         Me.Guna2TextBox4.Name = "Guna2TextBox4"
         Me.Guna2TextBox4.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.Guna2TextBox4.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2TextBox4.PlaceholderText = "Stephen"
         Me.Guna2TextBox4.SelectedText = ""
         Me.Guna2TextBox4.ShadowDecoration.BorderRadius = 2
-        Me.Guna2TextBox4.Size = New System.Drawing.Size(236, 36)
+        Me.Guna2TextBox4.Size = New System.Drawing.Size(354, 55)
         Me.Guna2TextBox4.TabIndex = 3
         '
         'Guna2TextBox3
@@ -365,24 +377,25 @@ Partial Class RegistrationForm
         Me.Guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox3.Location = New System.Drawing.Point(82, 339)
-        Me.Guna2TextBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Guna2TextBox3.Location = New System.Drawing.Point(123, 522)
+        Me.Guna2TextBox3.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.Guna2TextBox3.Name = "Guna2TextBox3"
         Me.Guna2TextBox3.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.Guna2TextBox3.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2TextBox3.PlaceholderText = "Maano"
         Me.Guna2TextBox3.SelectedText = ""
         Me.Guna2TextBox3.ShadowDecoration.BorderRadius = 2
-        Me.Guna2TextBox3.Size = New System.Drawing.Size(236, 36)
+        Me.Guna2TextBox3.Size = New System.Drawing.Size(354, 55)
         Me.Guna2TextBox3.TabIndex = 2
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Montserrat Medium", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(321, 257)
+        Me.Label9.Location = New System.Drawing.Point(482, 395)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(113, 15)
+        Me.Label9.Size = New System.Drawing.Size(176, 24)
         Me.Label9.TabIndex = 20
         Me.Label9.Text = "Security Questions"
         '
@@ -400,15 +413,15 @@ Partial Class RegistrationForm
         Me.Guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox2.Font = New System.Drawing.Font("Montserrat", 8.999999!)
         Me.Guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox2.Location = New System.Drawing.Point(82, 222)
-        Me.Guna2TextBox2.Margin = New System.Windows.Forms.Padding(5)
+        Me.Guna2TextBox2.Location = New System.Drawing.Point(123, 342)
+        Me.Guna2TextBox2.Margin = New System.Windows.Forms.Padding(8, 8, 8, 8)
         Me.Guna2TextBox2.Name = "Guna2TextBox2"
         Me.Guna2TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.Guna2TextBox2.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2TextBox2.PlaceholderText = "2022-12345"
         Me.Guna2TextBox2.SelectedText = ""
         Me.Guna2TextBox2.ShadowDecoration.BorderRadius = 2
-        Me.Guna2TextBox2.Size = New System.Drawing.Size(236, 36)
+        Me.Guna2TextBox2.Size = New System.Drawing.Size(354, 55)
         Me.Guna2TextBox2.TabIndex = 1
         '
         'Guna2TextBox1
@@ -425,15 +438,15 @@ Partial Class RegistrationForm
         Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox1.Font = New System.Drawing.Font("Montserrat", 8.999999!)
         Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.Location = New System.Drawing.Point(82, 166)
-        Me.Guna2TextBox1.Margin = New System.Windows.Forms.Padding(5)
+        Me.Guna2TextBox1.Location = New System.Drawing.Point(123, 255)
+        Me.Guna2TextBox1.Margin = New System.Windows.Forms.Padding(8, 8, 8, 8)
         Me.Guna2TextBox1.Name = "Guna2TextBox1"
         Me.Guna2TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.Guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2TextBox1.PlaceholderText = "Example@lpulaguna.edu.ph"
         Me.Guna2TextBox1.SelectedText = ""
         Me.Guna2TextBox1.ShadowDecoration.BorderRadius = 2
-        Me.Guna2TextBox1.Size = New System.Drawing.Size(236, 36)
+        Me.Guna2TextBox1.Size = New System.Drawing.Size(354, 55)
         Me.Guna2TextBox1.TabIndex = 0
         '
         'Guna2BorderlessForm1
@@ -464,10 +477,11 @@ Partial Class RegistrationForm
         Me.Guna2Panel2.Controls.Add(Me.Guna2Button2)
         Me.Guna2Panel2.Controls.Add(Me.Guna2Button1)
         Me.Guna2Panel2.Controls.Add(Me.lblCreateAcc)
-        Me.Guna2Panel2.Location = New System.Drawing.Point(14, 12)
+        Me.Guna2Panel2.Location = New System.Drawing.Point(21, 18)
+        Me.Guna2Panel2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2Panel2.Name = "Guna2Panel2"
         Me.Guna2Panel2.ShadowDecoration.Enabled = True
-        Me.Guna2Panel2.Size = New System.Drawing.Size(579, 696)
+        Me.Guna2Panel2.Size = New System.Drawing.Size(868, 1071)
         Me.Guna2Panel2.TabIndex = 1
         '
         'lblAccountType
@@ -476,10 +490,9 @@ Partial Class RegistrationForm
         Me.lblAccountType.BackColor = System.Drawing.Color.White
         Me.lblAccountType.Font = New System.Drawing.Font("Inter", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAccountType.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.lblAccountType.Location = New System.Drawing.Point(240, 492)
-        Me.lblAccountType.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblAccountType.Location = New System.Drawing.Point(360, 757)
         Me.lblAccountType.Name = "lblAccountType"
-        Me.lblAccountType.Size = New System.Drawing.Size(99, 17)
+        Me.lblAccountType.Size = New System.Drawing.Size(142, 24)
         Me.lblAccountType.TabIndex = 39
         Me.lblAccountType.Text = "Account Type"
         '
@@ -495,9 +508,10 @@ Partial Class RegistrationForm
         Me.cmbboxAccountType.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbboxAccountType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.cmbboxAccountType.ItemHeight = 30
-        Me.cmbboxAccountType.Location = New System.Drawing.Point(206, 517)
+        Me.cmbboxAccountType.Location = New System.Drawing.Point(309, 795)
+        Me.cmbboxAccountType.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cmbboxAccountType.Name = "cmbboxAccountType"
-        Me.cmbboxAccountType.Size = New System.Drawing.Size(166, 36)
+        Me.cmbboxAccountType.Size = New System.Drawing.Size(247, 36)
         Me.cmbboxAccountType.TabIndex = 38
         '
         'picLogo
@@ -505,10 +519,10 @@ Partial Class RegistrationForm
         Me.picLogo.FillColor = System.Drawing.Color.Transparent
         Me.picLogo.Image = CType(resources.GetObject("picLogo.Image"), System.Drawing.Image)
         Me.picLogo.ImageRotate = 0!
-        Me.picLogo.Location = New System.Drawing.Point(20, 30)
-        Me.picLogo.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.picLogo.Location = New System.Drawing.Point(30, 46)
+        Me.picLogo.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.picLogo.Name = "picLogo"
-        Me.picLogo.Size = New System.Drawing.Size(266, 66)
+        Me.picLogo.Size = New System.Drawing.Size(399, 102)
         Me.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.picLogo.TabIndex = 37
         Me.picLogo.TabStop = False
@@ -519,10 +533,9 @@ Partial Class RegistrationForm
         Me.lblConfirmPassword.BackColor = System.Drawing.Color.White
         Me.lblConfirmPassword.Font = New System.Drawing.Font("Inter", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblConfirmPassword.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.lblConfirmPassword.Location = New System.Drawing.Point(300, 403)
-        Me.lblConfirmPassword.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblConfirmPassword.Location = New System.Drawing.Point(450, 620)
         Me.lblConfirmPassword.Name = "lblConfirmPassword"
-        Me.lblConfirmPassword.Size = New System.Drawing.Size(127, 17)
+        Me.lblConfirmPassword.Size = New System.Drawing.Size(182, 24)
         Me.lblConfirmPassword.TabIndex = 36
         Me.lblConfirmPassword.Text = "Confirm Password"
         '
@@ -540,14 +553,14 @@ Partial Class RegistrationForm
         Me.txtConfirmPassword.Font = New System.Drawing.Font("Inter", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtConfirmPassword.ForeColor = System.Drawing.Color.DimGray
         Me.txtConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtConfirmPassword.Location = New System.Drawing.Point(296, 427)
-        Me.txtConfirmPassword.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
+        Me.txtConfirmPassword.Location = New System.Drawing.Point(444, 657)
+        Me.txtConfirmPassword.Margin = New System.Windows.Forms.Padding(9, 11, 9, 11)
         Me.txtConfirmPassword.Name = "txtConfirmPassword"
         Me.txtConfirmPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtConfirmPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtConfirmPassword.PlaceholderText = "Juan"
         Me.txtConfirmPassword.SelectedText = ""
-        Me.txtConfirmPassword.Size = New System.Drawing.Size(231, 48)
+        Me.txtConfirmPassword.Size = New System.Drawing.Size(346, 74)
         Me.txtConfirmPassword.TabIndex = 35
         '
         'txtPasswordReg
@@ -564,14 +577,14 @@ Partial Class RegistrationForm
         Me.txtPasswordReg.Font = New System.Drawing.Font("Inter", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPasswordReg.ForeColor = System.Drawing.Color.DimGray
         Me.txtPasswordReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtPasswordReg.Location = New System.Drawing.Point(54, 427)
-        Me.txtPasswordReg.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
+        Me.txtPasswordReg.Location = New System.Drawing.Point(81, 657)
+        Me.txtPasswordReg.Margin = New System.Windows.Forms.Padding(9, 11, 9, 11)
         Me.txtPasswordReg.Name = "txtPasswordReg"
         Me.txtPasswordReg.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPasswordReg.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtPasswordReg.PlaceholderText = "Juan"
         Me.txtPasswordReg.SelectedText = ""
-        Me.txtPasswordReg.Size = New System.Drawing.Size(231, 48)
+        Me.txtPasswordReg.Size = New System.Drawing.Size(346, 74)
         Me.txtPasswordReg.TabIndex = 34
         '
         'lblPasswordReg
@@ -580,10 +593,9 @@ Partial Class RegistrationForm
         Me.lblPasswordReg.BackColor = System.Drawing.Color.White
         Me.lblPasswordReg.Font = New System.Drawing.Font("Inter", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPasswordReg.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.lblPasswordReg.Location = New System.Drawing.Point(51, 403)
-        Me.lblPasswordReg.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblPasswordReg.Location = New System.Drawing.Point(76, 620)
         Me.lblPasswordReg.Name = "lblPasswordReg"
-        Me.lblPasswordReg.Size = New System.Drawing.Size(72, 17)
+        Me.lblPasswordReg.Size = New System.Drawing.Size(101, 24)
         Me.lblPasswordReg.TabIndex = 33
         Me.lblPasswordReg.Text = "Password"
         '
@@ -601,14 +613,14 @@ Partial Class RegistrationForm
         Me.txtLastName.Font = New System.Drawing.Font("Inter", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLastName.ForeColor = System.Drawing.Color.DimGray
         Me.txtLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtLastName.Location = New System.Drawing.Point(296, 327)
-        Me.txtLastName.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
+        Me.txtLastName.Location = New System.Drawing.Point(444, 503)
+        Me.txtLastName.Margin = New System.Windows.Forms.Padding(9, 11, 9, 11)
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtLastName.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtLastName.PlaceholderText = "Dela Cruz"
         Me.txtLastName.SelectedText = ""
-        Me.txtLastName.Size = New System.Drawing.Size(231, 48)
+        Me.txtLastName.Size = New System.Drawing.Size(346, 74)
         Me.txtLastName.TabIndex = 32
         '
         'lblLastName
@@ -617,10 +629,9 @@ Partial Class RegistrationForm
         Me.lblLastName.BackColor = System.Drawing.Color.White
         Me.lblLastName.Font = New System.Drawing.Font("Inter", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLastName.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.lblLastName.Location = New System.Drawing.Point(293, 304)
-        Me.lblLastName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblLastName.Location = New System.Drawing.Point(440, 468)
         Me.lblLastName.Name = "lblLastName"
-        Me.lblLastName.Size = New System.Drawing.Size(79, 17)
+        Me.lblLastName.Size = New System.Drawing.Size(110, 24)
         Me.lblLastName.TabIndex = 31
         Me.lblLastName.Text = "Last Name"
         '
@@ -638,14 +649,14 @@ Partial Class RegistrationForm
         Me.txtFirstName.Font = New System.Drawing.Font("Inter", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtFirstName.ForeColor = System.Drawing.Color.DimGray
         Me.txtFirstName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtFirstName.Location = New System.Drawing.Point(54, 327)
-        Me.txtFirstName.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
+        Me.txtFirstName.Location = New System.Drawing.Point(81, 503)
+        Me.txtFirstName.Margin = New System.Windows.Forms.Padding(9, 11, 9, 11)
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtFirstName.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtFirstName.PlaceholderText = "Juan"
         Me.txtFirstName.SelectedText = ""
-        Me.txtFirstName.Size = New System.Drawing.Size(231, 48)
+        Me.txtFirstName.Size = New System.Drawing.Size(346, 74)
         Me.txtFirstName.TabIndex = 30
         '
         'lblFirstName
@@ -654,10 +665,9 @@ Partial Class RegistrationForm
         Me.lblFirstName.BackColor = System.Drawing.Color.White
         Me.lblFirstName.Font = New System.Drawing.Font("Inter", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFirstName.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.lblFirstName.Location = New System.Drawing.Point(51, 303)
-        Me.lblFirstName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblFirstName.Location = New System.Drawing.Point(76, 466)
         Me.lblFirstName.Name = "lblFirstName"
-        Me.lblFirstName.Size = New System.Drawing.Size(79, 17)
+        Me.lblFirstName.Size = New System.Drawing.Size(112, 24)
         Me.lblFirstName.TabIndex = 29
         Me.lblFirstName.Text = "First Name"
         '
@@ -675,14 +685,14 @@ Partial Class RegistrationForm
         Me.txtSchoolID.Font = New System.Drawing.Font("Inter", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSchoolID.ForeColor = System.Drawing.Color.DimGray
         Me.txtSchoolID.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtSchoolID.Location = New System.Drawing.Point(338, 234)
-        Me.txtSchoolID.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
+        Me.txtSchoolID.Location = New System.Drawing.Point(507, 360)
+        Me.txtSchoolID.Margin = New System.Windows.Forms.Padding(9, 11, 9, 11)
         Me.txtSchoolID.Name = "txtSchoolID"
         Me.txtSchoolID.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtSchoolID.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtSchoolID.PlaceholderText = "2020-12345"
         Me.txtSchoolID.SelectedText = ""
-        Me.txtSchoolID.Size = New System.Drawing.Size(189, 48)
+        Me.txtSchoolID.Size = New System.Drawing.Size(284, 74)
         Me.txtSchoolID.TabIndex = 28
         '
         'lblSchoolID
@@ -691,10 +701,9 @@ Partial Class RegistrationForm
         Me.lblSchoolID.BackColor = System.Drawing.Color.White
         Me.lblSchoolID.Font = New System.Drawing.Font("Inter", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSchoolID.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.lblSchoolID.Location = New System.Drawing.Point(335, 210)
-        Me.lblSchoolID.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblSchoolID.Location = New System.Drawing.Point(502, 323)
         Me.lblSchoolID.Name = "lblSchoolID"
-        Me.lblSchoolID.Size = New System.Drawing.Size(70, 17)
+        Me.lblSchoolID.Size = New System.Drawing.Size(100, 24)
         Me.lblSchoolID.TabIndex = 27
         Me.lblSchoolID.Text = "School ID"
         '
@@ -712,14 +721,14 @@ Partial Class RegistrationForm
         Me.txtEmailReg.Font = New System.Drawing.Font("Inter", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmailReg.ForeColor = System.Drawing.Color.DimGray
         Me.txtEmailReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtEmailReg.Location = New System.Drawing.Point(54, 234)
-        Me.txtEmailReg.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
+        Me.txtEmailReg.Location = New System.Drawing.Point(81, 360)
+        Me.txtEmailReg.Margin = New System.Windows.Forms.Padding(9, 11, 9, 11)
         Me.txtEmailReg.Name = "txtEmailReg"
         Me.txtEmailReg.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtEmailReg.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtEmailReg.PlaceholderText = "johnsmith@lpulaguna.edu.ph"
         Me.txtEmailReg.SelectedText = ""
-        Me.txtEmailReg.Size = New System.Drawing.Size(272, 48)
+        Me.txtEmailReg.Size = New System.Drawing.Size(408, 74)
         Me.txtEmailReg.TabIndex = 26
         '
         'lblEmailReg
@@ -728,10 +737,9 @@ Partial Class RegistrationForm
         Me.lblEmailReg.BackColor = System.Drawing.Color.White
         Me.lblEmailReg.Font = New System.Drawing.Font("Inter", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblEmailReg.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.lblEmailReg.Location = New System.Drawing.Point(51, 210)
-        Me.lblEmailReg.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblEmailReg.Location = New System.Drawing.Point(76, 323)
         Me.lblEmailReg.Name = "lblEmailReg"
-        Me.lblEmailReg.Size = New System.Drawing.Size(42, 17)
+        Me.lblEmailReg.Size = New System.Drawing.Size(60, 24)
         Me.lblEmailReg.TabIndex = 25
         Me.lblEmailReg.Text = "Email"
         '
@@ -739,7 +747,7 @@ Partial Class RegistrationForm
         '
         Me.Guna2Button2.AutoRoundedCorners = True
         Me.Guna2Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Button2.BorderRadius = 21
+        Me.Guna2Button2.BorderRadius = 33
         Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -747,9 +755,10 @@ Partial Class RegistrationForm
         Me.Guna2Button2.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Guna2Button2.Font = New System.Drawing.Font("Montserrat SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2Button2.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button2.Location = New System.Drawing.Point(70, 604)
+        Me.Guna2Button2.Location = New System.Drawing.Point(105, 929)
+        Me.Guna2Button2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2Button2.Name = "Guna2Button2"
-        Me.Guna2Button2.Size = New System.Drawing.Size(180, 45)
+        Me.Guna2Button2.Size = New System.Drawing.Size(270, 69)
         Me.Guna2Button2.TabIndex = 24
         Me.Guna2Button2.Text = "Cancel"
         Me.Guna2Button2.UseTransparentBackground = True
@@ -758,7 +767,7 @@ Partial Class RegistrationForm
         '
         Me.Guna2Button1.AutoRoundedCorners = True
         Me.Guna2Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Button1.BorderRadius = 21
+        Me.Guna2Button1.BorderRadius = 33
         Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -766,9 +775,10 @@ Partial Class RegistrationForm
         Me.Guna2Button1.FillColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.Guna2Button1.Font = New System.Drawing.Font("Montserrat SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(329, 604)
+        Me.Guna2Button1.Location = New System.Drawing.Point(490, 929)
+        Me.Guna2Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.Size = New System.Drawing.Size(180, 45)
+        Me.Guna2Button1.Size = New System.Drawing.Size(270, 69)
         Me.Guna2Button1.TabIndex = 23
         Me.Guna2Button1.Text = "Sign Up"
         Me.Guna2Button1.UseTransparentBackground = True
@@ -777,22 +787,24 @@ Partial Class RegistrationForm
         '
         Me.lblCreateAcc.AutoSize = True
         Me.lblCreateAcc.Font = New System.Drawing.Font("Inter SemiBold", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCreateAcc.Location = New System.Drawing.Point(48, 145)
+        Me.lblCreateAcc.Location = New System.Drawing.Point(72, 223)
+        Me.lblCreateAcc.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCreateAcc.Name = "lblCreateAcc"
-        Me.lblCreateAcc.Size = New System.Drawing.Size(238, 33)
+        Me.lblCreateAcc.Size = New System.Drawing.Size(362, 50)
         Me.lblCreateAcc.TabIndex = 4
         Me.lblCreateAcc.Text = "Let's get started!"
         Me.lblCreateAcc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'RegistrationForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(1280, 720)
+        Me.ClientSize = New System.Drawing.Size(1920, 1108)
         Me.Controls.Add(Me.Guna2Panel2)
         Me.Controls.Add(Me.pnlOverview)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "RegistrationForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "RegistrationForm"

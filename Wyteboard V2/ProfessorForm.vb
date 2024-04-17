@@ -53,9 +53,9 @@
             btnCourse.Text = ""
         Else
             btnAccount.Text = "Account"
-            btnSummary.Text = "Add Assessments"
+            btnSummary.Text = "Summary"
             btnLogout.Text = "Logout"
-            btnCourse.Text = "Summary"
+            btnCourse.Text = "Course"
         End If
     End Sub
 

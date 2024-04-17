@@ -11,7 +11,7 @@ Public Class Account
         txtConfirmAnswer.UseSystemPasswordChar = True
     End Sub
     Public Sub LoadUserData(email As String)
-        Dim connectionString As String = "Database=wyteboard;Data Source=localhost;User id=root;Password=An2022-10653;Port=3306;Command Timeout=600"
+        Dim connectionString As String = "Database=wyteboard;Data Source=localhost;User id=admin;Password=IamFinal0904;Port=3306;Command Timeout=600"
         Dim query As String = "SELECT * FROM wyteboard.tb_users WHERE email = @email"
 
         Try
@@ -181,9 +181,9 @@ Public Class Account
     Private Sub ToggleVisibility(textBox As Guna2TextBox, imageButton As Guna2ImageButton)
         textBox.UseSystemPasswordChar = Not textBox.UseSystemPasswordChar
         If textBox.UseSystemPasswordChar Then
-            imageButton.Image = Wyteboard_V2.My.Resources.Resources.icons8_lock_32__1_
-        Else
             imageButton.Image = Wyteboard_V2.My.Resources.Resources.icons8_unlocked_32__1_
+        Else
+            imageButton.Image = Wyteboard_V2.My.Resources.Resources.icons8_lock_32__1_
         End If
     End Sub
     Private Sub imgLockConfPass_Click(sender As Object, e As EventArgs) Handles imgLockConfPass.Click

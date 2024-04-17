@@ -50,6 +50,7 @@ Partial Class Account
         Me.imgLockConfirmAnswer = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.lblInfo = New System.Windows.Forms.Label()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtAnswer
@@ -67,7 +68,7 @@ Partial Class Account
         Me.txtAnswer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtAnswer.Font = New System.Drawing.Font("Montserrat", 8.249999!)
         Me.txtAnswer.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtAnswer.Location = New System.Drawing.Point(606, 380)
+        Me.txtAnswer.Location = New System.Drawing.Point(518, 328)
         Me.txtAnswer.Name = "txtAnswer"
         Me.txtAnswer.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtAnswer.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
@@ -92,7 +93,7 @@ Partial Class Account
         Me.txtConfirmPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtConfirmPass.Font = New System.Drawing.Font("Montserrat", 8.999999!)
         Me.txtConfirmPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtConfirmPass.Location = New System.Drawing.Point(606, 266)
+        Me.txtConfirmPass.Location = New System.Drawing.Point(518, 210)
         Me.txtConfirmPass.Name = "txtConfirmPass"
         Me.txtConfirmPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtConfirmPass.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
@@ -211,7 +212,7 @@ Partial Class Account
         Me.txtConfirmAnswer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtConfirmAnswer.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtConfirmAnswer.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtConfirmAnswer.Location = New System.Drawing.Point(606, 439)
+        Me.txtConfirmAnswer.Location = New System.Drawing.Point(518, 387)
         Me.txtConfirmAnswer.Name = "txtConfirmAnswer"
         Me.txtConfirmAnswer.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtConfirmAnswer.PlaceholderText = ""
@@ -235,7 +236,7 @@ Partial Class Account
         Me.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtPassword.Font = New System.Drawing.Font("Montserrat", 8.249999!)
         Me.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtPassword.Location = New System.Drawing.Point(606, 207)
+        Me.txtPassword.Location = New System.Drawing.Point(518, 155)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
@@ -442,11 +443,11 @@ Partial Class Account
         Me.imgLock.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_unlocked_32__1_
         Me.imgLock.ImageOffset = New System.Drawing.Point(0, 0)
         Me.imgLock.ImageRotate = 0!
-        Me.imgLock.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLock.Location = New System.Drawing.Point(796, 207)
+        Me.imgLock.ImageSize = New System.Drawing.Size(28, 28)
+        Me.imgLock.Location = New System.Drawing.Point(713, 157)
         Me.imgLock.Name = "imgLock"
         Me.imgLock.PressedState.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLock.Size = New System.Drawing.Size(46, 36)
+        Me.imgLock.Size = New System.Drawing.Size(37, 33)
         Me.imgLock.TabIndex = 50
         Me.imgLock.UseTransparentBackground = True
         '
@@ -460,11 +461,11 @@ Partial Class Account
         Me.imgLockConfPass.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_unlocked_32__1_
         Me.imgLockConfPass.ImageOffset = New System.Drawing.Point(0, 0)
         Me.imgLockConfPass.ImageRotate = 0!
-        Me.imgLockConfPass.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockConfPass.Location = New System.Drawing.Point(796, 266)
+        Me.imgLockConfPass.ImageSize = New System.Drawing.Size(28, 28)
+        Me.imgLockConfPass.Location = New System.Drawing.Point(713, 212)
         Me.imgLockConfPass.Name = "imgLockConfPass"
         Me.imgLockConfPass.PressedState.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockConfPass.Size = New System.Drawing.Size(46, 36)
+        Me.imgLockConfPass.Size = New System.Drawing.Size(37, 33)
         Me.imgLockConfPass.TabIndex = 51
         Me.imgLockConfPass.UseTransparentBackground = True
         '
@@ -478,11 +479,11 @@ Partial Class Account
         Me.imgLockAnswer.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_unlocked_32__1_
         Me.imgLockAnswer.ImageOffset = New System.Drawing.Point(0, 0)
         Me.imgLockAnswer.ImageRotate = 0!
-        Me.imgLockAnswer.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockAnswer.Location = New System.Drawing.Point(796, 380)
+        Me.imgLockAnswer.ImageSize = New System.Drawing.Size(28, 28)
+        Me.imgLockAnswer.Location = New System.Drawing.Point(713, 330)
         Me.imgLockAnswer.Name = "imgLockAnswer"
         Me.imgLockAnswer.PressedState.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockAnswer.Size = New System.Drawing.Size(46, 36)
+        Me.imgLockAnswer.Size = New System.Drawing.Size(37, 33)
         Me.imgLockAnswer.TabIndex = 52
         Me.imgLockAnswer.UseTransparentBackground = True
         '
@@ -496,11 +497,11 @@ Partial Class Account
         Me.imgLockConfirmAnswer.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_unlocked_32__1_
         Me.imgLockConfirmAnswer.ImageOffset = New System.Drawing.Point(0, 0)
         Me.imgLockConfirmAnswer.ImageRotate = 0!
-        Me.imgLockConfirmAnswer.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockConfirmAnswer.Location = New System.Drawing.Point(796, 439)
+        Me.imgLockConfirmAnswer.ImageSize = New System.Drawing.Size(28, 28)
+        Me.imgLockConfirmAnswer.Location = New System.Drawing.Point(713, 389)
         Me.imgLockConfirmAnswer.Name = "imgLockConfirmAnswer"
         Me.imgLockConfirmAnswer.PressedState.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockConfirmAnswer.Size = New System.Drawing.Size(46, 36)
+        Me.imgLockConfirmAnswer.Size = New System.Drawing.Size(37, 31)
         Me.imgLockConfirmAnswer.TabIndex = 53
         Me.imgLockConfirmAnswer.UseTransparentBackground = True
         '
@@ -520,6 +521,14 @@ Partial Class Account
         'Guna2Panel1
         '
         Me.Guna2Panel1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Guna2Panel1.Controls.Add(Me.imgLock)
+        Me.Guna2Panel1.Controls.Add(Me.imgLockConfirmAnswer)
+        Me.Guna2Panel1.Controls.Add(Me.txtPassword)
+        Me.Guna2Panel1.Controls.Add(Me.imgLockAnswer)
+        Me.Guna2Panel1.Controls.Add(Me.imgLockConfPass)
+        Me.Guna2Panel1.Controls.Add(Me.txtConfirmPass)
+        Me.Guna2Panel1.Controls.Add(Me.txtAnswer)
+        Me.Guna2Panel1.Controls.Add(Me.txtConfirmAnswer)
         Me.Guna2Panel1.Location = New System.Drawing.Point(88, 52)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(903, 542)
@@ -531,12 +540,6 @@ Partial Class Account
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1079, 635)
         Me.Controls.Add(Me.lblInfo)
-        Me.Controls.Add(Me.imgLockConfirmAnswer)
-        Me.Controls.Add(Me.imgLockAnswer)
-        Me.Controls.Add(Me.imgLockConfPass)
-        Me.Controls.Add(Me.imgLock)
-        Me.Controls.Add(Me.txtAnswer)
-        Me.Controls.Add(Me.txtConfirmPass)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
@@ -544,8 +547,6 @@ Partial Class Account
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.cbxQuestion)
-        Me.Controls.Add(Me.txtConfirmAnswer)
-        Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.cbxType)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -561,6 +562,7 @@ Partial Class Account
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Account"
         Me.Text = "Account"
+        Me.Guna2Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

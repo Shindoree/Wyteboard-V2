@@ -342,6 +342,7 @@ Partial Class ForgotPasswordForm
         Me.Controls.Add(Me.pnlOverview)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "ForgotPasswordForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ForgotPasswordForm"
         Me.Guna2Panel2.ResumeLayout(False)
         Me.Guna2Panel2.PerformLayout()

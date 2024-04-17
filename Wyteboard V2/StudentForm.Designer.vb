@@ -26,27 +26,27 @@ Partial Class StudentForm
         Me.pnlMenu = New Guna.UI2.WinForms.Guna2Panel()
         Me.pnlControl = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnLogout = New System.Windows.Forms.Button()
+        Me.btnSummary = New System.Windows.Forms.Button()
+        Me.btnCourse = New System.Windows.Forms.Button()
+        Me.btnAccount = New System.Windows.Forms.Button()
         Me.btnHome = New System.Windows.Forms.Button()
         Me.pnlSidebarTop = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnSlider = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.pnlDisplay = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnAccount = New System.Windows.Forms.Button()
-        Me.btnCourse = New System.Windows.Forms.Button()
-        Me.btnSummary = New System.Windows.Forms.Button()
+        Me.lblUser = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.pnlMenu.SuspendLayout()
         Me.pnlControl.SuspendLayout()
         Me.pnlSidebarTop.SuspendLayout()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel4.SuspendLayout()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlDisplay.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -94,6 +94,60 @@ Partial Class StudentForm
         Me.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnLogout.UseVisualStyleBackColor = True
         '
+        'btnSummary
+        '
+        Me.btnSummary.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnSummary.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnSummary.FlatAppearance.BorderSize = 0
+        Me.btnSummary.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSummary.Font = New System.Drawing.Font("Cambria", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSummary.ForeColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnSummary.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_summary_32
+        Me.btnSummary.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSummary.Location = New System.Drawing.Point(0, 219)
+        Me.btnSummary.Name = "btnSummary"
+        Me.btnSummary.Size = New System.Drawing.Size(183, 73)
+        Me.btnSummary.TabIndex = 16
+        Me.btnSummary.Text = "Summary"
+        Me.btnSummary.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnSummary.UseVisualStyleBackColor = True
+        '
+        'btnCourse
+        '
+        Me.btnCourse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnCourse.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnCourse.FlatAppearance.BorderSize = 0
+        Me.btnCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCourse.Font = New System.Drawing.Font("Cambria", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCourse.ForeColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnCourse.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_course_32__1_
+        Me.btnCourse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCourse.Location = New System.Drawing.Point(0, 146)
+        Me.btnCourse.Name = "btnCourse"
+        Me.btnCourse.Size = New System.Drawing.Size(183, 73)
+        Me.btnCourse.TabIndex = 15
+        Me.btnCourse.Text = "Courses"
+        Me.btnCourse.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnCourse.UseVisualStyleBackColor = True
+        '
+        'btnAccount
+        '
+        Me.btnAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnAccount.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnAccount.FlatAppearance.BorderSize = 0
+        Me.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAccount.Font = New System.Drawing.Font("Cambria", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAccount.ForeColor = System.Drawing.Color.Silver
+        Me.btnAccount.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_account_32__1_
+        Me.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAccount.Location = New System.Drawing.Point(0, 73)
+        Me.btnAccount.Name = "btnAccount"
+        Me.btnAccount.Size = New System.Drawing.Size(183, 73)
+        Me.btnAccount.TabIndex = 14
+        Me.btnAccount.Text = "Account"
+        Me.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAccount.UseVisualStyleBackColor = True
+        '
         'btnHome
         '
         Me.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
@@ -107,7 +161,7 @@ Partial Class StudentForm
         Me.btnHome.Location = New System.Drawing.Point(0, 0)
         Me.btnHome.Name = "btnHome"
         Me.btnHome.Size = New System.Drawing.Size(183, 73)
-        Me.btnHome.TabIndex = 13
+        Me.btnHome.TabIndex = 18
         Me.btnHome.Text = "Home"
         Me.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnHome.UseVisualStyleBackColor = True
@@ -147,6 +201,15 @@ Partial Class StudentForm
         Me.Guna2BorderlessForm1.ResizeForm = False
         Me.Guna2BorderlessForm1.TransparentWhileDrag = True
         '
+        'Guna2Panel4
+        '
+        Me.Guna2Panel4.Controls.Add(Me.Guna2PictureBox1)
+        Me.Guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Guna2Panel4.Location = New System.Drawing.Point(183, 0)
+        Me.Guna2Panel4.Name = "Guna2Panel4"
+        Me.Guna2Panel4.Size = New System.Drawing.Size(1097, 69)
+        Me.Guna2Panel4.TabIndex = 0
+        '
         'Guna2PictureBox1
         '
         Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
@@ -160,36 +223,18 @@ Partial Class StudentForm
         Me.Guna2PictureBox1.TabIndex = 12
         Me.Guna2PictureBox1.TabStop = False
         '
-        'Guna2Panel4
-        '
-        Me.Guna2Panel4.Controls.Add(Me.Guna2PictureBox1)
-        Me.Guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Guna2Panel4.Location = New System.Drawing.Point(183, 0)
-        Me.Guna2Panel4.Name = "Guna2Panel4"
-        Me.Guna2Panel4.Size = New System.Drawing.Size(1097, 69)
-        Me.Guna2Panel4.TabIndex = 0
-        '
         'pnlDisplay
         '
         Me.pnlDisplay.Controls.Add(Me.Guna2Panel1)
         Me.pnlDisplay.Controls.Add(Me.Guna2Panel3)
         Me.pnlDisplay.Controls.Add(Me.Guna2Panel2)
-        Me.pnlDisplay.Controls.Add(Me.Label1)
+        Me.pnlDisplay.Controls.Add(Me.lblUser)
         Me.pnlDisplay.Controls.Add(Me.Panel1)
         Me.pnlDisplay.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlDisplay.Location = New System.Drawing.Point(183, 69)
         Me.pnlDisplay.Name = "pnlDisplay"
         Me.pnlDisplay.Size = New System.Drawing.Size(1097, 651)
         Me.pnlDisplay.TabIndex = 14
-        '
-        'Guna2Panel3
-        '
-        Me.Guna2Panel3.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Guna2Panel3.BackColor = System.Drawing.Color.White
-        Me.Guna2Panel3.Location = New System.Drawing.Point(18, 195)
-        Me.Guna2Panel3.Name = "Guna2Panel3"
-        Me.Guna2Panel3.Size = New System.Drawing.Size(788, 440)
-        Me.Guna2Panel3.TabIndex = 13
         '
         'Guna2Panel1
         '
@@ -210,6 +255,15 @@ Partial Class StudentForm
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 0
         '
+        'Guna2Panel3
+        '
+        Me.Guna2Panel3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Guna2Panel3.BackColor = System.Drawing.Color.White
+        Me.Guna2Panel3.Location = New System.Drawing.Point(18, 195)
+        Me.Guna2Panel3.Name = "Guna2Panel3"
+        Me.Guna2Panel3.Size = New System.Drawing.Size(788, 440)
+        Me.Guna2Panel3.TabIndex = 13
+        '
         'Guna2Panel2
         '
         Me.Guna2Panel2.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -222,71 +276,17 @@ Partial Class StudentForm
         Me.Guna2Panel2.Size = New System.Drawing.Size(788, 100)
         Me.Guna2Panel2.TabIndex = 11
         '
-        'Label1
+        'lblUser
         '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Montserrat ExtraBold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(20, 26)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(223, 51)
-        Me.Label1.TabIndex = 10
-        Me.Label1.Text = "Good Day,"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'btnAccount
-        '
-        Me.btnAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnAccount.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnAccount.FlatAppearance.BorderSize = 0
-        Me.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAccount.Font = New System.Drawing.Font("Cambria", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAccount.ForeColor = System.Drawing.Color.Silver
-        Me.btnAccount.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_account_32__1_
-        Me.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAccount.Location = New System.Drawing.Point(0, 73)
-        Me.btnAccount.Name = "btnAccount"
-        Me.btnAccount.Size = New System.Drawing.Size(183, 73)
-        Me.btnAccount.TabIndex = 14
-        Me.btnAccount.Text = "Account"
-        Me.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnAccount.UseVisualStyleBackColor = True
-        '
-        'btnCourse
-        '
-        Me.btnCourse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnCourse.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnCourse.FlatAppearance.BorderSize = 0
-        Me.btnCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCourse.Font = New System.Drawing.Font("Cambria", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCourse.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.btnCourse.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_course_32__1_
-        Me.btnCourse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCourse.Location = New System.Drawing.Point(0, 146)
-        Me.btnCourse.Name = "btnCourse"
-        Me.btnCourse.Size = New System.Drawing.Size(183, 73)
-        Me.btnCourse.TabIndex = 15
-        Me.btnCourse.Text = "Courses"
-        Me.btnCourse.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnCourse.UseVisualStyleBackColor = True
-        '
-        'btnSummary
-        '
-        Me.btnSummary.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnSummary.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnSummary.FlatAppearance.BorderSize = 0
-        Me.btnSummary.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSummary.Font = New System.Drawing.Font("Cambria", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSummary.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.btnSummary.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_summary_32
-        Me.btnSummary.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSummary.Location = New System.Drawing.Point(0, 219)
-        Me.btnSummary.Name = "btnSummary"
-        Me.btnSummary.Size = New System.Drawing.Size(183, 73)
-        Me.btnSummary.TabIndex = 16
-        Me.btnSummary.Text = "Summary"
-        Me.btnSummary.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnSummary.UseVisualStyleBackColor = True
+        Me.lblUser.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblUser.AutoSize = True
+        Me.lblUser.Font = New System.Drawing.Font("Montserrat ExtraBold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUser.Location = New System.Drawing.Point(20, 26)
+        Me.lblUser.Name = "lblUser"
+        Me.lblUser.Size = New System.Drawing.Size(223, 51)
+        Me.lblUser.TabIndex = 10
+        Me.lblUser.Text = "Good Day,"
+        Me.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel1
         '
@@ -312,8 +312,8 @@ Partial Class StudentForm
         Me.pnlMenu.ResumeLayout(False)
         Me.pnlControl.ResumeLayout(False)
         Me.pnlSidebarTop.ResumeLayout(False)
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel4.ResumeLayout(False)
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlDisplay.ResumeLayout(False)
         Me.pnlDisplay.PerformLayout()
         Me.Guna2Panel1.ResumeLayout(False)
@@ -326,7 +326,6 @@ Partial Class StudentForm
     Friend WithEvents pnlSidebarTop As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
     Friend WithEvents btnSlider As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btnHome As Button
     Friend WithEvents btnLogout As Button
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2Panel4 As Guna.UI2.WinForms.Guna2Panel
@@ -335,9 +334,10 @@ Partial Class StudentForm
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents MonthCalendar1 As MonthCalendar
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblUser As Label
     Friend WithEvents btnSummary As Button
     Friend WithEvents btnCourse As Button
     Friend WithEvents btnAccount As Button
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents btnHome As Button
 End Class

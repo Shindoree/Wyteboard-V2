@@ -141,7 +141,4 @@ Public Class CourseForm
         lblUser.Text = "Hello " & FirstName & ", Enjoy your day!"
     End Sub
 
-    Private Sub dgViewGrade_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
-
-    End Sub
 End Class

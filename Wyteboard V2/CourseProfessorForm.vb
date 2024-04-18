@@ -4,6 +4,7 @@ Imports MySql.Data.MySqlClient
 Public Class CourseProfessorForm
     Public Property Username As String
     Public Property FirstName As String
+    Private isLoadingData As Boolean = False
 
     Private Sub CourseProfessorForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Form load code here
@@ -52,17 +53,25 @@ Public Class CourseProfessorForm
                     cbxSubject.SelectedIndex = -1
                 End Using
             End Using
+
+            ' Refresh DataGridView and chart after adding a new user
+            LoadDataIntoDataGridView(username)
+            UpdateChartData()
+
         Catch ex As Exception
             ' Display error message if insertion fails
             MessageBox.Show("Error inserting data: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
     Public Sub LoadDataIntoDataGridView(username As String)
         Dim myConnection As MySqlConnection
         Dim myCommand As MySqlCommand
         Dim myAdapter As New MySqlDataAdapter
         Dim myDataSet As New DataSet
 
+        If isLoadingData Then Return ' If already loading data, exit the method to avoid reentrant calls
+        isLoadingData = True ' Set the flag to indicate that data loading is in progress
         ' Connection string to your database
         Dim connectionString As String = "Database=wyteboard;" &
         "Data Source=localhost;" &
@@ -135,10 +144,11 @@ Public Class CourseProfessorForm
             myConnection.Close()
         End Try
         ComputeFinalGrade()
+        isLoadingData = False
     End Sub
+
     Public Sub ComputeFinalGrade()
         For Each row As DataGridViewRow In dgViewGrade.Rows
-
             Dim oeTotal As Double = 0
             Dim ptTotal As Double = 0
             Dim prelimExam As Double = 0
@@ -153,7 +163,6 @@ Public Class CourseProfessorForm
                 End If
             Next
 
-
             Dim ptCount As Integer = 0
             For i As Integer = 1 To 3
                 Dim ptCellValue As Object = row.Cells("pt" & i).Value
@@ -163,12 +172,10 @@ Public Class CourseProfessorForm
                 End If
             Next
 
-
             Dim prelimExamCellValue As Object = row.Cells("prelimexam").Value
             If prelimExamCellValue IsNot DBNull.Value AndAlso IsNumeric(prelimExamCellValue) Then
                 prelimExam = CDbl(prelimExamCellValue)
             End If
-
 
             Dim midtermExamCellValue As Object = row.Cells("midtermexam").Value
             If midtermExamCellValue IsNot DBNull.Value AndAlso IsNumeric(midtermExamCellValue) Then
@@ -186,7 +193,80 @@ Public Class CourseProfessorForm
         Next
     End Sub
 
-    Private Sub dgViewGrade_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgViewGrade.CellContentClick
+    Private Sub dgViewGrade_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles dgViewGrade.CellEndEdit
+        ' Get the edited value
+        Dim editedValue As Object = dgViewGrade.Rows(e.RowIndex).Cells(e.ColumnIndex).Value
+
+        ' Get the corresponding column name
+        Dim columnName As String = dgViewGrade.Columns(e.ColumnIndex).Name
+
+        ' Update the value in the database
+        UpdateDatabase(editedValue, columnName, e.RowIndex)
+    End Sub
+
+    Private Sub UpdateDatabase(value As Object, columnName As String, rowIndex As Integer)
+        ' Database connection string
+        Dim connectionString As String = "Database=wyteboard;Data Source=localhost;User id=admin;Password=IamFinal0904;Port=3306;Command Timeout=600;"
+
+        ' SQL query to update the value in the database
+        Dim query As String = $"UPDATE tb_course SET {columnName} = @value WHERE subject = 'IM1' AND schoolid = @schoolID"
+
+        Try
+            ' Open connection to MySQL database
+            Using connection As New MySqlConnection(connectionString)
+                connection.Open()
+
+                ' Create MySqlCommand
+                Using cmd As New MySqlCommand(query, connection)
+                    ' Add parameters to the command
+                    cmd.Parameters.AddWithValue("@value", value)
+                    ' Assuming schoolid is a unique identifier for the row
+                    cmd.Parameters.AddWithValue("@schoolID", dgViewGrade.Rows(rowIndex).Cells("schoolid").Value)
+
+                    ' Execute the command
+                    cmd.ExecuteNonQuery()
+                End Using
+            End Using
+
+            ' Inform the user that the value has been updated
+            MessageBox.Show("Value updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            ' Update the corresponding cell value in the DataGridView
+            dgViewGrade.Rows(rowIndex).Cells(columnName).Value = value
+
+            ' Recalculate and update final grades
+            ComputeFinalGrade()
+
+            ' Update chart data
+            UpdateChartData()
+        Catch ex As Exception
+            ' Handle exception
+            MessageBox.Show("Error updating value: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+    Private Sub UpdateChartData()
+        ' Clear existing series data
+        chartCourse.Series.Clear()
+
+        ' Repopulate the chart with updated data
+        For Each column As DataGridViewColumn In dgViewGrade.Columns
+            If column.Name <> "schoolid" AndAlso column.Name <> "finalgrade" AndAlso column.Name <> "subject" Then
+                Dim series As New Series()
+                series.Name = column.Name
+                series.ChartType = SeriesChartType.Column
+
+                For Each row As DataGridViewRow In dgViewGrade.Rows
+                    If Not row.IsNewRow Then
+                        series.Points.AddXY(row.Index + 1, row.Cells(column.Name).Value)
+                    End If
+                Next
+
+                chartCourse.Series.Add(series)
+            End If
+        Next
+    End Sub
+
+    Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
 
     End Sub
 End Class

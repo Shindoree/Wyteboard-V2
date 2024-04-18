@@ -171,6 +171,7 @@ Partial Class CourseForm
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgViewGrade.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgViewGrade.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgViewGrade.Enabled = False
         Me.dgViewGrade.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgViewGrade.Location = New System.Drawing.Point(3, 3)
         Me.dgViewGrade.Name = "dgViewGrade"

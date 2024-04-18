@@ -106,9 +106,8 @@ Public Class CourseProfessorForm
             dgViewGrade.Columns("pt2").HeaderText = "PT2"
             dgViewGrade.Columns("pt3").HeaderText = "PT3"
             dgViewGrade.Columns("prelimexam").HeaderText = "Prelim Exam"
-            dgViewGrade.Columns("midtermexam").HeaderText = "midterm Exam"
+            dgViewGrade.Columns("midtermexam").HeaderText = "Midterm Exam"
             dgViewGrade.Columns("finalgrade").HeaderText = "Final Grade"
-
             dgViewGrade.Columns("subject").HeaderText = "Subject"
 
             ' Populate the chart with data of oe, pt, and exam

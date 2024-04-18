@@ -57,7 +57,7 @@ Partial Class CourseProfessorForm
         Me.chartCourse.BackColor = System.Drawing.Color.Transparent
         ChartArea1.Name = "ChartArea1"
         Me.chartCourse.ChartAreas.Add(ChartArea1)
-        Me.chartCourse.Dock = System.Windows.Forms.DockStyle.Top
+        Me.chartCourse.Dock = System.Windows.Forms.DockStyle.Fill
         Me.chartCourse.Enabled = False
         Legend1.Name = "Legend1"
         Me.chartCourse.Legends.Add(Legend1)
@@ -67,7 +67,7 @@ Partial Class CourseProfessorForm
         Series1.Legend = "Legend1"
         Series1.Name = "Series1"
         Me.chartCourse.Series.Add(Series1)
-        Me.chartCourse.Size = New System.Drawing.Size(306, 293)
+        Me.chartCourse.Size = New System.Drawing.Size(1079, 114)
         Me.chartCourse.TabIndex = 1
         Me.chartCourse.Text = "Chart1"
         '
@@ -76,7 +76,7 @@ Partial Class CourseProfessorForm
         Me.lblUser.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblUser.AutoSize = True
         Me.lblUser.Font = New System.Drawing.Font("Montserrat ExtraBold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUser.Location = New System.Drawing.Point(12, 9)
+        Me.lblUser.Location = New System.Drawing.Point(6, 11)
         Me.lblUser.Name = "lblUser"
         Me.lblUser.Size = New System.Drawing.Size(223, 51)
         Me.lblUser.TabIndex = 14
@@ -87,10 +87,10 @@ Partial Class CourseProfessorForm
         '
         Me.Guna2Panel2.BackColor = System.Drawing.SystemColors.Control
         Me.Guna2Panel2.Controls.Add(Me.chartCourse)
-        Me.Guna2Panel2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Guna2Panel2.Location = New System.Drawing.Point(773, 0)
+        Me.Guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Guna2Panel2.Location = New System.Drawing.Point(0, 132)
         Me.Guna2Panel2.Name = "Guna2Panel2"
-        Me.Guna2Panel2.Size = New System.Drawing.Size(306, 635)
+        Me.Guna2Panel2.Size = New System.Drawing.Size(1079, 114)
         Me.Guna2Panel2.TabIndex = 13
         '
         'cbxSubject
@@ -107,7 +107,7 @@ Partial Class CourseProfessorForm
         Me.cbxSubject.ForeColor = System.Drawing.Color.Black
         Me.cbxSubject.ItemHeight = 30
         Me.cbxSubject.Items.AddRange(New Object() {"IM1"})
-        Me.cbxSubject.Location = New System.Drawing.Point(393, 91)
+        Me.cbxSubject.Location = New System.Drawing.Point(393, 88)
         Me.cbxSubject.Name = "cbxSubject"
         Me.cbxSubject.Size = New System.Drawing.Size(157, 36)
         Me.cbxSubject.TabIndex = 57
@@ -127,7 +127,7 @@ Partial Class CourseProfessorForm
         Me.txtEmail.Font = New System.Drawing.Font("Montserrat", 8.249999!)
         Me.txtEmail.ForeColor = System.Drawing.Color.DimGray
         Me.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtEmail.Location = New System.Drawing.Point(15, 89)
+        Me.txtEmail.Location = New System.Drawing.Point(15, 86)
         Me.txtEmail.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -150,7 +150,7 @@ Partial Class CourseProfessorForm
         Me.btnUpdate.FillColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.btnUpdate.Font = New System.Drawing.Font("Montserrat SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUpdate.ForeColor = System.Drawing.Color.White
-        Me.btnUpdate.Location = New System.Drawing.Point(556, 86)
+        Me.btnUpdate.Location = New System.Drawing.Point(556, 83)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(180, 46)
         Me.btnUpdate.TabIndex = 58
@@ -172,7 +172,7 @@ Partial Class CourseProfessorForm
         Me.txtSchoolID.Font = New System.Drawing.Font("Montserrat", 8.249999!)
         Me.txtSchoolID.ForeColor = System.Drawing.Color.DimGray
         Me.txtSchoolID.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtSchoolID.Location = New System.Drawing.Point(203, 89)
+        Me.txtSchoolID.Location = New System.Drawing.Point(203, 86)
         Me.txtSchoolID.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.txtSchoolID.Name = "txtSchoolID"
         Me.txtSchoolID.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -189,7 +189,7 @@ Partial Class CourseProfessorForm
         Me.lblInfo.BackColor = System.Drawing.SystemColors.Control
         Me.lblInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer))
-        Me.lblInfo.Location = New System.Drawing.Point(7, 65)
+        Me.lblInfo.Location = New System.Drawing.Point(12, 62)
         Me.lblInfo.Name = "lblInfo"
         Me.lblInfo.Size = New System.Drawing.Size(200, 17)
         Me.lblInfo.TabIndex = 60
@@ -203,9 +203,10 @@ Partial Class CourseProfessorForm
         Me.Guna2Panel3.Controls.Add(Me.txtSchoolID)
         Me.Guna2Panel3.Controls.Add(Me.lblUser)
         Me.Guna2Panel3.Controls.Add(Me.btnUpdate)
+        Me.Guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Guna2Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel3.Name = "Guna2Panel3"
-        Me.Guna2Panel3.Size = New System.Drawing.Size(773, 135)
+        Me.Guna2Panel3.Size = New System.Drawing.Size(1079, 132)
         Me.Guna2Panel3.TabIndex = 61
         '
         'cntrlTabCourses
@@ -217,7 +218,7 @@ Partial Class CourseProfessorForm
         Me.cntrlTabCourses.Location = New System.Drawing.Point(0, 0)
         Me.cntrlTabCourses.Name = "cntrlTabCourses"
         Me.cntrlTabCourses.SelectedIndex = 0
-        Me.cntrlTabCourses.Size = New System.Drawing.Size(773, 500)
+        Me.cntrlTabCourses.Size = New System.Drawing.Size(1079, 394)
         Me.cntrlTabCourses.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty
         Me.cntrlTabCourses.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.cntrlTabCourses.TabButtonHoverState.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
@@ -243,21 +244,21 @@ Partial Class CourseProfessorForm
         Me.TabPage2.Location = New System.Drawing.Point(4, 44)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(683, 401)
+        Me.TabPage2.Size = New System.Drawing.Size(1071, 346)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "TabPage2"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'TabPage1
         '
+        Me.TabPage1.BackColor = System.Drawing.SystemColors.Control
         Me.TabPage1.Controls.Add(Me.dgViewGrade)
         Me.TabPage1.Location = New System.Drawing.Point(4, 44)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(765, 452)
+        Me.TabPage1.Size = New System.Drawing.Size(1071, 346)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "TabPage1"
-        Me.TabPage1.UseVisualStyleBackColor = True
         '
         'dgViewGrade
         '
@@ -296,7 +297,7 @@ Partial Class CourseProfessorForm
         Me.dgViewGrade.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgViewGrade.RowHeadersVisible = False
         Me.dgViewGrade.RowHeadersWidth = 20
-        Me.dgViewGrade.Size = New System.Drawing.Size(759, 446)
+        Me.dgViewGrade.Size = New System.Drawing.Size(1065, 340)
         Me.dgViewGrade.TabIndex = 0
         Me.dgViewGrade.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.dgViewGrade.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -322,11 +323,12 @@ Partial Class CourseProfessorForm
         '
         'Guna2Panel1
         '
-        Me.Guna2Panel1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Guna2Panel1.BackColor = System.Drawing.Color.White
         Me.Guna2Panel1.Controls.Add(Me.cntrlTabCourses)
-        Me.Guna2Panel1.Location = New System.Drawing.Point(0, 135)
+        Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Guna2Panel1.Location = New System.Drawing.Point(0, 246)
         Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.Size = New System.Drawing.Size(773, 500)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(1079, 394)
         Me.Guna2Panel1.TabIndex = 12
         '
         'CourseProfessorForm
@@ -334,9 +336,9 @@ Partial Class CourseProfessorForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1079, 635)
-        Me.Controls.Add(Me.Guna2Panel3)
-        Me.Controls.Add(Me.Guna2Panel2)
         Me.Controls.Add(Me.Guna2Panel1)
+        Me.Controls.Add(Me.Guna2Panel2)
+        Me.Controls.Add(Me.Guna2Panel3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "CourseProfessorForm"
         CType(Me.chartCourse, System.ComponentModel.ISupportInitialize).EndInit()

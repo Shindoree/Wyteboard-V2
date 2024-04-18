@@ -1,6 +1,10 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports System.Windows.Forms.DataVisualization.Charting
+
 Public Class CourseForm
+    Public Property FirstName As String
     Public Property Username As String
+
     Public Sub LoadDataIntoDataGridView(username As String)
         Dim myConnection As MySqlConnection
         Dim myCommand As MySqlCommand
@@ -20,7 +24,7 @@ Public Class CourseForm
             myConnection.Open()
 
             ' Use parameters to prevent SQL injection
-            Dim query As String = "SELECT schoolid, oe, pt, exam, finalgrade FROM wyteboard.tb_course1 WHERE username = @username"
+            Dim query As String = "SELECT schoolid, oe, pt, exam, finalgrade, subject FROM wyteboard.tb_course1 WHERE username = @username"
 
             myCommand = New MySqlCommand(query, myConnection)
             myCommand.Parameters.AddWithValue("@username", username) ' Use the provided username
@@ -40,11 +44,45 @@ Public Class CourseForm
             dgViewGrade.Columns("pt").HeaderText = "Performance Task"
             dgViewGrade.Columns("exam").HeaderText = "Exam"
             dgViewGrade.Columns("finalgrade").HeaderText = "Final Grade"
+            dgViewGrade.Columns("subject").HeaderText = "Subject"
+
+            ' Populate the chart with data of oe, pt, and exam
+            If myDataSet.Tables("myData").Rows.Count > 0 Then
+                chartCourse.Series.Clear()
+                For Each column As DataColumn In myDataSet.Tables("myData").Columns
+                    If column.ColumnName <> "schoolid" AndAlso column.ColumnName <> "finalgrade" AndAlso column.ColumnName <> "subject" Then
+                        Dim series As New Series()
+                        series.Name = column.ColumnName
+                        series.ChartType = SeriesChartType.Column
+                        For i As Integer = 0 To myDataSet.Tables("myData").Rows.Count - 1
+                            series.Points.AddXY(i + 1, myDataSet.Tables("myData").Rows(i)(column.ColumnName))
+                        Next
+                        chartCourse.Series.Add(series)
+                    End If
+                Next
+
+                ' Set TabPage1 text to the subject from the first row
+                TabPage1.Text = myDataSet.Tables("myData").Rows(0)("subject").ToString()
+            End If
 
         Catch ex As Exception
             MsgBox("Error loading data: " & ex.Message)
         Finally
             myConnection.Close()
         End Try
+    End Sub
+
+    Private Sub CourseForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Call the method to load data into DataGridView
+        LoadDataIntoDataGridView(Username)
+        lblUser.Text = "Hello " & FirstName & ", Enjoy your day!"
+    End Sub
+
+    Private Sub dgViewGrade_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgViewGrade.CellContentClick
+
+    End Sub
+
+    Private Sub lblUser_Click(sender As Object, e As EventArgs) Handles lblUser.Click
+
     End Sub
 End Class

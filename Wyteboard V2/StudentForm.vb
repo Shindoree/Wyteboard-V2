@@ -31,6 +31,7 @@
             Case "btnCourse"
                 If CourseForm Is Nothing Then
                     CourseForm = New CourseForm()
+                    CourseForm.FirstName = Me.FirstName ' Pass the first name to HomeForm
                     CourseForm.Username = Me.Username ' Pass the username to CourseForm
                 End If
                 ' Always load user data when opening the CourseForm

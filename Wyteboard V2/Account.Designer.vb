@@ -44,12 +44,12 @@ Partial Class Account
         Me.txtLastname = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtSchoolID = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtEmail = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.imgLock = New Guna.UI2.WinForms.Guna2ImageButton()
-        Me.imgLockConfPass = New Guna.UI2.WinForms.Guna2ImageButton()
-        Me.imgLockAnswer = New Guna.UI2.WinForms.Guna2ImageButton()
-        Me.imgLockConfirmAnswer = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.lblInfo = New System.Windows.Forms.Label()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.imgLock = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.imgLockConfirmAnswer = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.imgLockAnswer = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.imgLockConfPass = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -433,6 +433,35 @@ Partial Class Account
         Me.txtEmail.Size = New System.Drawing.Size(236, 36)
         Me.txtEmail.TabIndex = 27
         '
+        'lblInfo
+        '
+        Me.lblInfo.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblInfo.AutoSize = True
+        Me.lblInfo.BackColor = System.Drawing.Color.Transparent
+        Me.lblInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer))
+        Me.lblInfo.Location = New System.Drawing.Point(446, 556)
+        Me.lblInfo.Name = "lblInfo"
+        Me.lblInfo.Size = New System.Drawing.Size(239, 17)
+        Me.lblInfo.TabIndex = 54
+        Me.lblInfo.Text = "Please make 2 Factor Authentication"
+        '
+        'Guna2Panel1
+        '
+        Me.Guna2Panel1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Guna2Panel1.Controls.Add(Me.imgLock)
+        Me.Guna2Panel1.Controls.Add(Me.imgLockConfirmAnswer)
+        Me.Guna2Panel1.Controls.Add(Me.txtPassword)
+        Me.Guna2Panel1.Controls.Add(Me.imgLockAnswer)
+        Me.Guna2Panel1.Controls.Add(Me.imgLockConfPass)
+        Me.Guna2Panel1.Controls.Add(Me.txtConfirmPass)
+        Me.Guna2Panel1.Controls.Add(Me.txtAnswer)
+        Me.Guna2Panel1.Controls.Add(Me.txtConfirmAnswer)
+        Me.Guna2Panel1.Location = New System.Drawing.Point(88, 52)
+        Me.Guna2Panel1.Name = "Guna2Panel1"
+        Me.Guna2Panel1.Size = New System.Drawing.Size(903, 542)
+        Me.Guna2Panel1.TabIndex = 55
+        '
         'imgLock
         '
         Me.imgLock.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -450,42 +479,6 @@ Partial Class Account
         Me.imgLock.Size = New System.Drawing.Size(37, 33)
         Me.imgLock.TabIndex = 50
         Me.imgLock.UseTransparentBackground = True
-        '
-        'imgLockConfPass
-        '
-        Me.imgLockConfPass.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.imgLockConfPass.BackColor = System.Drawing.Color.Transparent
-        Me.imgLockConfPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.imgLockConfPass.CheckedState.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockConfPass.HoverState.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockConfPass.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_unlocked_32__1_
-        Me.imgLockConfPass.ImageOffset = New System.Drawing.Point(0, 0)
-        Me.imgLockConfPass.ImageRotate = 0!
-        Me.imgLockConfPass.ImageSize = New System.Drawing.Size(28, 28)
-        Me.imgLockConfPass.Location = New System.Drawing.Point(713, 212)
-        Me.imgLockConfPass.Name = "imgLockConfPass"
-        Me.imgLockConfPass.PressedState.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockConfPass.Size = New System.Drawing.Size(37, 33)
-        Me.imgLockConfPass.TabIndex = 51
-        Me.imgLockConfPass.UseTransparentBackground = True
-        '
-        'imgLockAnswer
-        '
-        Me.imgLockAnswer.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.imgLockAnswer.BackColor = System.Drawing.Color.Transparent
-        Me.imgLockAnswer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.imgLockAnswer.CheckedState.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockAnswer.HoverState.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockAnswer.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_unlocked_32__1_
-        Me.imgLockAnswer.ImageOffset = New System.Drawing.Point(0, 0)
-        Me.imgLockAnswer.ImageRotate = 0!
-        Me.imgLockAnswer.ImageSize = New System.Drawing.Size(28, 28)
-        Me.imgLockAnswer.Location = New System.Drawing.Point(713, 330)
-        Me.imgLockAnswer.Name = "imgLockAnswer"
-        Me.imgLockAnswer.PressedState.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockAnswer.Size = New System.Drawing.Size(37, 33)
-        Me.imgLockAnswer.TabIndex = 52
-        Me.imgLockAnswer.UseTransparentBackground = True
         '
         'imgLockConfirmAnswer
         '
@@ -505,34 +498,41 @@ Partial Class Account
         Me.imgLockConfirmAnswer.TabIndex = 53
         Me.imgLockConfirmAnswer.UseTransparentBackground = True
         '
-        'lblInfo
+        'imgLockAnswer
         '
-        Me.lblInfo.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblInfo.AutoSize = True
-        Me.lblInfo.BackColor = System.Drawing.Color.Transparent
-        Me.lblInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer))
-        Me.lblInfo.Location = New System.Drawing.Point(446, 556)
-        Me.lblInfo.Name = "lblInfo"
-        Me.lblInfo.Size = New System.Drawing.Size(12, 17)
-        Me.lblInfo.TabIndex = 54
-        Me.lblInfo.Text = "."
+        Me.imgLockAnswer.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.imgLockAnswer.BackColor = System.Drawing.Color.Transparent
+        Me.imgLockAnswer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.imgLockAnswer.CheckedState.ImageSize = New System.Drawing.Size(32, 33)
+        Me.imgLockAnswer.HoverState.ImageSize = New System.Drawing.Size(32, 33)
+        Me.imgLockAnswer.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_unlocked_32__1_
+        Me.imgLockAnswer.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.imgLockAnswer.ImageRotate = 0!
+        Me.imgLockAnswer.ImageSize = New System.Drawing.Size(28, 28)
+        Me.imgLockAnswer.Location = New System.Drawing.Point(713, 330)
+        Me.imgLockAnswer.Name = "imgLockAnswer"
+        Me.imgLockAnswer.PressedState.ImageSize = New System.Drawing.Size(32, 33)
+        Me.imgLockAnswer.Size = New System.Drawing.Size(37, 33)
+        Me.imgLockAnswer.TabIndex = 52
+        Me.imgLockAnswer.UseTransparentBackground = True
         '
-        'Guna2Panel1
+        'imgLockConfPass
         '
-        Me.Guna2Panel1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Guna2Panel1.Controls.Add(Me.imgLock)
-        Me.Guna2Panel1.Controls.Add(Me.imgLockConfirmAnswer)
-        Me.Guna2Panel1.Controls.Add(Me.txtPassword)
-        Me.Guna2Panel1.Controls.Add(Me.imgLockAnswer)
-        Me.Guna2Panel1.Controls.Add(Me.imgLockConfPass)
-        Me.Guna2Panel1.Controls.Add(Me.txtConfirmPass)
-        Me.Guna2Panel1.Controls.Add(Me.txtAnswer)
-        Me.Guna2Panel1.Controls.Add(Me.txtConfirmAnswer)
-        Me.Guna2Panel1.Location = New System.Drawing.Point(88, 52)
-        Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.Size = New System.Drawing.Size(903, 542)
-        Me.Guna2Panel1.TabIndex = 55
+        Me.imgLockConfPass.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.imgLockConfPass.BackColor = System.Drawing.Color.Transparent
+        Me.imgLockConfPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.imgLockConfPass.CheckedState.ImageSize = New System.Drawing.Size(32, 33)
+        Me.imgLockConfPass.HoverState.ImageSize = New System.Drawing.Size(32, 33)
+        Me.imgLockConfPass.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_unlocked_32__1_
+        Me.imgLockConfPass.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.imgLockConfPass.ImageRotate = 0!
+        Me.imgLockConfPass.ImageSize = New System.Drawing.Size(28, 28)
+        Me.imgLockConfPass.Location = New System.Drawing.Point(713, 212)
+        Me.imgLockConfPass.Name = "imgLockConfPass"
+        Me.imgLockConfPass.PressedState.ImageSize = New System.Drawing.Size(32, 33)
+        Me.imgLockConfPass.Size = New System.Drawing.Size(37, 33)
+        Me.imgLockConfPass.TabIndex = 51
+        Me.imgLockConfPass.UseTransparentBackground = True
         '
         'Account
         '

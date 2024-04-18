@@ -67,7 +67,7 @@ Public Class LoginForm
 
     Function GetUserType(email As String, password As String) As String
         Dim connectionString As String = "Database=wyteboard;Data Source=localhost;User id=admin;Password=IamFinal0904;Port=3306;Command Timeout=600;"
-        Dim query As String = "SELECT type FROM wyteboard.tb_users WHERE email = @email AND password = @password"
+        Dim query As String = "SELECT type FROM wyteboard.tb_user WHERE email = @email AND password = @password"
 
         Try
             Using myConnection As New MySqlConnection(connectionString)
@@ -86,7 +86,7 @@ Public Class LoginForm
     Function GetFirstName(email As String) As String
         Dim firstName As String = ""
         Dim connectionString As String = "Database=wyteboard;Data Source=localhost;User id=admin;Password=IamFinal0904;Port=3306;Command Timeout=600;"
-        Dim query As String = "SELECT firstname FROM tb_users WHERE email = @email"
+        Dim query As String = "SELECT firstname FROM tb_user WHERE email = @email"
 
         Try
             Using myConnection As New MySqlConnection(connectionString)

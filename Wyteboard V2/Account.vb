@@ -12,7 +12,7 @@ Public Class Account
     End Sub
     Public Sub LoadUserData(email As String)
         Dim connectionString As String = "Database=wyteboard;Data Source=localhost;User id=admin;Password=IamFinal0904;Port=3306;Command Timeout=600"
-        Dim query As String = "SELECT * FROM wyteboard.tb_users WHERE email = @email"
+        Dim query As String = "SELECT * FROM wyteboard.tb_user WHERE email = @email"
 
         Try
             Using myConnection As New MySqlConnection(connectionString)
@@ -38,7 +38,7 @@ Public Class Account
     End Sub
     Private Sub UpdateUserData()
         Dim connectionString As String = "Database=wyteboard;Data Source=localhost;User id=admin;Password=IamFinal0904;Port=3306;Command Timeout=600"
-        Dim query As String = "UPDATE wyteboard.tb_users SET schoolid = @schoolid, firstname = @firstname, lastname = @lastname, password = @password, question = @question, answer = @answer, type = @type WHERE email = @email"
+        Dim query As String = "UPDATE wyteboard.tb_user SET schoolid = @schoolid, firstname = @firstname, lastname = @lastname, password = @password, question = @question, answer = @answer, type = @type WHERE email = @email"
 
         Try
             Using myConnection As New MySqlConnection(connectionString)
@@ -129,7 +129,7 @@ Public Class Account
     End Function
     Private Function GetStoredSchoolID(email As String) As String
         Dim connectionString As String = "Database=wyteboard;Data Source=localhost;User id=admin;Password=IamFinal0904;Port=3306;Command Timeout=600"
-        Dim query As String = "SELECT schoolid FROM wyteboard.tb_users WHERE email = @email"
+        Dim query As String = "SELECT schoolid FROM wyteboard.tb_user WHERE email = @email"
 
         Try
             Using myConnection As New MySqlConnection(connectionString)

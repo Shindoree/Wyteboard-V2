@@ -26,7 +26,7 @@ Public Class CourseProfessorForm
         Dim connectionString As String = "Database=wyteboard;Data Source=localhost;User id=admin;Password=IamFinal0904;Port=3306;Command Timeout=600;"
 
         ' SQL query to insert data into database
-        Dim query As String = "INSERT INTO tb_course1 (schoolid, username, subject) VALUES (@schoolID, @username, @subject)"
+        Dim query As String = "INSERT INTO tb_course (schoolid, username, subject) VALUES (@schoolID, @username, @subject)"
 
         Try
             ' Open connection to MySQL database
@@ -76,7 +76,7 @@ Public Class CourseProfessorForm
             myConnection.Open()
 
             ' Use parameters to prevent SQL injection
-            Dim query As String = "SELECT schoolid, oe1,oe2,oe3,oe4,oe5,oe6,oe7,oe8,oe9,oe10, pt1,pt2,pt3, prelimexam,midtermexam, finalgrade, subject FROM wyteboard.tb_course1 WHERE subject = 'IM1'"
+            Dim query As String = "SELECT schoolid, oe1,oe2,oe3,oe4,oe5,oe6,oe7,oe8,oe9,oe10, pt1,pt2,pt3, prelimexam,midtermexam, finalgrade, subject FROM wyteboard.tb_course WHERE subject = 'IM1'"
 
             myCommand = New MySqlCommand(query, myConnection)
             myCommand.Parameters.AddWithValue("@username", username) ' Use the provided username
@@ -185,5 +185,9 @@ Public Class CourseProfessorForm
 
             row.Cells("finalgrade").Value = finalGrade.ToString("F2") & "%"
         Next
+    End Sub
+
+    Private Sub dgViewGrade_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgViewGrade.CellContentClick
+
     End Sub
 End Class

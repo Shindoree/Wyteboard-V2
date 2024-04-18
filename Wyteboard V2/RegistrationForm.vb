@@ -112,7 +112,7 @@ Public Class RegistrationForm
                 "Port=3306;Command Timeout=600;")
 
             myConnectionx.Open()
-            Dim query As String = "INSERT INTO wyteboard.tb_users (email, firstname, lastname, password, schoolid, timestamp,  type ) VALUES (@email, @firstname, @lastname, @password, @schoolid, @timestamp, @type)"
+            Dim query As String = "INSERT INTO wyteboard.tb_user (email, firstname, lastname, password, schoolid, timestamp,  type ) VALUES (@email, @firstname, @lastname, @password, @schoolid, @timestamp, @type)"
             myCommandx = New MySqlCommand(query, myConnectionx)
 
             myCommandx.Parameters.AddWithValue("@email", txtEmail.Text)

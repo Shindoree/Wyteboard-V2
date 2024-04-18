@@ -13,10 +13,10 @@ Public Class CourseForm
 
         ' Connection string to your database
         Dim connectionString As String = "Database=wyteboard;" &
-            "Data Source=localhost;" &
-            "User id=admin;" &
-            "Password=IamFinal0904;" &
-            "Port=3306;Command Timeout=600;"
+        "Data Source=localhost;" &
+        "User id=admin;" &
+        "Password=IamFinal0904;" &
+        "Port=3306;Command Timeout=600;"
 
         myConnection = New MySqlConnection(connectionString)
 
@@ -24,7 +24,7 @@ Public Class CourseForm
             myConnection.Open()
 
             ' Use parameters to prevent SQL injection
-            Dim query As String = "SELECT schoolid, oe1, pt1, prelimexam, finalgrade, subject FROM wyteboard.tb_course1 WHERE username = @username"
+            Dim query As String = "SELECT schoolid, oe1,oe2,oe3,oe4,oe5,oe6,oe7,oe8,oe9,oe10, pt1,pt2,pt3, prelimexam,midtermexam, finalgrade, subject FROM wyteboard.tb_course WHERE username = @username AND subject = 'IM1'"
 
             myCommand = New MySqlCommand(query, myConnection)
             myCommand.Parameters.AddWithValue("@username", username) ' Use the provided username
@@ -40,10 +40,23 @@ Public Class CourseForm
 
             ' Set the HeaderText for each column
             dgViewGrade.Columns("schoolid").HeaderText = "School ID"
-            dgViewGrade.Columns("oe1").HeaderText = "Outcome Evaluation"
-            dgViewGrade.Columns("pt1").HeaderText = "Performance Task"
-            dgViewGrade.Columns("prelimexam").HeaderText = "Exam"
+            dgViewGrade.Columns("oe1").HeaderText = "OE1"
+            dgViewGrade.Columns("oe2").HeaderText = "OE2"
+            dgViewGrade.Columns("oe3").HeaderText = "OE3"
+            dgViewGrade.Columns("oe4").HeaderText = "OE4"
+            dgViewGrade.Columns("oe5").HeaderText = "OE5"
+            dgViewGrade.Columns("oe6").HeaderText = "OE6"
+            dgViewGrade.Columns("oe7").HeaderText = "OE7"
+            dgViewGrade.Columns("oe8").HeaderText = "OE8"
+            dgViewGrade.Columns("oe9").HeaderText = "OE9"
+            dgViewGrade.Columns("oe10").HeaderText = "OE10"
+            dgViewGrade.Columns("pt1").HeaderText = "PT1"
+            dgViewGrade.Columns("pt2").HeaderText = "PT2"
+            dgViewGrade.Columns("pt3").HeaderText = "PT3"
+            dgViewGrade.Columns("prelimexam").HeaderText = "Prelim Exam"
+            dgViewGrade.Columns("midtermexam").HeaderText = "midterm Exam"
             dgViewGrade.Columns("finalgrade").HeaderText = "Final Grade"
+
             dgViewGrade.Columns("subject").HeaderText = "Subject"
 
             ' Populate the chart with data of oe, pt, and exam
@@ -70,6 +83,56 @@ Public Class CourseForm
         Finally
             myConnection.Close()
         End Try
+        ComputeFinalGrade()
+    End Sub
+    Public Sub ComputeFinalGrade()
+        For Each row As DataGridViewRow In dgViewGrade.Rows
+
+            Dim oeTotal As Double = 0
+            Dim ptTotal As Double = 0
+            Dim prelimExam As Double = 0
+            Dim midtermExam As Double = 0
+
+            Dim oeCount As Integer = 0
+            For i As Integer = 1 To 10
+                Dim oeCellValue As Object = row.Cells("oe" & i).Value
+                If oeCellValue IsNot DBNull.Value AndAlso IsNumeric(oeCellValue) Then
+                    oeTotal += CDbl(oeCellValue)
+                    oeCount += 1
+                End If
+            Next
+
+
+            Dim ptCount As Integer = 0
+            For i As Integer = 1 To 3
+                Dim ptCellValue As Object = row.Cells("pt" & i).Value
+                If ptCellValue IsNot DBNull.Value AndAlso IsNumeric(ptCellValue) Then
+                    ptTotal += CDbl(ptCellValue)
+                    ptCount += 1
+                End If
+            Next
+
+
+            Dim prelimExamCellValue As Object = row.Cells("prelimexam").Value
+            If prelimExamCellValue IsNot DBNull.Value AndAlso IsNumeric(prelimExamCellValue) Then
+                prelimExam = CDbl(prelimExamCellValue)
+            End If
+
+
+            Dim midtermExamCellValue As Object = row.Cells("midtermexam").Value
+            If midtermExamCellValue IsNot DBNull.Value AndAlso IsNumeric(midtermExamCellValue) Then
+                midtermExam = CDbl(midtermExamCellValue)
+            End If
+
+            Dim oePercent As Double = oeTotal / (oeCount * 100) * 100
+            Dim ptPercent As Double = ptTotal / (ptCount * 100) * 100
+            Dim prelimPercent As Double = prelimExam
+            Dim midtermPercent As Double = midtermExam
+
+            Dim finalGrade As Double = (oePercent * 0.2) + (ptPercent * 0.4) + (prelimPercent * 0.2) + (midtermPercent * 0.2)
+
+            row.Cells("finalgrade").Value = finalGrade.ToString("F2") & "%"
+        Next
     End Sub
 
     Private Sub CourseForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -78,35 +141,5 @@ Public Class CourseForm
         lblUser.Text = "Hello " & FirstName & ", Enjoy your day!"
     End Sub
 
-    Private Sub dgViewGrade_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgViewGrade.CellContentClick
 
-    End Sub
-
-    Private Sub lblUser_Click(sender As Object, e As EventArgs) Handles lblUser.Click
-
-    End Sub
-
-    Private Sub cntrlTabCourses_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cntrlTabCourses.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
-
-    End Sub
-
-    Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
-
-    End Sub
-
-    Private Sub chartCourse_Click(sender As Object, e As EventArgs) Handles chartCourse.Click
-
-    End Sub
-
-    Private Sub Guna2Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel2.Paint
-
-    End Sub
-
-    Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
-
-    End Sub
 End Class

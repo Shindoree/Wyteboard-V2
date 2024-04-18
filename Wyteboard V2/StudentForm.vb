@@ -1,5 +1,6 @@
 ﻿Public Class StudentForm
     Public Property Username As String
+    Public Property FirstName As String
     Private account As Account ' Field to store the AccountForm instance
     Private CourseForm As CourseForm
     Private Sub btnSlider_Click(sender As Object, e As EventArgs) Handles btnSlider.Click
@@ -9,7 +10,9 @@
             pnlMenu.Width = 183 ' Set the panel width to a larger value instantly
         End If
     End Sub
-    Private Sub btnOpenChildForm_Click(sender As Object, e As EventArgs) Handles btnAccount.Click, btnSummary.Click, btnCourse.Click
+    Private Sub btnOpenChildForm_Click(sender As Object, e As EventArgs) Handles btnSummary.Click, btnCourse.Click, btnAccount.Click, btnHome.Click
+
+        Console.WriteLine("Button clicked: " & DirectCast(sender, Button).Name)
         Dim btn As Button = DirectCast(sender, Button)
         Dim childForm As Form = Nothing
 
@@ -28,11 +31,16 @@
             Case "btnCourse"
                 If CourseForm Is Nothing Then
                     CourseForm = New CourseForm()
+                    CourseForm.FirstName = Me.FirstName ' Pass the first name to HomeForm
                     CourseForm.Username = Me.Username ' Pass the username to CourseForm
                 End If
                 ' Always load user data when opening the CourseForm
                 CourseForm.LoadDataIntoDataGridView(Me.Username)
                 childForm = CourseForm ' Use the existing CourseForm instance
+            Case "btnHome"
+                Dim homeForm As New HomeForm()
+                homeForm.FirstName = Me.FirstName ' Pass the first name to HomeForm
+                childForm = homeForm
         End Select
 
         ' Open the selected child form
@@ -51,11 +59,13 @@
             btnSummary.Text = ""
             btnLogout.Text = ""
             btnCourse.Text = ""
+            btnHome.Text = ""
         Else
             btnAccount.Text = "Account"
-            btnSummary.Text = "Add Assessments"
+            btnSummary.Text = "Summary"
             btnLogout.Text = "Logout"
-            btnCourse.Text = "Summary"
+            btnCourse.Text = "Course"
+            btnHome.Text = "Home"
         End If
     End Sub
 
@@ -64,8 +74,19 @@
         Dim LoginForm As New LoginForm()
         LoginForm.Show()
     End Sub
+    Private Sub pnlDisplay_Paint(sender As Object, e As PaintEventArgs) Handles pnlDisplay.Paint
+        lblUser.Text = "Welcome, " & FirstName & " 🍆"
+    End Sub
 
-    Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
+    Private Sub lblUser_Click(sender As Object, e As EventArgs) Handles lblUser.Click
+
+    End Sub
+
+    Private Sub Guna2Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel3.Paint
+
+    End Sub
+
+    Private Sub Guna2Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel2.Paint
 
     End Sub
 End Class

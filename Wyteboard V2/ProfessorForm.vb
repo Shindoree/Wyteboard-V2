@@ -1,7 +1,8 @@
 ﻿Public Class ProfessorForm
     Public Property Username As String
+    Public Property FirstName As String
     Private account As Account ' Field to store the AccountForm instance
-    Private CourseForm As CourseForm
+    Private CourseProfessorForm As CourseProfessorForm ' Update the variable type
     Private Sub btnSlider_Click(sender As Object, e As EventArgs) Handles btnSlider.Click
         If pnlMenu.Width > 60 Then
             pnlMenu.Width = 60 ' Set the panel width to a smaller value instantly
@@ -9,7 +10,9 @@
             pnlMenu.Width = 183 ' Set the panel width to a larger value instantly
         End If
     End Sub
-    Private Sub btnOpenChildForm_Click(sender As Object, e As EventArgs) Handles btnAccount.Click, btnSummary.Click, btnCourse.Click
+    Private Sub btnOpenChildForm_Click(sender As Object, e As EventArgs) Handles btnSummary.Click, btnCourse.Click, btnAccount.Click, btnHome.Click
+
+        Console.WriteLine("Button clicked: " & DirectCast(sender, Button).Name)
         Dim btn As Button = DirectCast(sender, Button)
         Dim childForm As Form = Nothing
 
@@ -26,13 +29,18 @@
             Case "btnSummary"
                 childForm = New SummaryForm()
             Case "btnCourse"
-                If CourseForm Is Nothing Then
-                    CourseForm = New CourseForm()
-                    CourseForm.Username = Me.Username ' Pass the username to CourseForm
+                If CourseProfessorForm Is Nothing Then
+                    CourseProfessorForm = New CourseProfessorForm()
+                    CourseProfessorForm.FirstName = Me.FirstName ' Pass the first name to CourseProfessorForm
+                    CourseProfessorForm.Username = Me.Username ' Pass the username to CourseProfessorForm
                 End If
-                ' Always load user data when opening the CourseForm
-                CourseForm.LoadDataIntoDataGridView(Me.Username)
-                childForm = CourseForm ' Use the existing CourseForm instance
+                ' Always load user data when opening the CourseProfessorForm
+                CourseProfessorForm.LoadDataIntoDataGridView(Me.Username)
+                childForm = CourseProfessorForm ' Use the existing CourseProfessorForm instance
+            Case "btnHome"
+                Dim homeForm As New HomeForm()
+                homeForm.FirstName = Me.FirstName ' Pass the first name to HomeForm
+                childForm = homeForm
         End Select
 
         ' Open the selected child form
@@ -51,11 +59,13 @@
             btnSummary.Text = ""
             btnLogout.Text = ""
             btnCourse.Text = ""
+            btnHome.Text = ""
         Else
             btnAccount.Text = "Account"
-            btnSummary.Text = "Add Assessments"
+            btnSummary.Text = "Summary"
             btnLogout.Text = "Logout"
-            btnCourse.Text = "Summary"
+            btnCourse.Text = "Course"
+            btnHome.Text = "Home"
         End If
     End Sub
 
@@ -64,60 +74,7 @@
         Dim LoginForm As New LoginForm()
         LoginForm.Show()
     End Sub
-
-    Private Sub pnlDisplay_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Guna2PictureBox1_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox1.Click
-
-    End Sub
-
-    Private Sub StudentForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub pnlMenu_Paint(sender As Object, e As PaintEventArgs) Handles pnlMenu.Paint
-
-    End Sub
-
-    Private Sub pnlControl_Paint(sender As Object, e As PaintEventArgs) Handles pnlControl.Paint
-
-    End Sub
-
-    Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
-
-    End Sub
-
-    Private Sub pnlSidebarTop_Paint(sender As Object, e As PaintEventArgs) Handles pnlSidebarTop.Paint
-
-    End Sub
-
-    Private Sub Guna2Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel4.Paint
-
-    End Sub
-
-    Private Sub pnlDisplay_Paint_1(sender As Object, e As PaintEventArgs) Handles pnlDisplay.Paint
-
-    End Sub
-
-    Private Sub Guna2Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel3.Paint
-
-    End Sub
-
-    Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
-
-    End Sub
-
-    Private Sub MonthCalendar1_DateChanged(sender As Object, e As DateRangeEventArgs) Handles MonthCalendar1.DateChanged
-
-    End Sub
-
-    Private Sub Guna2Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel2.Paint
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
+    Private Sub pnlDisplay_Paint(sender As Object, e As PaintEventArgs) Handles pnlDisplay.Paint
+        lblUser.Text = "Welcome, " & FirstName & " 🍆"
     End Sub
 End Class

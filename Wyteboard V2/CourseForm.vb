@@ -24,7 +24,7 @@ Public Class CourseForm
             myConnection.Open()
 
             ' Use parameters to prevent SQL injection
-            Dim query As String = "SELECT schoolid, oe, pt, exam, finalgrade, subject FROM wyteboard.tb_course1 WHERE username = @username"
+            Dim query As String = "SELECT schoolid, oe1, pt1, prelimexam, finalgrade, subject FROM wyteboard.tb_course1 WHERE username = @username"
 
             myCommand = New MySqlCommand(query, myConnection)
             myCommand.Parameters.AddWithValue("@username", username) ' Use the provided username
@@ -40,9 +40,9 @@ Public Class CourseForm
 
             ' Set the HeaderText for each column
             dgViewGrade.Columns("schoolid").HeaderText = "School ID"
-            dgViewGrade.Columns("oe").HeaderText = "Outcome Evaluation"
-            dgViewGrade.Columns("pt").HeaderText = "Performance Task"
-            dgViewGrade.Columns("exam").HeaderText = "Exam"
+            dgViewGrade.Columns("oe1").HeaderText = "Outcome Evaluation"
+            dgViewGrade.Columns("pt1").HeaderText = "Performance Task"
+            dgViewGrade.Columns("prelimexam").HeaderText = "Exam"
             dgViewGrade.Columns("finalgrade").HeaderText = "Final Grade"
             dgViewGrade.Columns("subject").HeaderText = "Subject"
 
@@ -83,6 +83,30 @@ Public Class CourseForm
     End Sub
 
     Private Sub lblUser_Click(sender As Object, e As EventArgs) Handles lblUser.Click
+
+    End Sub
+
+    Private Sub cntrlTabCourses_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cntrlTabCourses.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
+
+    End Sub
+
+    Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
+
+    End Sub
+
+    Private Sub chartCourse_Click(sender As Object, e As EventArgs) Handles chartCourse.Click
+
+    End Sub
+
+    Private Sub Guna2Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel2.Paint
+
+    End Sub
+
+    Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
 
     End Sub
 End Class

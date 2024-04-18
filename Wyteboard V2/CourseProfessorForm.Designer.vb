@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class CourseForm
+Partial Class CourseProfessorForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -25,6 +25,7 @@ Partial Class CourseForm
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
@@ -34,8 +35,13 @@ Partial Class CourseForm
         Me.dgViewGrade = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.chartCourse = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.lblUser = New System.Windows.Forms.Label()
+        Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.cbxSubject = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.txtEmail = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.btnUpdate = New Guna.UI2.WinForms.Guna2Button()
+        Me.txtSchoolID = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.lblInfo = New System.Windows.Forms.Label()
         Me.Guna2Panel1.SuspendLayout()
         Me.cntrlTabCourses.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -47,10 +53,10 @@ Partial Class CourseForm
         'Guna2Panel1
         '
         Me.Guna2Panel1.Controls.Add(Me.cntrlTabCourses)
-        Me.Guna2Panel1.Location = New System.Drawing.Point(12, 177)
+        Me.Guna2Panel1.Location = New System.Drawing.Point(10, 177)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(759, 446)
-        Me.Guna2Panel1.TabIndex = 0
+        Me.Guna2Panel1.TabIndex = 12
         '
         'cntrlTabCourses
         '
@@ -105,7 +111,7 @@ Partial Class CourseForm
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgViewGrade.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.dgViewGrade.ColumnHeadersHeight = 20
+        Me.dgViewGrade.ColumnHeadersHeight = 40
         Me.dgViewGrade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
@@ -116,12 +122,20 @@ Partial Class CourseForm
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgViewGrade.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgViewGrade.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgViewGrade.Enabled = False
         Me.dgViewGrade.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgViewGrade.Location = New System.Drawing.Point(3, 3)
         Me.dgViewGrade.Name = "dgViewGrade"
         Me.dgViewGrade.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgViewGrade.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgViewGrade.RowHeadersVisible = False
+        Me.dgViewGrade.RowHeadersWidth = 20
         Me.dgViewGrade.Size = New System.Drawing.Size(745, 392)
         Me.dgViewGrade.TabIndex = 0
         Me.dgViewGrade.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
@@ -136,7 +150,7 @@ Partial Class CourseForm
         Me.dgViewGrade.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgViewGrade.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
         Me.dgViewGrade.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.dgViewGrade.ThemeStyle.HeaderStyle.Height = 20
+        Me.dgViewGrade.ThemeStyle.HeaderStyle.Height = 40
         Me.dgViewGrade.ThemeStyle.ReadOnly = False
         Me.dgViewGrade.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
         Me.dgViewGrade.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
@@ -175,6 +189,18 @@ Partial Class CourseForm
         Me.chartCourse.TabIndex = 1
         Me.chartCourse.Text = "Chart1"
         '
+        'lblUser
+        '
+        Me.lblUser.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblUser.AutoSize = True
+        Me.lblUser.Font = New System.Drawing.Font("Montserrat ExtraBold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUser.Location = New System.Drawing.Point(1, 9)
+        Me.lblUser.Name = "lblUser"
+        Me.lblUser.Size = New System.Drawing.Size(223, 51)
+        Me.lblUser.TabIndex = 14
+        Me.lblUser.Text = "Good Day,"
+        Me.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Guna2Panel2
         '
         Me.Guna2Panel2.BackColor = System.Drawing.SystemColors.Control
@@ -183,31 +209,125 @@ Partial Class CourseForm
         Me.Guna2Panel2.Location = New System.Drawing.Point(773, 0)
         Me.Guna2Panel2.Name = "Guna2Panel2"
         Me.Guna2Panel2.Size = New System.Drawing.Size(306, 635)
-        Me.Guna2Panel2.TabIndex = 2
+        Me.Guna2Panel2.TabIndex = 13
         '
-        'lblUser
+        'cbxSubject
         '
-        Me.lblUser.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblUser.AutoSize = True
-        Me.lblUser.Font = New System.Drawing.Font("Montserrat ExtraBold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUser.Location = New System.Drawing.Point(3, 9)
-        Me.lblUser.Name = "lblUser"
-        Me.lblUser.Size = New System.Drawing.Size(223, 51)
-        Me.lblUser.TabIndex = 11
-        Me.lblUser.Text = "Good Day,"
-        Me.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.cbxSubject.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.cbxSubject.BackColor = System.Drawing.Color.Transparent
+        Me.cbxSubject.BorderColor = System.Drawing.Color.FromArgb(CType(CType(154, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.cbxSubject.BorderRadius = 5
+        Me.cbxSubject.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbxSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbxSubject.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cbxSubject.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cbxSubject.Font = New System.Drawing.Font("Montserrat", 9.749999!)
+        Me.cbxSubject.ForeColor = System.Drawing.Color.Black
+        Me.cbxSubject.ItemHeight = 30
+        Me.cbxSubject.Items.AddRange(New Object() {"IM1"})
+        Me.cbxSubject.Location = New System.Drawing.Point(393, 94)
+        Me.cbxSubject.Name = "cbxSubject"
+        Me.cbxSubject.Size = New System.Drawing.Size(166, 36)
+        Me.cbxSubject.TabIndex = 57
         '
-        'CourseForm
+        'txtEmail
+        '
+        Me.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtEmail.BorderColor = System.Drawing.Color.FromArgb(CType(CType(154, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.txtEmail.BorderRadius = 5
+        Me.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtEmail.DefaultText = ""
+        Me.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtEmail.Font = New System.Drawing.Font("Montserrat", 8.249999!)
+        Me.txtEmail.ForeColor = System.Drawing.Color.DimGray
+        Me.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtEmail.Location = New System.Drawing.Point(10, 89)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtEmail.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtEmail.PlaceholderText = "Username"
+        Me.txtEmail.SelectedText = ""
+        Me.txtEmail.Size = New System.Drawing.Size(181, 46)
+        Me.txtEmail.TabIndex = 15
+        '
+        'btnUpdate
+        '
+        Me.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnUpdate.AutoRoundedCorners = True
+        Me.btnUpdate.BackColor = System.Drawing.Color.Transparent
+        Me.btnUpdate.BorderRadius = 22
+        Me.btnUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnUpdate.FillColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.btnUpdate.Font = New System.Drawing.Font("Montserrat SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUpdate.ForeColor = System.Drawing.Color.White
+        Me.btnUpdate.Location = New System.Drawing.Point(582, 89)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(180, 46)
+        Me.btnUpdate.TabIndex = 58
+        Me.btnUpdate.Text = "Add"
+        Me.btnUpdate.UseTransparentBackground = True
+        '
+        'txtSchoolID
+        '
+        Me.txtSchoolID.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtSchoolID.BorderColor = System.Drawing.Color.FromArgb(CType(CType(154, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.txtSchoolID.BorderRadius = 5
+        Me.txtSchoolID.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtSchoolID.DefaultText = ""
+        Me.txtSchoolID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtSchoolID.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtSchoolID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtSchoolID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtSchoolID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtSchoolID.Font = New System.Drawing.Font("Montserrat", 8.249999!)
+        Me.txtSchoolID.ForeColor = System.Drawing.Color.DimGray
+        Me.txtSchoolID.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtSchoolID.Location = New System.Drawing.Point(203, 89)
+        Me.txtSchoolID.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
+        Me.txtSchoolID.Name = "txtSchoolID"
+        Me.txtSchoolID.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtSchoolID.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtSchoolID.PlaceholderText = "SchoolId"
+        Me.txtSchoolID.SelectedText = ""
+        Me.txtSchoolID.Size = New System.Drawing.Size(181, 46)
+        Me.txtSchoolID.TabIndex = 59
+        '
+        'lblInfo
+        '
+        Me.lblInfo.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblInfo.AutoSize = True
+        Me.lblInfo.BackColor = System.Drawing.SystemColors.Control
+        Me.lblInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer))
+        Me.lblInfo.Location = New System.Drawing.Point(7, 65)
+        Me.lblInfo.Name = "lblInfo"
+        Me.lblInfo.Size = New System.Drawing.Size(200, 17)
+        Me.lblInfo.TabIndex = 60
+        Me.lblInfo.Text = "Add new student to the course"
+        '
+        'CourseProfessorForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1079, 635)
+        Me.Controls.Add(Me.lblInfo)
+        Me.Controls.Add(Me.txtSchoolID)
+        Me.Controls.Add(Me.btnUpdate)
+        Me.Controls.Add(Me.cbxSubject)
+        Me.Controls.Add(Me.txtEmail)
+        Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.lblUser)
         Me.Controls.Add(Me.Guna2Panel2)
-        Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "CourseForm"
-        Me.Text = "CourseForm"
+        Me.Name = "CourseProfessorForm"
         Me.Guna2Panel1.ResumeLayout(False)
         Me.cntrlTabCourses.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
@@ -225,6 +345,11 @@ Partial Class CourseForm
     Friend WithEvents dgViewGrade As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents chartCourse As DataVisualization.Charting.Chart
-    Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents lblUser As Label
+    Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents cbxSubject As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents txtEmail As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents btnUpdate As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents txtSchoolID As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents lblInfo As Label
 End Class

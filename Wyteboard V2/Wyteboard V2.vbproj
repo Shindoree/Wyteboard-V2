@@ -212,6 +212,12 @@
     <Compile Include="CourseForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CourseProfessorForm.Designer.vb">
+      <DependentUpon>CourseProfessorForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CourseProfessorForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ForgotPasswordForm.Designer.vb">
       <DependentUpon>ForgotPasswordForm.vb</DependentUpon>
     </Compile>
@@ -284,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CourseForm.resx">
       <DependentUpon>CourseForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseProfessorForm.resx">
+      <DependentUpon>CourseProfessorForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForgotPasswordForm.resx">
       <DependentUpon>ForgotPasswordForm.vb</DependentUpon>

@@ -2,7 +2,7 @@
     Public Property Username As String
     Public Property FirstName As String
     Private account As Account ' Field to store the AccountForm instance
-    Private CourseForm As CourseForm
+    Private CourseProfessorForm As CourseProfessorForm ' Update the variable type
     Private Sub btnSlider_Click(sender As Object, e As EventArgs) Handles btnSlider.Click
         If pnlMenu.Width > 60 Then
             pnlMenu.Width = 60 ' Set the panel width to a smaller value instantly
@@ -29,13 +29,14 @@
             Case "btnSummary"
                 childForm = New SummaryForm()
             Case "btnCourse"
-                If CourseForm Is Nothing Then
-                    CourseForm = New CourseForm()
-                    CourseForm.Username = Me.Username ' Pass the username to CourseForm
+                If CourseProfessorForm Is Nothing Then
+                    CourseProfessorForm = New CourseProfessorForm()
+                    CourseProfessorForm.FirstName = Me.FirstName ' Pass the first name to CourseProfessorForm
+                    CourseProfessorForm.Username = Me.Username ' Pass the username to CourseProfessorForm
                 End If
-                ' Always load user data when opening the CourseForm
-                CourseForm.LoadDataIntoDataGridView(Me.Username)
-                childForm = CourseForm ' Use the existing CourseForm instance
+                ' Always load user data when opening the CourseProfessorForm
+                CourseProfessorForm.LoadDataIntoDataGridView(Me.Username)
+                childForm = CourseProfessorForm ' Use the existing CourseProfessorForm instance
             Case "btnHome"
                 Dim homeForm As New HomeForm()
                 homeForm.FirstName = Me.FirstName ' Pass the first name to HomeForm
@@ -75,9 +76,5 @@
     End Sub
     Private Sub pnlDisplay_Paint(sender As Object, e As PaintEventArgs) Handles pnlDisplay.Paint
         lblUser.Text = "Welcome, " & FirstName & " 🍆"
-    End Sub
-
-    Private Sub lblUser_Click(sender As Object, e As EventArgs) Handles lblUser.Click
-
     End Sub
 End Class

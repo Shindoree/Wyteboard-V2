@@ -81,4 +81,12 @@
     Private Sub lblUser_Click(sender As Object, e As EventArgs) Handles lblUser.Click
 
     End Sub
+
+    Private Sub Guna2Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel3.Paint
+
+    End Sub
+
+    Private Sub Guna2Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel2.Paint
+
+    End Sub
 End Class

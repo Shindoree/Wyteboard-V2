@@ -1,7 +1,6 @@
-﻿Public Class ProfessorForm
+﻿Public Class AdminForm
     Public Property Username As String
     Public Property FirstName As String
-    Public Property LoginAttempts As DataTable
     Private account As Account ' Field to store the AccountForm instance
     Private CourseProfessorForm As CourseProfessorForm ' Update the variable type
     Private Sub btnSlider_Click(sender As Object, e As EventArgs) Handles btnSlider.Click
@@ -40,7 +39,6 @@
                 childForm = CourseProfessorForm ' Use the existing CourseProfessorForm instance
             Case "btnHome"
                 Dim homeForm As New HomeForm()
-                homeForm.Username = Me.Username ' Pass the username to HomeForm
                 homeForm.FirstName = Me.FirstName ' Pass the first name to HomeForm
                 childForm = homeForm
         End Select
@@ -78,58 +76,5 @@
     End Sub
     Private Sub pnlDisplay_Paint(sender As Object, e As PaintEventArgs) Handles pnlDisplay.Paint
         lblUser.Text = "Welcome, " & FirstName & " 🍆"
-    End Sub
-
-    Private Sub ProfessorForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Initialize HomeForm to retrieve login attempts data
-        Dim homeForm As New HomeForm()
-        ' Set the username and first name properties if needed
-        homeForm.Username = Me.Username ' Assuming you have the username property in ProfessorForm
-        homeForm.FirstName = Me.FirstName ' Assuming you have the first name property in ProfessorForm
-        ' Show HomeForm
-        homeForm.Show()
-
-        ' Retrieve login attempts data from HomeForm and assign it to LoginAttempts
-        LoginAttempts = homeForm.GetLatestLoginAttempts(Me.Username)
-
-        ' Display the login attempts data received from HomeForm
-        DisplayLoginAttempts()
-    End Sub
-    Private Sub DisplayLoginAttempts()
-        If LoginAttempts.Rows.Count > 0 Then
-            ' Display the login date and status of the first attempt
-            lblLogin_Time.Text = LoginAttempts.Rows(0)("login_time").ToString()
-            lblLogin_Status.Text = LoginAttempts.Rows(0)("login_status").ToString()
-            SetLabelColor(lblLogin_Status, LoginAttempts.Rows(0)("login_status").ToString())
-
-            ' If there are more than one attempts, display them on additional labels
-            If LoginAttempts.Rows.Count > 1 Then
-                lblLogin_Time1.Text = LoginAttempts.Rows(1)("login_time").ToString()
-                lblLogin_Status1.Text = LoginAttempts.Rows(1)("login_status").ToString()
-                SetLabelColor(lblLogin_Status1, LoginAttempts.Rows(1)("login_status").ToString())
-            End If
-
-            If LoginAttempts.Rows.Count > 2 Then
-                lblLogin_Time2.Text = LoginAttempts.Rows(2)("login_time").ToString()
-                lblLogin_Status2.Text = LoginAttempts.Rows(2)("login_status").ToString()
-                SetLabelColor(lblLogin_Status2, LoginAttempts.Rows(2)("login_status").ToString())
-            End If
-        Else
-            ' No login attempts found, display N/A on labels
-            lblLogin_Time.Text = "N/A"
-            lblLogin_Status.Text = "N/A"
-            lblLogin_Time1.Text = "N/A"
-            lblLogin_Status1.Text = "N/A"
-            lblLogin_Time2.Text = "N/A"
-            lblLogin_Status2.Text = "N/A"
-        End If
-    End Sub
-
-    Private Sub SetLabelColor(label As Label, status As String)
-        If status = "Success" Then
-            label.ForeColor = Color.Green
-        ElseIf status = "Failed" Then
-            label.ForeColor = Color.Red
-        End If
     End Sub
 End Class

@@ -71,7 +71,7 @@ Public Class CourseProfessorForm
             MessageBox.Show($"New {columnType.ToUpper()} column '{columnName}' added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             ' Refresh the entire form to update the DataGridView with the latest data
-            Me.Refresh()
+            ClearAndReloadDataGridView()
 
             Return True
         Catch ex As Exception
@@ -178,6 +178,23 @@ Public Class CourseProfessorForm
                 End If
             Next
 
+            ' Include newly created columns in the computation
+            For Each column As DataGridViewColumn In dgViewGrade.Columns
+                If column.Name.StartsWith("oe") AndAlso column.Index > 10 Then
+                    Dim oeCellValue As Object = row.Cells(column.Index).Value
+                    If oeCellValue IsNot DBNull.Value AndAlso IsNumeric(oeCellValue) Then
+                        oeTotal += CDbl(oeCellValue)
+                        oeCount += 1
+                    End If
+                ElseIf column.Name.StartsWith("pt") AndAlso column.Index > 3 Then
+                    Dim ptCellValue As Object = row.Cells(column.Index).Value
+                    If ptCellValue IsNot DBNull.Value AndAlso IsNumeric(ptCellValue) Then
+                        ptTotal += CDbl(ptCellValue)
+                        ptCount += 1
+                    End If
+                End If
+            Next
+
             Dim prelimExamCellValue As Object = row.Cells("prelimexam").Value
             If prelimExamCellValue IsNot DBNull.Value AndAlso IsNumeric(prelimExamCellValue) Then
                 prelimExam = CDbl(prelimExamCellValue)
@@ -279,7 +296,15 @@ Public Class CourseProfessorForm
     Private Sub dgViewGrade_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgViewGrade.CellContentClick
 
     End Sub
+    Private Sub ClearAndReloadDataGridView()
+        ' Clear existing data from DataGridView
+        dgViewGrade.DataSource = Nothing
+        dgViewGrade.Rows.Clear()
+        dgViewGrade.Columns.Clear()
 
+        ' Reload data into DataGridView
+        LoadDataIntoDataGridView(Username)
+    End Sub
     Private Sub btnAddNew_Click(sender As Object, e As EventArgs) Handles btnAddNew.Click
         ' Add new OE column if the txtNewOE TextBox is not empty
         If Not String.IsNullOrEmpty(txtNewOE.Text.Trim()) Then

@@ -69,7 +69,7 @@ Partial Class RegistrationForm
         Me.pnlOverview.Controls.Add(Me.Label4)
         Me.pnlOverview.Controls.Add(Me.Label5)
         Me.pnlOverview.Controls.Add(Me.Label6)
-        Me.pnlOverview.Location = New System.Drawing.Point(661, 28)
+        Me.pnlOverview.Location = New System.Drawing.Point(661, 31)
         Me.pnlOverview.Name = "pnlOverview"
         Me.pnlOverview.Size = New System.Drawing.Size(587, 662)
         Me.pnlOverview.TabIndex = 0
@@ -155,7 +155,7 @@ Partial Class RegistrationForm
         Me.Guna2Panel2.Controls.Add(Me.btnBack)
         Me.Guna2Panel2.Controls.Add(Me.btnUpdate)
         Me.Guna2Panel2.Controls.Add(Me.lblCreateAcc)
-        Me.Guna2Panel2.Location = New System.Drawing.Point(36, 28)
+        Me.Guna2Panel2.Location = New System.Drawing.Point(36, 31)
         Me.Guna2Panel2.Name = "Guna2Panel2"
         Me.Guna2Panel2.ShadowDecoration.Enabled = True
         Me.Guna2Panel2.Size = New System.Drawing.Size(589, 662)
@@ -530,7 +530,7 @@ Partial Class RegistrationForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(1280, 715)
+        Me.ClientSize = New System.Drawing.Size(1280, 720)
         Me.Controls.Add(Me.Guna2Panel2)
         Me.Controls.Add(Me.pnlOverview)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None

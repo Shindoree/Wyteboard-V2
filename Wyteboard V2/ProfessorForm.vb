@@ -77,7 +77,7 @@
         LoginForm.Show()
     End Sub
     Private Sub pnlDisplay_Paint(sender As Object, e As PaintEventArgs) Handles pnlDisplay.Paint
-        lblUser.Text = "Welcome, " & FirstName & " 🍆"
+        lblUser.Text = "Welcome, " & FirstName & " !"
     End Sub
 
     Private Sub ProfessorForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -86,9 +86,6 @@
         ' Set the username and first name properties if needed
         homeForm.Username = Me.Username ' Assuming you have the username property in ProfessorForm
         homeForm.FirstName = Me.FirstName ' Assuming you have the first name property in ProfessorForm
-        ' Show HomeForm
-        homeForm.Show()
-
         ' Retrieve login attempts data from HomeForm and assign it to LoginAttempts
         LoginAttempts = homeForm.GetLatestLoginAttempts(Me.Username)
 

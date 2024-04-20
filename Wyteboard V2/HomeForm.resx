@@ -117,4 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>To democratize information and promote academic success by arming students with visibility and tracking 
+to monitor progress and see areas for improvement and their decision on education. 
+Also, to reinforce grading by making faculty-student communication efficient and 
+effective for reciprocation between teaching and learning.</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>To empower students with information and put them at the driver’s seat in their academic endeavor
+by providing a centralized platform to monitor performance, receive feedback, and understand their course journey.</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Developed to foster transparency and help students take control of their academic journey,
+Wyteboard allows students to track their progress, understand what areas need improvement, 
+and strategize for success towards course goals. </value>
+  </data>
 </root>

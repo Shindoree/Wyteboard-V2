@@ -5,7 +5,7 @@ Public Class HomeForm
     Public Property Username As String
 
     Private Sub HomeForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lblUser.Text = "Welcome, " & FirstName & " 🍆"
+        lblUser.Text = "Welcome, " & FirstName & " !"
 
         ' Retrieve the latest three login attempts
         Dim loginAttempts As DataTable = GetLatestLoginAttempts(Username)
@@ -88,6 +88,10 @@ Public Class HomeForm
     End Sub
 
     Private Sub lblLogin_Time1_Click(sender As Object, e As EventArgs) Handles lblLogin_Time1.Click
+
+    End Sub
+
+    Private Sub Guna2PictureBox2_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox2.Click
 
     End Sub
 End Class

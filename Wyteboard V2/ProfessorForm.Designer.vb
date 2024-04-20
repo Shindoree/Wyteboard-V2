@@ -23,11 +23,22 @@ Partial Class ProfessorForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProfessorForm))
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblLogin_Status2 = New System.Windows.Forms.Label()
+        Me.lblLogin_Status1 = New System.Windows.Forms.Label()
+        Me.lblLogin_Status = New System.Windows.Forms.Label()
+        Me.lblLogin_Time2 = New System.Windows.Forms.Label()
+        Me.lblLogin_Time1 = New System.Windows.Forms.Label()
+        Me.lblLogin_Time = New System.Windows.Forms.Label()
+        Me.lblInfo = New System.Windows.Forms.Label()
         Me.pnlDisplay = New Guna.UI2.WinForms.Guna2Panel()
         Me.lblUser = New System.Windows.Forms.Label()
         Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
@@ -42,30 +53,45 @@ Partial Class ProfessorForm
         Me.btnAccount = New System.Windows.Forms.Button()
         Me.btnHome = New System.Windows.Forms.Button()
         Me.btnSlider = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.lblLogin_Status2 = New System.Windows.Forms.Label()
-        Me.lblLogin_Status1 = New System.Windows.Forms.Label()
-        Me.lblLogin_Status = New System.Windows.Forms.Label()
-        Me.lblLogin_Time2 = New System.Windows.Forms.Label()
-        Me.lblLogin_Time1 = New System.Windows.Forms.Label()
-        Me.lblLogin_Time = New System.Windows.Forms.Label()
-        Me.lblInfo = New System.Windows.Forms.Label()
+        Me.Guna2PictureBox4 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Guna2PictureBox5 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Guna2Panel3.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
+        Me.Guna2Panel5.SuspendLayout()
         Me.pnlDisplay.SuspendLayout()
         Me.Guna2Panel4.SuspendLayout()
         Me.pnlControl.SuspendLayout()
         Me.pnlMenu.SuspendLayout()
         Me.pnlSidebarTop.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Guna2Panel5.SuspendLayout()
+        CType(Me.Guna2PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Panel3
         '
         Me.Guna2Panel3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Guna2Panel3.BackColor = System.Drawing.Color.White
+        Me.Guna2Panel3.Controls.Add(Me.Guna2PictureBox4)
+        Me.Guna2Panel3.Controls.Add(Me.Guna2PictureBox3)
+        Me.Guna2Panel3.Controls.Add(Me.Label8)
+        Me.Guna2Panel3.Controls.Add(Me.Guna2PictureBox2)
+        Me.Guna2Panel3.Controls.Add(Me.Label7)
+        Me.Guna2Panel3.Controls.Add(Me.Guna2PictureBox5)
+        Me.Guna2Panel3.Controls.Add(Me.Label6)
+        Me.Guna2Panel3.Controls.Add(Me.Label5)
+        Me.Guna2Panel3.Controls.Add(Me.Label4)
+        Me.Guna2Panel3.Controls.Add(Me.Label3)
         Me.Guna2Panel3.Location = New System.Drawing.Point(18, 195)
         Me.Guna2Panel3.Name = "Guna2Panel3"
         Me.Guna2Panel3.Size = New System.Drawing.Size(788, 440)
@@ -111,6 +137,141 @@ Partial Class ProfessorForm
         Me.Guna2Panel1.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(3)
         Me.Guna2Panel1.Size = New System.Drawing.Size(270, 635)
         Me.Guna2Panel1.TabIndex = 12
+        '
+        'Guna2Panel5
+        '
+        Me.Guna2Panel5.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Guna2Panel5.BackColor = System.Drawing.Color.White
+        Me.Guna2Panel5.Controls.Add(Me.Label2)
+        Me.Guna2Panel5.Controls.Add(Me.Label1)
+        Me.Guna2Panel5.Controls.Add(Me.lblLogin_Status2)
+        Me.Guna2Panel5.Controls.Add(Me.lblLogin_Status1)
+        Me.Guna2Panel5.Controls.Add(Me.lblLogin_Status)
+        Me.Guna2Panel5.Controls.Add(Me.lblLogin_Time2)
+        Me.Guna2Panel5.Controls.Add(Me.lblLogin_Time1)
+        Me.Guna2Panel5.Controls.Add(Me.lblLogin_Time)
+        Me.Guna2Panel5.Controls.Add(Me.lblInfo)
+        Me.Guna2Panel5.Location = New System.Drawing.Point(25, 247)
+        Me.Guna2Panel5.Name = "Guna2Panel5"
+        Me.Guna2Panel5.Size = New System.Drawing.Size(233, 364)
+        Me.Guna2Panel5.TabIndex = 25
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(119, 28)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(63, 17)
+        Me.Label2.TabIndex = 31
+        Me.Label2.Text = "Attempts"
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(11, 28)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 17)
+        Me.Label1.TabIndex = 30
+        Me.Label1.Text = "Time"
+        '
+        'lblLogin_Status2
+        '
+        Me.lblLogin_Status2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblLogin_Status2.AutoSize = True
+        Me.lblLogin_Status2.BackColor = System.Drawing.Color.Transparent
+        Me.lblLogin_Status2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLogin_Status2.ForeColor = System.Drawing.Color.Black
+        Me.lblLogin_Status2.Location = New System.Drawing.Point(119, 107)
+        Me.lblLogin_Status2.Name = "lblLogin_Status2"
+        Me.lblLogin_Status2.Size = New System.Drawing.Size(102, 17)
+        Me.lblLogin_Status2.TabIndex = 29
+        Me.lblLogin_Status2.Text = "Login Attempts"
+        '
+        'lblLogin_Status1
+        '
+        Me.lblLogin_Status1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblLogin_Status1.AutoSize = True
+        Me.lblLogin_Status1.BackColor = System.Drawing.Color.Transparent
+        Me.lblLogin_Status1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLogin_Status1.ForeColor = System.Drawing.Color.Black
+        Me.lblLogin_Status1.Location = New System.Drawing.Point(119, 80)
+        Me.lblLogin_Status1.Name = "lblLogin_Status1"
+        Me.lblLogin_Status1.Size = New System.Drawing.Size(102, 17)
+        Me.lblLogin_Status1.TabIndex = 28
+        Me.lblLogin_Status1.Text = "Login Attempts"
+        '
+        'lblLogin_Status
+        '
+        Me.lblLogin_Status.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblLogin_Status.AutoSize = True
+        Me.lblLogin_Status.BackColor = System.Drawing.Color.Transparent
+        Me.lblLogin_Status.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLogin_Status.ForeColor = System.Drawing.Color.Black
+        Me.lblLogin_Status.Location = New System.Drawing.Point(119, 52)
+        Me.lblLogin_Status.Name = "lblLogin_Status"
+        Me.lblLogin_Status.Size = New System.Drawing.Size(102, 17)
+        Me.lblLogin_Status.TabIndex = 27
+        Me.lblLogin_Status.Text = "Login Attempts"
+        '
+        'lblLogin_Time2
+        '
+        Me.lblLogin_Time2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblLogin_Time2.AutoSize = True
+        Me.lblLogin_Time2.BackColor = System.Drawing.Color.Transparent
+        Me.lblLogin_Time2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLogin_Time2.ForeColor = System.Drawing.Color.Black
+        Me.lblLogin_Time2.Location = New System.Drawing.Point(11, 107)
+        Me.lblLogin_Time2.Name = "lblLogin_Time2"
+        Me.lblLogin_Time2.Size = New System.Drawing.Size(102, 17)
+        Me.lblLogin_Time2.TabIndex = 26
+        Me.lblLogin_Time2.Text = "Login Attempts"
+        '
+        'lblLogin_Time1
+        '
+        Me.lblLogin_Time1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblLogin_Time1.AutoSize = True
+        Me.lblLogin_Time1.BackColor = System.Drawing.Color.Transparent
+        Me.lblLogin_Time1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLogin_Time1.ForeColor = System.Drawing.Color.Black
+        Me.lblLogin_Time1.Location = New System.Drawing.Point(11, 80)
+        Me.lblLogin_Time1.Name = "lblLogin_Time1"
+        Me.lblLogin_Time1.Size = New System.Drawing.Size(102, 17)
+        Me.lblLogin_Time1.TabIndex = 25
+        Me.lblLogin_Time1.Text = "Login Attempts"
+        '
+        'lblLogin_Time
+        '
+        Me.lblLogin_Time.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblLogin_Time.AutoSize = True
+        Me.lblLogin_Time.BackColor = System.Drawing.Color.Transparent
+        Me.lblLogin_Time.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLogin_Time.ForeColor = System.Drawing.Color.Black
+        Me.lblLogin_Time.Location = New System.Drawing.Point(11, 52)
+        Me.lblLogin_Time.Name = "lblLogin_Time"
+        Me.lblLogin_Time.Size = New System.Drawing.Size(102, 17)
+        Me.lblLogin_Time.TabIndex = 24
+        Me.lblLogin_Time.Text = "Login Attempts"
+        '
+        'lblInfo
+        '
+        Me.lblInfo.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblInfo.AutoSize = True
+        Me.lblInfo.BackColor = System.Drawing.Color.Transparent
+        Me.lblInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInfo.ForeColor = System.Drawing.Color.Black
+        Me.lblInfo.Location = New System.Drawing.Point(11, 6)
+        Me.lblInfo.Name = "lblInfo"
+        Me.lblInfo.Size = New System.Drawing.Size(102, 17)
+        Me.lblInfo.TabIndex = 23
+        Me.lblInfo.Text = "Login Attempts"
         '
         'pnlDisplay
         '
@@ -309,140 +470,139 @@ Partial Class ProfessorForm
         Me.btnSlider.TabIndex = 1
         Me.btnSlider.UseTransparentBackground = True
         '
-        'Guna2Panel5
+        'Guna2PictureBox4
         '
-        Me.Guna2Panel5.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Guna2Panel5.BackColor = System.Drawing.Color.White
-        Me.Guna2Panel5.Controls.Add(Me.Label2)
-        Me.Guna2Panel5.Controls.Add(Me.Label1)
-        Me.Guna2Panel5.Controls.Add(Me.lblLogin_Status2)
-        Me.Guna2Panel5.Controls.Add(Me.lblLogin_Status1)
-        Me.Guna2Panel5.Controls.Add(Me.lblLogin_Status)
-        Me.Guna2Panel5.Controls.Add(Me.lblLogin_Time2)
-        Me.Guna2Panel5.Controls.Add(Me.lblLogin_Time1)
-        Me.Guna2Panel5.Controls.Add(Me.lblLogin_Time)
-        Me.Guna2Panel5.Controls.Add(Me.lblInfo)
-        Me.Guna2Panel5.Location = New System.Drawing.Point(25, 247)
-        Me.Guna2Panel5.Name = "Guna2Panel5"
-        Me.Guna2Panel5.Size = New System.Drawing.Size(233, 364)
-        Me.Guna2Panel5.TabIndex = 25
+        Me.Guna2PictureBox4.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox4.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox4.Image = Global.Wyteboard_V2.My.Resources.Resources.Wyteboard_Logo_03
+        Me.Guna2PictureBox4.ImageRotate = 0!
+        Me.Guna2PictureBox4.Location = New System.Drawing.Point(22, 346)
+        Me.Guna2PictureBox4.Name = "Guna2PictureBox4"
+        Me.Guna2PictureBox4.Size = New System.Drawing.Size(127, 89)
+        Me.Guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox4.TabIndex = 40
+        Me.Guna2PictureBox4.TabStop = False
+        Me.Guna2PictureBox4.UseTransparentBackground = True
         '
-        'Label2
+        'Guna2PictureBox3
         '
-        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(119, 28)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(63, 17)
-        Me.Label2.TabIndex = 31
-        Me.Label2.Text = "Attempts"
+        Me.Guna2PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox3.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox3.Image = Global.Wyteboard_V2.My.Resources.Resources.Visual_Studio_logo
+        Me.Guna2PictureBox3.ImageRotate = 0!
+        Me.Guna2PictureBox3.Location = New System.Drawing.Point(288, 345)
+        Me.Guna2PictureBox3.Name = "Guna2PictureBox3"
+        Me.Guna2PictureBox3.Size = New System.Drawing.Size(127, 89)
+        Me.Guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox3.TabIndex = 33
+        Me.Guna2PictureBox3.TabStop = False
+        Me.Guna2PictureBox3.UseTransparentBackground = True
         '
-        'Label1
+        'Label8
         '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(11, 28)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 17)
-        Me.Label1.TabIndex = 30
-        Me.Label1.Text = "Time"
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Montserrat", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.Black
+        Me.Label8.Location = New System.Drawing.Point(19, 236)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(694, 72)
+        Me.Label8.TabIndex = 39
+        Me.Label8.Text = resources.GetString("Label8.Text")
         '
-        'lblLogin_Status2
+        'Guna2PictureBox2
         '
-        Me.lblLogin_Status2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblLogin_Status2.AutoSize = True
-        Me.lblLogin_Status2.BackColor = System.Drawing.Color.Transparent
-        Me.lblLogin_Status2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLogin_Status2.ForeColor = System.Drawing.Color.Black
-        Me.lblLogin_Status2.Location = New System.Drawing.Point(119, 107)
-        Me.lblLogin_Status2.Name = "lblLogin_Status2"
-        Me.lblLogin_Status2.Size = New System.Drawing.Size(102, 17)
-        Me.lblLogin_Status2.TabIndex = 29
-        Me.lblLogin_Status2.Text = "Login Attempts"
+        Me.Guna2PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox2.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox2.Image = Global.Wyteboard_V2.My.Resources.Resources.png_transparent_mysql_workbench_macos_bigsur_icon_thumbnail_removebg_preview
+        Me.Guna2PictureBox2.ImageRotate = 0!
+        Me.Guna2PictureBox2.Location = New System.Drawing.Point(421, 346)
+        Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
+        Me.Guna2PictureBox2.Size = New System.Drawing.Size(127, 89)
+        Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox2.TabIndex = 32
+        Me.Guna2PictureBox2.TabStop = False
+        Me.Guna2PictureBox2.UseTransparentBackground = True
         '
-        'lblLogin_Status1
+        'Label7
         '
-        Me.lblLogin_Status1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblLogin_Status1.AutoSize = True
-        Me.lblLogin_Status1.BackColor = System.Drawing.Color.Transparent
-        Me.lblLogin_Status1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLogin_Status1.ForeColor = System.Drawing.Color.Black
-        Me.lblLogin_Status1.Location = New System.Drawing.Point(119, 80)
-        Me.lblLogin_Status1.Name = "lblLogin_Status1"
-        Me.lblLogin_Status1.Size = New System.Drawing.Size(102, 17)
-        Me.lblLogin_Status1.TabIndex = 28
-        Me.lblLogin_Status1.Text = "Login Attempts"
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Montserrat", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.Black
+        Me.Label7.Location = New System.Drawing.Point(15, 199)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(104, 37)
+        Me.Label7.TabIndex = 38
+        Me.Label7.Text = "Vision"
         '
-        'lblLogin_Status
+        'Guna2PictureBox5
         '
-        Me.lblLogin_Status.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblLogin_Status.AutoSize = True
-        Me.lblLogin_Status.BackColor = System.Drawing.Color.Transparent
-        Me.lblLogin_Status.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLogin_Status.ForeColor = System.Drawing.Color.Black
-        Me.lblLogin_Status.Location = New System.Drawing.Point(119, 52)
-        Me.lblLogin_Status.Name = "lblLogin_Status"
-        Me.lblLogin_Status.Size = New System.Drawing.Size(102, 17)
-        Me.lblLogin_Status.TabIndex = 27
-        Me.lblLogin_Status.Text = "Login Attempts"
+        Me.Guna2PictureBox5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox5.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox5.Image = Global.Wyteboard_V2.My.Resources.Resources.Seal_of_Lyceum_of_the_Philippines_University__1_
+        Me.Guna2PictureBox5.ImageRotate = 0!
+        Me.Guna2PictureBox5.Location = New System.Drawing.Point(155, 346)
+        Me.Guna2PictureBox5.Name = "Guna2PictureBox5"
+        Me.Guna2PictureBox5.Size = New System.Drawing.Size(127, 89)
+        Me.Guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox5.TabIndex = 31
+        Me.Guna2PictureBox5.TabStop = False
+        Me.Guna2PictureBox5.UseTransparentBackground = True
         '
-        'lblLogin_Time2
+        'Label6
         '
-        Me.lblLogin_Time2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblLogin_Time2.AutoSize = True
-        Me.lblLogin_Time2.BackColor = System.Drawing.Color.Transparent
-        Me.lblLogin_Time2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLogin_Time2.ForeColor = System.Drawing.Color.Black
-        Me.lblLogin_Time2.Location = New System.Drawing.Point(11, 107)
-        Me.lblLogin_Time2.Name = "lblLogin_Time2"
-        Me.lblLogin_Time2.Size = New System.Drawing.Size(102, 17)
-        Me.lblLogin_Time2.TabIndex = 26
-        Me.lblLogin_Time2.Text = "Login Attempts"
+        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Montserrat", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.Location = New System.Drawing.Point(19, 143)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(755, 36)
+        Me.Label6.TabIndex = 37
+        Me.Label6.Text = resources.GetString("Label6.Text")
         '
-        'lblLogin_Time1
+        'Label5
         '
-        Me.lblLogin_Time1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblLogin_Time1.AutoSize = True
-        Me.lblLogin_Time1.BackColor = System.Drawing.Color.Transparent
-        Me.lblLogin_Time1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLogin_Time1.ForeColor = System.Drawing.Color.Black
-        Me.lblLogin_Time1.Location = New System.Drawing.Point(11, 80)
-        Me.lblLogin_Time1.Name = "lblLogin_Time1"
-        Me.lblLogin_Time1.Size = New System.Drawing.Size(102, 17)
-        Me.lblLogin_Time1.TabIndex = 25
-        Me.lblLogin_Time1.Text = "Login Attempts"
+        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Montserrat", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.Location = New System.Drawing.Point(15, 106)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(124, 37)
+        Me.Label5.TabIndex = 36
+        Me.Label5.Text = "Mission"
         '
-        'lblLogin_Time
+        'Label4
         '
-        Me.lblLogin_Time.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblLogin_Time.AutoSize = True
-        Me.lblLogin_Time.BackColor = System.Drawing.Color.Transparent
-        Me.lblLogin_Time.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLogin_Time.ForeColor = System.Drawing.Color.Black
-        Me.lblLogin_Time.Location = New System.Drawing.Point(11, 52)
-        Me.lblLogin_Time.Name = "lblLogin_Time"
-        Me.lblLogin_Time.Size = New System.Drawing.Size(102, 17)
-        Me.lblLogin_Time.TabIndex = 24
-        Me.lblLogin_Time.Text = "Login Attempts"
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Montserrat", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(19, 40)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(619, 54)
+        Me.Label4.TabIndex = 35
+        Me.Label4.Text = resources.GetString("Label4.Text")
         '
-        'lblInfo
+        'Label3
         '
-        Me.lblInfo.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblInfo.AutoSize = True
-        Me.lblInfo.BackColor = System.Drawing.Color.Transparent
-        Me.lblInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblInfo.ForeColor = System.Drawing.Color.Black
-        Me.lblInfo.Location = New System.Drawing.Point(11, 6)
-        Me.lblInfo.Name = "lblInfo"
-        Me.lblInfo.Size = New System.Drawing.Size(102, 17)
-        Me.lblInfo.TabIndex = 23
-        Me.lblInfo.Text = "Login Attempts"
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Montserrat", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.Location = New System.Drawing.Point(15, 5)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(106, 37)
+        Me.Label3.TabIndex = 34
+        Me.Label3.Text = "About"
         '
         'ProfessorForm
         '
@@ -456,7 +616,11 @@ Partial Class ProfessorForm
         Me.Name = "ProfessorForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ProfessorForm"
+        Me.Guna2Panel3.ResumeLayout(False)
+        Me.Guna2Panel3.PerformLayout()
         Me.Guna2Panel1.ResumeLayout(False)
+        Me.Guna2Panel5.ResumeLayout(False)
+        Me.Guna2Panel5.PerformLayout()
         Me.pnlDisplay.ResumeLayout(False)
         Me.pnlDisplay.PerformLayout()
         Me.Guna2Panel4.ResumeLayout(False)
@@ -464,8 +628,10 @@ Partial Class ProfessorForm
         Me.pnlMenu.ResumeLayout(False)
         Me.pnlSidebarTop.ResumeLayout(False)
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Guna2Panel5.ResumeLayout(False)
-        Me.Guna2Panel5.PerformLayout()
+        CType(Me.Guna2PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -499,4 +665,14 @@ Partial Class ProfessorForm
     Friend WithEvents lblLogin_Time1 As Label
     Friend WithEvents lblLogin_Time As Label
     Friend WithEvents lblInfo As Label
+    Friend WithEvents Guna2PictureBox4 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Guna2PictureBox3 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Guna2PictureBox5 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
 End Class

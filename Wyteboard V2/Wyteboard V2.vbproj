@@ -392,5 +392,20 @@
   <ItemGroup>
     <None Include="Resources\icons8-lock-32 %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Seal_of_Lyceum_of_the_Philippines_University.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Seal_of_Lyceum_of_the_Philippines_University %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-mysql-workbench-macos-bigsur-icon-thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-mysql-workbench-macos-bigsur-icon-thumbnail-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Visual-Studio-logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

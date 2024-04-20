@@ -46,10 +46,18 @@ Partial Class HomeForm
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Guna2PictureBox4 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel3.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
         Me.Guna2Panel4.SuspendLayout()
         Me.pnlHome.SuspendLayout()
+        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -89,8 +97,12 @@ Partial Class HomeForm
         '
         Me.Guna2Panel3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Guna2Panel3.BackColor = System.Drawing.Color.White
+        Me.Guna2Panel3.Controls.Add(Me.Guna2PictureBox4)
+        Me.Guna2Panel3.Controls.Add(Me.Guna2PictureBox3)
         Me.Guna2Panel3.Controls.Add(Me.Label8)
+        Me.Guna2Panel3.Controls.Add(Me.Guna2PictureBox2)
         Me.Guna2Panel3.Controls.Add(Me.Label7)
+        Me.Guna2Panel3.Controls.Add(Me.Guna2PictureBox1)
         Me.Guna2Panel3.Controls.Add(Me.Label6)
         Me.Guna2Panel3.Controls.Add(Me.Label5)
         Me.Guna2Panel3.Controls.Add(Me.Label4)
@@ -275,7 +287,7 @@ Partial Class HomeForm
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Montserrat", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(6, 125)
+        Me.Label3.Location = New System.Drawing.Point(6, 7)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(106, 37)
         Me.Label3.TabIndex = 24
@@ -288,7 +300,7 @@ Partial Class HomeForm
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Montserrat", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(10, 160)
+        Me.Label4.Location = New System.Drawing.Point(10, 42)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(619, 54)
         Me.Label4.TabIndex = 25
@@ -301,7 +313,7 @@ Partial Class HomeForm
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Montserrat", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(6, 226)
+        Me.Label5.Location = New System.Drawing.Point(6, 108)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(124, 37)
         Me.Label5.TabIndex = 26
@@ -314,7 +326,7 @@ Partial Class HomeForm
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Montserrat", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(10, 263)
+        Me.Label6.Location = New System.Drawing.Point(10, 145)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(755, 36)
         Me.Label6.TabIndex = 27
@@ -327,7 +339,7 @@ Partial Class HomeForm
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Montserrat", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(6, 319)
+        Me.Label7.Location = New System.Drawing.Point(6, 201)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(104, 37)
         Me.Label7.TabIndex = 28
@@ -340,11 +352,67 @@ Partial Class HomeForm
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Montserrat", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(10, 356)
+        Me.Label8.Location = New System.Drawing.Point(10, 238)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(694, 72)
         Me.Label8.TabIndex = 29
         Me.Label8.Text = resources.GetString("Label8.Text")
+        '
+        'Guna2PictureBox3
+        '
+        Me.Guna2PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox3.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox3.Image = Global.Wyteboard_V2.My.Resources.Resources.Visual_Studio_logo
+        Me.Guna2PictureBox3.ImageRotate = 0!
+        Me.Guna2PictureBox3.Location = New System.Drawing.Point(279, 347)
+        Me.Guna2PictureBox3.Name = "Guna2PictureBox3"
+        Me.Guna2PictureBox3.Size = New System.Drawing.Size(127, 89)
+        Me.Guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox3.TabIndex = 2
+        Me.Guna2PictureBox3.TabStop = False
+        Me.Guna2PictureBox3.UseTransparentBackground = True
+        '
+        'Guna2PictureBox2
+        '
+        Me.Guna2PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox2.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox2.Image = Global.Wyteboard_V2.My.Resources.Resources.png_transparent_mysql_workbench_macos_bigsur_icon_thumbnail_removebg_preview
+        Me.Guna2PictureBox2.ImageRotate = 0!
+        Me.Guna2PictureBox2.Location = New System.Drawing.Point(412, 348)
+        Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
+        Me.Guna2PictureBox2.Size = New System.Drawing.Size(127, 89)
+        Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox2.TabIndex = 1
+        Me.Guna2PictureBox2.TabStop = False
+        Me.Guna2PictureBox2.UseTransparentBackground = True
+        '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox1.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox1.Image = Global.Wyteboard_V2.My.Resources.Resources.Seal_of_Lyceum_of_the_Philippines_University__1_
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(146, 348)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(127, 89)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox1.TabIndex = 0
+        Me.Guna2PictureBox1.TabStop = False
+        Me.Guna2PictureBox1.UseTransparentBackground = True
+        '
+        'Guna2PictureBox4
+        '
+        Me.Guna2PictureBox4.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox4.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox4.Image = Global.Wyteboard_V2.My.Resources.Resources.Wyteboard_Logo_03
+        Me.Guna2PictureBox4.ImageRotate = 0!
+        Me.Guna2PictureBox4.Location = New System.Drawing.Point(13, 348)
+        Me.Guna2PictureBox4.Name = "Guna2PictureBox4"
+        Me.Guna2PictureBox4.Size = New System.Drawing.Size(127, 89)
+        Me.Guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox4.TabIndex = 30
+        Me.Guna2PictureBox4.TabStop = False
+        Me.Guna2PictureBox4.UseTransparentBackground = True
         '
         'HomeForm
         '
@@ -362,6 +430,10 @@ Partial Class HomeForm
         Me.Guna2Panel4.PerformLayout()
         Me.pnlHome.ResumeLayout(False)
         Me.pnlHome.PerformLayout()
+        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -389,4 +461,8 @@ Partial Class HomeForm
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Guna2PictureBox3 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Guna2PictureBox4 As Guna.UI2.WinForms.Guna2PictureBox
 End Class

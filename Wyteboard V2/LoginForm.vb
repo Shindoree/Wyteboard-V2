@@ -9,6 +9,17 @@ Public Class LoginForm
 
     Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtPassword.UseSystemPasswordChar = True
+
+        ' Load saved email and password if "Keep Signed In" was previously checked
+        If My.Settings.KeepSignedIn IsNot Nothing AndAlso Boolean.TryParse(My.Settings.KeepSignedIn, False) Then
+            txtEmail.Text = My.Settings.SavedEmail
+            txtPassword.Text = My.Settings.SavedPassword
+        End If
+
+        If Not String.IsNullOrEmpty(txtEmail.Text) AndAlso Not String.IsNullOrEmpty(txtPassword.Text) Then
+            tglKeepSigned.Checked = True
+        End If
+
     End Sub
 
     Private Sub imgLock_Click(sender As Object, e As EventArgs) Handles imgLock.Click
@@ -62,6 +73,13 @@ Public Class LoginForm
             InsertLoginAttempt(email, "Failed")
             lblError.Text = "Invalid User"
             txtEmail.BorderColor = Color.Red ' Set border color to red for invalid user
+        End If
+
+        If tglKeepSigned.Checked Then
+            My.Settings.SavedEmail = txtEmail.Text.Trim()
+            My.Settings.SavedPassword = txtPassword.Text
+            My.Settings.KeepSignedIn = True
+            My.Settings.Save()
         End If
     End Sub
 
@@ -153,9 +171,20 @@ Public Class LoginForm
         txtPassword.BorderColor = Color.Black ' Reset border color to black
     End Sub
 
+
     Private Sub lnkForgetpassword_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lnkForgetpassword.LinkClicked
         Me.Hide()
         Dim ForgotPasswordForm As New ForgotPasswordForm()
         ForgotPasswordForm.Show()
     End Sub
+    Private Sub tglKeepSigned_CheckedChanged(sender As Object, e As EventArgs) Handles tglKeepSigned.CheckedChanged
+        ' Clear saved email and password if "Keep Signed In" is unchecked
+        If Not tglKeepSigned.Checked Then
+            My.Settings.SavedEmail = ""
+            My.Settings.SavedPassword = ""
+            My.Settings.KeepSignedIn = False
+            My.Settings.Save()
+        End If
+    End Sub
+
 End Class

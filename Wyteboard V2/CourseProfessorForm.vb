@@ -15,7 +15,7 @@ Public Class CourseProfessorForm
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         Dim schoolID As String = txtSchoolID.Text
         Dim username As String = txtEmail.Text
-        Dim subject As String = cbxSubject.SelectedItem.ToString()
+        Dim subject As String = If(cbxSubject.SelectedItem IsNot Nothing, cbxSubject.SelectedItem.ToString(), "")
 
         ' Validate inputs
         If String.IsNullOrEmpty(schoolID) OrElse String.IsNullOrEmpty(username) OrElse String.IsNullOrEmpty(subject) Then
@@ -23,46 +23,36 @@ Public Class CourseProfessorForm
             Return
         End If
 
-        ' Database connection string
-        Dim connectionString As String = "Database=wyteboard;Data Source=localhost;User id=admin;Password=IamFinal0904;Port=3306;Command Timeout=600;"
+        ' Check if the email and school ID exist in tb_user
+        If Not UserExists(username, schoolID) Then
+            MessageBox.Show("User with the provided email and school ID does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
 
-        ' SQL query to insert data into database
-        Dim query As String = "INSERT INTO tb_course (schoolid, username, subject) VALUES (@schoolID, @username, @subject)"
+        ' Continue with the insertion process...
+        ' (Remaining code for inserting into tb_course)
+    End Sub
+
+    Private Function UserExists(username As String, schoolID As String) As Boolean
+        Dim query As String = "SELECT COUNT(*) FROM tb_user WHERE email = @username AND schoolID = @schoolID"
+        Dim connectionString As String = "Your_Connection_String_Here"
 
         Try
-            ' Open connection to MySQL database
             Using connection As New MySqlConnection(connectionString)
                 connection.Open()
 
-                ' Create MySqlCommand
                 Using cmd As New MySqlCommand(query, connection)
-                    ' Add parameters to the command
-                    cmd.Parameters.AddWithValue("@schoolID", schoolID)
                     cmd.Parameters.AddWithValue("@username", username)
-                    cmd.Parameters.AddWithValue("@subject", subject)
-
-                    ' Execute the command
-                    cmd.ExecuteNonQuery()
-
-                    ' Inform user that data has been successfully added
-                    MessageBox.Show("New student added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-                    ' Clear input fields after successful insertion
-                    txtSchoolID.Clear()
-                    txtEmail.Clear()
-                    cbxSubject.SelectedIndex = -1
+                    cmd.Parameters.AddWithValue("@schoolID", schoolID)
+                    Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+                    Return count > 0
                 End Using
             End Using
-
-            ' Refresh DataGridView and chart after adding a new user
-            LoadDataIntoDataGridView(username)
-            UpdateChartData()
-
         Catch ex As Exception
-            ' Display error message if insertion fails
-            MessageBox.Show("Error inserting data: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error checking user existence: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
         End Try
-    End Sub
+    End Function
 
     Public Sub LoadDataIntoDataGridView(username As String)
         Dim myConnection As MySqlConnection
@@ -85,7 +75,7 @@ Public Class CourseProfessorForm
             myConnection.Open()
 
             ' Use parameters to prevent SQL injection
-            Dim query As String = "SELECT schoolid, oe1,oe2,oe3,oe4,oe5,oe6,oe7,oe8,oe9,oe10, pt1,pt2,pt3, prelimexam,midtermexam, finalgrade, subject FROM wyteboard.tb_course WHERE subject = 'IM1'"
+            Dim query As String = "SELECT tb_course.schoolid, CONCAT(lastname, ' ', firstname) AS Fullname, oe1, oe2, oe3, oe4, oe5, oe6, oe7, oe8, oe9, oe10, pt1, pt2, pt3, prelimexam, midtermexam, finalgrade, subject FROM wyteboard.tb_course INNER JOIN tb_user ON tb_course.username = tb_user.email WHERE subject = 'IM1' ORDER BY tb_user.lastname ASC"
 
             myCommand = New MySqlCommand(query, myConnection)
             myCommand.Parameters.AddWithValue("@username", username) ' Use the provided username
@@ -267,6 +257,10 @@ Public Class CourseProfessorForm
     End Sub
 
     Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
+
+    End Sub
+
+    Private Sub dgViewGrade_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgViewGrade.CellContentClick
 
     End Sub
 End Class

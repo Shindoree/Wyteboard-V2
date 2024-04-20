@@ -22,6 +22,7 @@ Partial Class HomeForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HomeForm))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblUser = New System.Windows.Forms.Label()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
@@ -39,6 +40,13 @@ Partial Class HomeForm
         Me.lblLogin_Time = New System.Windows.Forms.Label()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.pnlHome = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Guna2Panel3.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
         Me.Guna2Panel4.SuspendLayout()
         Me.pnlHome.SuspendLayout()
@@ -81,6 +89,12 @@ Partial Class HomeForm
         '
         Me.Guna2Panel3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Guna2Panel3.BackColor = System.Drawing.Color.White
+        Me.Guna2Panel3.Controls.Add(Me.Label8)
+        Me.Guna2Panel3.Controls.Add(Me.Label7)
+        Me.Guna2Panel3.Controls.Add(Me.Label6)
+        Me.Guna2Panel3.Controls.Add(Me.Label5)
+        Me.Guna2Panel3.Controls.Add(Me.Label4)
+        Me.Guna2Panel3.Controls.Add(Me.Label3)
         Me.Guna2Panel3.Location = New System.Drawing.Point(9, 187)
         Me.Guna2Panel3.Name = "Guna2Panel3"
         Me.Guna2Panel3.Size = New System.Drawing.Size(788, 440)
@@ -254,6 +268,84 @@ Partial Class HomeForm
         Me.pnlHome.Size = New System.Drawing.Size(1079, 635)
         Me.pnlHome.TabIndex = 15
         '
+        'Label3
+        '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Montserrat", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.Location = New System.Drawing.Point(6, 125)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(106, 37)
+        Me.Label3.TabIndex = 24
+        Me.Label3.Text = "About"
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Montserrat", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(10, 160)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(619, 54)
+        Me.Label4.TabIndex = 25
+        Me.Label4.Text = resources.GetString("Label4.Text")
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Montserrat", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.Location = New System.Drawing.Point(6, 226)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(124, 37)
+        Me.Label5.TabIndex = 26
+        Me.Label5.Text = "Mission"
+        '
+        'Label6
+        '
+        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Montserrat", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.Location = New System.Drawing.Point(10, 263)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(755, 36)
+        Me.Label6.TabIndex = 27
+        Me.Label6.Text = resources.GetString("Label6.Text")
+        '
+        'Label7
+        '
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Montserrat", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.Black
+        Me.Label7.Location = New System.Drawing.Point(6, 319)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(104, 37)
+        Me.Label7.TabIndex = 28
+        Me.Label7.Text = "Vision"
+        '
+        'Label8
+        '
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Montserrat", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.Black
+        Me.Label8.Location = New System.Drawing.Point(10, 356)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(694, 72)
+        Me.Label8.TabIndex = 29
+        Me.Label8.Text = resources.GetString("Label8.Text")
+        '
         'HomeForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -263,6 +355,8 @@ Partial Class HomeForm
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "HomeForm"
         Me.Text = "HomeForm"
+        Me.Guna2Panel3.ResumeLayout(False)
+        Me.Guna2Panel3.PerformLayout()
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel4.ResumeLayout(False)
         Me.Guna2Panel4.PerformLayout()
@@ -289,4 +383,10 @@ Partial Class HomeForm
     Friend WithEvents lblLogin_Status As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
 End Class

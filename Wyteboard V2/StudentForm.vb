@@ -90,8 +90,6 @@
         ' Set the username and first name properties if needed
         homeForm.Username = Me.Username ' Assuming you have the username property in StudentForm
         homeForm.FirstName = Me.FirstName ' Assuming you have the first name property in StudentForm
-        ' Show HomeForm
-        homeForm.Show()
 
         ' Retrieve login attempts data from HomeForm and assign it to LoginAttempts
         LoginAttempts = homeForm.GetLatestLoginAttempts(Me.Username)

@@ -1,5 +1,6 @@
 ﻿Imports System.Windows.Forms.DataVisualization.Charting
 Imports MySql.Data.MySqlClient
+Imports MySql.Data.MySqlClient.X.XDevAPI.Common
 
 Public Class CourseProfessorForm
     Public Property Username As String
@@ -28,10 +29,57 @@ Public Class CourseProfessorForm
             MessageBox.Show("User with the provided email and school ID does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
         End If
-
-        ' Continue with the insertion process...
-        ' (Remaining code for inserting into tb_course)
     End Sub
+
+    Private Function AddNewColumn(columnName As String, columnType As String) As Boolean
+        Try
+            ' Database connection string
+            Dim connectionString As String = "Database=wyteboard;Data Source=localhost;User id=admin;Password=IamFinal0904;Port=3306;Command Timeout=600;"
+
+            ' Determine the last column index of the specified type (OE or PT)
+            Dim lastColumnIndex As Integer = -1
+            For Each column As DataGridViewColumn In dgViewGrade.Columns
+                If column.Name.StartsWith(columnType) Then
+                    Dim index As Integer = dgViewGrade.Columns.IndexOf(column)
+                    If index > lastColumnIndex Then
+                        lastColumnIndex = index
+                    End If
+                End If
+            Next
+
+            ' Construct the ALTER TABLE query to add the new column after the last column of its type
+            Dim query As String
+            If lastColumnIndex >= 0 Then
+                query = $"ALTER TABLE tb_course ADD COLUMN {columnType}{columnName} VARCHAR(45) AFTER {dgViewGrade.Columns(lastColumnIndex).Name}"
+            Else
+                ' If no columns of the specified type exist, add the new column as the first column
+                query = $"ALTER TABLE tb_course ADD COLUMN {columnType}{columnName} VARCHAR(45) FIRST"
+            End If
+
+            ' Open connection to MySQL database
+            Using connection As New MySqlConnection(connectionString)
+                connection.Open()
+
+                ' Create MySqlCommand
+                Using cmd As New MySqlCommand(query, connection)
+                    ' Execute the command
+                    cmd.ExecuteNonQuery()
+                End Using
+            End Using
+
+            ' Inform the user that the column has been added
+            MessageBox.Show($"New {columnType.ToUpper()} column '{columnName}' added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            ' Refresh the entire form to update the DataGridView with the latest data
+            Me.Refresh()
+
+            Return True
+        Catch ex As Exception
+            ' Handle exception
+            MessageBox.Show($"Error adding new {columnType.ToUpper()} column: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End Try
+    End Function
 
     Private Function UserExists(username As String, schoolID As String) As Boolean
         Dim query As String = "SELECT COUNT(*) FROM tb_user WHERE email = @username AND schoolID = @schoolID"
@@ -62,6 +110,7 @@ Public Class CourseProfessorForm
 
         If isLoadingData Then Return ' If already loading data, exit the method to avoid reentrant calls
         isLoadingData = True ' Set the flag to indicate that data loading is in progress
+
         ' Connection string to your database
         Dim connectionString As String = "Database=wyteboard;" &
         "Data Source=localhost;" &
@@ -74,68 +123,35 @@ Public Class CourseProfessorForm
         Try
             myConnection.Open()
 
-            ' Use parameters to prevent SQL injection
-            Dim query As String = "SELECT tb_course.schoolid, CONCAT(lastname, ' ', firstname) AS Fullname, oe1, oe2, oe3, oe4, oe5, oe6, oe7, oe8, oe9, oe10, pt1, pt2, pt3, prelimexam, midtermexam, finalgrade, subject FROM wyteboard.tb_course INNER JOIN tb_user ON tb_course.username = tb_user.email WHERE subject = 'IM1' ORDER BY tb_user.lastname ASC"
+            ' Generate the SELECT statement
+            Dim query As String = $"SELECT * FROM wyteboard.tb_course WHERE subject = 'IM1' ORDER BY fullname ASC"
 
             myCommand = New MySqlCommand(query, myConnection)
-            myCommand.Parameters.AddWithValue("@username", username) ' Use the provided username
 
+            ' Fill the DataSet with the schema and data from the database
             myAdapter.SelectCommand = myCommand
+            myAdapter.FillSchema(myDataSet, SchemaType.Source, "myData")
             myAdapter.Fill(myDataSet, "myData")
 
             ' Set the DataSource of the DataGridView
             dgViewGrade.DataSource = myDataSet.Tables("myData")
 
-            ' Set AutoGenerateColumns to True to display column headers
-            dgViewGrade.AutoGenerateColumns = True
+            ' Refresh the DataGridView to display the newly added columns and update column headers
+            dgViewGrade.Refresh()
 
-            ' Set the HeaderText for each column
-            dgViewGrade.Columns("schoolid").HeaderText = "School ID"
-            dgViewGrade.Columns("oe1").HeaderText = "OE1"
-            dgViewGrade.Columns("oe2").HeaderText = "OE2"
-            dgViewGrade.Columns("oe3").HeaderText = "OE3"
-            dgViewGrade.Columns("oe4").HeaderText = "OE4"
-            dgViewGrade.Columns("oe5").HeaderText = "OE5"
-            dgViewGrade.Columns("oe6").HeaderText = "OE6"
-            dgViewGrade.Columns("oe7").HeaderText = "OE7"
-            dgViewGrade.Columns("oe8").HeaderText = "OE8"
-            dgViewGrade.Columns("oe9").HeaderText = "OE9"
-            dgViewGrade.Columns("oe10").HeaderText = "OE10"
-            dgViewGrade.Columns("pt1").HeaderText = "PT1"
-            dgViewGrade.Columns("pt2").HeaderText = "PT2"
-            dgViewGrade.Columns("pt3").HeaderText = "PT3"
-            dgViewGrade.Columns("prelimexam").HeaderText = "Prelim Exam"
-            dgViewGrade.Columns("midtermexam").HeaderText = "Midterm Exam"
-            dgViewGrade.Columns("finalgrade").HeaderText = "Final Grade"
-            dgViewGrade.Columns("subject").HeaderText = "Subject"
-
-            ' Populate the chart with data of oe, pt, and exam
-            If myDataSet.Tables("myData").Rows.Count > 0 Then
-                chartCourse.Series.Clear()
-                For Each column As DataColumn In myDataSet.Tables("myData").Columns
-                    If column.ColumnName <> "schoolid" AndAlso column.ColumnName <> "finalgrade" AndAlso column.ColumnName <> "subject" Then
-                        Dim series As New Series()
-                        series.Name = column.ColumnName
-                        series.ChartType = SeriesChartType.Column
-                        For i As Integer = 0 To myDataSet.Tables("myData").Rows.Count - 1
-                            series.Points.AddXY(i + 1, myDataSet.Tables("myData").Rows(i)(column.ColumnName))
-                        Next
-                        chartCourse.Series.Add(series)
-                    End If
-                Next
-
-                ' Set TabPage1 text to the subject from the first row
-                TabPage1.Text = myDataSet.Tables("myData").Rows(0)("subject").ToString()
-            End If
+            ' Compute final grade after loading data
+            ComputeFinalGrade()
 
         Catch ex As Exception
             MsgBox("Error loading data: " & ex.Message)
         Finally
             myConnection.Close()
         End Try
-        ComputeFinalGrade()
+
+        UpdateChartData()
         isLoadingData = False
     End Sub
+
 
     Public Sub ComputeFinalGrade()
         For Each row As DataGridViewRow In dgViewGrade.Rows
@@ -261,6 +277,36 @@ Public Class CourseProfessorForm
     End Sub
 
     Private Sub dgViewGrade_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgViewGrade.CellContentClick
+
+    End Sub
+
+    Private Sub btnAddNew_Click(sender As Object, e As EventArgs) Handles btnAddNew.Click
+        ' Add new OE column if the txtNewOE TextBox is not empty
+        If Not String.IsNullOrEmpty(txtNewOE.Text.Trim()) Then
+            Dim newOEColumnName As String = txtNewOE.Text.Trim()
+
+            ' Add the new OE column to the database
+            If AddNewColumn(newOEColumnName, "oe") Then
+                ' Refresh the DataGridView and chart
+                LoadDataIntoDataGridView(Username)
+                UpdateChartData() ' Update chart data after adding new columns
+            End If
+        End If
+
+        ' Check if the new PT field is not empty
+        If Not String.IsNullOrEmpty(txtNewPT.Text.Trim()) Then
+            Dim newPTColumnName As String = txtNewPT.Text.Trim()
+
+            ' Add the new PT column to the database
+            If AddNewColumn(newPTColumnName, "pt") Then
+                ' Refresh the DataGridView and chart
+                LoadDataIntoDataGridView(Username)
+                UpdateChartData() ' Update chart data after adding new columns
+            End If
+        End If
+    End Sub
+
+    Private Sub Guna2Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel3.Paint
 
     End Sub
 End Class

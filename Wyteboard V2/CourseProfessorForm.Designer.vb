@@ -44,7 +44,6 @@ Partial Class CourseProfessorForm
         Me.cntrlTabCourses = New Guna.UI2.WinForms.Guna2TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.dgViewGrade = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         CType(Me.chartCourse, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel3.SuspendLayout()
@@ -98,7 +97,6 @@ Partial Class CourseProfessorForm
         Me.cbxSubject.Font = New System.Drawing.Font("Montserrat", 9.749999!)
         Me.cbxSubject.ForeColor = System.Drawing.Color.Black
         Me.cbxSubject.ItemHeight = 30
-        Me.cbxSubject.Items.AddRange(New Object() {"IM1"})
         Me.cbxSubject.Location = New System.Drawing.Point(393, 92)
         Me.cbxSubject.Name = "cbxSubject"
         Me.cbxSubject.Size = New System.Drawing.Size(157, 36)
@@ -146,7 +144,7 @@ Partial Class CourseProfessorForm
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(180, 37)
         Me.btnUpdate.TabIndex = 58
-        Me.btnUpdate.Text = "Add"
+        Me.btnUpdate.Text = "Add Student"
         Me.btnUpdate.UseTransparentBackground = True
         '
         'txtSchoolID
@@ -222,7 +220,7 @@ Partial Class CourseProfessorForm
         Me.btnAddNew.Name = "btnAddNew"
         Me.btnAddNew.Size = New System.Drawing.Size(180, 37)
         Me.btnAddNew.TabIndex = 65
-        Me.btnAddNew.Text = "Add"
+        Me.btnAddNew.Text = "Add Task"
         Me.btnAddNew.UseTransparentBackground = True
         '
         'txtNewPT
@@ -291,7 +289,6 @@ Partial Class CourseProfessorForm
         'cntrlTabCourses
         '
         Me.cntrlTabCourses.Controls.Add(Me.TabPage1)
-        Me.cntrlTabCourses.Controls.Add(Me.TabPage2)
         Me.cntrlTabCourses.Dock = System.Windows.Forms.DockStyle.Fill
         Me.cntrlTabCourses.ItemSize = New System.Drawing.Size(180, 40)
         Me.cntrlTabCourses.Location = New System.Drawing.Point(0, 0)
@@ -349,12 +346,12 @@ Partial Class CourseProfessorForm
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgViewGrade.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgViewGrade.Dock = System.Windows.Forms.DockStyle.Top
-        Me.dgViewGrade.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgViewGrade.GridColor = System.Drawing.Color.White
         Me.dgViewGrade.Location = New System.Drawing.Point(3, 3)
         Me.dgViewGrade.Name = "dgViewGrade"
         Me.dgViewGrade.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -376,7 +373,7 @@ Partial Class CourseProfessorForm
         Me.dgViewGrade.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
         Me.dgViewGrade.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
         Me.dgViewGrade.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.dgViewGrade.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgViewGrade.ThemeStyle.GridColor = System.Drawing.Color.White
         Me.dgViewGrade.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgViewGrade.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgViewGrade.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -391,16 +388,6 @@ Partial Class CourseProfessorForm
         Me.dgViewGrade.ThemeStyle.RowsStyle.Height = 22
         Me.dgViewGrade.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgViewGrade.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        '
-        'TabPage2
-        '
-        Me.TabPage2.Location = New System.Drawing.Point(4, 44)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1071, 331)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "TabPage2"
-        Me.TabPage2.UseVisualStyleBackColor = True
         '
         'Guna2Panel1
         '
@@ -442,7 +429,6 @@ Partial Class CourseProfessorForm
     Friend WithEvents cntrlTabCourses As Guna.UI2.WinForms.Guna2TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents dgViewGrade As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents TabPage2 As TabPage
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents txtNewPT As Guna.UI2.WinForms.Guna2TextBox

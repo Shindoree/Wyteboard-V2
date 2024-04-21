@@ -11,6 +11,20 @@ Public Class CourseProfessorForm
         ' Form load code here
         LoadDataIntoDataGridView(Username)
         lblUser.Text = "Hello " & FirstName & ", Enjoy your day!"
+
+        ' Set the Text property of TabPage1 to the subject of the professor
+        Dim subjects As String = GetProfessorSubjects(Username)
+        If Not String.IsNullOrEmpty(subjects) Then
+            Dim subjectArray As String() = subjects.Split(","c)
+            If subjectArray.Length > 0 Then
+                TabPage1.Text = subjectArray(0) ' Set the Text property to the first subject
+            End If
+
+            ' Populate cbxSubject with the subjects handled by the professor
+            For Each subject As String In subjectArray
+                cbxSubject.Items.Add(subject.Trim())
+            Next
+        End If
     End Sub
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         Dim schoolID As String = txtSchoolID.Text
@@ -392,7 +406,7 @@ Public Class CourseProfessorForm
         Next
     End Sub
 
-    Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
+    Private Sub TabPage2_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -433,8 +447,36 @@ Public Class CourseProfessorForm
             End If
         End If
     End Sub
+    Private Function GetProfessorSubjects(username As String) As String
+        Dim connectionString As String = "Database=wyteboard;Data Source=localhost;User id=admin;Password=IamFinal0904;Port=3306;Command Timeout=600;"
+        Dim query As String = "SELECT subjects FROM tb_handler WHERE email = @username"
+
+        Try
+            Using connection As New MySqlConnection(connectionString)
+                connection.Open()
+
+                Using cmd As New MySqlCommand(query, connection)
+                    cmd.Parameters.AddWithValue("@username", username)
+
+                    Dim result As Object = cmd.ExecuteScalar()
+                    If result IsNot Nothing AndAlso Not DBNull.Value.Equals(result) Then
+                        Return result.ToString()
+                    Else
+                        Return ""
+                    End If
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error retrieving subjects: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return ""
+        End Try
+    End Function
 
     Private Sub Guna2Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel3.Paint
+
+    End Sub
+
+    Private Sub cbxSubject_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxSubject.SelectedIndexChanged
 
     End Sub
 End Class

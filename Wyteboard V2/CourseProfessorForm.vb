@@ -12,24 +12,92 @@ Public Class CourseProfessorForm
         LoadDataIntoDataGridView(Username)
         lblUser.Text = "Hello " & FirstName & ", Enjoy your day!"
     End Sub
-
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         Dim schoolID As String = txtSchoolID.Text
-        Dim username As String = txtEmail.Text
+        Dim email As String = txtEmail.Text
         Dim subject As String = If(cbxSubject.SelectedItem IsNot Nothing, cbxSubject.SelectedItem.ToString(), "")
 
+        ' Debugging output
+        MessageBox.Show($"Email: {email}, School ID: {schoolID}, Subject: {subject}", "Debug", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
         ' Validate inputs
-        If String.IsNullOrEmpty(schoolID) OrElse String.IsNullOrEmpty(username) OrElse String.IsNullOrEmpty(subject) Then
+        If String.IsNullOrEmpty(schoolID) OrElse String.IsNullOrEmpty(email) OrElse String.IsNullOrEmpty(subject) Then
             MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
         End If
 
         ' Check if the email and school ID exist in tb_user
-        If Not UserExists(username, schoolID) Then
+        If Not UserExists(email, schoolID) Then
             MessageBox.Show("User with the provided email and school ID does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
         End If
+
+        ' If all inputs are valid and user exists, insert email and school ID into tb_course
+        If InsertUserIntoCourse(email, schoolID, subject) Then
+            ' Reload the data in the DataGridView
+            LoadDataIntoDataGridView(Username)
+        End If
     End Sub
+    Private Function GetFullNameFromUser(email As String, schoolID As String) As String
+        Dim query As String = "SELECT CONCAT(firstname, ' ', lastname) AS fullname FROM tb_user WHERE email = @email AND schoolID = @schoolID"
+        Dim connectionString As String = "Database=wyteboard;Data Source=localhost;User id=admin;Password=IamFinal0904;Port=3306;Command Timeout=600;"
+        Dim fullname As String = ""
+
+        Try
+            Using connection As New MySqlConnection(connectionString)
+                connection.Open()
+
+                Using cmd As New MySqlCommand(query, connection)
+                    cmd.Parameters.AddWithValue("@email", email)
+                    cmd.Parameters.AddWithValue("@schoolID", schoolID)
+
+                    Dim reader As Object = cmd.ExecuteScalar()
+                    If reader IsNot Nothing Then
+                        fullName = Convert.ToString(reader)
+                    End If
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error retrieving full name: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+        Return fullName
+    End Function
+
+    Private Function InsertUserIntoCourse(email As String, schoolID As String, subject As String) As Boolean
+        Dim query As String = $"INSERT INTO tb_course (fullname, username, schoolid, subject) VALUES (@fullname, @username, @schoolID, @subject)"
+        Dim connectionString As String = "Database=wyteboard;Data Source=localhost;User id=admin;Password=IamFinal0904;Port=3306;Command Timeout=600;"
+
+        Try
+            ' Retrieve the full name from tb_user based on email and school ID
+            Dim fullname As String = GetFullNameFromUser(email, schoolID)
+
+            If String.IsNullOrEmpty(fullname) Then
+                MessageBox.Show("Full name not found for the provided email and school ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return False
+            End If
+
+            Using connection As New MySqlConnection(connectionString)
+                connection.Open()
+
+                Using cmd As New MySqlCommand(query, connection)
+                    ' Use the email as the username
+                    cmd.Parameters.AddWithValue("@fullname", fullname)
+                    cmd.Parameters.AddWithValue("@username", email) ' Use the email as the username
+                    cmd.Parameters.AddWithValue("@schoolID", schoolID)
+                    cmd.Parameters.AddWithValue("@subject", subject)
+
+                    cmd.ExecuteNonQuery()
+                End Using
+            End Using
+
+            MessageBox.Show("User added to the course successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return True
+        Catch ex As Exception
+            MessageBox.Show("Error adding user to the course: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End Try
+    End Function
 
     Private Function AddNewColumn(columnName As String, columnType As String) As Boolean
         Try
@@ -81,16 +149,16 @@ Public Class CourseProfessorForm
         End Try
     End Function
 
-    Private Function UserExists(username As String, schoolID As String) As Boolean
-        Dim query As String = "SELECT COUNT(*) FROM tb_user WHERE email = @username AND schoolID = @schoolID"
-        Dim connectionString As String = "Your_Connection_String_Here"
+    Private Function UserExists(email As String, schoolID As String) As Boolean
+        Dim query As String = "SELECT COUNT(*) FROM tb_user WHERE email = @email AND schoolID = @schoolID"
+        Dim connectionString As String = "Database=wyteboard;Data Source=localhost;User id=admin;Password=IamFinal0904;Port=3306;Command Timeout=600;"
 
         Try
             Using connection As New MySqlConnection(connectionString)
                 connection.Open()
 
                 Using cmd As New MySqlCommand(query, connection)
-                    cmd.Parameters.AddWithValue("@username", username)
+                    cmd.Parameters.AddWithValue("@email", email)
                     cmd.Parameters.AddWithValue("@schoolID", schoolID)
                     Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
                     Return count > 0
@@ -113,10 +181,10 @@ Public Class CourseProfessorForm
 
         ' Connection string to your database
         Dim connectionString As String = "Database=wyteboard;" &
-    "Data Source=localhost;" &
-    "User id=admin;" &
-    "Password=IamFinal0904;" &
-    "Port=3306;Command Timeout=600;"
+        "Data Source=localhost;" &
+        "User id=admin;" &
+        "Password=IamFinal0904;" &
+        "Port=3306;Command Timeout=600;"
 
         myConnection = New MySqlConnection(connectionString)
 
@@ -154,6 +222,9 @@ Public Class CourseProfessorForm
             myAdapter.FillSchema(myDataSet, SchemaType.Source, "myData")
             myAdapter.Fill(myDataSet, "myData")
 
+            ' Exclude the id column from the DataGridView
+            myDataSet.Tables("myData").Columns.Remove("id")
+
             ' Set the DataSource of the DataGridView
             dgViewGrade.DataSource = myDataSet.Tables("myData")
 
@@ -174,6 +245,9 @@ Public Class CourseProfessorForm
     End Sub
 
 
+    Private oeColumnCountBeforeDeletion As Integer = 0
+    Private ptColumnCountBeforeDeletion As Integer = 0
+
     Public Sub ComputeFinalGrade()
         For Each row As DataGridViewRow In dgViewGrade.Rows
             Dim oeTotal As Double = 0
@@ -182,48 +256,41 @@ Public Class CourseProfessorForm
             Dim midtermExam As Double = 0
 
             Dim oeCount As Integer = 0
-            For i As Integer = 1 To 10
-                Dim oeCellValue As Object = row.Cells("oe" & i).Value
-                If oeCellValue IsNot DBNull.Value AndAlso IsNumeric(oeCellValue) Then
-                    oeTotal += CDbl(oeCellValue)
-                    oeCount += 1
-                End If
-            Next
-
             Dim ptCount As Integer = 0
-            For i As Integer = 1 To 3
-                Dim ptCellValue As Object = row.Cells("pt" & i).Value
-                If ptCellValue IsNot DBNull.Value AndAlso IsNumeric(ptCellValue) Then
-                    ptTotal += CDbl(ptCellValue)
-                    ptCount += 1
-                End If
-            Next
 
-            ' Include newly created columns in the computation
             For Each column As DataGridViewColumn In dgViewGrade.Columns
-                If column.Name.StartsWith("oe") AndAlso column.Index > 10 Then
+                If column.Name.StartsWith("oe") Then
                     Dim oeCellValue As Object = row.Cells(column.Index).Value
                     If oeCellValue IsNot DBNull.Value AndAlso IsNumeric(oeCellValue) Then
                         oeTotal += CDbl(oeCellValue)
                         oeCount += 1
                     End If
-                ElseIf column.Name.StartsWith("pt") AndAlso column.Index > 3 Then
+                ElseIf column.Name.StartsWith("pt") Then
                     Dim ptCellValue As Object = row.Cells(column.Index).Value
                     If ptCellValue IsNot DBNull.Value AndAlso IsNumeric(ptCellValue) Then
                         ptTotal += CDbl(ptCellValue)
                         ptCount += 1
                     End If
+                ElseIf column.Name = "prelimexam" Then
+                    Dim prelimExamCellValue As Object = row.Cells(column.Index).Value
+                    If prelimExamCellValue IsNot DBNull.Value AndAlso IsNumeric(prelimExamCellValue) Then
+                        prelimExam = CDbl(prelimExamCellValue)
+                    End If
+                ElseIf column.Name = "midtermexam" Then
+                    Dim midtermExamCellValue As Object = row.Cells(column.Index).Value
+                    If midtermExamCellValue IsNot DBNull.Value AndAlso IsNumeric(midtermExamCellValue) Then
+                        midtermExam = CDbl(midtermExamCellValue)
+                    End If
                 End If
             Next
 
-            Dim prelimExamCellValue As Object = row.Cells("prelimexam").Value
-            If prelimExamCellValue IsNot DBNull.Value AndAlso IsNumeric(prelimExamCellValue) Then
-                prelimExam = CDbl(prelimExamCellValue)
+            ' Adjust the count of OE and PT columns if a column was deleted
+            If oeColumnCountBeforeDeletion > 0 AndAlso oeCount < oeColumnCountBeforeDeletion Then
+                oeCount = oeColumnCountBeforeDeletion
             End If
 
-            Dim midtermExamCellValue As Object = row.Cells("midtermexam").Value
-            If midtermExamCellValue IsNot DBNull.Value AndAlso IsNumeric(midtermExamCellValue) Then
-                midtermExam = CDbl(midtermExamCellValue)
+            If ptColumnCountBeforeDeletion > 0 AndAlso ptCount < ptColumnCountBeforeDeletion Then
+                ptCount = ptColumnCountBeforeDeletion
             End If
 
             Dim oePercent As Double = oeTotal / (oeCount * 100) * 100
@@ -235,6 +302,21 @@ Public Class CourseProfessorForm
 
             row.Cells("finalgrade").Value = finalGrade.ToString("F2") & "%"
         Next
+    End Sub
+
+    Private Sub DeleteColumn(columnName As String)
+        ' Determine the column type (OE or PT)
+        Dim columnType As String = If(columnName.StartsWith("oe"), "oe", "pt")
+
+        ' Adjust the count of OE and PT columns before deletion
+        If columnType = "oe" Then
+            oeColumnCountBeforeDeletion -= 1
+        ElseIf columnType = "pt" Then
+            ptColumnCountBeforeDeletion -= 1
+        End If
+
+        ' Perform the deletion of the column
+        ' (This part is not included here as it depends on how you are deleting columns)
     End Sub
 
     Private Sub dgViewGrade_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles dgViewGrade.CellEndEdit

@@ -3,30 +3,30 @@ Imports MySql.Data.MySqlClient
 Public Class RegistrationForm
 
 
-    Private Sub txtSchoolID_TextChanged(sender As Object, e As EventArgs) Handles txtSchoolID.TextChanged
+    Private Sub txtSchoolID_TextChanged(sender As Object, e As EventArgs)
         ResetFieldBorders()
     End Sub
 
-    Private Sub txtFirstname_TextChanged(sender As Object, e As EventArgs) Handles txtFirstname.TextChanged
+    Private Sub txtFirstname_TextChanged(sender As Object, e As EventArgs)
         ResetFieldBorders()
     End Sub
 
-    Private Sub txtLastname_TextChanged(sender As Object, e As EventArgs) Handles txtLastname.TextChanged
+    Private Sub txtLastname_TextChanged(sender As Object, e As EventArgs)
         ResetFieldBorders()
     End Sub
 
-    Private Sub txtType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxType.SelectedIndexChanged
+    Private Sub txtType_SelectedIndexChanged(sender As Object, e As EventArgs)
         ResetFieldBorders()
     End Sub
 
-    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
+    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs)
         ResetFieldBorders()
     End Sub
 
-    Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
+    Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs)
         ResetFieldBorders()
     End Sub
-    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs)
 
         If AreFieldsEmpty() Then
             lblError.Text = "Please fill in all fields before submitting."
@@ -92,7 +92,7 @@ Public Class RegistrationForm
         txtConfirmPass.BorderColor = Color.Empty
     End Sub
 
-    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+    Private Sub btnBack_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Dim LoginForm As New LoginForm()
         LoginForm.Show()
@@ -154,15 +154,15 @@ Public Class RegistrationForm
         txtConfirmPass.UseSystemPasswordChar = True
     End Sub
 
-    Private Sub imgLockPass_Click(sender As Object, e As EventArgs) Handles imgLockPass.Click
+    Private Sub imgLockPass_Click(sender As Object, e As EventArgs)
         ToggleVisibility(txtPassword, imgLockPass)
     End Sub
 
-    Private Sub imgLockConfPass_Click(sender As Object, e As EventArgs) Handles imgLockConfPass.Click
+    Private Sub imgLockConfPass_Click(sender As Object, e As EventArgs)
         ToggleVisibility(txtConfirmPass, imgLockConfPass)
     End Sub
 
-    Private Sub lblError_Click(sender As Object, e As EventArgs) Handles lblError.Click
+    Private Sub lblError_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class

@@ -22,22 +22,11 @@ Partial Class RegistrationForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RegistrationForm))
-        Me.pnlOverview = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
-        Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.imgLockConfPass = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.imgLockPass = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.lblError = New System.Windows.Forms.Label()
         Me.lblAccountType = New System.Windows.Forms.Label()
         Me.cbxType = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.picLogo = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lblConfirmPassword = New System.Windows.Forms.Label()
         Me.txtConfirmPass = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtPassword = New Guna.UI2.WinForms.Guna2TextBox()
@@ -53,113 +42,7 @@ Partial Class RegistrationForm
         Me.btnBack = New Guna.UI2.WinForms.Guna2Button()
         Me.btnUpdate = New Guna.UI2.WinForms.Guna2Button()
         Me.lblCreateAcc = New System.Windows.Forms.Label()
-        Me.pnlOverview.SuspendLayout()
-        Me.Guna2Panel2.SuspendLayout()
-        CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'pnlOverview
-        '
-        Me.pnlOverview.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.pnlOverview.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(104, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.pnlOverview.BorderRadius = 10
-        Me.pnlOverview.BorderThickness = 1
-        Me.pnlOverview.Controls.Add(Me.Label2)
-        Me.pnlOverview.Controls.Add(Me.Label3)
-        Me.pnlOverview.Controls.Add(Me.Label4)
-        Me.pnlOverview.Controls.Add(Me.Label5)
-        Me.pnlOverview.Controls.Add(Me.Label6)
-        Me.pnlOverview.Location = New System.Drawing.Point(661, 31)
-        Me.pnlOverview.Name = "pnlOverview"
-        Me.pnlOverview.Size = New System.Drawing.Size(587, 662)
-        Me.pnlOverview.TabIndex = 0
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Montserrat Medium", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(-141, 147)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 15)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Email"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Montserrat Medium", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(-141, 202)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(59, 15)
-        Me.Label3.TabIndex = 6
-        Me.Label3.Text = "School ID"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Montserrat Medium", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(-141, 261)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(71, 15)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "First Name"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Montserrat Medium", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(-141, 320)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(70, 15)
-        Me.Label5.TabIndex = 8
-        Me.Label5.Text = "Last Name"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Montserrat Medium", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(-141, 379)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(88, 15)
-        Me.Label6.TabIndex = 9
-        Me.Label6.Text = "Account Type?"
-        '
-        'Guna2BorderlessForm1
-        '
-        Me.Guna2BorderlessForm1.ContainerControl = Me
-        Me.Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
-        Me.Guna2BorderlessForm1.TransparentWhileDrag = True
-        '
-        'Guna2Panel2
-        '
-        Me.Guna2Panel2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Guna2Panel2.BackColor = System.Drawing.Color.White
-        Me.Guna2Panel2.Controls.Add(Me.imgLockConfPass)
-        Me.Guna2Panel2.Controls.Add(Me.imgLockPass)
-        Me.Guna2Panel2.Controls.Add(Me.lblError)
-        Me.Guna2Panel2.Controls.Add(Me.lblAccountType)
-        Me.Guna2Panel2.Controls.Add(Me.cbxType)
-        Me.Guna2Panel2.Controls.Add(Me.picLogo)
-        Me.Guna2Panel2.Controls.Add(Me.lblConfirmPassword)
-        Me.Guna2Panel2.Controls.Add(Me.txtConfirmPass)
-        Me.Guna2Panel2.Controls.Add(Me.txtPassword)
-        Me.Guna2Panel2.Controls.Add(Me.lblPasswordReg)
-        Me.Guna2Panel2.Controls.Add(Me.txtLastname)
-        Me.Guna2Panel2.Controls.Add(Me.lblLastName)
-        Me.Guna2Panel2.Controls.Add(Me.txtFirstname)
-        Me.Guna2Panel2.Controls.Add(Me.lblFirstName)
-        Me.Guna2Panel2.Controls.Add(Me.txtSchoolID)
-        Me.Guna2Panel2.Controls.Add(Me.lblSchoolID)
-        Me.Guna2Panel2.Controls.Add(Me.txtEmail)
-        Me.Guna2Panel2.Controls.Add(Me.lblEmailReg)
-        Me.Guna2Panel2.Controls.Add(Me.btnBack)
-        Me.Guna2Panel2.Controls.Add(Me.btnUpdate)
-        Me.Guna2Panel2.Controls.Add(Me.lblCreateAcc)
-        Me.Guna2Panel2.Location = New System.Drawing.Point(36, 31)
-        Me.Guna2Panel2.Name = "Guna2Panel2"
-        Me.Guna2Panel2.ShadowDecoration.Enabled = True
-        Me.Guna2Panel2.Size = New System.Drawing.Size(589, 662)
-        Me.Guna2Panel2.TabIndex = 1
         '
         'imgLockConfPass
         '
@@ -171,7 +54,7 @@ Partial Class RegistrationForm
         Me.imgLockConfPass.ImageOffset = New System.Drawing.Point(0, 0)
         Me.imgLockConfPass.ImageRotate = 0!
         Me.imgLockConfPass.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockConfPass.Location = New System.Drawing.Point(492, 416)
+        Me.imgLockConfPass.Location = New System.Drawing.Point(730, 361)
         Me.imgLockConfPass.Name = "imgLockConfPass"
         Me.imgLockConfPass.PressedState.ImageSize = New System.Drawing.Size(32, 33)
         Me.imgLockConfPass.Size = New System.Drawing.Size(46, 39)
@@ -188,7 +71,7 @@ Partial Class RegistrationForm
         Me.imgLockPass.ImageOffset = New System.Drawing.Point(0, 0)
         Me.imgLockPass.ImageRotate = 0!
         Me.imgLockPass.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockPass.Location = New System.Drawing.Point(247, 416)
+        Me.imgLockPass.Location = New System.Drawing.Point(485, 361)
         Me.imgLockPass.Name = "imgLockPass"
         Me.imgLockPass.PressedState.ImageSize = New System.Drawing.Size(32, 33)
         Me.imgLockPass.Size = New System.Drawing.Size(46, 39)
@@ -197,12 +80,11 @@ Partial Class RegistrationForm
         '
         'lblError
         '
-        Me.lblError.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblError.AutoSize = True
         Me.lblError.BackColor = System.Drawing.Color.White
         Me.lblError.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblError.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer))
-        Me.lblError.Location = New System.Drawing.Point(65, 161)
+        Me.lblError.Location = New System.Drawing.Point(303, 106)
         Me.lblError.Name = "lblError"
         Me.lblError.Size = New System.Drawing.Size(12, 17)
         Me.lblError.TabIndex = 58
@@ -214,7 +96,7 @@ Partial Class RegistrationForm
         Me.lblAccountType.BackColor = System.Drawing.Color.White
         Me.lblAccountType.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAccountType.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.lblAccountType.Location = New System.Drawing.Point(254, 477)
+        Me.lblAccountType.Location = New System.Drawing.Point(492, 422)
         Me.lblAccountType.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblAccountType.Name = "lblAccountType"
         Me.lblAccountType.Size = New System.Drawing.Size(95, 17)
@@ -234,23 +116,10 @@ Partial Class RegistrationForm
         Me.cbxType.ForeColor = System.Drawing.Color.Black
         Me.cbxType.ItemHeight = 30
         Me.cbxType.Items.AddRange(New Object() {"Professor", "Student"})
-        Me.cbxType.Location = New System.Drawing.Point(220, 502)
+        Me.cbxType.Location = New System.Drawing.Point(458, 447)
         Me.cbxType.Name = "cbxType"
         Me.cbxType.Size = New System.Drawing.Size(166, 36)
         Me.cbxType.TabIndex = 56
-        '
-        'picLogo
-        '
-        Me.picLogo.FillColor = System.Drawing.Color.Transparent
-        Me.picLogo.Image = CType(resources.GetObject("picLogo.Image"), System.Drawing.Image)
-        Me.picLogo.ImageRotate = 0!
-        Me.picLogo.Location = New System.Drawing.Point(47, 39)
-        Me.picLogo.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.picLogo.Name = "picLogo"
-        Me.picLogo.Size = New System.Drawing.Size(266, 66)
-        Me.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picLogo.TabIndex = 55
-        Me.picLogo.TabStop = False
         '
         'lblConfirmPassword
         '
@@ -258,7 +127,7 @@ Partial Class RegistrationForm
         Me.lblConfirmPassword.BackColor = System.Drawing.Color.White
         Me.lblConfirmPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblConfirmPassword.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.lblConfirmPassword.Location = New System.Drawing.Point(314, 388)
+        Me.lblConfirmPassword.Location = New System.Drawing.Point(552, 333)
         Me.lblConfirmPassword.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblConfirmPassword.Name = "lblConfirmPassword"
         Me.lblConfirmPassword.Size = New System.Drawing.Size(121, 17)
@@ -279,7 +148,7 @@ Partial Class RegistrationForm
         Me.txtConfirmPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtConfirmPass.ForeColor = System.Drawing.Color.Black
         Me.txtConfirmPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtConfirmPass.Location = New System.Drawing.Point(310, 412)
+        Me.txtConfirmPass.Location = New System.Drawing.Point(548, 357)
         Me.txtConfirmPass.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.txtConfirmPass.Name = "txtConfirmPass"
         Me.txtConfirmPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -303,7 +172,7 @@ Partial Class RegistrationForm
         Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassword.ForeColor = System.Drawing.Color.Black
         Me.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtPassword.Location = New System.Drawing.Point(68, 412)
+        Me.txtPassword.Location = New System.Drawing.Point(306, 357)
         Me.txtPassword.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -319,7 +188,7 @@ Partial Class RegistrationForm
         Me.lblPasswordReg.BackColor = System.Drawing.Color.White
         Me.lblPasswordReg.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPasswordReg.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.lblPasswordReg.Location = New System.Drawing.Point(65, 388)
+        Me.lblPasswordReg.Location = New System.Drawing.Point(303, 333)
         Me.lblPasswordReg.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblPasswordReg.Name = "lblPasswordReg"
         Me.lblPasswordReg.Size = New System.Drawing.Size(69, 17)
@@ -340,7 +209,7 @@ Partial Class RegistrationForm
         Me.txtLastname.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLastname.ForeColor = System.Drawing.Color.Black
         Me.txtLastname.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtLastname.Location = New System.Drawing.Point(310, 312)
+        Me.txtLastname.Location = New System.Drawing.Point(548, 257)
         Me.txtLastname.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.txtLastname.Name = "txtLastname"
         Me.txtLastname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -356,7 +225,7 @@ Partial Class RegistrationForm
         Me.lblLastName.BackColor = System.Drawing.Color.White
         Me.lblLastName.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLastName.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.lblLastName.Location = New System.Drawing.Point(307, 289)
+        Me.lblLastName.Location = New System.Drawing.Point(545, 234)
         Me.lblLastName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblLastName.Name = "lblLastName"
         Me.lblLastName.Size = New System.Drawing.Size(76, 17)
@@ -377,7 +246,7 @@ Partial Class RegistrationForm
         Me.txtFirstname.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtFirstname.ForeColor = System.Drawing.Color.Black
         Me.txtFirstname.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtFirstname.Location = New System.Drawing.Point(68, 312)
+        Me.txtFirstname.Location = New System.Drawing.Point(306, 257)
         Me.txtFirstname.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.txtFirstname.Name = "txtFirstname"
         Me.txtFirstname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -393,7 +262,7 @@ Partial Class RegistrationForm
         Me.lblFirstName.BackColor = System.Drawing.Color.White
         Me.lblFirstName.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFirstName.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.lblFirstName.Location = New System.Drawing.Point(65, 288)
+        Me.lblFirstName.Location = New System.Drawing.Point(303, 233)
         Me.lblFirstName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblFirstName.Name = "lblFirstName"
         Me.lblFirstName.Size = New System.Drawing.Size(76, 17)
@@ -414,7 +283,7 @@ Partial Class RegistrationForm
         Me.txtSchoolID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSchoolID.ForeColor = System.Drawing.Color.Black
         Me.txtSchoolID.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtSchoolID.Location = New System.Drawing.Point(352, 219)
+        Me.txtSchoolID.Location = New System.Drawing.Point(590, 164)
         Me.txtSchoolID.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.txtSchoolID.Name = "txtSchoolID"
         Me.txtSchoolID.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -430,7 +299,7 @@ Partial Class RegistrationForm
         Me.lblSchoolID.BackColor = System.Drawing.Color.White
         Me.lblSchoolID.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSchoolID.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.lblSchoolID.Location = New System.Drawing.Point(349, 195)
+        Me.lblSchoolID.Location = New System.Drawing.Point(587, 140)
         Me.lblSchoolID.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblSchoolID.Name = "lblSchoolID"
         Me.lblSchoolID.Size = New System.Drawing.Size(68, 17)
@@ -451,7 +320,7 @@ Partial Class RegistrationForm
         Me.txtEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmail.ForeColor = System.Drawing.Color.Black
         Me.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtEmail.Location = New System.Drawing.Point(68, 219)
+        Me.txtEmail.Location = New System.Drawing.Point(306, 164)
         Me.txtEmail.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -467,7 +336,7 @@ Partial Class RegistrationForm
         Me.lblEmailReg.BackColor = System.Drawing.Color.White
         Me.lblEmailReg.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblEmailReg.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.lblEmailReg.Location = New System.Drawing.Point(65, 195)
+        Me.lblEmailReg.Location = New System.Drawing.Point(303, 140)
         Me.lblEmailReg.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblEmailReg.Name = "lblEmailReg"
         Me.lblEmailReg.Size = New System.Drawing.Size(42, 17)
@@ -488,7 +357,7 @@ Partial Class RegistrationForm
         Me.btnBack.FillColor = System.Drawing.Color.White
         Me.btnBack.Font = New System.Drawing.Font("Montserrat SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.ForeColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(229, Byte), Integer))
-        Me.btnBack.Location = New System.Drawing.Point(81, 569)
+        Me.btnBack.Location = New System.Drawing.Point(319, 514)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(180, 45)
         Me.btnBack.TabIndex = 42
@@ -507,7 +376,7 @@ Partial Class RegistrationForm
         Me.btnUpdate.FillColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.btnUpdate.Font = New System.Drawing.Font("Montserrat SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUpdate.ForeColor = System.Drawing.Color.White
-        Me.btnUpdate.Location = New System.Drawing.Point(337, 569)
+        Me.btnUpdate.Location = New System.Drawing.Point(575, 514)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(180, 45)
         Me.btnUpdate.TabIndex = 41
@@ -518,7 +387,7 @@ Partial Class RegistrationForm
         '
         Me.lblCreateAcc.AutoSize = True
         Me.lblCreateAcc.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCreateAcc.Location = New System.Drawing.Point(62, 130)
+        Me.lblCreateAcc.Location = New System.Drawing.Point(300, 75)
         Me.lblCreateAcc.Name = "lblCreateAcc"
         Me.lblCreateAcc.Size = New System.Drawing.Size(233, 31)
         Me.lblCreateAcc.TabIndex = 40
@@ -529,33 +398,43 @@ Partial Class RegistrationForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(1280, 720)
-        Me.Controls.Add(Me.Guna2Panel2)
-        Me.Controls.Add(Me.pnlOverview)
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(1079, 635)
+        Me.Controls.Add(Me.imgLockConfPass)
+        Me.Controls.Add(Me.imgLockPass)
+        Me.Controls.Add(Me.lblError)
+        Me.Controls.Add(Me.lblCreateAcc)
+        Me.Controls.Add(Me.lblAccountType)
+        Me.Controls.Add(Me.btnUpdate)
+        Me.Controls.Add(Me.cbxType)
+        Me.Controls.Add(Me.btnBack)
+        Me.Controls.Add(Me.lblEmailReg)
+        Me.Controls.Add(Me.lblConfirmPassword)
+        Me.Controls.Add(Me.txtEmail)
+        Me.Controls.Add(Me.txtConfirmPass)
+        Me.Controls.Add(Me.lblSchoolID)
+        Me.Controls.Add(Me.txtPassword)
+        Me.Controls.Add(Me.txtSchoolID)
+        Me.Controls.Add(Me.lblPasswordReg)
+        Me.Controls.Add(Me.lblFirstName)
+        Me.Controls.Add(Me.txtLastname)
+        Me.Controls.Add(Me.txtFirstname)
+        Me.Controls.Add(Me.lblLastName)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "RegistrationForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "RegistrationForm"
-        Me.pnlOverview.ResumeLayout(False)
-        Me.pnlOverview.PerformLayout()
-        Me.Guna2Panel2.ResumeLayout(False)
-        Me.Guna2Panel2.PerformLayout()
-        CType(Me.picLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents pnlOverview As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
-    Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
+
+    Friend WithEvents imgLockConfPass As Guna.UI2.WinForms.Guna2ImageButton
+    Friend WithEvents imgLockPass As Guna.UI2.WinForms.Guna2ImageButton
+    Friend WithEvents lblError As Label
     Friend WithEvents lblAccountType As Label
     Friend WithEvents cbxType As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents picLogo As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents lblConfirmPassword As Label
     Friend WithEvents txtConfirmPass As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtPassword As Guna.UI2.WinForms.Guna2TextBox
@@ -571,7 +450,4 @@ Partial Class RegistrationForm
     Friend WithEvents btnBack As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnUpdate As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lblCreateAcc As Label
-    Friend WithEvents lblError As Label
-    Friend WithEvents imgLockConfPass As Guna.UI2.WinForms.Guna2ImageButton
-    Friend WithEvents imgLockPass As Guna.UI2.WinForms.Guna2ImageButton
 End Class

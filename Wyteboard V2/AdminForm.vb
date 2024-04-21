@@ -10,7 +10,7 @@
             pnlMenu.Width = 183 ' Set the panel width to a larger value instantly
         End If
     End Sub
-    Private Sub btnOpenChildForm_Click(sender As Object, e As EventArgs) Handles btnSummary.Click, btnCourse.Click, btnAccount.Click, btnHome.Click
+    Private Sub btnOpenChildForm_Click(sender As Object, e As EventArgs) Handles btnRegistration.Click, btnAccount.Click, btnHome.Click
 
         Console.WriteLine("Button clicked: " & DirectCast(sender, Button).Name)
         Dim btn As Button = DirectCast(sender, Button)
@@ -26,17 +26,9 @@
                 ' Always load user data when opening the AccountForm
                 account.LoadUserData(account.Username)
                 childForm = account
-            Case "btnSummary"
-                childForm = New SummaryForm()
-            Case "btnCourse"
-                If CourseProfessorForm Is Nothing Then
-                    CourseProfessorForm = New CourseProfessorForm()
-                    CourseProfessorForm.FirstName = Me.FirstName ' Pass the first name to CourseProfessorForm
-                    CourseProfessorForm.Username = Me.Username ' Pass the username to CourseProfessorForm
-                End If
-                ' Always load user data when opening the CourseProfessorForm
-                CourseProfessorForm.LoadDataIntoDataGridView(Me.Username)
-                childForm = CourseProfessorForm ' Use the existing CourseProfessorForm instance
+            Case "btnRegistration"
+                childForm = New RegistrationForm()
+                childForm = RegistrationForm
             Case "btnHome"
                 Dim homeForm As New HomeForm()
                 homeForm.FirstName = Me.FirstName ' Pass the first name to HomeForm
@@ -56,15 +48,13 @@
     Private Sub pnlMenu_SizeChanged(sender As Object, e As EventArgs) Handles pnlMenu.SizeChanged
         If pnlMenu.Width < 180 Then
             btnAccount.Text = ""
-            btnSummary.Text = ""
+            btnRegistration.Text = ""
             btnLogout.Text = ""
-            btnCourse.Text = ""
             btnHome.Text = ""
         Else
             btnAccount.Text = "Account"
-            btnSummary.Text = "Summary"
+            btnRegistration.Text = "Enroll Student"
             btnLogout.Text = "Logout"
-            btnCourse.Text = "Course"
             btnHome.Text = "Home"
         End If
     End Sub

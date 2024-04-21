@@ -254,6 +254,7 @@ Partial Class Account
         Me.cbxType.BorderRadius = 5
         Me.cbxType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.cbxType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbxType.Enabled = False
         Me.cbxType.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.cbxType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.cbxType.Font = New System.Drawing.Font("Montserrat", 9.749999!)

@@ -113,18 +113,39 @@ Public Class CourseProfessorForm
 
         ' Connection string to your database
         Dim connectionString As String = "Database=wyteboard;" &
-        "Data Source=localhost;" &
-        "User id=admin;" &
-        "Password=IamFinal0904;" &
-        "Port=3306;Command Timeout=600;"
+    "Data Source=localhost;" &
+    "User id=admin;" &
+    "Password=IamFinal0904;" &
+    "Port=3306;Command Timeout=600;"
 
         myConnection = New MySqlConnection(connectionString)
 
         Try
             myConnection.Open()
 
-            ' Generate the SELECT statement
-            Dim query As String = $"SELECT * FROM wyteboard.tb_course WHERE subject = 'IM1' ORDER BY fullname ASC"
+            ' Generate the SELECT statement to get the subjects handled by the professor
+            Dim subjectsQuery As String = $"SELECT subjects FROM tb_handler WHERE email = @username"
+
+            myCommand = New MySqlCommand(subjectsQuery, myConnection)
+            myCommand.Parameters.AddWithValue("@username", username)
+
+            ' Execute the query to get the subjects
+            Dim subjects As String = ""
+
+            Using reader As MySqlDataReader = myCommand.ExecuteReader()
+                If reader.Read() Then
+                    subjects = reader.GetString("subjects")
+                End If
+            End Using
+
+            ' Split the subjects string into individual subjects
+            Dim subjectArray As String() = subjects.Split(","c)
+
+            ' Generate the IN clause for the SQL query
+            Dim subjectList As String = String.Join(",", subjectArray.Select(Function(s) $"'{s}'"))
+
+            ' Generate the SELECT statement to retrieve data for the professor's subjects
+            Dim query As String = $"SELECT * FROM wyteboard.tb_course WHERE subject IN ({subjectList}) ORDER BY fullname ASC"
 
             myCommand = New MySqlCommand(query, myConnection)
 

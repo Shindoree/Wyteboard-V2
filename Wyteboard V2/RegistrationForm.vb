@@ -1,47 +1,65 @@
 ﻿Imports Guna.UI2.WinForms
 Imports MySql.Data.MySqlClient
+
 Public Class RegistrationForm
+    Private connectionString As String = "Database=wyteboard;Data Source=localhost;User id=admin;Password=IamFinal0904;Port=3306;Command Timeout=600;"
 
-
-    Private Sub txtSchoolID_TextChanged(sender As Object, e As EventArgs)
+    Private Sub txtConfirmPass_TextChanged(sender As Object, e As EventArgs) Handles txtConfirmPass.TextChanged
         ResetFieldBorders()
     End Sub
 
-    Private Sub txtFirstname_TextChanged(sender As Object, e As EventArgs)
+    Private Sub imgLockConfPass_Click(sender As Object, e As EventArgs) Handles imgLockConfPass.Click
+        ToggleVisibility(txtConfirmPass, imgLockConfPass)
+    End Sub
+
+    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
         ResetFieldBorders()
     End Sub
 
-    Private Sub txtLastname_TextChanged(sender As Object, e As EventArgs)
+    Private Sub imgLock_Click(sender As Object, e As EventArgs) Handles imgLock.Click
+        ToggleVisibility(txtPassword, imgLock)
+    End Sub
+
+    Private Sub cbxType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxType.SelectedIndexChanged
         ResetFieldBorders()
     End Sub
 
-    Private Sub txtType_SelectedIndexChanged(sender As Object, e As EventArgs)
+    Private Sub txtLastname_TextChanged(sender As Object, e As EventArgs) Handles txtLastname.TextChanged
         ResetFieldBorders()
     End Sub
 
-    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs)
+    Private Sub txtFirstname_TextChanged(sender As Object, e As EventArgs) Handles txtFirstname.TextChanged
         ResetFieldBorders()
     End Sub
 
-    Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs)
+    Private Sub txtSchoolID_TextChanged(sender As Object, e As EventArgs) Handles txtSchoolID.TextChanged
         ResetFieldBorders()
     End Sub
-    Private Sub btnUpdate_Click(sender As Object, e As EventArgs)
 
+    Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
+        ResetFieldBorders()
+    End Sub
+
+    Private Sub lblInfo_Click(sender As Object, e As EventArgs) Handles lblInfo.Click
+        ' Handle label click event if needed
+    End Sub
+
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         If AreFieldsEmpty() Then
-            lblError.Text = "Please fill in all fields before submitting."
+            lblInfo.Text = "Please fill in all fields before submitting."
             Return
         End If
 
-
         If txtPassword.Text <> txtConfirmPass.Text Then
-            lblError.Text = "Passwords do not match."
+            lblInfo.Text = "Passwords do not match."
             txtPassword.BorderColor = Color.Red
             txtConfirmPass.BorderColor = Color.Red
             Return
         End If
-        insertLogs()
+
+        InsertLogs()
     End Sub
+
     Private Function AreFieldsEmpty() As Boolean
         Dim isEmpty As Boolean = False
 
@@ -79,10 +97,11 @@ Public Class RegistrationForm
             txtConfirmPass.BorderColor = Color.Red
             isEmpty = True
         End If
+
         Return isEmpty
     End Function
-    Private Sub ResetFieldBorders()
 
+    Private Sub ResetFieldBorders()
         txtEmail.BorderColor = Color.Empty
         txtSchoolID.BorderColor = Color.Empty
         txtFirstname.BorderColor = Color.Empty
@@ -92,54 +111,6 @@ Public Class RegistrationForm
         txtConfirmPass.BorderColor = Color.Empty
     End Sub
 
-    Private Sub btnBack_Click(sender As Object, e As EventArgs)
-        Me.Hide()
-        Dim LoginForm As New LoginForm()
-        LoginForm.Show()
-    End Sub
-
-    Sub insertLogs()
-        Dim myConnectionx As MySqlConnection = Nothing
-        Dim myCommandx As MySqlCommand = Nothing
-        Dim timestampValue As String = DateTime.Now.ToString("yyyy-MM-dd")
-
-        Try
-            myConnectionx = New MySqlConnection(
-                "Database= wyteboard;" &
-                "Data Source= localhost;" &
-                "User id= admin;" &
-                "Password= IamFinal0904;" &
-                "Port=3306;Command Timeout=600;")
-
-            myConnectionx.Open()
-            Dim query As String = "INSERT INTO wyteboard.tb_user (email, firstname, lastname, password, schoolid, timestamp,  type ) VALUES (@email, @firstname, @lastname, @password, @schoolid, @timestamp, @type)"
-            myCommandx = New MySqlCommand(query, myConnectionx)
-
-            myCommandx.Parameters.AddWithValue("@email", txtEmail.Text)
-            myCommandx.Parameters.AddWithValue("@firstName", txtFirstname.Text)
-            myCommandx.Parameters.AddWithValue("@lastName", txtLastname.Text)
-            myCommandx.Parameters.AddWithValue("@passWord", txtPassword.Text)
-            myCommandx.Parameters.AddWithValue("@schoolid", txtSchoolID.Text)
-            myCommandx.Parameters.AddWithValue("@timestamp", timestampValue)
-            myCommandx.Parameters.AddWithValue("@type", cbxType.SelectedItem.ToString())
-
-            myCommandx.ExecuteNonQuery()
-            lblError.Text = "Successfully created an account. Please go back to login page."
-        Catch ex As MySqlException
-            If ex.Number = 1062 Then
-                lblError.Text = "Please choose a different email."
-
-            Else
-                MsgBox("Error: " & ex.Message)
-            End If
-        Catch ex As Exception
-            MsgBox("Error: " & ex.Message)
-        Finally
-            If myConnectionx IsNot Nothing Then
-                myConnectionx.Close()
-            End If
-        End Try
-    End Sub
     Private Sub ToggleVisibility(textBox As Guna2TextBox, imageButton As Guna2ImageButton)
         textBox.UseSystemPasswordChar = Not textBox.UseSystemPasswordChar
         If textBox.UseSystemPasswordChar Then
@@ -149,20 +120,38 @@ Public Class RegistrationForm
         End If
     End Sub
 
+    Private Sub InsertLogs()
+        Dim timestampValue As String = DateTime.Now.ToString("yyyy-MM-dd")
+
+        Try
+            Using myConnectionx As New MySqlConnection(connectionString)
+                myConnectionx.Open()
+                Dim query As String = "INSERT INTO wyteboard.tb_user (email, firstname, lastname, password, schoolid, timestamp, type ) VALUES (@email, @firstname, @lastname, @password, @schoolid, @timestamp, @type)"
+                Using myCommandx As New MySqlCommand(query, myConnectionx)
+                    myCommandx.Parameters.AddWithValue("@email", txtEmail.Text)
+                    myCommandx.Parameters.AddWithValue("@firstName", txtFirstname.Text)
+                    myCommandx.Parameters.AddWithValue("@lastName", txtLastname.Text)
+                    myCommandx.Parameters.AddWithValue("@passWord", txtPassword.Text)
+                    myCommandx.Parameters.AddWithValue("@schoolid", txtSchoolID.Text)
+                    myCommandx.Parameters.AddWithValue("@timestamp", timestampValue)
+                    myCommandx.Parameters.AddWithValue("@type", cbxType.SelectedItem.ToString())
+                    myCommandx.ExecuteNonQuery()
+                End Using
+                lblInfo.Text = "Account creation done. Please go back to Login Page."
+            End Using
+        Catch ex As MySqlException
+            If ex.Number = 1062 Then
+                lblInfo.Text = "The provided username or email is already in use. Please choose a different one."
+            Else
+                MsgBox("Error: " & ex.Message)
+            End If
+        Catch ex As Exception
+            MsgBox("Error: " & ex.Message)
+        End Try
+    End Sub
+
     Private Sub RegistrationForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtPassword.UseSystemPasswordChar = True
         txtConfirmPass.UseSystemPasswordChar = True
-    End Sub
-
-    Private Sub imgLockPass_Click(sender As Object, e As EventArgs)
-        ToggleVisibility(txtPassword, imgLockPass)
-    End Sub
-
-    Private Sub imgLockConfPass_Click(sender As Object, e As EventArgs)
-        ToggleVisibility(txtConfirmPass, imgLockConfPass)
-    End Sub
-
-    Private Sub lblError_Click(sender As Object, e As EventArgs)
-
     End Sub
 End Class

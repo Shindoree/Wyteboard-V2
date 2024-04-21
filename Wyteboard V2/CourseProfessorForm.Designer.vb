@@ -22,13 +22,13 @@ Partial Class CourseProfessorForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.chartCourse = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.lblUser = New System.Windows.Forms.Label()
         Me.cbxSubject = New Guna.UI2.WinForms.Guna2ComboBox()
@@ -37,15 +37,15 @@ Partial Class CourseProfessorForm
         Me.txtSchoolID = New Guna.UI2.WinForms.Guna2TextBox()
         Me.lblInfo = New System.Windows.Forms.Label()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.btnAddNew = New Guna.UI2.WinForms.Guna2Button()
+        Me.txtNewPT = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtNewOE = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.cntrlTabCourses = New Guna.UI2.WinForms.Guna2TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.dgViewGrade = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtNewOE = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.txtNewPT = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.btnAddNew = New Guna.UI2.WinForms.Guna2Button()
         CType(Me.chartCourse, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel3.SuspendLayout()
         Me.cntrlTabCourses.SuspendLayout()
@@ -57,18 +57,18 @@ Partial Class CourseProfessorForm
         'chartCourse
         '
         Me.chartCourse.BackColor = System.Drawing.Color.Transparent
-        ChartArea2.Name = "ChartArea1"
-        Me.chartCourse.ChartAreas.Add(ChartArea2)
+        ChartArea1.Name = "ChartArea1"
+        Me.chartCourse.ChartAreas.Add(ChartArea1)
         Me.chartCourse.Dock = System.Windows.Forms.DockStyle.Fill
         Me.chartCourse.Enabled = False
-        Legend2.Name = "Legend1"
-        Me.chartCourse.Legends.Add(Legend2)
+        Legend1.Name = "Legend1"
+        Me.chartCourse.Legends.Add(Legend1)
         Me.chartCourse.Location = New System.Drawing.Point(3, 222)
         Me.chartCourse.Name = "chartCourse"
-        Series2.ChartArea = "ChartArea1"
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        Me.chartCourse.Series.Add(Series2)
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        Me.chartCourse.Series.Add(Series1)
         Me.chartCourse.Size = New System.Drawing.Size(1065, 106)
         Me.chartCourse.TabIndex = 1
         Me.chartCourse.Text = "Chart1"
@@ -205,6 +205,89 @@ Partial Class CourseProfessorForm
         Me.Guna2Panel3.Size = New System.Drawing.Size(1079, 256)
         Me.Guna2Panel3.TabIndex = 61
         '
+        'btnAddNew
+        '
+        Me.btnAddNew.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnAddNew.AutoRoundedCorners = True
+        Me.btnAddNew.BackColor = System.Drawing.Color.Transparent
+        Me.btnAddNew.BorderRadius = 17
+        Me.btnAddNew.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnAddNew.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnAddNew.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnAddNew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnAddNew.FillColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.btnAddNew.Font = New System.Drawing.Font("Montserrat SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddNew.ForeColor = System.Drawing.Color.White
+        Me.btnAddNew.Location = New System.Drawing.Point(393, 161)
+        Me.btnAddNew.Name = "btnAddNew"
+        Me.btnAddNew.Size = New System.Drawing.Size(180, 37)
+        Me.btnAddNew.TabIndex = 65
+        Me.btnAddNew.Text = "Add"
+        Me.btnAddNew.UseTransparentBackground = True
+        '
+        'txtNewPT
+        '
+        Me.txtNewPT.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtNewPT.BorderColor = System.Drawing.Color.FromArgb(CType(CType(154, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.txtNewPT.BorderRadius = 5
+        Me.txtNewPT.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtNewPT.DefaultText = ""
+        Me.txtNewPT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtNewPT.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtNewPT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtNewPT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtNewPT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtNewPT.Font = New System.Drawing.Font("Montserrat", 8.249999!)
+        Me.txtNewPT.ForeColor = System.Drawing.Color.DimGray
+        Me.txtNewPT.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtNewPT.Location = New System.Drawing.Point(203, 160)
+        Me.txtNewPT.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
+        Me.txtNewPT.Name = "txtNewPT"
+        Me.txtNewPT.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtNewPT.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtNewPT.PlaceholderText = "New PT name"
+        Me.txtNewPT.SelectedText = ""
+        Me.txtNewPT.Size = New System.Drawing.Size(181, 39)
+        Me.txtNewPT.TabIndex = 64
+        '
+        'txtNewOE
+        '
+        Me.txtNewOE.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtNewOE.BorderColor = System.Drawing.Color.FromArgb(CType(CType(154, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.txtNewOE.BorderRadius = 5
+        Me.txtNewOE.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtNewOE.DefaultText = ""
+        Me.txtNewOE.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtNewOE.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtNewOE.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtNewOE.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtNewOE.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtNewOE.Font = New System.Drawing.Font("Montserrat", 8.249999!)
+        Me.txtNewOE.ForeColor = System.Drawing.Color.DimGray
+        Me.txtNewOE.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtNewOE.Location = New System.Drawing.Point(15, 160)
+        Me.txtNewOE.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
+        Me.txtNewOE.Name = "txtNewOE"
+        Me.txtNewOE.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtNewOE.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtNewOE.PlaceholderText = "New OE name"
+        Me.txtNewOE.SelectedText = ""
+        Me.txtNewOE.Size = New System.Drawing.Size(181, 39)
+        Me.txtNewOE.TabIndex = 63
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.SystemColors.Control
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(12, 136)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(108, 17)
+        Me.Label1.TabIndex = 62
+        Me.Label1.Text = "Add new OE/PT"
+        '
         'cntrlTabCourses
         '
         Me.cntrlTabCourses.Controls.Add(Me.TabPage1)
@@ -249,40 +332,40 @@ Partial Class CourseProfessorForm
         '
         'dgViewGrade
         '
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
-        Me.dgViewGrade.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgViewGrade.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgViewGrade.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgViewGrade.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgViewGrade.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgViewGrade.ColumnHeadersHeight = 40
         Me.dgViewGrade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgViewGrade.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgViewGrade.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgViewGrade.Dock = System.Windows.Forms.DockStyle.Top
         Me.dgViewGrade.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgViewGrade.Location = New System.Drawing.Point(3, 3)
         Me.dgViewGrade.Name = "dgViewGrade"
         Me.dgViewGrade.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgViewGrade.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Montserrat", 8.249999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgViewGrade.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgViewGrade.RowHeadersVisible = False
         Me.dgViewGrade.RowHeadersWidth = 20
         Me.dgViewGrade.Size = New System.Drawing.Size(1065, 219)
@@ -314,7 +397,7 @@ Partial Class CourseProfessorForm
         Me.TabPage2.Location = New System.Drawing.Point(4, 44)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1071, 346)
+        Me.TabPage2.Size = New System.Drawing.Size(1071, 331)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "TabPage2"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -328,89 +411,6 @@ Partial Class CourseProfessorForm
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(1079, 379)
         Me.Guna2Panel1.TabIndex = 12
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.SystemColors.Control
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(12, 136)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(200, 17)
-        Me.Label1.TabIndex = 62
-        Me.Label1.Text = "Add new student to the course"
-        '
-        'txtNewOE
-        '
-        Me.txtNewOE.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txtNewOE.BorderColor = System.Drawing.Color.FromArgb(CType(CType(154, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.txtNewOE.BorderRadius = 5
-        Me.txtNewOE.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtNewOE.DefaultText = ""
-        Me.txtNewOE.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtNewOE.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtNewOE.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtNewOE.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtNewOE.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtNewOE.Font = New System.Drawing.Font("Montserrat", 8.249999!)
-        Me.txtNewOE.ForeColor = System.Drawing.Color.DimGray
-        Me.txtNewOE.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtNewOE.Location = New System.Drawing.Point(15, 160)
-        Me.txtNewOE.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
-        Me.txtNewOE.Name = "txtNewOE"
-        Me.txtNewOE.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtNewOE.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtNewOE.PlaceholderText = "New OE name"
-        Me.txtNewOE.SelectedText = ""
-        Me.txtNewOE.Size = New System.Drawing.Size(181, 39)
-        Me.txtNewOE.TabIndex = 63
-        '
-        'txtNewPT
-        '
-        Me.txtNewPT.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txtNewPT.BorderColor = System.Drawing.Color.FromArgb(CType(CType(154, Byte), Integer), CType(CType(154, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.txtNewPT.BorderRadius = 5
-        Me.txtNewPT.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtNewPT.DefaultText = ""
-        Me.txtNewPT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtNewPT.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtNewPT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtNewPT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtNewPT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtNewPT.Font = New System.Drawing.Font("Montserrat", 8.249999!)
-        Me.txtNewPT.ForeColor = System.Drawing.Color.DimGray
-        Me.txtNewPT.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtNewPT.Location = New System.Drawing.Point(203, 160)
-        Me.txtNewPT.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
-        Me.txtNewPT.Name = "txtNewPT"
-        Me.txtNewPT.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtNewPT.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtNewPT.PlaceholderText = "New PT name"
-        Me.txtNewPT.SelectedText = ""
-        Me.txtNewPT.Size = New System.Drawing.Size(181, 39)
-        Me.txtNewPT.TabIndex = 64
-        '
-        'btnAddNew
-        '
-        Me.btnAddNew.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnAddNew.AutoRoundedCorners = True
-        Me.btnAddNew.BackColor = System.Drawing.Color.Transparent
-        Me.btnAddNew.BorderRadius = 17
-        Me.btnAddNew.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnAddNew.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnAddNew.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnAddNew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnAddNew.FillColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(229, Byte), Integer))
-        Me.btnAddNew.Font = New System.Drawing.Font("Montserrat SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddNew.ForeColor = System.Drawing.Color.White
-        Me.btnAddNew.Location = New System.Drawing.Point(393, 161)
-        Me.btnAddNew.Name = "btnAddNew"
-        Me.btnAddNew.Size = New System.Drawing.Size(180, 37)
-        Me.btnAddNew.TabIndex = 65
-        Me.btnAddNew.Text = "Add"
-        Me.btnAddNew.UseTransparentBackground = True
         '
         'CourseProfessorForm
         '

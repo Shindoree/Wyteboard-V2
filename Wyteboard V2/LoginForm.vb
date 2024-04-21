@@ -101,7 +101,7 @@ Public Class LoginForm
     End Sub
 
     Private Sub HandleLoginSuccess(email As String, userType As String)
-        If userType = "Admin" OrElse userType = "Professor" Then
+        If userType = "Professor" Then
             Me.Hide()
             Dim professorForm As New ProfessorForm()
             professorForm.Username = email ' Pass the username to ProfessorForm
@@ -116,6 +116,13 @@ Public Class LoginForm
             studentForm.FirstName = GetFirstName(email) ' Pass the first name to StudentForm
             LoginForm.Username = email ' Set the username property in the LoginForm
             studentForm.Show()
+        ElseIf userType = "Admin" Then
+            Me.Hide()
+            Dim adminForm As New AdminForm()
+            adminForm.Username = email ' Pass the username to AdminForm
+            adminForm.FirstName = GetFirstName(email) ' Pass the first name to AdminForm
+            LoginForm.Username = email ' Set the username property in the LoginForm
+            adminForm.Show()
         End If
     End Sub
 

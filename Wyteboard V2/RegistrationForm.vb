@@ -3,69 +3,9 @@ Imports MySql.Data.MySqlClient
 
 Public Class RegistrationForm
     Private connectionString As String = "Database=wyteboard;Data Source=localhost;User id=admin;Password=IamFinal0904;Port=3306;Command Timeout=600;"
-
-    Private Sub txtConfirmPass_TextChanged(sender As Object, e As EventArgs) Handles txtConfirmPass.TextChanged
-        ResetFieldBorders()
-    End Sub
-
-    Private Sub imgLockConfPass_Click(sender As Object, e As EventArgs) Handles imgLockConfPass.Click
-        ToggleVisibility(txtConfirmPass, imgLockConfPass)
-    End Sub
-
-    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
-        ResetFieldBorders()
-    End Sub
-
-    Private Sub imgLock_Click(sender As Object, e As EventArgs) Handles imgLock.Click
-        ToggleVisibility(txtPassword, imgLock)
-    End Sub
-
-    Private Sub cbxType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxType.SelectedIndexChanged
-        ResetFieldBorders()
-    End Sub
-
-    Private Sub txtLastname_TextChanged(sender As Object, e As EventArgs) Handles txtLastname.TextChanged
-        ResetFieldBorders()
-    End Sub
-
-    Private Sub txtFirstname_TextChanged(sender As Object, e As EventArgs) Handles txtFirstname.TextChanged
-        ResetFieldBorders()
-    End Sub
-
-    Private Sub txtSchoolID_TextChanged(sender As Object, e As EventArgs) Handles txtSchoolID.TextChanged
-        ResetFieldBorders()
-    End Sub
-
-    Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
-        ResetFieldBorders()
-    End Sub
-
-    Private Sub lblInfo_Click(sender As Object, e As EventArgs) Handles lblInfo.Click
+    Private Sub lblInfo_Click(sender As Object, e As EventArgs)
         ' Handle label click event if needed
     End Sub
-
-    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
-        If AreFieldsEmpty() Then
-            lblInfo.Text = "Please fill in all fields before submitting."
-            Return
-        End If
-
-        If txtPassword.Text <> txtConfirmPass.Text Then
-            lblInfo.Text = "Passwords do not match."
-            txtPassword.BorderColor = Color.Red
-            txtConfirmPass.BorderColor = Color.Red
-            Return
-        End If
-
-        If Not txtEmail.Text.EndsWith("@lpulaguna.edu.ph", StringComparison.OrdinalIgnoreCase) Then
-            lblInfo.Text = "Please enter a valid email ending with @lpulaguna.edu.ph."
-            txtEmail.BorderColor = Color.Red
-            Return
-        End If
-
-        InsertLogs()
-    End Sub
-
     Private Function AreFieldsEmpty() As Boolean
         Dim isEmpty As Boolean = False
 
@@ -166,5 +106,55 @@ Public Class RegistrationForm
     Private Sub RegistrationForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtPassword.UseSystemPasswordChar = True
         txtConfirmPass.UseSystemPasswordChar = True
+    End Sub
+
+    Private Sub btnUpdate_Click_1(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        If AreFieldsEmpty() Then
+            lblInfo.Text = "Please fill in all fields before submitting."
+            Return
+        End If
+
+        If txtPassword.Text <> txtConfirmPass.Text Then
+            lblInfo.Text = "Passwords do not match."
+            txtPassword.BorderColor = Color.Red
+            txtConfirmPass.BorderColor = Color.Red
+            Return
+        End If
+
+        If Not txtEmail.Text.EndsWith("@lpulaguna.edu.ph", StringComparison.OrdinalIgnoreCase) Then
+            lblInfo.Text = "Please enter a valid email ending with @lpulaguna.edu.ph."
+            txtEmail.BorderColor = Color.Red
+            Return
+        End If
+
+        InsertLogs()
+    End Sub
+
+    Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
+        ResetFieldBorders()
+    End Sub
+
+    Private Sub txtSchoolID_TextChanged(sender As Object, e As EventArgs) Handles txtSchoolID.TextChanged
+        ResetFieldBorders()
+    End Sub
+
+    Private Sub txtFirstname_TextChanged(sender As Object, e As EventArgs) Handles txtFirstname.TextChanged
+        ResetFieldBorders()
+    End Sub
+
+    Private Sub txtLastname_TextChanged(sender As Object, e As EventArgs) Handles txtLastname.TextChanged
+        ResetFieldBorders()
+    End Sub
+
+    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
+        ResetFieldBorders()
+    End Sub
+
+    Private Sub txtConfirmPass_TextChanged(sender As Object, e As EventArgs) Handles txtConfirmPass.TextChanged
+        ResetFieldBorders()
+    End Sub
+
+    Private Sub cbxType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxType.SelectedIndexChanged
+        ResetFieldBorders()
     End Sub
 End Class

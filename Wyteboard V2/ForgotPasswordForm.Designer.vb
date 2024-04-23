@@ -43,10 +43,10 @@ Partial Class ForgotPasswordForm
         Me.lblForgotPassword = New System.Windows.Forms.Label()
         Me.lblSecurityQuestion = New System.Windows.Forms.Label()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         Me.imgLockConfPass = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.imgLockPass = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.picLogo = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         Me.Guna2Panel2.SuspendLayout()
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -102,7 +102,7 @@ Partial Class ForgotPasswordForm
         Me.txtSchoolID.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSchoolID.ForeColor = System.Drawing.Color.Black
         Me.txtSchoolID.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtSchoolID.Location = New System.Drawing.Point(409, 283)
+        Me.txtSchoolID.Location = New System.Drawing.Point(371, 283)
         Me.txtSchoolID.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.txtSchoolID.MaxLength = 10
         Me.txtSchoolID.Name = "txtSchoolID"
@@ -110,7 +110,7 @@ Partial Class ForgotPasswordForm
         Me.txtSchoolID.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtSchoolID.PlaceholderText = "2020-12345"
         Me.txtSchoolID.SelectedText = ""
-        Me.txtSchoolID.Size = New System.Drawing.Size(128, 48)
+        Me.txtSchoolID.Size = New System.Drawing.Size(166, 48)
         Me.txtSchoolID.TabIndex = 2
         '
         'lblSchoolID
@@ -119,7 +119,7 @@ Partial Class ForgotPasswordForm
         Me.lblSchoolID.BackColor = System.Drawing.Color.White
         Me.lblSchoolID.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSchoolID.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.lblSchoolID.Location = New System.Drawing.Point(406, 259)
+        Me.lblSchoolID.Location = New System.Drawing.Point(368, 260)
         Me.lblSchoolID.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblSchoolID.Name = "lblSchoolID"
         Me.lblSchoolID.Size = New System.Drawing.Size(65, 16)
@@ -278,7 +278,7 @@ Partial Class ForgotPasswordForm
         Me.txtEmail.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtEmail.PlaceholderText = "johnsmith@lpulaguna.edu.ph"
         Me.txtEmail.SelectedText = ""
-        Me.txtEmail.Size = New System.Drawing.Size(333, 48)
+        Me.txtEmail.Size = New System.Drawing.Size(295, 48)
         Me.txtEmail.TabIndex = 1
         '
         'btnCancel
@@ -384,12 +384,6 @@ Partial Class ForgotPasswordForm
         Me.Guna2Panel2.Size = New System.Drawing.Size(624, 696)
         Me.Guna2Panel2.TabIndex = 7
         '
-        'Guna2BorderlessForm1
-        '
-        Me.Guna2BorderlessForm1.ContainerControl = Me
-        Me.Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
-        Me.Guna2BorderlessForm1.TransparentWhileDrag = True
-        '
         'imgLockConfPass
         '
         Me.imgLockConfPass.BackColor = System.Drawing.Color.Transparent
@@ -436,6 +430,12 @@ Partial Class ForgotPasswordForm
         Me.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.picLogo.TabIndex = 56
         Me.picLogo.TabStop = False
+        '
+        'Guna2BorderlessForm1
+        '
+        Me.Guna2BorderlessForm1.ContainerControl = Me
+        Me.Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
+        Me.Guna2BorderlessForm1.TransparentWhileDrag = True
         '
         'ForgotPasswordForm
         '

@@ -74,4 +74,8 @@ Public Class ForgotPasswordForm
         Dim LoginForm As New LoginForm()
         LoginForm.Show()
     End Sub
+
+    Private Sub txtSchoolID_TextChanged(sender As Object, e As EventArgs) Handles txtSchoolID.TextChanged
+
+    End Sub
 End Class

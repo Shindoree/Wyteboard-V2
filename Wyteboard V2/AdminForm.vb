@@ -53,7 +53,7 @@
             btnHome.Text = ""
         Else
             btnAccount.Text = "Account"
-            btnRegistration.Text = "Enroll Student"
+            btnRegistration.Text = "Enrollment"
             btnLogout.Text = "Logout"
             btnHome.Text = "Home"
         End If

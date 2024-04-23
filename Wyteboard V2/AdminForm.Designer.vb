@@ -48,8 +48,8 @@ Partial Class AdminForm
         Me.lblInfo = New System.Windows.Forms.Label()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2PictureBox4 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Guna2PictureBox4 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -70,8 +70,8 @@ Partial Class AdminForm
         Me.Guna2Panel1.SuspendLayout()
         Me.Guna2Panel5.SuspendLayout()
         Me.Guna2Panel3.SuspendLayout()
-        CType(Me.Guna2PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlDisplay.SuspendLayout()
@@ -135,7 +135,7 @@ Partial Class AdminForm
         Me.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.btnLogout.FlatAppearance.BorderSize = 0
         Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogout.Font = New System.Drawing.Font("Cambria", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogout.Font = New System.Drawing.Font("Montserrat Medium", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogout.ForeColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnLogout.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_logout_32
         Me.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -144,7 +144,6 @@ Partial Class AdminForm
         Me.btnLogout.Size = New System.Drawing.Size(183, 73)
         Me.btnLogout.TabIndex = 17
         Me.btnLogout.Text = "Log out"
-        Me.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnLogout.UseVisualStyleBackColor = True
         '
         'btnRegistration
@@ -153,7 +152,7 @@ Partial Class AdminForm
         Me.btnRegistration.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnRegistration.FlatAppearance.BorderSize = 0
         Me.btnRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRegistration.Font = New System.Drawing.Font("Cambria", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegistration.Font = New System.Drawing.Font("Montserrat Medium", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRegistration.ForeColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnRegistration.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_summary_32
         Me.btnRegistration.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -161,8 +160,7 @@ Partial Class AdminForm
         Me.btnRegistration.Name = "btnRegistration"
         Me.btnRegistration.Size = New System.Drawing.Size(183, 73)
         Me.btnRegistration.TabIndex = 16
-        Me.btnRegistration.Text = "Enroll Student"
-        Me.btnRegistration.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnRegistration.Text = "Enrollment"
         Me.btnRegistration.UseVisualStyleBackColor = True
         '
         'btnAccount
@@ -171,7 +169,7 @@ Partial Class AdminForm
         Me.btnAccount.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnAccount.FlatAppearance.BorderSize = 0
         Me.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAccount.Font = New System.Drawing.Font("Cambria", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAccount.Font = New System.Drawing.Font("Montserrat Medium", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAccount.ForeColor = System.Drawing.Color.Silver
         Me.btnAccount.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_account_32__1_
         Me.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -180,7 +178,6 @@ Partial Class AdminForm
         Me.btnAccount.Size = New System.Drawing.Size(183, 73)
         Me.btnAccount.TabIndex = 14
         Me.btnAccount.Text = "Account"
-        Me.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnAccount.UseVisualStyleBackColor = True
         '
         'btnHome
@@ -189,7 +186,7 @@ Partial Class AdminForm
         Me.btnHome.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnHome.FlatAppearance.BorderSize = 0
         Me.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnHome.Font = New System.Drawing.Font("Cambria", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHome.Font = New System.Drawing.Font("Montserrat Medium", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnHome.ForeColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnHome.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_home_32
         Me.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -198,7 +195,6 @@ Partial Class AdminForm
         Me.btnHome.Size = New System.Drawing.Size(183, 73)
         Me.btnHome.TabIndex = 18
         Me.btnHome.Text = "Home"
-        Me.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnHome.UseVisualStyleBackColor = True
         '
         'Guna2Panel4
@@ -261,9 +257,9 @@ Partial Class AdminForm
         Me.Guna2Panel5.Controls.Add(Me.lblLogin_Time1)
         Me.Guna2Panel5.Controls.Add(Me.lblLogin_Time)
         Me.Guna2Panel5.Controls.Add(Me.lblInfo)
-        Me.Guna2Panel5.Location = New System.Drawing.Point(25, 247)
+        Me.Guna2Panel5.Location = New System.Drawing.Point(16, 247)
         Me.Guna2Panel5.Name = "Guna2Panel5"
-        Me.Guna2Panel5.Size = New System.Drawing.Size(233, 364)
+        Me.Guna2Panel5.Size = New System.Drawing.Size(239, 364)
         Me.Guna2Panel5.TabIndex = 26
         '
         'Label2
@@ -273,7 +269,7 @@ Partial Class AdminForm
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(119, 28)
+        Me.Label2.Location = New System.Drawing.Point(160, 28)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(63, 17)
         Me.Label2.TabIndex = 31
@@ -286,7 +282,7 @@ Partial Class AdminForm
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(11, 28)
+        Me.Label1.Location = New System.Drawing.Point(14, 28)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(39, 17)
         Me.Label1.TabIndex = 30
@@ -299,11 +295,11 @@ Partial Class AdminForm
         Me.lblLogin_Status2.BackColor = System.Drawing.Color.Transparent
         Me.lblLogin_Status2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLogin_Status2.ForeColor = System.Drawing.Color.Black
-        Me.lblLogin_Status2.Location = New System.Drawing.Point(119, 107)
+        Me.lblLogin_Status2.Location = New System.Drawing.Point(176, 107)
         Me.lblLogin_Status2.Name = "lblLogin_Status2"
-        Me.lblLogin_Status2.Size = New System.Drawing.Size(102, 17)
+        Me.lblLogin_Status2.Size = New System.Drawing.Size(48, 17)
         Me.lblLogin_Status2.TabIndex = 29
-        Me.lblLogin_Status2.Text = "Login Attempts"
+        Me.lblLogin_Status2.Text = "Status"
         '
         'lblLogin_Status1
         '
@@ -312,11 +308,11 @@ Partial Class AdminForm
         Me.lblLogin_Status1.BackColor = System.Drawing.Color.Transparent
         Me.lblLogin_Status1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLogin_Status1.ForeColor = System.Drawing.Color.Black
-        Me.lblLogin_Status1.Location = New System.Drawing.Point(119, 80)
+        Me.lblLogin_Status1.Location = New System.Drawing.Point(176, 80)
         Me.lblLogin_Status1.Name = "lblLogin_Status1"
-        Me.lblLogin_Status1.Size = New System.Drawing.Size(102, 17)
+        Me.lblLogin_Status1.Size = New System.Drawing.Size(48, 17)
         Me.lblLogin_Status1.TabIndex = 28
-        Me.lblLogin_Status1.Text = "Login Attempts"
+        Me.lblLogin_Status1.Text = "Status"
         '
         'lblLogin_Status
         '
@@ -325,11 +321,11 @@ Partial Class AdminForm
         Me.lblLogin_Status.BackColor = System.Drawing.Color.Transparent
         Me.lblLogin_Status.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLogin_Status.ForeColor = System.Drawing.Color.Black
-        Me.lblLogin_Status.Location = New System.Drawing.Point(119, 52)
+        Me.lblLogin_Status.Location = New System.Drawing.Point(176, 52)
         Me.lblLogin_Status.Name = "lblLogin_Status"
-        Me.lblLogin_Status.Size = New System.Drawing.Size(102, 17)
+        Me.lblLogin_Status.Size = New System.Drawing.Size(48, 17)
         Me.lblLogin_Status.TabIndex = 27
-        Me.lblLogin_Status.Text = "Login Attempts"
+        Me.lblLogin_Status.Text = "Status"
         '
         'lblLogin_Time2
         '
@@ -338,7 +334,7 @@ Partial Class AdminForm
         Me.lblLogin_Time2.BackColor = System.Drawing.Color.Transparent
         Me.lblLogin_Time2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLogin_Time2.ForeColor = System.Drawing.Color.Black
-        Me.lblLogin_Time2.Location = New System.Drawing.Point(11, 107)
+        Me.lblLogin_Time2.Location = New System.Drawing.Point(14, 107)
         Me.lblLogin_Time2.Name = "lblLogin_Time2"
         Me.lblLogin_Time2.Size = New System.Drawing.Size(102, 17)
         Me.lblLogin_Time2.TabIndex = 26
@@ -351,7 +347,7 @@ Partial Class AdminForm
         Me.lblLogin_Time1.BackColor = System.Drawing.Color.Transparent
         Me.lblLogin_Time1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLogin_Time1.ForeColor = System.Drawing.Color.Black
-        Me.lblLogin_Time1.Location = New System.Drawing.Point(11, 80)
+        Me.lblLogin_Time1.Location = New System.Drawing.Point(14, 80)
         Me.lblLogin_Time1.Name = "lblLogin_Time1"
         Me.lblLogin_Time1.Size = New System.Drawing.Size(102, 17)
         Me.lblLogin_Time1.TabIndex = 25
@@ -364,7 +360,7 @@ Partial Class AdminForm
         Me.lblLogin_Time.BackColor = System.Drawing.Color.Transparent
         Me.lblLogin_Time.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLogin_Time.ForeColor = System.Drawing.Color.Black
-        Me.lblLogin_Time.Location = New System.Drawing.Point(11, 52)
+        Me.lblLogin_Time.Location = New System.Drawing.Point(14, 52)
         Me.lblLogin_Time.Name = "lblLogin_Time"
         Me.lblLogin_Time.Size = New System.Drawing.Size(102, 17)
         Me.lblLogin_Time.TabIndex = 24
@@ -377,7 +373,7 @@ Partial Class AdminForm
         Me.lblInfo.BackColor = System.Drawing.Color.Transparent
         Me.lblInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblInfo.ForeColor = System.Drawing.Color.Black
-        Me.lblInfo.Location = New System.Drawing.Point(11, 6)
+        Me.lblInfo.Location = New System.Drawing.Point(14, 6)
         Me.lblInfo.Name = "lblInfo"
         Me.lblInfo.Size = New System.Drawing.Size(102, 17)
         Me.lblInfo.TabIndex = 23
@@ -386,7 +382,7 @@ Partial Class AdminForm
         'MonthCalendar1
         '
         Me.MonthCalendar1.BackColor = System.Drawing.Color.White
-        Me.MonthCalendar1.Location = New System.Drawing.Point(25, 73)
+        Me.MonthCalendar1.Location = New System.Drawing.Point(22, 73)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 0
         '
@@ -394,8 +390,8 @@ Partial Class AdminForm
         '
         Me.Guna2Panel3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Guna2Panel3.BackColor = System.Drawing.Color.White
-        Me.Guna2Panel3.Controls.Add(Me.Guna2PictureBox4)
         Me.Guna2Panel3.Controls.Add(Me.Guna2PictureBox3)
+        Me.Guna2Panel3.Controls.Add(Me.Guna2PictureBox4)
         Me.Guna2Panel3.Controls.Add(Me.Label8)
         Me.Guna2Panel3.Controls.Add(Me.Guna2PictureBox2)
         Me.Guna2Panel3.Controls.Add(Me.Label7)
@@ -408,6 +404,20 @@ Partial Class AdminForm
         Me.Guna2Panel3.Name = "Guna2Panel3"
         Me.Guna2Panel3.Size = New System.Drawing.Size(788, 440)
         Me.Guna2Panel3.TabIndex = 13
+        '
+        'Guna2PictureBox3
+        '
+        Me.Guna2PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox3.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox3.Image = Global.Wyteboard_V2.My.Resources.Resources.Visual_Studio_logo
+        Me.Guna2PictureBox3.ImageRotate = 0!
+        Me.Guna2PictureBox3.Location = New System.Drawing.Point(288, 343)
+        Me.Guna2PictureBox3.Name = "Guna2PictureBox3"
+        Me.Guna2PictureBox3.Size = New System.Drawing.Size(127, 89)
+        Me.Guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox3.TabIndex = 33
+        Me.Guna2PictureBox3.TabStop = False
+        Me.Guna2PictureBox3.UseTransparentBackground = True
         '
         'Guna2PictureBox4
         '
@@ -422,20 +432,6 @@ Partial Class AdminForm
         Me.Guna2PictureBox4.TabIndex = 40
         Me.Guna2PictureBox4.TabStop = False
         Me.Guna2PictureBox4.UseTransparentBackground = True
-        '
-        'Guna2PictureBox3
-        '
-        Me.Guna2PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox3.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox3.Image = Global.Wyteboard_V2.My.Resources.Resources.Visual_Studio_logo
-        Me.Guna2PictureBox3.ImageRotate = 0!
-        Me.Guna2PictureBox3.Location = New System.Drawing.Point(288, 345)
-        Me.Guna2PictureBox3.Name = "Guna2PictureBox3"
-        Me.Guna2PictureBox3.Size = New System.Drawing.Size(127, 89)
-        Me.Guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Guna2PictureBox3.TabIndex = 33
-        Me.Guna2PictureBox3.TabStop = False
-        Me.Guna2PictureBox3.UseTransparentBackground = True
         '
         'Label8
         '
@@ -606,8 +602,8 @@ Partial Class AdminForm
         Me.Guna2Panel5.PerformLayout()
         Me.Guna2Panel3.ResumeLayout(False)
         Me.Guna2Panel3.PerformLayout()
-        CType(Me.Guna2PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Guna2PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlDisplay.ResumeLayout(False)

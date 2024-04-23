@@ -80,11 +80,11 @@ Partial Class ForgotPasswordForm
         Me.lblPasswordWarning.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblPasswordWarning.AutoSize = True
         Me.lblPasswordWarning.BackColor = System.Drawing.Color.White
-        Me.lblPasswordWarning.Font = New System.Drawing.Font("Inter", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPasswordWarning.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPasswordWarning.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.lblPasswordWarning.Location = New System.Drawing.Point(61, 505)
         Me.lblPasswordWarning.Name = "lblPasswordWarning"
-        Me.lblPasswordWarning.Size = New System.Drawing.Size(183, 15)
+        Me.lblPasswordWarning.Size = New System.Drawing.Size(205, 16)
         Me.lblPasswordWarning.TabIndex = 69
         Me.lblPasswordWarning.Text = "Must have at least 8 characters"
         '
@@ -381,7 +381,7 @@ Partial Class ForgotPasswordForm
         Me.lblForgotPassword.Font = New System.Drawing.Font("Inter SemiBold", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblForgotPassword.Location = New System.Drawing.Point(57, 150)
         Me.lblForgotPassword.Name = "lblForgotPassword"
-        Me.lblForgotPassword.Size = New System.Drawing.Size(295, 39)
+        Me.lblForgotPassword.Size = New System.Drawing.Size(294, 39)
         Me.lblForgotPassword.TabIndex = 4
         Me.lblForgotPassword.Text = "Forgot Password?"
         Me.lblForgotPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter

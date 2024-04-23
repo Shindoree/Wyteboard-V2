@@ -96,10 +96,10 @@ Partial Class CourseProfessorForm
         Me.cbxSubject.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.cbxSubject.Font = New System.Drawing.Font("Montserrat", 9.749999!)
         Me.cbxSubject.ForeColor = System.Drawing.Color.Black
-        Me.cbxSubject.ItemHeight = 30
-        Me.cbxSubject.Location = New System.Drawing.Point(393, 92)
+        Me.cbxSubject.ItemHeight = 33
+        Me.cbxSubject.Location = New System.Drawing.Point(395, 104)
         Me.cbxSubject.Name = "cbxSubject"
-        Me.cbxSubject.Size = New System.Drawing.Size(157, 36)
+        Me.cbxSubject.Size = New System.Drawing.Size(157, 39)
         Me.cbxSubject.TabIndex = 57
         '
         'txtEmail
@@ -114,10 +114,10 @@ Partial Class CourseProfessorForm
         Me.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtEmail.Font = New System.Drawing.Font("Montserrat", 8.249999!)
+        Me.txtEmail.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmail.ForeColor = System.Drawing.Color.DimGray
         Me.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtEmail.Location = New System.Drawing.Point(15, 90)
+        Me.txtEmail.Location = New System.Drawing.Point(17, 104)
         Me.txtEmail.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -138,9 +138,9 @@ Partial Class CourseProfessorForm
         Me.btnUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnUpdate.FillColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(229, Byte), Integer))
-        Me.btnUpdate.Font = New System.Drawing.Font("Montserrat SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUpdate.Font = New System.Drawing.Font("Inter SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUpdate.ForeColor = System.Drawing.Color.White
-        Me.btnUpdate.Location = New System.Drawing.Point(556, 90)
+        Me.btnUpdate.Location = New System.Drawing.Point(569, 104)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(180, 37)
         Me.btnUpdate.TabIndex = 58
@@ -159,15 +159,15 @@ Partial Class CourseProfessorForm
         Me.txtSchoolID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtSchoolID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtSchoolID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtSchoolID.Font = New System.Drawing.Font("Montserrat", 8.249999!)
+        Me.txtSchoolID.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSchoolID.ForeColor = System.Drawing.Color.DimGray
         Me.txtSchoolID.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtSchoolID.Location = New System.Drawing.Point(203, 90)
+        Me.txtSchoolID.Location = New System.Drawing.Point(205, 104)
         Me.txtSchoolID.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.txtSchoolID.Name = "txtSchoolID"
         Me.txtSchoolID.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtSchoolID.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtSchoolID.PlaceholderText = "SchoolId"
+        Me.txtSchoolID.PlaceholderText = "School ID"
         Me.txtSchoolID.SelectedText = ""
         Me.txtSchoolID.Size = New System.Drawing.Size(181, 39)
         Me.txtSchoolID.TabIndex = 59
@@ -177,11 +177,11 @@ Partial Class CourseProfessorForm
         Me.lblInfo.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblInfo.AutoSize = True
         Me.lblInfo.BackColor = System.Drawing.SystemColors.Control
-        Me.lblInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInfo.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer))
-        Me.lblInfo.Location = New System.Drawing.Point(12, 66)
+        Me.lblInfo.Location = New System.Drawing.Point(14, 80)
         Me.lblInfo.Name = "lblInfo"
-        Me.lblInfo.Size = New System.Drawing.Size(200, 17)
+        Me.lblInfo.Size = New System.Drawing.Size(205, 16)
         Me.lblInfo.TabIndex = 60
         Me.lblInfo.Text = "Add new student to the course"
         '
@@ -214,9 +214,9 @@ Partial Class CourseProfessorForm
         Me.btnAddNew.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnAddNew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnAddNew.FillColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(229, Byte), Integer))
-        Me.btnAddNew.Font = New System.Drawing.Font("Montserrat SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddNew.Font = New System.Drawing.Font("Inter SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAddNew.ForeColor = System.Drawing.Color.White
-        Me.btnAddNew.Location = New System.Drawing.Point(393, 161)
+        Me.btnAddNew.Location = New System.Drawing.Point(395, 175)
         Me.btnAddNew.Name = "btnAddNew"
         Me.btnAddNew.Size = New System.Drawing.Size(180, 37)
         Me.btnAddNew.TabIndex = 65
@@ -235,10 +235,10 @@ Partial Class CourseProfessorForm
         Me.txtNewPT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtNewPT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtNewPT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtNewPT.Font = New System.Drawing.Font("Montserrat", 8.249999!)
+        Me.txtNewPT.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNewPT.ForeColor = System.Drawing.Color.DimGray
         Me.txtNewPT.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtNewPT.Location = New System.Drawing.Point(203, 160)
+        Me.txtNewPT.Location = New System.Drawing.Point(205, 174)
         Me.txtNewPT.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.txtNewPT.Name = "txtNewPT"
         Me.txtNewPT.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -260,10 +260,10 @@ Partial Class CourseProfessorForm
         Me.txtNewOE.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtNewOE.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtNewOE.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtNewOE.Font = New System.Drawing.Font("Montserrat", 8.249999!)
+        Me.txtNewOE.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNewOE.ForeColor = System.Drawing.Color.DimGray
         Me.txtNewOE.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtNewOE.Location = New System.Drawing.Point(15, 160)
+        Me.txtNewOE.Location = New System.Drawing.Point(17, 174)
         Me.txtNewOE.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.txtNewOE.Name = "txtNewOE"
         Me.txtNewOE.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -280,7 +280,7 @@ Partial Class CourseProfessorForm
         Me.Label1.BackColor = System.Drawing.SystemColors.Control
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(12, 136)
+        Me.Label1.Location = New System.Drawing.Point(14, 150)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(108, 17)
         Me.Label1.TabIndex = 62

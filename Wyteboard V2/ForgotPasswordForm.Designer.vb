@@ -29,8 +29,6 @@ Partial Class ForgotPasswordForm
         Me.lblPasswordWarning = New System.Windows.Forms.Label()
         Me.txtSchoolID = New Guna.UI2.WinForms.Guna2TextBox()
         Me.lblSchoolID = New System.Windows.Forms.Label()
-        Me.imgLockConfPass = New Guna.UI2.WinForms.Guna2ImageButton()
-        Me.imgLockPass = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.lblConfirmPassword = New System.Windows.Forms.Label()
         Me.txtConfirmPass = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtNewPassword = New Guna.UI2.WinForms.Guna2TextBox()
@@ -40,15 +38,17 @@ Partial Class ForgotPasswordForm
         Me.cbxSecurityQuestion = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.txtEmail = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnCancel = New Guna.UI2.WinForms.Guna2Button()
-        Me.picLogo = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.btnConfirm = New Guna.UI2.WinForms.Guna2Button()
         Me.lblEmail = New System.Windows.Forms.Label()
         Me.lblForgotPassword = New System.Windows.Forms.Label()
         Me.lblSecurityQuestion = New System.Windows.Forms.Label()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
-        CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.imgLockConfPass = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.imgLockPass = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.picLogo = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel2.SuspendLayout()
+        CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlOverview
@@ -104,6 +104,7 @@ Partial Class ForgotPasswordForm
         Me.txtSchoolID.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtSchoolID.Location = New System.Drawing.Point(409, 283)
         Me.txtSchoolID.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
+        Me.txtSchoolID.MaxLength = 10
         Me.txtSchoolID.Name = "txtSchoolID"
         Me.txtSchoolID.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtSchoolID.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
@@ -124,40 +125,6 @@ Partial Class ForgotPasswordForm
         Me.lblSchoolID.Size = New System.Drawing.Size(65, 16)
         Me.lblSchoolID.TabIndex = 67
         Me.lblSchoolID.Text = "School ID"
-        '
-        'imgLockConfPass
-        '
-        Me.imgLockConfPass.BackColor = System.Drawing.Color.Transparent
-        Me.imgLockConfPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.imgLockConfPass.CheckedState.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockConfPass.HoverState.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockConfPass.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_unlocked_32__1_
-        Me.imgLockConfPass.ImageOffset = New System.Drawing.Point(0, 0)
-        Me.imgLockConfPass.ImageRotate = 0!
-        Me.imgLockConfPass.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockConfPass.Location = New System.Drawing.Point(488, 454)
-        Me.imgLockConfPass.Name = "imgLockConfPass"
-        Me.imgLockConfPass.PressedState.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockConfPass.Size = New System.Drawing.Size(46, 39)
-        Me.imgLockConfPass.TabIndex = 66
-        Me.imgLockConfPass.UseTransparentBackground = True
-        '
-        'imgLockPass
-        '
-        Me.imgLockPass.BackColor = System.Drawing.Color.Transparent
-        Me.imgLockPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.imgLockPass.CheckedState.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockPass.HoverState.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockPass.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_unlocked_32__1_
-        Me.imgLockPass.ImageOffset = New System.Drawing.Point(0, 0)
-        Me.imgLockPass.ImageRotate = 0!
-        Me.imgLockPass.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockPass.Location = New System.Drawing.Point(243, 454)
-        Me.imgLockPass.Name = "imgLockPass"
-        Me.imgLockPass.PressedState.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockPass.Size = New System.Drawing.Size(46, 39)
-        Me.imgLockPass.TabIndex = 65
-        Me.imgLockPass.UseTransparentBackground = True
         '
         'lblConfirmPassword
         '
@@ -188,6 +155,7 @@ Partial Class ForgotPasswordForm
         Me.txtConfirmPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtConfirmPass.Location = New System.Drawing.Point(306, 450)
         Me.txtConfirmPass.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
+        Me.txtConfirmPass.MaxLength = 25
         Me.txtConfirmPass.Name = "txtConfirmPass"
         Me.txtConfirmPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtConfirmPass.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
@@ -212,6 +180,7 @@ Partial Class ForgotPasswordForm
         Me.txtNewPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtNewPassword.Location = New System.Drawing.Point(64, 450)
         Me.txtNewPassword.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
+        Me.txtNewPassword.MaxLength = 25
         Me.txtNewPassword.Name = "txtNewPassword"
         Me.txtNewPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtNewPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
@@ -249,6 +218,7 @@ Partial Class ForgotPasswordForm
         Me.txtSecAnswer.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtSecAnswer.Location = New System.Drawing.Point(368, 365)
         Me.txtSecAnswer.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
+        Me.txtSecAnswer.MaxLength = 45
         Me.txtSecAnswer.Name = "txtSecAnswer"
         Me.txtSecAnswer.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtSecAnswer.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
@@ -331,19 +301,6 @@ Partial Class ForgotPasswordForm
         Me.btnCancel.TabIndex = 8
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseTransparentBackground = True
-        '
-        'picLogo
-        '
-        Me.picLogo.FillColor = System.Drawing.Color.Transparent
-        Me.picLogo.Image = CType(resources.GetObject("picLogo.Image"), System.Drawing.Image)
-        Me.picLogo.ImageRotate = 0!
-        Me.picLogo.Location = New System.Drawing.Point(40, 47)
-        Me.picLogo.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.picLogo.Name = "picLogo"
-        Me.picLogo.Size = New System.Drawing.Size(266, 66)
-        Me.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picLogo.TabIndex = 56
-        Me.picLogo.TabStop = False
         '
         'btnConfirm
         '
@@ -433,6 +390,53 @@ Partial Class ForgotPasswordForm
         Me.Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
         Me.Guna2BorderlessForm1.TransparentWhileDrag = True
         '
+        'imgLockConfPass
+        '
+        Me.imgLockConfPass.BackColor = System.Drawing.Color.Transparent
+        Me.imgLockConfPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.imgLockConfPass.CheckedState.ImageSize = New System.Drawing.Size(32, 33)
+        Me.imgLockConfPass.HoverState.ImageSize = New System.Drawing.Size(32, 33)
+        Me.imgLockConfPass.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_unlocked_32__1_
+        Me.imgLockConfPass.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.imgLockConfPass.ImageRotate = 0!
+        Me.imgLockConfPass.ImageSize = New System.Drawing.Size(32, 33)
+        Me.imgLockConfPass.Location = New System.Drawing.Point(488, 454)
+        Me.imgLockConfPass.Name = "imgLockConfPass"
+        Me.imgLockConfPass.PressedState.ImageSize = New System.Drawing.Size(32, 33)
+        Me.imgLockConfPass.Size = New System.Drawing.Size(46, 39)
+        Me.imgLockConfPass.TabIndex = 66
+        Me.imgLockConfPass.UseTransparentBackground = True
+        '
+        'imgLockPass
+        '
+        Me.imgLockPass.BackColor = System.Drawing.Color.Transparent
+        Me.imgLockPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.imgLockPass.CheckedState.ImageSize = New System.Drawing.Size(32, 33)
+        Me.imgLockPass.HoverState.ImageSize = New System.Drawing.Size(32, 33)
+        Me.imgLockPass.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_unlocked_32__1_
+        Me.imgLockPass.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.imgLockPass.ImageRotate = 0!
+        Me.imgLockPass.ImageSize = New System.Drawing.Size(32, 33)
+        Me.imgLockPass.Location = New System.Drawing.Point(243, 454)
+        Me.imgLockPass.Name = "imgLockPass"
+        Me.imgLockPass.PressedState.ImageSize = New System.Drawing.Size(32, 33)
+        Me.imgLockPass.Size = New System.Drawing.Size(46, 39)
+        Me.imgLockPass.TabIndex = 65
+        Me.imgLockPass.UseTransparentBackground = True
+        '
+        'picLogo
+        '
+        Me.picLogo.FillColor = System.Drawing.Color.Transparent
+        Me.picLogo.Image = CType(resources.GetObject("picLogo.Image"), System.Drawing.Image)
+        Me.picLogo.ImageRotate = 0!
+        Me.picLogo.Location = New System.Drawing.Point(40, 47)
+        Me.picLogo.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.picLogo.Name = "picLogo"
+        Me.picLogo.Size = New System.Drawing.Size(266, 66)
+        Me.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picLogo.TabIndex = 56
+        Me.picLogo.TabStop = False
+        '
         'ForgotPasswordForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -444,9 +448,9 @@ Partial Class ForgotPasswordForm
         Me.Name = "ForgotPasswordForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ForgotPasswordForm"
-        CType(Me.picLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel2.ResumeLayout(False)
         Me.Guna2Panel2.PerformLayout()
+        CType(Me.picLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

@@ -69,6 +69,7 @@ Partial Class Account
         Me.txtAnswer.Font = New System.Drawing.Font("Montserrat", 8.249999!)
         Me.txtAnswer.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtAnswer.Location = New System.Drawing.Point(517, 328)
+        Me.txtAnswer.MaxLength = 45
         Me.txtAnswer.Name = "txtAnswer"
         Me.txtAnswer.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtAnswer.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
@@ -94,6 +95,7 @@ Partial Class Account
         Me.txtConfirmPass.Font = New System.Drawing.Font("Montserrat", 8.999999!)
         Me.txtConfirmPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtConfirmPass.Location = New System.Drawing.Point(517, 210)
+        Me.txtConfirmPass.MaxLength = 25
         Me.txtConfirmPass.Name = "txtConfirmPass"
         Me.txtConfirmPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtConfirmPass.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
@@ -213,6 +215,7 @@ Partial Class Account
         Me.txtConfirmAnswer.Font = New System.Drawing.Font("Montserrat", 8.249999!)
         Me.txtConfirmAnswer.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtConfirmAnswer.Location = New System.Drawing.Point(517, 387)
+        Me.txtConfirmAnswer.MaxLength = 45
         Me.txtConfirmAnswer.Name = "txtConfirmAnswer"
         Me.txtConfirmAnswer.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtConfirmAnswer.PlaceholderText = ""
@@ -237,6 +240,7 @@ Partial Class Account
         Me.txtPassword.Font = New System.Drawing.Font("Montserrat", 8.249999!)
         Me.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtPassword.Location = New System.Drawing.Point(517, 155)
+        Me.txtPassword.MaxLength = 25
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
@@ -349,6 +353,7 @@ Partial Class Account
         Me.txtFirstname.Font = New System.Drawing.Font("Montserrat", 8.999999!)
         Me.txtFirstname.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtFirstname.Location = New System.Drawing.Point(152, 269)
+        Me.txtFirstname.MaxLength = 30
         Me.txtFirstname.Name = "txtFirstname"
         Me.txtFirstname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtFirstname.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
@@ -374,6 +379,7 @@ Partial Class Account
         Me.txtLastname.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtLastname.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtLastname.Location = New System.Drawing.Point(152, 328)
+        Me.txtLastname.MaxLength = 30
         Me.txtLastname.Name = "txtLastname"
         Me.txtLastname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtLastname.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
@@ -400,6 +406,7 @@ Partial Class Account
         Me.txtSchoolID.Font = New System.Drawing.Font("Montserrat", 8.999999!)
         Me.txtSchoolID.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtSchoolID.Location = New System.Drawing.Point(152, 210)
+        Me.txtSchoolID.MaxLength = 10
         Me.txtSchoolID.Name = "txtSchoolID"
         Me.txtSchoolID.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtSchoolID.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
@@ -425,6 +432,7 @@ Partial Class Account
         Me.txtEmail.Font = New System.Drawing.Font("Montserrat", 8.999999!)
         Me.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtEmail.Location = New System.Drawing.Point(152, 155)
+        Me.txtEmail.MaxLength = 45
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtEmail.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))

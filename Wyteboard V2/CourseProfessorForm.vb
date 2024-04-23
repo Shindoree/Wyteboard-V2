@@ -80,7 +80,8 @@ Public Class CourseProfessorForm
 
     Private Function InsertUserIntoCourse(email As String, schoolID As String, subject As String) As Boolean
         Dim queryCourse As String = $"INSERT INTO tb_course (fullname, username, schoolid, subject) VALUES (@fullname, @username, @schoolID, @subject)"
-        Dim queryStudentSubject As String = $"INSERT INTO tb_studentsubject (email, subject) VALUES (@email, @subject)"
+        Dim queryStudentSubjectCheck As String = $"SELECT COUNT(*) FROM tb_studentsubject WHERE email = @email AND subject = @subject"
+        Dim queryStudentSubjectInsert As String = $"INSERT INTO tb_studentsubject (email, subject) VALUES (@email, @subject)"
         Dim connectionString As String = "Database=wyteboard;Data Source=localhost;User id=admin;Password=IamFinal0904;Port=3306;Command Timeout=600;"
 
         Try
@@ -95,6 +96,25 @@ Public Class CourseProfessorForm
             Using connection As New MySqlConnection(connectionString)
                 connection.Open()
 
+                ' Check if the user already exists in tb_studentsubject
+                Using cmdCheck As New MySqlCommand(queryStudentSubjectCheck, connection)
+                    cmdCheck.Parameters.AddWithValue("@email", email)
+                    cmdCheck.Parameters.AddWithValue("@subject", subject)
+                    Dim count As Integer = Convert.ToInt32(cmdCheck.ExecuteScalar())
+                    If count = 0 Then
+                        ' If the user doesn't exist in tb_studentsubject, insert them
+                        Using cmdStudentSubject As New MySqlCommand(queryStudentSubjectInsert, connection)
+                            cmdStudentSubject.Parameters.AddWithValue("@email", email)
+                            cmdStudentSubject.Parameters.AddWithValue("@subject", subject)
+                            cmdStudentSubject.ExecuteNonQuery()
+                        End Using
+                    Else
+                        ' User already exists in tb_studentsubject, skip insertion
+                        MessageBox.Show("User already exists in tb_studentsubject.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    End If
+                End Using
+
+                ' Insert data into tb_course
                 Using cmdCourse As New MySqlCommand(queryCourse, connection)
                     ' Use the email as the username
                     cmdCourse.Parameters.AddWithValue("@fullname", fullname)
@@ -103,14 +123,6 @@ Public Class CourseProfessorForm
                     cmdCourse.Parameters.AddWithValue("@subject", subject)
 
                     cmdCourse.ExecuteNonQuery()
-                End Using
-
-                Using cmdStudentSubject As New MySqlCommand(queryStudentSubject, connection)
-                    ' Insert email and subject into tb_studentsubject
-                    cmdStudentSubject.Parameters.AddWithValue("@email", email)
-                    cmdStudentSubject.Parameters.AddWithValue("@subject", subject)
-
-                    cmdStudentSubject.ExecuteNonQuery()
                 End Using
             End Using
 

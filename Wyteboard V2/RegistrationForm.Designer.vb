@@ -38,8 +38,8 @@ Partial Class RegistrationForm
         Me.txtSchoolID = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtEmail = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtConfirmPass = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.imgLockConfPass = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.txtPassword = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.imgLockConfPass = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.imgLock = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.SuspendLayout()
         '
@@ -124,9 +124,9 @@ Partial Class RegistrationForm
         Me.Label6.Font = New System.Drawing.Font("Montserrat Medium", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(420, 336)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(88, 15)
+        Me.Label6.Size = New System.Drawing.Size(83, 15)
         Me.Label6.TabIndex = 65
-        Me.Label6.Text = "Account Type?"
+        Me.Label6.Text = "Account Type"
         '
         'Label5
         '
@@ -200,6 +200,7 @@ Partial Class RegistrationForm
         Me.txtFirstname.Font = New System.Drawing.Font("Montserrat", 8.999999!)
         Me.txtFirstname.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtFirstname.Location = New System.Drawing.Point(423, 234)
+        Me.txtFirstname.MaxLength = 30
         Me.txtFirstname.Name = "txtFirstname"
         Me.txtFirstname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtFirstname.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
@@ -225,6 +226,7 @@ Partial Class RegistrationForm
         Me.txtLastname.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtLastname.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtLastname.Location = New System.Drawing.Point(423, 293)
+        Me.txtLastname.MaxLength = 30
         Me.txtLastname.Name = "txtLastname"
         Me.txtLastname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtLastname.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
@@ -250,6 +252,7 @@ Partial Class RegistrationForm
         Me.txtSchoolID.Font = New System.Drawing.Font("Montserrat", 8.999999!)
         Me.txtSchoolID.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtSchoolID.Location = New System.Drawing.Point(423, 175)
+        Me.txtSchoolID.MaxLength = 10
         Me.txtSchoolID.Name = "txtSchoolID"
         Me.txtSchoolID.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtSchoolID.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
@@ -275,6 +278,7 @@ Partial Class RegistrationForm
         Me.txtEmail.Font = New System.Drawing.Font("Montserrat", 8.999999!)
         Me.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtEmail.Location = New System.Drawing.Point(423, 120)
+        Me.txtEmail.MaxLength = 45
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtEmail.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
@@ -300,6 +304,7 @@ Partial Class RegistrationForm
         Me.txtConfirmPass.Font = New System.Drawing.Font("Montserrat", 8.999999!)
         Me.txtConfirmPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtConfirmPass.Location = New System.Drawing.Point(422, 463)
+        Me.txtConfirmPass.MaxLength = 25
         Me.txtConfirmPass.Name = "txtConfirmPass"
         Me.txtConfirmPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtConfirmPass.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
@@ -308,6 +313,32 @@ Partial Class RegistrationForm
         Me.txtConfirmPass.ShadowDecoration.BorderRadius = 2
         Me.txtConfirmPass.Size = New System.Drawing.Size(236, 36)
         Me.txtConfirmPass.TabIndex = 48
+        '
+        'txtPassword
+        '
+        Me.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtPassword.BackColor = System.Drawing.Color.Transparent
+        Me.txtPassword.BorderColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.txtPassword.BorderRadius = 5
+        Me.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtPassword.DefaultText = ""
+        Me.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtPassword.Font = New System.Drawing.Font("Montserrat", 8.249999!)
+        Me.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtPassword.Location = New System.Drawing.Point(423, 408)
+        Me.txtPassword.MaxLength = 25
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtPassword.PlaceholderText = "Include special characters"
+        Me.txtPassword.SelectedText = ""
+        Me.txtPassword.ShadowDecoration.BorderRadius = 2
+        Me.txtPassword.Size = New System.Drawing.Size(236, 36)
+        Me.txtPassword.TabIndex = 38
         '
         'imgLockConfPass
         '
@@ -326,31 +357,6 @@ Partial Class RegistrationForm
         Me.imgLockConfPass.Size = New System.Drawing.Size(37, 33)
         Me.imgLockConfPass.TabIndex = 51
         Me.imgLockConfPass.UseTransparentBackground = True
-        '
-        'txtPassword
-        '
-        Me.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txtPassword.BackColor = System.Drawing.Color.Transparent
-        Me.txtPassword.BorderColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.txtPassword.BorderRadius = 5
-        Me.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtPassword.DefaultText = ""
-        Me.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtPassword.Font = New System.Drawing.Font("Montserrat", 8.249999!)
-        Me.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtPassword.Location = New System.Drawing.Point(423, 408)
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtPassword.PlaceholderText = "Include special characters"
-        Me.txtPassword.SelectedText = ""
-        Me.txtPassword.ShadowDecoration.BorderRadius = 2
-        Me.txtPassword.Size = New System.Drawing.Size(236, 36)
-        Me.txtPassword.TabIndex = 38
         '
         'imgLock
         '

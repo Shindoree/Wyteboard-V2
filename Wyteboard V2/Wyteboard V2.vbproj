@@ -407,5 +407,11 @@
   <ItemGroup>
     <None Include="Resources\Visual-Studio-logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aesthetic Minimal Laptop On Table Mockup Instagram Post.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aesthetic Minimal Laptop On Table Mockup Instagram Post %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

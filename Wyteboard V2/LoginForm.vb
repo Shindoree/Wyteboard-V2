@@ -199,18 +199,19 @@ Public Class LoginForm
             btnLogin.PerformClick()
         End If
     End Sub
-    Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmail.KeyPress
-        If e.KeyChar = ChrW(Keys.Enter) Then
-            btnLogin.PerformClick()
+    Private Sub txtEmail_MouseDown(sender As Object, e As MouseEventArgs) Handles txtEmail.MouseDown
+        ' Disable right-click
+        If e.Button = MouseButtons.Right Then
+            txtEmail.ContextMenuStrip = New ContextMenuStrip()
         End If
     End Sub
 
-    Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPassword.KeyPress
-        If e.KeyChar = ChrW(Keys.Enter) Then
-            btnLogin.PerformClick()
+    Private Sub txtPassword_MouseDown(sender As Object, e As MouseEventArgs) Handles txtPassword.MouseDown
+        ' Disable right-click
+        If e.Button = MouseButtons.Right Then
+            txtPassword.ContextMenuStrip = New ContextMenuStrip()
         End If
     End Sub
-
     Private Sub Guna2Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel4.Paint
 
     End Sub

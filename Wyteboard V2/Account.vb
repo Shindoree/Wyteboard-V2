@@ -84,8 +84,9 @@ Public Class Account
         Dim typeNotSelected As Boolean = cbxType.SelectedIndex = -1
         Dim passwordsNotMatch As Boolean = txtPassword.Text <> txtConfirmPass.Text
         Dim answersNotMatch As Boolean = txtAnswer.Text <> txtConfirmAnswer.Text
+        Dim emailDoesNotEndWithLPULaguna As Boolean = Not txtEmail.Text.EndsWith("@lpulaguna.edu.ph", StringComparison.OrdinalIgnoreCase)
 
-        If usernameIsEmpty OrElse passwordIsEmpty OrElse confirmPasswordIsEmpty OrElse answerIsEmpty OrElse confirmAnswerIsEmpty OrElse questionNotSelected OrElse Not ValidateSchoolID() OrElse typeNotSelected OrElse passwordsNotMatch OrElse answersNotMatch Then
+        If usernameIsEmpty OrElse passwordIsEmpty OrElse confirmPasswordIsEmpty OrElse answerIsEmpty OrElse confirmAnswerIsEmpty OrElse questionNotSelected OrElse Not ValidateSchoolID() OrElse typeNotSelected OrElse passwordsNotMatch OrElse answersNotMatch OrElse emailDoesNotEndWithLPULaguna Then
             lblInfo.Text = "Invalid inputs."
             If usernameIsEmpty Then txtEmail.BorderColor = Color.Red
             If passwordIsEmpty Then txtPassword.BorderColor = Color.Red
@@ -104,6 +105,10 @@ Public Class Account
                 txtAnswer.BorderColor = Color.Red
                 txtConfirmAnswer.BorderColor = Color.Red
                 lblInfo.Text = "Answers do not match."
+            End If
+            If emailDoesNotEndWithLPULaguna Then
+                txtEmail.BorderColor = Color.Red
+                lblInfo.Text = "Please enter a valid email ending with @lpulaguna.edu.ph."
             End If
             Return
         End If

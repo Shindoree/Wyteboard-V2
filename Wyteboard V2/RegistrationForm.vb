@@ -57,6 +57,12 @@ Public Class RegistrationForm
             Return
         End If
 
+        If Not txtEmail.Text.EndsWith("@lpulaguna.edu.ph", StringComparison.OrdinalIgnoreCase) Then
+            lblInfo.Text = "Please enter a valid email ending with @lpulaguna.edu.ph."
+            txtEmail.BorderColor = Color.Red
+            Return
+        End If
+
         InsertLogs()
     End Sub
 
@@ -136,12 +142,19 @@ Public Class RegistrationForm
                     myCommandx.Parameters.AddWithValue("@timestamp", timestampValue)
                     myCommandx.Parameters.AddWithValue("@type", cbxType.SelectedItem.ToString())
                     myCommandx.ExecuteNonQuery()
+                    lblInfo.Text = "Account creation done. Please go back to Login Page."
                 End Using
-                lblInfo.Text = "Account creation done. Please go back to Login Page."
             End Using
         Catch ex As MySqlException
             If ex.Number = 1062 Then
                 lblInfo.Text = "The provided username or email is already in use. Please choose a different one."
+                ' Clear all textboxes except for the student ID
+                txtEmail.Text = ""
+                txtFirstname.Text = ""
+                txtLastname.Text = ""
+                txtPassword.Text = ""
+                txtConfirmPass.Text = ""
+                cbxType.SelectedIndex = -1
             Else
                 MsgBox("Error: " & ex.Message)
             End If

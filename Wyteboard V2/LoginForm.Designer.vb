@@ -33,23 +33,25 @@ Partial Class LoginForm
         Me.txtPassword = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.lblWelcome = New System.Windows.Forms.Label()
-        Me.picBlue = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lblPassword = New System.Windows.Forms.Label()
         Me.lblEmail = New System.Windows.Forms.Label()
         Me.txtEmail = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblPasswordWarning = New System.Windows.Forms.Label()
         Me.lblError = New System.Windows.Forms.Label()
-        Me.imgLock = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.lblSignIn = New System.Windows.Forms.Label()
-        Me.picLogo = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.lblPasswordWarning = New System.Windows.Forms.Label()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.picBlue = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.picLogo = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.imgLock = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Guna2Panel2.SuspendLayout()
-        CType(Me.picBlue, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel3.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picBlue, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -167,6 +169,7 @@ Partial Class LoginForm
         'Guna2Panel2
         '
         Me.Guna2Panel2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Guna2Panel2.Controls.Add(Me.Guna2PictureBox1)
         Me.Guna2Panel2.Controls.Add(Me.Label1)
         Me.Guna2Panel2.Controls.Add(Me.lblWelcome)
         Me.Guna2Panel2.Controls.Add(Me.picBlue)
@@ -186,18 +189,6 @@ Partial Class LoginForm
         Me.lblWelcome.Size = New System.Drawing.Size(489, 40)
         Me.lblWelcome.TabIndex = 1
         Me.lblWelcome.Text = "Your All-in-One Gradebook and"
-        '
-        'picBlue
-        '
-        Me.picBlue.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.picBlue.BorderRadius = 20
-        Me.picBlue.FillColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.picBlue.ImageRotate = 0!
-        Me.picBlue.Location = New System.Drawing.Point(38, 32)
-        Me.picBlue.Name = "picBlue"
-        Me.picBlue.Size = New System.Drawing.Size(556, 639)
-        Me.picBlue.TabIndex = 0
-        Me.picBlue.TabStop = False
         '
         'lblPassword
         '
@@ -271,6 +262,19 @@ Partial Class LoginForm
         Me.Guna2Panel3.Size = New System.Drawing.Size(479, 461)
         Me.Guna2Panel3.TabIndex = 24
         '
+        'lblPasswordWarning
+        '
+        Me.lblPasswordWarning.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblPasswordWarning.AutoSize = True
+        Me.lblPasswordWarning.BackColor = System.Drawing.Color.White
+        Me.lblPasswordWarning.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPasswordWarning.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.lblPasswordWarning.Location = New System.Drawing.Point(60, 292)
+        Me.lblPasswordWarning.Name = "lblPasswordWarning"
+        Me.lblPasswordWarning.Size = New System.Drawing.Size(205, 16)
+        Me.lblPasswordWarning.TabIndex = 70
+        Me.lblPasswordWarning.Text = "Must have at least 8 characters"
+        '
         'lblError
         '
         Me.lblError.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -283,23 +287,6 @@ Partial Class LoginForm
         Me.lblError.Size = New System.Drawing.Size(12, 17)
         Me.lblError.TabIndex = 23
         Me.lblError.Text = "."
-        '
-        'imgLock
-        '
-        Me.imgLock.BackColor = System.Drawing.Color.Transparent
-        Me.imgLock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.imgLock.CheckedState.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLock.HoverState.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLock.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_unlocked_32__1_
-        Me.imgLock.ImageOffset = New System.Drawing.Point(0, 0)
-        Me.imgLock.ImageRotate = 0!
-        Me.imgLock.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLock.Location = New System.Drawing.Point(367, 248)
-        Me.imgLock.Name = "imgLock"
-        Me.imgLock.PressedState.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLock.Size = New System.Drawing.Size(46, 39)
-        Me.imgLock.TabIndex = 10
-        Me.imgLock.UseTransparentBackground = True
         '
         'Guna2Panel1
         '
@@ -329,20 +316,6 @@ Partial Class LoginForm
         Me.lblSignIn.TabIndex = 16
         Me.lblSignIn.Text = "Sign In"
         '
-        'picLogo
-        '
-        Me.picLogo.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.picLogo.FillColor = System.Drawing.Color.Transparent
-        Me.picLogo.Image = CType(resources.GetObject("picLogo.Image"), System.Drawing.Image)
-        Me.picLogo.ImageRotate = 0!
-        Me.picLogo.Location = New System.Drawing.Point(119, 75)
-        Me.picLogo.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.picLogo.Name = "picLogo"
-        Me.picLogo.Size = New System.Drawing.Size(368, 91)
-        Me.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picLogo.TabIndex = 15
-        Me.picLogo.TabStop = False
-        '
         'Guna2BorderlessForm1
         '
         Me.Guna2BorderlessForm1.ContainerControl = Me
@@ -358,18 +331,59 @@ Partial Class LoginForm
         Me.Guna2Panel4.Size = New System.Drawing.Size(1280, 720)
         Me.Guna2Panel4.TabIndex = 17
         '
-        'lblPasswordWarning
+        'Guna2PictureBox1
         '
-        Me.lblPasswordWarning.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblPasswordWarning.AutoSize = True
-        Me.lblPasswordWarning.BackColor = System.Drawing.Color.White
-        Me.lblPasswordWarning.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPasswordWarning.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.lblPasswordWarning.Location = New System.Drawing.Point(60, 292)
-        Me.lblPasswordWarning.Name = "lblPasswordWarning"
-        Me.lblPasswordWarning.Size = New System.Drawing.Size(205, 16)
-        Me.lblPasswordWarning.TabIndex = 70
-        Me.lblPasswordWarning.Text = "Must have at least 8 characters"
+        Me.Guna2PictureBox1.Image = Global.Wyteboard_V2.My.Resources.Resources.Aesthetic_Minimal_Laptop_On_Table_Mockup_Instagram_Post__1_
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(65, 236)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(513, 414)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox1.TabIndex = 3
+        Me.Guna2PictureBox1.TabStop = False
+        '
+        'picBlue
+        '
+        Me.picBlue.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.picBlue.BorderRadius = 20
+        Me.picBlue.FillColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.picBlue.ImageRotate = 0!
+        Me.picBlue.Location = New System.Drawing.Point(38, 32)
+        Me.picBlue.Name = "picBlue"
+        Me.picBlue.Size = New System.Drawing.Size(556, 639)
+        Me.picBlue.TabIndex = 0
+        Me.picBlue.TabStop = False
+        '
+        'picLogo
+        '
+        Me.picLogo.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.picLogo.FillColor = System.Drawing.Color.Transparent
+        Me.picLogo.Image = CType(resources.GetObject("picLogo.Image"), System.Drawing.Image)
+        Me.picLogo.ImageRotate = 0!
+        Me.picLogo.Location = New System.Drawing.Point(119, 75)
+        Me.picLogo.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.picLogo.Name = "picLogo"
+        Me.picLogo.Size = New System.Drawing.Size(368, 91)
+        Me.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picLogo.TabIndex = 15
+        Me.picLogo.TabStop = False
+        '
+        'imgLock
+        '
+        Me.imgLock.BackColor = System.Drawing.Color.Transparent
+        Me.imgLock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.imgLock.CheckedState.ImageSize = New System.Drawing.Size(32, 33)
+        Me.imgLock.HoverState.ImageSize = New System.Drawing.Size(32, 33)
+        Me.imgLock.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_unlocked_32__1_
+        Me.imgLock.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.imgLock.ImageRotate = 0!
+        Me.imgLock.ImageSize = New System.Drawing.Size(32, 33)
+        Me.imgLock.Location = New System.Drawing.Point(367, 241)
+        Me.imgLock.Name = "imgLock"
+        Me.imgLock.PressedState.ImageSize = New System.Drawing.Size(32, 33)
+        Me.imgLock.Size = New System.Drawing.Size(46, 39)
+        Me.imgLock.TabIndex = 10
+        Me.imgLock.UseTransparentBackground = True
         '
         'LoginForm
         '
@@ -385,11 +399,12 @@ Partial Class LoginForm
         Me.Text = "LoginForm"
         Me.Guna2Panel2.ResumeLayout(False)
         Me.Guna2Panel2.PerformLayout()
-        CType(Me.picBlue, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel3.ResumeLayout(False)
         Me.Guna2Panel3.PerformLayout()
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picBlue, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -417,4 +432,5 @@ Partial Class LoginForm
     Friend WithEvents Guna2Panel4 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents lblError As Label
     Friend WithEvents lblPasswordWarning As Label
+    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
 End Class

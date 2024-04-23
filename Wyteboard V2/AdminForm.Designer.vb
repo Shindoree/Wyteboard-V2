@@ -37,15 +37,6 @@ Partial Class AdminForm
         Me.lblUser = New System.Windows.Forms.Label()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.lblLogin_Status2 = New System.Windows.Forms.Label()
-        Me.lblLogin_Status1 = New System.Windows.Forms.Label()
-        Me.lblLogin_Status = New System.Windows.Forms.Label()
-        Me.lblLogin_Time2 = New System.Windows.Forms.Label()
-        Me.lblLogin_Time1 = New System.Windows.Forms.Label()
-        Me.lblLogin_Time = New System.Windows.Forms.Label()
-        Me.lblInfo = New System.Windows.Forms.Label()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
@@ -62,6 +53,15 @@ Partial Class AdminForm
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         Me.pnlDisplay = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblLogin_Status2 = New System.Windows.Forms.Label()
+        Me.lblLogin_Status1 = New System.Windows.Forms.Label()
+        Me.lblLogin_Status = New System.Windows.Forms.Label()
+        Me.lblLogin_Time2 = New System.Windows.Forms.Label()
+        Me.lblLogin_Time1 = New System.Windows.Forms.Label()
+        Me.lblLogin_Time = New System.Windows.Forms.Label()
+        Me.lblInfo = New System.Windows.Forms.Label()
         Me.pnlMenu.SuspendLayout()
         Me.pnlSidebarTop.SuspendLayout()
         Me.pnlControl.SuspendLayout()
@@ -261,123 +261,6 @@ Partial Class AdminForm
         Me.Guna2Panel5.Name = "Guna2Panel5"
         Me.Guna2Panel5.Size = New System.Drawing.Size(239, 364)
         Me.Guna2Panel5.TabIndex = 26
-        '
-        'Label2
-        '
-        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(160, 28)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(63, 17)
-        Me.Label2.TabIndex = 31
-        Me.Label2.Text = "Attempts"
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(14, 28)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 17)
-        Me.Label1.TabIndex = 30
-        Me.Label1.Text = "Time"
-        '
-        'lblLogin_Status2
-        '
-        Me.lblLogin_Status2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblLogin_Status2.AutoSize = True
-        Me.lblLogin_Status2.BackColor = System.Drawing.Color.Transparent
-        Me.lblLogin_Status2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLogin_Status2.ForeColor = System.Drawing.Color.Black
-        Me.lblLogin_Status2.Location = New System.Drawing.Point(176, 107)
-        Me.lblLogin_Status2.Name = "lblLogin_Status2"
-        Me.lblLogin_Status2.Size = New System.Drawing.Size(48, 17)
-        Me.lblLogin_Status2.TabIndex = 29
-        Me.lblLogin_Status2.Text = "Status"
-        '
-        'lblLogin_Status1
-        '
-        Me.lblLogin_Status1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblLogin_Status1.AutoSize = True
-        Me.lblLogin_Status1.BackColor = System.Drawing.Color.Transparent
-        Me.lblLogin_Status1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLogin_Status1.ForeColor = System.Drawing.Color.Black
-        Me.lblLogin_Status1.Location = New System.Drawing.Point(176, 80)
-        Me.lblLogin_Status1.Name = "lblLogin_Status1"
-        Me.lblLogin_Status1.Size = New System.Drawing.Size(48, 17)
-        Me.lblLogin_Status1.TabIndex = 28
-        Me.lblLogin_Status1.Text = "Status"
-        '
-        'lblLogin_Status
-        '
-        Me.lblLogin_Status.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblLogin_Status.AutoSize = True
-        Me.lblLogin_Status.BackColor = System.Drawing.Color.Transparent
-        Me.lblLogin_Status.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLogin_Status.ForeColor = System.Drawing.Color.Black
-        Me.lblLogin_Status.Location = New System.Drawing.Point(176, 52)
-        Me.lblLogin_Status.Name = "lblLogin_Status"
-        Me.lblLogin_Status.Size = New System.Drawing.Size(48, 17)
-        Me.lblLogin_Status.TabIndex = 27
-        Me.lblLogin_Status.Text = "Status"
-        '
-        'lblLogin_Time2
-        '
-        Me.lblLogin_Time2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblLogin_Time2.AutoSize = True
-        Me.lblLogin_Time2.BackColor = System.Drawing.Color.Transparent
-        Me.lblLogin_Time2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLogin_Time2.ForeColor = System.Drawing.Color.Black
-        Me.lblLogin_Time2.Location = New System.Drawing.Point(14, 107)
-        Me.lblLogin_Time2.Name = "lblLogin_Time2"
-        Me.lblLogin_Time2.Size = New System.Drawing.Size(102, 17)
-        Me.lblLogin_Time2.TabIndex = 26
-        Me.lblLogin_Time2.Text = "Login Attempts"
-        '
-        'lblLogin_Time1
-        '
-        Me.lblLogin_Time1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblLogin_Time1.AutoSize = True
-        Me.lblLogin_Time1.BackColor = System.Drawing.Color.Transparent
-        Me.lblLogin_Time1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLogin_Time1.ForeColor = System.Drawing.Color.Black
-        Me.lblLogin_Time1.Location = New System.Drawing.Point(14, 80)
-        Me.lblLogin_Time1.Name = "lblLogin_Time1"
-        Me.lblLogin_Time1.Size = New System.Drawing.Size(102, 17)
-        Me.lblLogin_Time1.TabIndex = 25
-        Me.lblLogin_Time1.Text = "Login Attempts"
-        '
-        'lblLogin_Time
-        '
-        Me.lblLogin_Time.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblLogin_Time.AutoSize = True
-        Me.lblLogin_Time.BackColor = System.Drawing.Color.Transparent
-        Me.lblLogin_Time.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLogin_Time.ForeColor = System.Drawing.Color.Black
-        Me.lblLogin_Time.Location = New System.Drawing.Point(14, 52)
-        Me.lblLogin_Time.Name = "lblLogin_Time"
-        Me.lblLogin_Time.Size = New System.Drawing.Size(102, 17)
-        Me.lblLogin_Time.TabIndex = 24
-        Me.lblLogin_Time.Text = "Login Attempts"
-        '
-        'lblInfo
-        '
-        Me.lblInfo.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblInfo.AutoSize = True
-        Me.lblInfo.BackColor = System.Drawing.Color.Transparent
-        Me.lblInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblInfo.ForeColor = System.Drawing.Color.Black
-        Me.lblInfo.Location = New System.Drawing.Point(14, 6)
-        Me.lblInfo.Name = "lblInfo"
-        Me.lblInfo.Size = New System.Drawing.Size(102, 17)
-        Me.lblInfo.TabIndex = 23
-        Me.lblInfo.Text = "Login Attempts"
         '
         'MonthCalendar1
         '
@@ -579,6 +462,123 @@ Partial Class AdminForm
         Me.pnlDisplay.Name = "pnlDisplay"
         Me.pnlDisplay.Size = New System.Drawing.Size(1097, 651)
         Me.pnlDisplay.TabIndex = 20
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(122, 34)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(63, 17)
+        Me.Label2.TabIndex = 40
+        Me.Label2.Text = "Attempts"
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(14, 34)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 17)
+        Me.Label1.TabIndex = 39
+        Me.Label1.Text = "Time"
+        '
+        'lblLogin_Status2
+        '
+        Me.lblLogin_Status2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblLogin_Status2.AutoSize = True
+        Me.lblLogin_Status2.BackColor = System.Drawing.Color.Transparent
+        Me.lblLogin_Status2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLogin_Status2.ForeColor = System.Drawing.Color.Black
+        Me.lblLogin_Status2.Location = New System.Drawing.Point(122, 113)
+        Me.lblLogin_Status2.Name = "lblLogin_Status2"
+        Me.lblLogin_Status2.Size = New System.Drawing.Size(102, 17)
+        Me.lblLogin_Status2.TabIndex = 38
+        Me.lblLogin_Status2.Text = "Login Attempts"
+        '
+        'lblLogin_Status1
+        '
+        Me.lblLogin_Status1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblLogin_Status1.AutoSize = True
+        Me.lblLogin_Status1.BackColor = System.Drawing.Color.Transparent
+        Me.lblLogin_Status1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLogin_Status1.ForeColor = System.Drawing.Color.Black
+        Me.lblLogin_Status1.Location = New System.Drawing.Point(122, 86)
+        Me.lblLogin_Status1.Name = "lblLogin_Status1"
+        Me.lblLogin_Status1.Size = New System.Drawing.Size(102, 17)
+        Me.lblLogin_Status1.TabIndex = 37
+        Me.lblLogin_Status1.Text = "Login Attempts"
+        '
+        'lblLogin_Status
+        '
+        Me.lblLogin_Status.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblLogin_Status.AutoSize = True
+        Me.lblLogin_Status.BackColor = System.Drawing.Color.Transparent
+        Me.lblLogin_Status.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLogin_Status.ForeColor = System.Drawing.Color.Black
+        Me.lblLogin_Status.Location = New System.Drawing.Point(122, 58)
+        Me.lblLogin_Status.Name = "lblLogin_Status"
+        Me.lblLogin_Status.Size = New System.Drawing.Size(102, 17)
+        Me.lblLogin_Status.TabIndex = 36
+        Me.lblLogin_Status.Text = "Login Attempts"
+        '
+        'lblLogin_Time2
+        '
+        Me.lblLogin_Time2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblLogin_Time2.AutoSize = True
+        Me.lblLogin_Time2.BackColor = System.Drawing.Color.Transparent
+        Me.lblLogin_Time2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLogin_Time2.ForeColor = System.Drawing.Color.Black
+        Me.lblLogin_Time2.Location = New System.Drawing.Point(14, 113)
+        Me.lblLogin_Time2.Name = "lblLogin_Time2"
+        Me.lblLogin_Time2.Size = New System.Drawing.Size(102, 17)
+        Me.lblLogin_Time2.TabIndex = 35
+        Me.lblLogin_Time2.Text = "Login Attempts"
+        '
+        'lblLogin_Time1
+        '
+        Me.lblLogin_Time1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblLogin_Time1.AutoSize = True
+        Me.lblLogin_Time1.BackColor = System.Drawing.Color.Transparent
+        Me.lblLogin_Time1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLogin_Time1.ForeColor = System.Drawing.Color.Black
+        Me.lblLogin_Time1.Location = New System.Drawing.Point(14, 86)
+        Me.lblLogin_Time1.Name = "lblLogin_Time1"
+        Me.lblLogin_Time1.Size = New System.Drawing.Size(102, 17)
+        Me.lblLogin_Time1.TabIndex = 34
+        Me.lblLogin_Time1.Text = "Login Attempts"
+        '
+        'lblLogin_Time
+        '
+        Me.lblLogin_Time.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblLogin_Time.AutoSize = True
+        Me.lblLogin_Time.BackColor = System.Drawing.Color.Transparent
+        Me.lblLogin_Time.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLogin_Time.ForeColor = System.Drawing.Color.Black
+        Me.lblLogin_Time.Location = New System.Drawing.Point(14, 58)
+        Me.lblLogin_Time.Name = "lblLogin_Time"
+        Me.lblLogin_Time.Size = New System.Drawing.Size(102, 17)
+        Me.lblLogin_Time.TabIndex = 33
+        Me.lblLogin_Time.Text = "Login Attempts"
+        '
+        'lblInfo
+        '
+        Me.lblInfo.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblInfo.AutoSize = True
+        Me.lblInfo.BackColor = System.Drawing.Color.Transparent
+        Me.lblInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInfo.ForeColor = System.Drawing.Color.Black
+        Me.lblInfo.Location = New System.Drawing.Point(14, 12)
+        Me.lblInfo.Name = "lblInfo"
+        Me.lblInfo.Size = New System.Drawing.Size(102, 17)
+        Me.lblInfo.TabIndex = 32
+        Me.lblInfo.Text = "Login Attempts"
         '
         'AdminForm
         '

@@ -79,7 +79,8 @@ Public Class CourseProfessorForm
     End Function
 
     Private Function InsertUserIntoCourse(email As String, schoolID As String, subject As String) As Boolean
-        Dim query As String = $"INSERT INTO tb_course (fullname, username, schoolid, subject) VALUES (@fullname, @username, @schoolID, @subject)"
+        Dim queryCourse As String = $"INSERT INTO tb_course (fullname, username, schoolid, subject) VALUES (@fullname, @username, @schoolID, @subject)"
+        Dim queryStudentSubject As String = $"INSERT INTO tb_studentsubject (email, subject) VALUES (@email, @subject)"
         Dim connectionString As String = "Database=wyteboard;Data Source=localhost;User id=admin;Password=IamFinal0904;Port=3306;Command Timeout=600;"
 
         Try
@@ -94,14 +95,22 @@ Public Class CourseProfessorForm
             Using connection As New MySqlConnection(connectionString)
                 connection.Open()
 
-                Using cmd As New MySqlCommand(query, connection)
+                Using cmdCourse As New MySqlCommand(queryCourse, connection)
                     ' Use the email as the username
-                    cmd.Parameters.AddWithValue("@fullname", fullname)
-                    cmd.Parameters.AddWithValue("@username", email) ' Use the email as the username
-                    cmd.Parameters.AddWithValue("@schoolID", schoolID)
-                    cmd.Parameters.AddWithValue("@subject", subject)
+                    cmdCourse.Parameters.AddWithValue("@fullname", fullname)
+                    cmdCourse.Parameters.AddWithValue("@username", email) ' Use the email as the username
+                    cmdCourse.Parameters.AddWithValue("@schoolID", schoolID)
+                    cmdCourse.Parameters.AddWithValue("@subject", subject)
 
-                    cmd.ExecuteNonQuery()
+                    cmdCourse.ExecuteNonQuery()
+                End Using
+
+                Using cmdStudentSubject As New MySqlCommand(queryStudentSubject, connection)
+                    ' Insert email and subject into tb_studentsubject
+                    cmdStudentSubject.Parameters.AddWithValue("@email", email)
+                    cmdStudentSubject.Parameters.AddWithValue("@subject", subject)
+
+                    cmdStudentSubject.ExecuteNonQuery()
                 End Using
             End Using
 

@@ -210,7 +210,7 @@ Partial Class Account
         Me.txtConfirmAnswer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtConfirmAnswer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtConfirmAnswer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtConfirmAnswer.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtConfirmAnswer.Font = New System.Drawing.Font("Montserrat", 8.249999!)
         Me.txtConfirmAnswer.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtConfirmAnswer.Location = New System.Drawing.Point(517, 387)
         Me.txtConfirmAnswer.Name = "txtConfirmAnswer"

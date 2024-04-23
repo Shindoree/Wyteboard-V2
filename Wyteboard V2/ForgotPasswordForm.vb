@@ -78,4 +78,8 @@ Public Class ForgotPasswordForm
     Private Sub txtSchoolID_TextChanged(sender As Object, e As EventArgs) Handles txtSchoolID.TextChanged
 
     End Sub
+
+    Private Sub txtNewPassword_TextChanged(sender As Object, e As EventArgs) Handles txtNewPassword.TextChanged
+
+    End Sub
 End Class

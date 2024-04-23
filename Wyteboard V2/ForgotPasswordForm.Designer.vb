@@ -47,6 +47,7 @@ Partial Class ForgotPasswordForm
         Me.imgLockPass = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.picLogo = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
+        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel2.SuspendLayout()
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -378,6 +379,7 @@ Partial Class ForgotPasswordForm
         Me.Guna2Panel2.Controls.Add(Me.lblEmail)
         Me.Guna2Panel2.Controls.Add(Me.lblForgotPassword)
         Me.Guna2Panel2.Controls.Add(Me.lblSecurityQuestion)
+        Me.Guna2Panel2.Controls.Add(Me.Guna2Panel1)
         Me.Guna2Panel2.Location = New System.Drawing.Point(12, 12)
         Me.Guna2Panel2.Name = "Guna2Panel2"
         Me.Guna2Panel2.ShadowDecoration.Enabled = True
@@ -437,6 +439,13 @@ Partial Class ForgotPasswordForm
         Me.Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
         Me.Guna2BorderlessForm1.TransparentWhileDrag = True
         '
+        'Guna2Panel1
+        '
+        Me.Guna2Panel1.Location = New System.Drawing.Point(53, 419)
+        Me.Guna2Panel1.Name = "Guna2Panel1"
+        Me.Guna2Panel1.Size = New System.Drawing.Size(500, 117)
+        Me.Guna2Panel1.TabIndex = 71
+        '
         'ForgotPasswordForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -478,4 +487,5 @@ Partial Class ForgotPasswordForm
     Friend WithEvents lblSecurityQuestion As Label
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
+    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
 End Class

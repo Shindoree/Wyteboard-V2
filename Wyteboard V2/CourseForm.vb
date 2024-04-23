@@ -2,6 +2,9 @@
 Imports System.Windows.Forms.DataVisualization.Charting
 
 Public Class CourseForm
+    Inherits Form
+
+
     Public Property FirstName As String
     Public Property Username As String
 
@@ -136,11 +139,52 @@ Public Class CourseForm
     End Sub
 
     Private Sub CourseForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'LoadDataIntoTabPages(Username)
         ' Call the method to load data into DataGridView
         LoadDataIntoDataGridView(Username)
         lblUser.Text = "Hello " & FirstName & ", Enjoy your day!"
     End Sub
+    ' Public Sub LoadDataIntoTabPages(email As String)
+    'Dim myConnection As MySqlConnection
+    'Dim myCommand As MySqlCommand
+    'Dim myAdapter As New MySqlDataAdapter
+    'Dim myDataSet As New DataSet
 
+    ' Connection string to your database
+    'im connectionString As String = "Database=wyteboard;" &
+    ' "Data Source=localhost;" &
+    '"User id=admin;" &
+    ' "Password=IamFinal0904;" &
+    '"Port=3306;Command Timeout=600;"
+    '
+    'myConnection = New MySqlConnection(connectionString)
+    '
+    ' Try
+    '        myConnection.Open()
+    '
+    ' Use parameters to prevent SQL injection
+    'Dim query As String = "SELECT DISTINCT subject FROM wyteboard.tb_studentsubject WHERE email= @email"
+    '
+    '   myCommand = New MySqlCommand(query, myConnection)
+    '     myCommand.Parameters.AddWithValue("@email", email) ' Use the provided username
+
+    ' Execute the query to retrieve subjects
+    'Dim reader As MySqlDataReader = myCommand.ExecuteReader()
+
+    ' Populate tab pages with subjects
+    'While reader.Read()
+    'Dim subject As String = reader.GetString("subject")
+    'Dim tabPage As New TabPage(subject)
+    '           cntrlTabCourses.TabPages.Add(tabPage)
+    'End While
+    '       reader.Close()
+    '
+    'Catch ex As Exception
+    '       MsgBox("Error loading data: " & ex.Message)
+    'Finally
+    '       myConnection.Close()
+    'End Try
+    'End Sub
     Private Sub dgViewGrade_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgViewGrade.CellContentClick
 
     End Sub

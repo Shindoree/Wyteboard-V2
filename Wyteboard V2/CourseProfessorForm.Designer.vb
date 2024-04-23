@@ -37,6 +37,11 @@ Partial Class CourseProfessorForm
         Me.txtSchoolID = New Guna.UI2.WinForms.Guna2TextBox()
         Me.lblInfo = New System.Windows.Forms.Label()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lblNote2 = New System.Windows.Forms.Label()
+        Me.lblNote1 = New System.Windows.Forms.Label()
+        Me.btnDeleteStudent = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnDeleteTask = New Guna.UI2.WinForms.Guna2Button()
         Me.btnAddNew = New Guna.UI2.WinForms.Guna2Button()
         Me.txtNewPT = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtNewOE = New Guna.UI2.WinForms.Guna2TextBox()
@@ -45,11 +50,6 @@ Partial Class CourseProfessorForm
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.dgViewGrade = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.btnDeleteTask = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnDeleteStudent = New Guna.UI2.WinForms.Guna2Button()
-        Me.lblNote1 = New System.Windows.Forms.Label()
-        Me.lblNote2 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.chartCourse, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel3.SuspendLayout()
         Me.cntrlTabCourses.SuspendLayout()
@@ -212,6 +212,84 @@ Partial Class CourseProfessorForm
         Me.Guna2Panel3.Name = "Guna2Panel3"
         Me.Guna2Panel3.Size = New System.Drawing.Size(1079, 256)
         Me.Guna2Panel3.TabIndex = 61
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.SystemColors.Control
+        Me.Label4.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(767, 220)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(0, 16)
+        Me.Label4.TabIndex = 70
+        '
+        'lblNote2
+        '
+        Me.lblNote2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblNote2.AutoSize = True
+        Me.lblNote2.BackColor = System.Drawing.SystemColors.Control
+        Me.lblNote2.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNote2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer))
+        Me.lblNote2.Location = New System.Drawing.Point(767, 197)
+        Me.lblNote2.Name = "lblNote2"
+        Me.lblNote2.Size = New System.Drawing.Size(281, 16)
+        Me.lblNote2.TabIndex = 69
+        Me.lblNote2.Text = "*PT and OE are types, becareful of deletion"
+        '
+        'lblNote1
+        '
+        Me.lblNote1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblNote1.AutoSize = True
+        Me.lblNote1.BackColor = System.Drawing.SystemColors.Control
+        Me.lblNote1.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNote1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer))
+        Me.lblNote1.Location = New System.Drawing.Point(767, 174)
+        Me.lblNote1.Name = "lblNote1"
+        Me.lblNote1.Size = New System.Drawing.Size(259, 16)
+        Me.lblNote1.TabIndex = 68
+        Me.lblNote1.Text = "*Note that OE name should be numbers"
+        '
+        'btnDeleteStudent
+        '
+        Me.btnDeleteStudent.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnDeleteStudent.AutoRoundedCorners = True
+        Me.btnDeleteStudent.BackColor = System.Drawing.Color.Transparent
+        Me.btnDeleteStudent.BorderRadius = 17
+        Me.btnDeleteStudent.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnDeleteStudent.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnDeleteStudent.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnDeleteStudent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnDeleteStudent.FillColor = System.Drawing.Color.Red
+        Me.btnDeleteStudent.Font = New System.Drawing.Font("Inter SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDeleteStudent.ForeColor = System.Drawing.Color.White
+        Me.btnDeleteStudent.Location = New System.Drawing.Point(755, 104)
+        Me.btnDeleteStudent.Name = "btnDeleteStudent"
+        Me.btnDeleteStudent.Size = New System.Drawing.Size(180, 37)
+        Me.btnDeleteStudent.TabIndex = 67
+        Me.btnDeleteStudent.Text = "Remove Student"
+        Me.btnDeleteStudent.UseTransparentBackground = True
+        '
+        'btnDeleteTask
+        '
+        Me.btnDeleteTask.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnDeleteTask.AutoRoundedCorners = True
+        Me.btnDeleteTask.BackColor = System.Drawing.Color.Transparent
+        Me.btnDeleteTask.BorderRadius = 18
+        Me.btnDeleteTask.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnDeleteTask.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnDeleteTask.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnDeleteTask.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnDeleteTask.FillColor = System.Drawing.Color.Red
+        Me.btnDeleteTask.Font = New System.Drawing.Font("Inter SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDeleteTask.ForeColor = System.Drawing.Color.White
+        Me.btnDeleteTask.Location = New System.Drawing.Point(581, 174)
+        Me.btnDeleteTask.Name = "btnDeleteTask"
+        Me.btnDeleteTask.Size = New System.Drawing.Size(180, 38)
+        Me.btnDeleteTask.TabIndex = 66
+        Me.btnDeleteTask.Text = "Delete Task"
+        Me.btnDeleteTask.UseTransparentBackground = True
         '
         'btnAddNew
         '
@@ -408,84 +486,6 @@ Partial Class CourseProfessorForm
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(1079, 379)
         Me.Guna2Panel1.TabIndex = 12
-        '
-        'btnDeleteTask
-        '
-        Me.btnDeleteTask.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnDeleteTask.AutoRoundedCorners = True
-        Me.btnDeleteTask.BackColor = System.Drawing.Color.Transparent
-        Me.btnDeleteTask.BorderRadius = 18
-        Me.btnDeleteTask.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnDeleteTask.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnDeleteTask.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnDeleteTask.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnDeleteTask.FillColor = System.Drawing.Color.Red
-        Me.btnDeleteTask.Font = New System.Drawing.Font("Inter SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDeleteTask.ForeColor = System.Drawing.Color.White
-        Me.btnDeleteTask.Location = New System.Drawing.Point(581, 174)
-        Me.btnDeleteTask.Name = "btnDeleteTask"
-        Me.btnDeleteTask.Size = New System.Drawing.Size(180, 38)
-        Me.btnDeleteTask.TabIndex = 66
-        Me.btnDeleteTask.Text = "Delete Task"
-        Me.btnDeleteTask.UseTransparentBackground = True
-        '
-        'btnDeleteStudent
-        '
-        Me.btnDeleteStudent.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnDeleteStudent.AutoRoundedCorners = True
-        Me.btnDeleteStudent.BackColor = System.Drawing.Color.Transparent
-        Me.btnDeleteStudent.BorderRadius = 17
-        Me.btnDeleteStudent.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnDeleteStudent.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnDeleteStudent.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnDeleteStudent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnDeleteStudent.FillColor = System.Drawing.Color.Red
-        Me.btnDeleteStudent.Font = New System.Drawing.Font("Inter SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDeleteStudent.ForeColor = System.Drawing.Color.White
-        Me.btnDeleteStudent.Location = New System.Drawing.Point(755, 104)
-        Me.btnDeleteStudent.Name = "btnDeleteStudent"
-        Me.btnDeleteStudent.Size = New System.Drawing.Size(180, 37)
-        Me.btnDeleteStudent.TabIndex = 67
-        Me.btnDeleteStudent.Text = "Remove Student"
-        Me.btnDeleteStudent.UseTransparentBackground = True
-        '
-        'lblNote1
-        '
-        Me.lblNote1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblNote1.AutoSize = True
-        Me.lblNote1.BackColor = System.Drawing.SystemColors.Control
-        Me.lblNote1.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNote1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer))
-        Me.lblNote1.Location = New System.Drawing.Point(767, 174)
-        Me.lblNote1.Name = "lblNote1"
-        Me.lblNote1.Size = New System.Drawing.Size(259, 16)
-        Me.lblNote1.TabIndex = 68
-        Me.lblNote1.Text = "*Note that OE name should be numbers"
-        '
-        'lblNote2
-        '
-        Me.lblNote2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblNote2.AutoSize = True
-        Me.lblNote2.BackColor = System.Drawing.SystemColors.Control
-        Me.lblNote2.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNote2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer))
-        Me.lblNote2.Location = New System.Drawing.Point(767, 197)
-        Me.lblNote2.Name = "lblNote2"
-        Me.lblNote2.Size = New System.Drawing.Size(281, 16)
-        Me.lblNote2.TabIndex = 69
-        Me.lblNote2.Text = "*PT and OE are types, becareful of deletion"
-        '
-        'Label4
-        '
-        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.SystemColors.Control
-        Me.Label4.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(767, 220)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(0, 16)
-        Me.Label4.TabIndex = 70
         '
         'CourseProfessorForm
         '

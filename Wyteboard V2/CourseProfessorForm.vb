@@ -427,14 +427,6 @@ Public Class CourseProfessorForm
             End If
         Next
     End Sub
-
-    Private Sub TabPage2_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub dgViewGrade_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgViewGrade.CellContentClick
-
-    End Sub
     Private Sub ClearAndReloadDataGridView()
         ' Clear existing data from DataGridView
         dgViewGrade.DataSource = Nothing
@@ -493,14 +485,6 @@ Public Class CourseProfessorForm
             Return ""
         End Try
     End Function
-
-    Private Sub Guna2Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel3.Paint
-
-    End Sub
-
-    Private Sub cbxSubject_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxSubject.SelectedIndexChanged
-
-    End Sub
     Private Sub btnDeleteTask_Click(sender As Object, e As EventArgs) Handles btnDeleteTask.Click
         ' Get the column type from the user
         Dim columnType As String = InputBox("Enter the column type (OE or PT):", "Enter Column Type")

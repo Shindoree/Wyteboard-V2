@@ -333,6 +333,7 @@ Public Class CourseProfessorForm
         ' (This part is not included here as it depends on how you are deleting columns)
     End Sub
 
+
     Private Sub dgViewGrade_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles dgViewGrade.CellEndEdit
         ' Get the edited value
         Dim editedValue As Object = dgViewGrade.Rows(e.RowIndex).Cells(e.ColumnIndex).Value
@@ -479,4 +480,117 @@ Public Class CourseProfessorForm
     Private Sub cbxSubject_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxSubject.SelectedIndexChanged
 
     End Sub
+    Private Sub btnDeleteTask_Click(sender As Object, e As EventArgs) Handles btnDeleteTask.Click
+        ' Get the column type from the user
+        Dim columnType As String = InputBox("Enter the column type (OE or PT):", "Enter Column Type")
+
+        ' Check if the user entered a column type
+        If String.IsNullOrEmpty(columnType.Trim()) Then
+            MessageBox.Show("Please enter the column type (OE or PT).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
+
+        ' Get the column name from the user
+        Dim columnName As String = InputBox($"Enter the name of the {columnType.ToUpper()} column to delete:", $"Delete {columnType.ToUpper()} Column")
+
+        ' Check if the user entered a column name
+        If String.IsNullOrEmpty(columnName.Trim()) Then
+            MessageBox.Show($"Please enter the name of the {columnType.ToUpper()} column to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
+
+        ' Call the method to delete the column
+        If DeleteColumn(columnName, columnType.ToLower()) Then
+            ' Refresh the DataGridView and chart after successful deletion
+            LoadDataIntoDataGridView(Username)
+            UpdateChartData()
+        End If
+    End Sub
+
+    Private Function DeleteColumn(columnName As String, columnType As String) As Boolean
+        Try
+            ' Database connection string
+            Dim connectionString As String = "Database=wyteboard;Data Source=localhost;User id=admin;Password=IamFinal0904;Port=3306;Command Timeout=600;"
+
+            ' Construct the query to drop the specified column
+            Dim query As String = $"ALTER TABLE tb_course DROP COLUMN {columnType}{columnName}"
+
+            ' Open connection to MySQL database
+            Using connection As New MySqlConnection(connectionString)
+                connection.Open()
+
+                ' Create MySqlCommand
+                Using cmd As New MySqlCommand(query, connection)
+                    ' Execute the command to drop the column
+                    cmd.ExecuteNonQuery()
+                End Using
+            End Using
+
+            MessageBox.Show($"The {columnType.ToUpper()} column '{columnName}' has been deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            Return True
+        Catch ex As Exception
+            ' Handle exception
+            MessageBox.Show($"Error deleting {columnType.ToUpper()} column: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End Try
+    End Function
+
+    Private Sub btnDeleteStudent_Click(sender As Object, e As EventArgs) Handles btnDeleteStudent.Click
+        ' Check if any row is selected
+        If dgViewGrade.SelectedRows.Count = 0 Then
+            MessageBox.Show("Please select a student row to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
+
+        ' Get the selected row
+        Dim selectedRow As DataGridViewRow = dgViewGrade.SelectedRows(0)
+
+        ' Get the student's school ID
+        Dim schoolID As String = selectedRow.Cells("schoolid").Value.ToString()
+
+        ' Ask for confirmation before deleting the student
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to delete the selected student?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If result = DialogResult.Yes Then
+            ' Call a method to delete the student from the database
+            If DeleteStudent(schoolID) Then
+                ' Refresh the DataGridView and chart after successful deletion
+                LoadDataIntoDataGridView(Username)
+                UpdateChartData()
+            End If
+        End If
+    End Sub
+
+    Private Function DeleteStudent(schoolID As String) As Boolean
+        Try
+            ' Database connection string
+            Dim connectionString As String = "Database=wyteboard;Data Source=localhost;User id=admin;Password=IamFinal0904;Port=3306;Command Timeout=600;"
+
+            ' Construct the query to delete the student
+            Dim query As String = $"DELETE FROM tb_course WHERE schoolid = @schoolID"
+
+            ' Open connection to MySQL database
+            Using connection As New MySqlConnection(connectionString)
+                connection.Open()
+
+                ' Create MySqlCommand
+                Using cmd As New MySqlCommand(query, connection)
+                    ' Add parameters to the command
+                    cmd.Parameters.AddWithValue("@schoolID", schoolID)
+
+                    ' Execute the command to delete the student
+                    cmd.ExecuteNonQuery()
+                End Using
+            End Using
+
+            MessageBox.Show("The student has been deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            Return True
+        Catch ex As Exception
+            ' Handle exception
+            MessageBox.Show($"Error deleting student: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End Try
+    End Function
 End Class

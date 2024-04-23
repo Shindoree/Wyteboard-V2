@@ -37,7 +37,6 @@ Partial Class CourseProfessorForm
         Me.txtSchoolID = New Guna.UI2.WinForms.Guna2TextBox()
         Me.lblInfo = New System.Windows.Forms.Label()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.lblNote2 = New System.Windows.Forms.Label()
         Me.lblNote1 = New System.Windows.Forms.Label()
         Me.btnDeleteStudent = New Guna.UI2.WinForms.Guna2Button()
@@ -192,7 +191,6 @@ Partial Class CourseProfessorForm
         '
         'Guna2Panel3
         '
-        Me.Guna2Panel3.Controls.Add(Me.Label4)
         Me.Guna2Panel3.Controls.Add(Me.lblNote2)
         Me.Guna2Panel3.Controls.Add(Me.lblNote1)
         Me.Guna2Panel3.Controls.Add(Me.btnDeleteStudent)
@@ -212,18 +210,6 @@ Partial Class CourseProfessorForm
         Me.Guna2Panel3.Name = "Guna2Panel3"
         Me.Guna2Panel3.Size = New System.Drawing.Size(1079, 256)
         Me.Guna2Panel3.TabIndex = 61
-        '
-        'Label4
-        '
-        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.SystemColors.Control
-        Me.Label4.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(767, 220)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(0, 16)
-        Me.Label4.TabIndex = 70
         '
         'lblNote2
         '
@@ -526,5 +512,4 @@ Partial Class CourseProfessorForm
     Friend WithEvents btnDeleteTask As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents lblNote2 As Label
     Friend WithEvents lblNote1 As Label
-    Friend WithEvents Label4 As Label
 End Class

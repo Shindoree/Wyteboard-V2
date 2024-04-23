@@ -47,9 +47,10 @@ Partial Class ForgotPasswordForm
         Me.imgLockPass = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.picLogo = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
-        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.pnlPassword = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel2.SuspendLayout()
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlPassword.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnlOverview
@@ -83,7 +84,7 @@ Partial Class ForgotPasswordForm
         Me.lblPasswordWarning.BackColor = System.Drawing.Color.White
         Me.lblPasswordWarning.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPasswordWarning.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.lblPasswordWarning.Location = New System.Drawing.Point(61, 505)
+        Me.lblPasswordWarning.Location = New System.Drawing.Point(73, 82)
         Me.lblPasswordWarning.Name = "lblPasswordWarning"
         Me.lblPasswordWarning.Size = New System.Drawing.Size(205, 16)
         Me.lblPasswordWarning.TabIndex = 69
@@ -103,7 +104,7 @@ Partial Class ForgotPasswordForm
         Me.txtSchoolID.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSchoolID.ForeColor = System.Drawing.Color.Black
         Me.txtSchoolID.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtSchoolID.Location = New System.Drawing.Point(371, 283)
+        Me.txtSchoolID.Location = New System.Drawing.Point(386, 283)
         Me.txtSchoolID.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.txtSchoolID.MaxLength = 10
         Me.txtSchoolID.Name = "txtSchoolID"
@@ -111,7 +112,7 @@ Partial Class ForgotPasswordForm
         Me.txtSchoolID.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtSchoolID.PlaceholderText = "2020-12345"
         Me.txtSchoolID.SelectedText = ""
-        Me.txtSchoolID.Size = New System.Drawing.Size(166, 48)
+        Me.txtSchoolID.Size = New System.Drawing.Size(163, 48)
         Me.txtSchoolID.TabIndex = 2
         '
         'lblSchoolID
@@ -120,7 +121,7 @@ Partial Class ForgotPasswordForm
         Me.lblSchoolID.BackColor = System.Drawing.Color.White
         Me.lblSchoolID.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSchoolID.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.lblSchoolID.Location = New System.Drawing.Point(368, 260)
+        Me.lblSchoolID.Location = New System.Drawing.Point(383, 260)
         Me.lblSchoolID.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblSchoolID.Name = "lblSchoolID"
         Me.lblSchoolID.Size = New System.Drawing.Size(65, 16)
@@ -133,7 +134,7 @@ Partial Class ForgotPasswordForm
         Me.lblConfirmPassword.BackColor = System.Drawing.Color.White
         Me.lblConfirmPassword.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblConfirmPassword.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.lblConfirmPassword.Location = New System.Drawing.Point(310, 426)
+        Me.lblConfirmPassword.Location = New System.Drawing.Point(322, 3)
         Me.lblConfirmPassword.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblConfirmPassword.Name = "lblConfirmPassword"
         Me.lblConfirmPassword.Size = New System.Drawing.Size(121, 16)
@@ -154,7 +155,7 @@ Partial Class ForgotPasswordForm
         Me.txtConfirmPass.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtConfirmPass.ForeColor = System.Drawing.Color.Black
         Me.txtConfirmPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtConfirmPass.Location = New System.Drawing.Point(306, 450)
+        Me.txtConfirmPass.Location = New System.Drawing.Point(318, 27)
         Me.txtConfirmPass.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.txtConfirmPass.MaxLength = 25
         Me.txtConfirmPass.Name = "txtConfirmPass"
@@ -162,7 +163,7 @@ Partial Class ForgotPasswordForm
         Me.txtConfirmPass.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtConfirmPass.PlaceholderText = ""
         Me.txtConfirmPass.SelectedText = ""
-        Me.txtConfirmPass.Size = New System.Drawing.Size(231, 48)
+        Me.txtConfirmPass.Size = New System.Drawing.Size(228, 48)
         Me.txtConfirmPass.TabIndex = 6
         '
         'txtNewPassword
@@ -179,7 +180,7 @@ Partial Class ForgotPasswordForm
         Me.txtNewPassword.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNewPassword.ForeColor = System.Drawing.Color.Black
         Me.txtNewPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtNewPassword.Location = New System.Drawing.Point(64, 450)
+        Me.txtNewPassword.Location = New System.Drawing.Point(76, 27)
         Me.txtNewPassword.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.txtNewPassword.MaxLength = 25
         Me.txtNewPassword.Name = "txtNewPassword"
@@ -196,7 +197,7 @@ Partial Class ForgotPasswordForm
         Me.lblNewPassword.BackColor = System.Drawing.Color.White
         Me.lblNewPassword.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNewPassword.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.lblNewPassword.Location = New System.Drawing.Point(61, 426)
+        Me.lblNewPassword.Location = New System.Drawing.Point(73, 3)
         Me.lblNewPassword.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblNewPassword.Name = "lblNewPassword"
         Me.lblNewPassword.Size = New System.Drawing.Size(101, 16)
@@ -217,7 +218,7 @@ Partial Class ForgotPasswordForm
         Me.txtSecAnswer.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSecAnswer.ForeColor = System.Drawing.Color.Black
         Me.txtSecAnswer.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtSecAnswer.Location = New System.Drawing.Point(368, 365)
+        Me.txtSecAnswer.Location = New System.Drawing.Point(386, 365)
         Me.txtSecAnswer.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.txtSecAnswer.MaxLength = 45
         Me.txtSecAnswer.Name = "txtSecAnswer"
@@ -225,7 +226,7 @@ Partial Class ForgotPasswordForm
         Me.txtSecAnswer.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtSecAnswer.PlaceholderText = ""
         Me.txtSecAnswer.SelectedText = ""
-        Me.txtSecAnswer.Size = New System.Drawing.Size(166, 48)
+        Me.txtSecAnswer.Size = New System.Drawing.Size(163, 48)
         Me.txtSecAnswer.TabIndex = 4
         '
         'lblYourAnswer
@@ -233,7 +234,7 @@ Partial Class ForgotPasswordForm
         Me.lblYourAnswer.AutoSize = True
         Me.lblYourAnswer.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblYourAnswer.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.lblYourAnswer.Location = New System.Drawing.Point(365, 346)
+        Me.lblYourAnswer.Location = New System.Drawing.Point(383, 346)
         Me.lblYourAnswer.Name = "lblYourAnswer"
         Me.lblYourAnswer.Size = New System.Drawing.Size(88, 16)
         Me.lblYourAnswer.TabIndex = 27
@@ -253,7 +254,7 @@ Partial Class ForgotPasswordForm
         Me.cbxSecurityQuestion.ForeColor = System.Drawing.Color.Black
         Me.cbxSecurityQuestion.ItemHeight = 42
         Me.cbxSecurityQuestion.Items.AddRange(New Object() {"Professor", "Student"})
-        Me.cbxSecurityQuestion.Location = New System.Drawing.Point(64, 365)
+        Me.cbxSecurityQuestion.Location = New System.Drawing.Point(79, 365)
         Me.cbxSecurityQuestion.Name = "cbxSecurityQuestion"
         Me.cbxSecurityQuestion.Size = New System.Drawing.Size(295, 48)
         Me.cbxSecurityQuestion.TabIndex = 3
@@ -272,7 +273,7 @@ Partial Class ForgotPasswordForm
         Me.txtEmail.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmail.ForeColor = System.Drawing.Color.Black
         Me.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtEmail.Location = New System.Drawing.Point(64, 283)
+        Me.txtEmail.Location = New System.Drawing.Point(79, 283)
         Me.txtEmail.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -296,7 +297,7 @@ Partial Class ForgotPasswordForm
         Me.btnCancel.FillColor = System.Drawing.Color.White
         Me.btnCancel.Font = New System.Drawing.Font("Inter SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(229, Byte), Integer))
-        Me.btnCancel.Location = New System.Drawing.Point(64, 565)
+        Me.btnCancel.Location = New System.Drawing.Point(77, 565)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(180, 45)
         Me.btnCancel.TabIndex = 8
@@ -315,7 +316,7 @@ Partial Class ForgotPasswordForm
         Me.btnConfirm.FillColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(111, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.btnConfirm.Font = New System.Drawing.Font("Inter SemiBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnConfirm.ForeColor = System.Drawing.Color.White
-        Me.btnConfirm.Location = New System.Drawing.Point(357, 565)
+        Me.btnConfirm.Location = New System.Drawing.Point(367, 565)
         Me.btnConfirm.Name = "btnConfirm"
         Me.btnConfirm.Size = New System.Drawing.Size(180, 45)
         Me.btnConfirm.TabIndex = 7
@@ -327,7 +328,7 @@ Partial Class ForgotPasswordForm
         Me.lblEmail.AutoSize = True
         Me.lblEmail.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblEmail.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.lblEmail.Location = New System.Drawing.Point(61, 260)
+        Me.lblEmail.Location = New System.Drawing.Point(76, 260)
         Me.lblEmail.Name = "lblEmail"
         Me.lblEmail.Size = New System.Drawing.Size(39, 16)
         Me.lblEmail.TabIndex = 5
@@ -349,7 +350,7 @@ Partial Class ForgotPasswordForm
         Me.lblSecurityQuestion.AutoSize = True
         Me.lblSecurityQuestion.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSecurityQuestion.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.lblSecurityQuestion.Location = New System.Drawing.Point(61, 346)
+        Me.lblSecurityQuestion.Location = New System.Drawing.Point(76, 346)
         Me.lblSecurityQuestion.Name = "lblSecurityQuestion"
         Me.lblSecurityQuestion.Size = New System.Drawing.Size(119, 16)
         Me.lblSecurityQuestion.TabIndex = 20
@@ -359,16 +360,10 @@ Partial Class ForgotPasswordForm
         '
         Me.Guna2Panel2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Guna2Panel2.BackColor = System.Drawing.Color.White
+        Me.Guna2Panel2.Controls.Add(Me.pnlPassword)
         Me.Guna2Panel2.Controls.Add(Me.lblInfo)
-        Me.Guna2Panel2.Controls.Add(Me.lblPasswordWarning)
         Me.Guna2Panel2.Controls.Add(Me.txtSchoolID)
         Me.Guna2Panel2.Controls.Add(Me.lblSchoolID)
-        Me.Guna2Panel2.Controls.Add(Me.imgLockConfPass)
-        Me.Guna2Panel2.Controls.Add(Me.imgLockPass)
-        Me.Guna2Panel2.Controls.Add(Me.lblConfirmPassword)
-        Me.Guna2Panel2.Controls.Add(Me.txtConfirmPass)
-        Me.Guna2Panel2.Controls.Add(Me.txtNewPassword)
-        Me.Guna2Panel2.Controls.Add(Me.lblNewPassword)
         Me.Guna2Panel2.Controls.Add(Me.txtSecAnswer)
         Me.Guna2Panel2.Controls.Add(Me.lblYourAnswer)
         Me.Guna2Panel2.Controls.Add(Me.cbxSecurityQuestion)
@@ -379,7 +374,6 @@ Partial Class ForgotPasswordForm
         Me.Guna2Panel2.Controls.Add(Me.lblEmail)
         Me.Guna2Panel2.Controls.Add(Me.lblForgotPassword)
         Me.Guna2Panel2.Controls.Add(Me.lblSecurityQuestion)
-        Me.Guna2Panel2.Controls.Add(Me.Guna2Panel1)
         Me.Guna2Panel2.Location = New System.Drawing.Point(12, 12)
         Me.Guna2Panel2.Name = "Guna2Panel2"
         Me.Guna2Panel2.ShadowDecoration.Enabled = True
@@ -396,7 +390,7 @@ Partial Class ForgotPasswordForm
         Me.imgLockConfPass.ImageOffset = New System.Drawing.Point(0, 0)
         Me.imgLockConfPass.ImageRotate = 0!
         Me.imgLockConfPass.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockConfPass.Location = New System.Drawing.Point(488, 454)
+        Me.imgLockConfPass.Location = New System.Drawing.Point(495, 31)
         Me.imgLockConfPass.Name = "imgLockConfPass"
         Me.imgLockConfPass.PressedState.ImageSize = New System.Drawing.Size(32, 33)
         Me.imgLockConfPass.Size = New System.Drawing.Size(46, 39)
@@ -413,7 +407,7 @@ Partial Class ForgotPasswordForm
         Me.imgLockPass.ImageOffset = New System.Drawing.Point(0, 0)
         Me.imgLockPass.ImageRotate = 0!
         Me.imgLockPass.ImageSize = New System.Drawing.Size(32, 33)
-        Me.imgLockPass.Location = New System.Drawing.Point(243, 454)
+        Me.imgLockPass.Location = New System.Drawing.Point(256, 31)
         Me.imgLockPass.Name = "imgLockPass"
         Me.imgLockPass.PressedState.ImageSize = New System.Drawing.Size(32, 33)
         Me.imgLockPass.Size = New System.Drawing.Size(46, 39)
@@ -439,12 +433,19 @@ Partial Class ForgotPasswordForm
         Me.Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
         Me.Guna2BorderlessForm1.TransparentWhileDrag = True
         '
-        'Guna2Panel1
+        'pnlPassword
         '
-        Me.Guna2Panel1.Location = New System.Drawing.Point(53, 419)
-        Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.Size = New System.Drawing.Size(500, 117)
-        Me.Guna2Panel1.TabIndex = 71
+        Me.pnlPassword.Controls.Add(Me.imgLockPass)
+        Me.pnlPassword.Controls.Add(Me.txtNewPassword)
+        Me.pnlPassword.Controls.Add(Me.lblPasswordWarning)
+        Me.pnlPassword.Controls.Add(Me.imgLockConfPass)
+        Me.pnlPassword.Controls.Add(Me.lblConfirmPassword)
+        Me.pnlPassword.Controls.Add(Me.txtConfirmPass)
+        Me.pnlPassword.Controls.Add(Me.lblNewPassword)
+        Me.pnlPassword.Location = New System.Drawing.Point(3, 423)
+        Me.pnlPassword.Name = "pnlPassword"
+        Me.pnlPassword.Size = New System.Drawing.Size(618, 128)
+        Me.pnlPassword.TabIndex = 71
         '
         'ForgotPasswordForm
         '
@@ -460,6 +461,8 @@ Partial Class ForgotPasswordForm
         Me.Guna2Panel2.ResumeLayout(False)
         Me.Guna2Panel2.PerformLayout()
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlPassword.ResumeLayout(False)
+        Me.pnlPassword.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -487,5 +490,5 @@ Partial Class ForgotPasswordForm
     Friend WithEvents lblSecurityQuestion As Label
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
-    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents pnlPassword As Guna.UI2.WinForms.Guna2Panel
 End Class

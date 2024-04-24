@@ -58,8 +58,14 @@ Public Class LoginForm
             Return
         End If
 
+        If password.Length < 8 Then
+            lblError.Text = "Password must be at least 8 characters"
+            txtPassword.BorderColor = Color.Red
+            Return
+        End If
+
         If Not email.EndsWith("@lpulaguna.edu.ph") Then
-            lblError.Text = "Invalid Email Domain"
+            lblError.Text = "Invalid email format"
             txtEmail.BorderColor = Color.Red ' Set border color to red for invalid domain
             Return
         End If
@@ -81,6 +87,7 @@ Public Class LoginForm
             My.Settings.KeepSignedIn = True
             My.Settings.Save()
         End If
+
     End Sub
 
     Private Sub InsertLoginAttempt(email As String, status As String)

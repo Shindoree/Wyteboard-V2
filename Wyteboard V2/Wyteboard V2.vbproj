@@ -206,6 +206,12 @@
     <Compile Include="Account.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AddStudentForm.Designer.vb">
+      <DependentUpon>AddStudentForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddStudentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AdminForm.Designer.vb">
       <DependentUpon>AdminForm.vb</DependentUpon>
     </Compile>
@@ -299,6 +305,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Account.resx">
       <DependentUpon>Account.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStudentForm.resx">
+      <DependentUpon>AddStudentForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.vb</DependentUpon>

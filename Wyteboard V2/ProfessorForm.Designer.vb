@@ -55,6 +55,7 @@ Partial Class ProfessorForm
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         Me.pnlControl = New Guna.UI2.WinForms.Guna2Panel()
+        Me.btnEnroll = New System.Windows.Forms.Button()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.btnSummary = New System.Windows.Forms.Button()
         Me.btnCourse = New System.Windows.Forms.Button()
@@ -463,6 +464,7 @@ Partial Class ProfessorForm
         '
         'pnlControl
         '
+        Me.pnlControl.Controls.Add(Me.btnEnroll)
         Me.pnlControl.Controls.Add(Me.btnLogout)
         Me.pnlControl.Controls.Add(Me.btnSummary)
         Me.pnlControl.Controls.Add(Me.btnCourse)
@@ -472,6 +474,23 @@ Partial Class ProfessorForm
         Me.pnlControl.Name = "pnlControl"
         Me.pnlControl.Size = New System.Drawing.Size(183, 647)
         Me.pnlControl.TabIndex = 1
+        '
+        'btnEnroll
+        '
+        Me.btnEnroll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnEnroll.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnEnroll.FlatAppearance.BorderSize = 0
+        Me.btnEnroll.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEnroll.Font = New System.Drawing.Font("Montserrat Medium", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEnroll.ForeColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnEnroll.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_summary_32
+        Me.btnEnroll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEnroll.Location = New System.Drawing.Point(0, 292)
+        Me.btnEnroll.Name = "btnEnroll"
+        Me.btnEnroll.Size = New System.Drawing.Size(183, 73)
+        Me.btnEnroll.TabIndex = 19
+        Me.btnEnroll.Text = "Enroll"
+        Me.btnEnroll.UseVisualStyleBackColor = True
         '
         'btnLogout
         '
@@ -504,7 +523,7 @@ Partial Class ProfessorForm
         Me.btnSummary.Name = "btnSummary"
         Me.btnSummary.Size = New System.Drawing.Size(183, 73)
         Me.btnSummary.TabIndex = 16
-        Me.btnSummary.Text = "Summary"
+        Me.btnSummary.Text = "Activities"
         Me.btnSummary.UseVisualStyleBackColor = True
         '
         'btnCourse
@@ -521,7 +540,7 @@ Partial Class ProfessorForm
         Me.btnCourse.Name = "btnCourse"
         Me.btnCourse.Size = New System.Drawing.Size(183, 73)
         Me.btnCourse.TabIndex = 15
-        Me.btnCourse.Text = "Courses"
+        Me.btnCourse.Text = "Evaluation"
         Me.btnCourse.UseVisualStyleBackColor = True
         '
         'btnAccount
@@ -670,4 +689,5 @@ Partial Class ProfessorForm
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents btnEnroll As Button
 End Class

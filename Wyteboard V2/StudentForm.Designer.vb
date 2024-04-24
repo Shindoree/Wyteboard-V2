@@ -111,7 +111,7 @@ Partial Class StudentForm
         Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogout.Font = New System.Drawing.Font("Montserrat Medium", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogout.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.btnLogout.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_logout_32
+        Me.btnLogout.Image = Global.Wyteboard_V2.My.Resources.Resources.Logout
         Me.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnLogout.Location = New System.Drawing.Point(0, 574)
         Me.btnLogout.Name = "btnLogout"
@@ -208,7 +208,7 @@ Partial Class StudentForm
         Me.btnSlider.FillColor = System.Drawing.Color.Transparent
         Me.btnSlider.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnSlider.ForeColor = System.Drawing.Color.White
-        Me.btnSlider.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_menu_50
+        Me.btnSlider.Image = Global.Wyteboard_V2.My.Resources.Resources.Menu
         Me.btnSlider.ImageSize = New System.Drawing.Size(35, 35)
         Me.btnSlider.Location = New System.Drawing.Point(118, 0)
         Me.btnSlider.Name = "btnSlider"
@@ -438,7 +438,7 @@ Partial Class StudentForm
         Me.Guna2PictureBox4.FillColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox4.Image = Global.Wyteboard_V2.My.Resources.Resources.Wyteboard_Logo_03
         Me.Guna2PictureBox4.ImageRotate = 0!
-        Me.Guna2PictureBox4.Location = New System.Drawing.Point(22, 346)
+        Me.Guna2PictureBox4.Location = New System.Drawing.Point(22, 330)
         Me.Guna2PictureBox4.Name = "Guna2PictureBox4"
         Me.Guna2PictureBox4.Size = New System.Drawing.Size(127, 89)
         Me.Guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -452,7 +452,7 @@ Partial Class StudentForm
         Me.Guna2PictureBox3.FillColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox3.Image = Global.Wyteboard_V2.My.Resources.Resources.Visual_Studio_logo
         Me.Guna2PictureBox3.ImageRotate = 0!
-        Me.Guna2PictureBox3.Location = New System.Drawing.Point(288, 345)
+        Me.Guna2PictureBox3.Location = New System.Drawing.Point(288, 329)
         Me.Guna2PictureBox3.Name = "Guna2PictureBox3"
         Me.Guna2PictureBox3.Size = New System.Drawing.Size(127, 89)
         Me.Guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -479,7 +479,7 @@ Partial Class StudentForm
         Me.Guna2PictureBox2.FillColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox2.Image = Global.Wyteboard_V2.My.Resources.Resources.png_transparent_mysql_workbench_macos_bigsur_icon_thumbnail_removebg_preview
         Me.Guna2PictureBox2.ImageRotate = 0!
-        Me.Guna2PictureBox2.Location = New System.Drawing.Point(421, 346)
+        Me.Guna2PictureBox2.Location = New System.Drawing.Point(421, 330)
         Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
         Me.Guna2PictureBox2.Size = New System.Drawing.Size(127, 89)
         Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -506,7 +506,7 @@ Partial Class StudentForm
         Me.Guna2PictureBox5.FillColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox5.Image = Global.Wyteboard_V2.My.Resources.Resources.Seal_of_Lyceum_of_the_Philippines_University__1_
         Me.Guna2PictureBox5.ImageRotate = 0!
-        Me.Guna2PictureBox5.Location = New System.Drawing.Point(155, 346)
+        Me.Guna2PictureBox5.Location = New System.Drawing.Point(155, 330)
         Me.Guna2PictureBox5.Name = "Guna2PictureBox5"
         Me.Guna2PictureBox5.Size = New System.Drawing.Size(127, 89)
         Me.Guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -582,10 +582,10 @@ Partial Class StudentForm
         '
         Me.lblUser.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblUser.AutoSize = True
-        Me.lblUser.Font = New System.Drawing.Font("Montserrat ExtraBold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUser.Location = New System.Drawing.Point(20, 26)
+        Me.lblUser.Font = New System.Drawing.Font("Inter SemiBold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUser.Location = New System.Drawing.Point(20, 29)
         Me.lblUser.Name = "lblUser"
-        Me.lblUser.Size = New System.Drawing.Size(223, 51)
+        Me.lblUser.Size = New System.Drawing.Size(204, 45)
         Me.lblUser.TabIndex = 10
         Me.lblUser.Text = "Good Day,"
         Me.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter

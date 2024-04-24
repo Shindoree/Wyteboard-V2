@@ -25,12 +25,8 @@ Partial Class ProfessorForm
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProfessorForm))
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2PictureBox4 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Guna2PictureBox5 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -52,31 +48,35 @@ Partial Class ProfessorForm
         Me.pnlDisplay = New Guna.UI2.WinForms.Guna2Panel()
         Me.lblUser = New System.Windows.Forms.Label()
         Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         Me.pnlControl = New Guna.UI2.WinForms.Guna2Panel()
+        Me.pnlMenu = New Guna.UI2.WinForms.Guna2Panel()
+        Me.pnlSidebarTop = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2PictureBox4 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Guna2PictureBox5 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.btnEnroll = New System.Windows.Forms.Button()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.btnSummary = New System.Windows.Forms.Button()
         Me.btnCourse = New System.Windows.Forms.Button()
         Me.btnAccount = New System.Windows.Forms.Button()
         Me.btnHome = New System.Windows.Forms.Button()
-        Me.pnlMenu = New Guna.UI2.WinForms.Guna2Panel()
-        Me.pnlSidebarTop = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnSlider = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel3.SuspendLayout()
-        CType(Me.Guna2PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Guna2PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel1.SuspendLayout()
         Me.Guna2Panel5.SuspendLayout()
         Me.pnlDisplay.SuspendLayout()
         Me.Guna2Panel4.SuspendLayout()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlControl.SuspendLayout()
         Me.pnlMenu.SuspendLayout()
         Me.pnlSidebarTop.SuspendLayout()
+        CType(Me.Guna2PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Panel3
@@ -98,34 +98,6 @@ Partial Class ProfessorForm
         Me.Guna2Panel3.Size = New System.Drawing.Size(788, 440)
         Me.Guna2Panel3.TabIndex = 13
         '
-        'Guna2PictureBox4
-        '
-        Me.Guna2PictureBox4.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox4.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox4.Image = Global.Wyteboard_V2.My.Resources.Resources.Wyteboard_Logo_03
-        Me.Guna2PictureBox4.ImageRotate = 0!
-        Me.Guna2PictureBox4.Location = New System.Drawing.Point(22, 346)
-        Me.Guna2PictureBox4.Name = "Guna2PictureBox4"
-        Me.Guna2PictureBox4.Size = New System.Drawing.Size(127, 89)
-        Me.Guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Guna2PictureBox4.TabIndex = 40
-        Me.Guna2PictureBox4.TabStop = False
-        Me.Guna2PictureBox4.UseTransparentBackground = True
-        '
-        'Guna2PictureBox3
-        '
-        Me.Guna2PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox3.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox3.Image = Global.Wyteboard_V2.My.Resources.Resources.Visual_Studio_logo
-        Me.Guna2PictureBox3.ImageRotate = 0!
-        Me.Guna2PictureBox3.Location = New System.Drawing.Point(288, 345)
-        Me.Guna2PictureBox3.Name = "Guna2PictureBox3"
-        Me.Guna2PictureBox3.Size = New System.Drawing.Size(127, 89)
-        Me.Guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Guna2PictureBox3.TabIndex = 33
-        Me.Guna2PictureBox3.TabStop = False
-        Me.Guna2PictureBox3.UseTransparentBackground = True
-        '
         'Label8
         '
         Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -139,20 +111,6 @@ Partial Class ProfessorForm
         Me.Label8.TabIndex = 39
         Me.Label8.Text = resources.GetString("Label8.Text")
         '
-        'Guna2PictureBox2
-        '
-        Me.Guna2PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox2.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox2.Image = Global.Wyteboard_V2.My.Resources.Resources.png_transparent_mysql_workbench_macos_bigsur_icon_thumbnail_removebg_preview
-        Me.Guna2PictureBox2.ImageRotate = 0!
-        Me.Guna2PictureBox2.Location = New System.Drawing.Point(421, 346)
-        Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
-        Me.Guna2PictureBox2.Size = New System.Drawing.Size(127, 89)
-        Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Guna2PictureBox2.TabIndex = 32
-        Me.Guna2PictureBox2.TabStop = False
-        Me.Guna2PictureBox2.UseTransparentBackground = True
-        '
         'Label7
         '
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -165,20 +123,6 @@ Partial Class ProfessorForm
         Me.Label7.Size = New System.Drawing.Size(104, 37)
         Me.Label7.TabIndex = 38
         Me.Label7.Text = "Vision"
-        '
-        'Guna2PictureBox5
-        '
-        Me.Guna2PictureBox5.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox5.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox5.Image = Global.Wyteboard_V2.My.Resources.Resources.Seal_of_Lyceum_of_the_Philippines_University__1_
-        Me.Guna2PictureBox5.ImageRotate = 0!
-        Me.Guna2PictureBox5.Location = New System.Drawing.Point(155, 346)
-        Me.Guna2PictureBox5.Name = "Guna2PictureBox5"
-        Me.Guna2PictureBox5.Size = New System.Drawing.Size(127, 89)
-        Me.Guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Guna2PictureBox5.TabIndex = 31
-        Me.Guna2PictureBox5.TabStop = False
-        Me.Guna2PictureBox5.UseTransparentBackground = True
         '
         'Label6
         '
@@ -425,10 +369,10 @@ Partial Class ProfessorForm
         '
         Me.lblUser.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblUser.AutoSize = True
-        Me.lblUser.Font = New System.Drawing.Font("Montserrat ExtraBold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUser.Font = New System.Drawing.Font("Inter SemiBold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUser.Location = New System.Drawing.Point(20, 26)
         Me.lblUser.Name = "lblUser"
-        Me.lblUser.Size = New System.Drawing.Size(223, 51)
+        Me.lblUser.Size = New System.Drawing.Size(204, 45)
         Me.lblUser.TabIndex = 10
         Me.lblUser.Text = "Good Day,"
         Me.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -441,19 +385,6 @@ Partial Class ProfessorForm
         Me.Guna2Panel4.Name = "Guna2Panel4"
         Me.Guna2Panel4.Size = New System.Drawing.Size(1097, 69)
         Me.Guna2Panel4.TabIndex = 15
-        '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Guna2PictureBox1.Image = Global.Wyteboard_V2.My.Resources.Resources.Wyteboard_Logo_01
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(1097, 69)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Guna2PictureBox1.TabIndex = 12
-        Me.Guna2PictureBox1.TabStop = False
         '
         'Guna2BorderlessForm1
         '
@@ -475,6 +406,97 @@ Partial Class ProfessorForm
         Me.pnlControl.Size = New System.Drawing.Size(183, 647)
         Me.pnlControl.TabIndex = 1
         '
+        'pnlMenu
+        '
+        Me.pnlMenu.BackColor = System.Drawing.Color.White
+        Me.pnlMenu.Controls.Add(Me.pnlControl)
+        Me.pnlMenu.Controls.Add(Me.pnlSidebarTop)
+        Me.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left
+        Me.pnlMenu.Location = New System.Drawing.Point(0, 0)
+        Me.pnlMenu.Name = "pnlMenu"
+        Me.pnlMenu.ShadowDecoration.Enabled = True
+        Me.pnlMenu.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(3)
+        Me.pnlMenu.Size = New System.Drawing.Size(183, 720)
+        Me.pnlMenu.TabIndex = 16
+        '
+        'pnlSidebarTop
+        '
+        Me.pnlSidebarTop.Controls.Add(Me.btnSlider)
+        Me.pnlSidebarTop.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlSidebarTop.Location = New System.Drawing.Point(0, 0)
+        Me.pnlSidebarTop.Name = "pnlSidebarTop"
+        Me.pnlSidebarTop.Size = New System.Drawing.Size(183, 73)
+        Me.pnlSidebarTop.TabIndex = 0
+        '
+        'Guna2PictureBox4
+        '
+        Me.Guna2PictureBox4.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox4.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox4.Image = Global.Wyteboard_V2.My.Resources.Resources.Wyteboard_Logo_03
+        Me.Guna2PictureBox4.ImageRotate = 0!
+        Me.Guna2PictureBox4.Location = New System.Drawing.Point(22, 329)
+        Me.Guna2PictureBox4.Name = "Guna2PictureBox4"
+        Me.Guna2PictureBox4.Size = New System.Drawing.Size(127, 89)
+        Me.Guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox4.TabIndex = 40
+        Me.Guna2PictureBox4.TabStop = False
+        Me.Guna2PictureBox4.UseTransparentBackground = True
+        '
+        'Guna2PictureBox3
+        '
+        Me.Guna2PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox3.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox3.Image = Global.Wyteboard_V2.My.Resources.Resources.Visual_Studio_logo
+        Me.Guna2PictureBox3.ImageRotate = 0!
+        Me.Guna2PictureBox3.Location = New System.Drawing.Point(288, 328)
+        Me.Guna2PictureBox3.Name = "Guna2PictureBox3"
+        Me.Guna2PictureBox3.Size = New System.Drawing.Size(127, 89)
+        Me.Guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox3.TabIndex = 33
+        Me.Guna2PictureBox3.TabStop = False
+        Me.Guna2PictureBox3.UseTransparentBackground = True
+        '
+        'Guna2PictureBox2
+        '
+        Me.Guna2PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox2.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox2.Image = Global.Wyteboard_V2.My.Resources.Resources.png_transparent_mysql_workbench_macos_bigsur_icon_thumbnail_removebg_preview
+        Me.Guna2PictureBox2.ImageRotate = 0!
+        Me.Guna2PictureBox2.Location = New System.Drawing.Point(421, 329)
+        Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
+        Me.Guna2PictureBox2.Size = New System.Drawing.Size(127, 89)
+        Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox2.TabIndex = 32
+        Me.Guna2PictureBox2.TabStop = False
+        Me.Guna2PictureBox2.UseTransparentBackground = True
+        '
+        'Guna2PictureBox5
+        '
+        Me.Guna2PictureBox5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox5.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox5.Image = Global.Wyteboard_V2.My.Resources.Resources.Seal_of_Lyceum_of_the_Philippines_University__1_
+        Me.Guna2PictureBox5.ImageRotate = 0!
+        Me.Guna2PictureBox5.Location = New System.Drawing.Point(155, 329)
+        Me.Guna2PictureBox5.Name = "Guna2PictureBox5"
+        Me.Guna2PictureBox5.Size = New System.Drawing.Size(127, 89)
+        Me.Guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox5.TabIndex = 31
+        Me.Guna2PictureBox5.TabStop = False
+        Me.Guna2PictureBox5.UseTransparentBackground = True
+        '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Guna2PictureBox1.Image = Global.Wyteboard_V2.My.Resources.Resources.Wyteboard_Logo_01
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(1097, 69)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox1.TabIndex = 12
+        Me.Guna2PictureBox1.TabStop = False
+        '
         'btnEnroll
         '
         Me.btnEnroll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
@@ -483,7 +505,7 @@ Partial Class ProfessorForm
         Me.btnEnroll.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEnroll.Font = New System.Drawing.Font("Montserrat Medium", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEnroll.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.btnEnroll.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_summary_32
+        Me.btnEnroll.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_add_male_user_32
         Me.btnEnroll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnEnroll.Location = New System.Drawing.Point(0, 292)
         Me.btnEnroll.Name = "btnEnroll"
@@ -500,7 +522,7 @@ Partial Class ProfessorForm
         Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogout.Font = New System.Drawing.Font("Montserrat Medium", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogout.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.btnLogout.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_logout_32
+        Me.btnLogout.Image = Global.Wyteboard_V2.My.Resources.Resources.Logout
         Me.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnLogout.Location = New System.Drawing.Point(0, 574)
         Me.btnLogout.Name = "btnLogout"
@@ -577,28 +599,6 @@ Partial Class ProfessorForm
         Me.btnHome.Text = "Home"
         Me.btnHome.UseVisualStyleBackColor = True
         '
-        'pnlMenu
-        '
-        Me.pnlMenu.BackColor = System.Drawing.Color.White
-        Me.pnlMenu.Controls.Add(Me.pnlControl)
-        Me.pnlMenu.Controls.Add(Me.pnlSidebarTop)
-        Me.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left
-        Me.pnlMenu.Location = New System.Drawing.Point(0, 0)
-        Me.pnlMenu.Name = "pnlMenu"
-        Me.pnlMenu.ShadowDecoration.Enabled = True
-        Me.pnlMenu.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(3)
-        Me.pnlMenu.Size = New System.Drawing.Size(183, 720)
-        Me.pnlMenu.TabIndex = 16
-        '
-        'pnlSidebarTop
-        '
-        Me.pnlSidebarTop.Controls.Add(Me.btnSlider)
-        Me.pnlSidebarTop.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlSidebarTop.Location = New System.Drawing.Point(0, 0)
-        Me.pnlSidebarTop.Name = "pnlSidebarTop"
-        Me.pnlSidebarTop.Size = New System.Drawing.Size(183, 73)
-        Me.pnlSidebarTop.TabIndex = 0
-        '
         'btnSlider
         '
         Me.btnSlider.BackColor = System.Drawing.Color.Transparent
@@ -610,7 +610,7 @@ Partial Class ProfessorForm
         Me.btnSlider.FillColor = System.Drawing.Color.Transparent
         Me.btnSlider.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnSlider.ForeColor = System.Drawing.Color.White
-        Me.btnSlider.Image = Global.Wyteboard_V2.My.Resources.Resources.icons8_menu_50
+        Me.btnSlider.Image = Global.Wyteboard_V2.My.Resources.Resources.Menu
         Me.btnSlider.ImageSize = New System.Drawing.Size(35, 35)
         Me.btnSlider.Location = New System.Drawing.Point(118, 0)
         Me.btnSlider.Name = "btnSlider"
@@ -632,20 +632,20 @@ Partial Class ProfessorForm
         Me.Text = "ProfessorForm"
         Me.Guna2Panel3.ResumeLayout(False)
         Me.Guna2Panel3.PerformLayout()
-        CType(Me.Guna2PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Guna2PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel5.ResumeLayout(False)
         Me.Guna2Panel5.PerformLayout()
         Me.pnlDisplay.ResumeLayout(False)
         Me.pnlDisplay.PerformLayout()
         Me.Guna2Panel4.ResumeLayout(False)
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlControl.ResumeLayout(False)
         Me.pnlMenu.ResumeLayout(False)
         Me.pnlSidebarTop.ResumeLayout(False)
+        CType(Me.Guna2PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

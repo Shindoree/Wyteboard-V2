@@ -561,4 +561,27 @@ Public Class CourseProfessorForm
         LoadDataIntoDataGridView(Username)
     End Sub
 
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        Dim searchText As String = txtSearch.Text
+        SearchTransactions(searchText)
+    End Sub
+
+    Private Sub SearchTransactions(ByVal searchText As String)
+        If dgViewGrade.DataSource Is Nothing Then
+            Return ' Exit the event handler if the data source is null
+        End If
+
+        Dim dataTable As DataTable = CType(dgViewGrade.DataSource, DataTable) ' Get the DataTable bound to the DataGridView
+        If String.IsNullOrEmpty(searchText) Then
+            dataTable.DefaultView.RowFilter = ""
+            Exit Sub ' Exit the event handler
+        End If
+        Dim filterExpression As String = $"fullname LIKE '%{searchText}%'"
+        dataTable.DefaultView.RowFilter = filterExpression
+    End Sub
 End Class

@@ -38,7 +38,7 @@ Public Class Account
     End Sub
     Private Sub UpdateUserData()
         Dim connectionString As String = "Database=wyteboard;Data Source=localhost;User id=admin;Password=IamFinal0904;Port=3306;Command Timeout=600"
-        Dim query As String = "UPDATE wyteboard.tb_user SET schoolid = @schoolid, firstname = @firstname, lastname = @lastname, password = @password, question = @question, answer = @answer, type = @type WHERE email = @email"
+        Dim query As String = "UPDATE wyteboard.tb_user SET schoolid = @schoolid, firstname = @firstname, lastname = @lastname, password = @password, question = @question, answer = @answer  WHERE email = @email"
 
         Try
             Using myConnection As New MySqlConnection(connectionString)
@@ -50,7 +50,7 @@ Public Class Account
                 myCommand.Parameters.AddWithValue("@password", txtPassword.Text)
                 myCommand.Parameters.AddWithValue("@question", cbxQuestion.Text)
                 myCommand.Parameters.AddWithValue("@answer", txtAnswer.Text)
-                myCommand.Parameters.AddWithValue("@type", cbxType.Text) ' Add this line
+
                 myCommand.Parameters.AddWithValue("@email", txtEmail.Text)
 
                 Dim rowsAffected As Integer = myCommand.ExecuteNonQuery()
@@ -72,7 +72,7 @@ Public Class Account
         txtConfirmAnswer.BorderColor = Color.Gray
         cbxQuestion.BorderColor = Color.Gray
         txtSchoolID.BorderColor = Color.Gray
-        cbxType.BorderColor = Color.Gray
+
 
         ' Highlight unfilled or mismatched controls with a red border
         Dim usernameIsEmpty As Boolean = String.IsNullOrWhiteSpace(txtEmail.Text)
@@ -81,12 +81,11 @@ Public Class Account
         Dim answerIsEmpty As Boolean = String.IsNullOrWhiteSpace(txtAnswer.Text)
         Dim confirmAnswerIsEmpty As Boolean = String.IsNullOrWhiteSpace(txtConfirmAnswer.Text)
         Dim questionNotSelected As Boolean = cbxQuestion.SelectedIndex = -1
-        Dim typeNotSelected As Boolean = cbxType.SelectedIndex = -1
         Dim passwordsNotMatch As Boolean = txtPassword.Text <> txtConfirmPass.Text
         Dim answersNotMatch As Boolean = txtAnswer.Text <> txtConfirmAnswer.Text
         Dim emailDoesNotEndWithLPULaguna As Boolean = Not txtEmail.Text.EndsWith("@lpulaguna.edu.ph", StringComparison.OrdinalIgnoreCase)
 
-        If usernameIsEmpty OrElse passwordIsEmpty OrElse confirmPasswordIsEmpty OrElse answerIsEmpty OrElse confirmAnswerIsEmpty OrElse questionNotSelected OrElse Not ValidateSchoolID() OrElse typeNotSelected OrElse passwordsNotMatch OrElse answersNotMatch OrElse emailDoesNotEndWithLPULaguna Then
+        If usernameIsEmpty OrElse passwordIsEmpty OrElse confirmPasswordIsEmpty OrElse answerIsEmpty OrElse confirmAnswerIsEmpty OrElse questionNotSelected OrElse Not ValidateSchoolID() OrElse passwordsNotMatch OrElse answersNotMatch OrElse emailDoesNotEndWithLPULaguna Then
             lblInfo.Text = "Invalid inputs."
             If usernameIsEmpty Then txtEmail.BorderColor = Color.Red
             If passwordIsEmpty Then txtPassword.BorderColor = Color.Red
@@ -95,7 +94,7 @@ Public Class Account
             If confirmAnswerIsEmpty Then txtConfirmAnswer.BorderColor = Color.Red
             If questionNotSelected Then cbxQuestion.BorderColor = Color.Red
             If Not ValidateSchoolID() Then txtSchoolID.BorderColor = Color.Red
-            If typeNotSelected Then cbxType.BorderColor = Color.Red
+
             If passwordsNotMatch Then
                 txtPassword.BorderColor = Color.Red
                 txtConfirmPass.BorderColor = Color.Red
@@ -179,11 +178,6 @@ Public Class Account
         cbxQuestion.BorderColor = Color.Gray ' Set the border color back to normal
         lblInfo.Text = "" ' Clear any previous error message
     End Sub
-
-    Private Sub cbxType_Enter(sender As Object, e As EventArgs) Handles cbxType.Enter
-        cbxType.BorderColor = Color.Gray ' Set the border color back to normal
-        lblInfo.Text = "" ' Clear any previous error message
-    End Sub
     Private Sub ToggleVisibility(textBox As Guna2TextBox, imageButton As Guna2ImageButton)
         textBox.UseSystemPasswordChar = Not textBox.UseSystemPasswordChar
         If textBox.UseSystemPasswordChar Then
@@ -207,4 +201,5 @@ Public Class Account
     Private Sub imgLock_Click(sender As Object, e As EventArgs) Handles imgLock.Click
         ToggleVisibility(txtPassword, imgLock)
     End Sub
+
 End Class

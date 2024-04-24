@@ -64,6 +64,8 @@ Partial Class ProfessorForm
         Me.pnlMenu = New Guna.UI2.WinForms.Guna2Panel()
         Me.pnlSidebarTop = New Guna.UI2.WinForms.Guna2Panel()
         Me.btnSlider = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2Panel3.SuspendLayout()
         CType(Me.Guna2PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -435,6 +437,8 @@ Partial Class ProfessorForm
         '
         'Guna2Panel4
         '
+        Me.Guna2Panel4.Controls.Add(Me.Guna2ControlBox2)
+        Me.Guna2Panel4.Controls.Add(Me.Guna2ControlBox1)
         Me.Guna2Panel4.Controls.Add(Me.Guna2PictureBox1)
         Me.Guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Guna2Panel4.Location = New System.Drawing.Point(183, 0)
@@ -618,6 +622,31 @@ Partial Class ProfessorForm
         Me.btnSlider.TabIndex = 1
         Me.btnSlider.UseTransparentBackground = True
         '
+        'Guna2ControlBox1
+        '
+        Me.Guna2ControlBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2ControlBox1.BackColor = System.Drawing.SystemColors.Control
+        Me.Guna2ControlBox1.FillColor = System.Drawing.SystemColors.Control
+        Me.Guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.Red
+        Me.Guna2ControlBox1.IconColor = System.Drawing.Color.DimGray
+        Me.Guna2ControlBox1.Location = New System.Drawing.Point(1052, 0)
+        Me.Guna2ControlBox1.Name = "Guna2ControlBox1"
+        Me.Guna2ControlBox1.Size = New System.Drawing.Size(45, 29)
+        Me.Guna2ControlBox1.TabIndex = 13
+        '
+        'Guna2ControlBox2
+        '
+        Me.Guna2ControlBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2ControlBox2.BackColor = System.Drawing.SystemColors.Control
+        Me.Guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
+        Me.Guna2ControlBox2.FillColor = System.Drawing.SystemColors.Control
+        Me.Guna2ControlBox2.ForeColor = System.Drawing.Color.DimGray
+        Me.Guna2ControlBox2.IconColor = System.Drawing.Color.DimGray
+        Me.Guna2ControlBox2.Location = New System.Drawing.Point(1006, 0)
+        Me.Guna2ControlBox2.Name = "Guna2ControlBox2"
+        Me.Guna2ControlBox2.Size = New System.Drawing.Size(45, 29)
+        Me.Guna2ControlBox2.TabIndex = 14
+        '
         'ProfessorForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -690,4 +719,6 @@ Partial Class ProfessorForm
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents btnEnroll As Button
+    Friend WithEvents Guna2ControlBox1 As Guna.UI2.WinForms.Guna2ControlBox
+    Friend WithEvents Guna2ControlBox2 As Guna.UI2.WinForms.Guna2ControlBox
 End Class

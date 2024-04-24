@@ -44,11 +44,11 @@ Partial Class Account
         Me.txtEmail = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.lblAcc = New System.Windows.Forms.Label()
+        Me.lblInfo = New System.Windows.Forms.Label()
         Me.imgLock = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.imgLockConfirmAnswer = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.imgLockAnswer = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.imgLockConfPass = New Guna.UI2.WinForms.Guna2ImageButton()
-        Me.lblInfo = New System.Windows.Forms.Label()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -413,7 +413,7 @@ Partial Class Account
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtEmail.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtEmail.PlaceholderText = "Example@lpulaguna.edu.ph"
+        Me.txtEmail.PlaceholderText = "example@lpulaguna.edu.ph"
         Me.txtEmail.SelectedText = ""
         Me.txtEmail.ShadowDecoration.BorderRadius = 2
         Me.txtEmail.Size = New System.Drawing.Size(333, 48)
@@ -466,6 +466,18 @@ Partial Class Account
         Me.lblAcc.Size = New System.Drawing.Size(437, 19)
         Me.lblAcc.TabIndex = 55
         Me.lblAcc.Text = "Manage your account settings or set a security question" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
+        'lblInfo
+        '
+        Me.lblInfo.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblInfo.AutoSize = True
+        Me.lblInfo.BackColor = System.Drawing.Color.Transparent
+        Me.lblInfo.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInfo.ForeColor = System.Drawing.Color.Red
+        Me.lblInfo.Location = New System.Drawing.Point(52, 121)
+        Me.lblInfo.Name = "lblInfo"
+        Me.lblInfo.Size = New System.Drawing.Size(0, 16)
+        Me.lblInfo.TabIndex = 54
         '
         'imgLock
         '
@@ -538,18 +550,6 @@ Partial Class Account
         Me.imgLockConfPass.Size = New System.Drawing.Size(37, 33)
         Me.imgLockConfPass.TabIndex = 51
         Me.imgLockConfPass.UseTransparentBackground = True
-        '
-        'lblInfo
-        '
-        Me.lblInfo.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblInfo.AutoSize = True
-        Me.lblInfo.BackColor = System.Drawing.Color.Transparent
-        Me.lblInfo.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblInfo.ForeColor = System.Drawing.Color.Red
-        Me.lblInfo.Location = New System.Drawing.Point(52, 121)
-        Me.lblInfo.Name = "lblInfo"
-        Me.lblInfo.Size = New System.Drawing.Size(0, 16)
-        Me.lblInfo.TabIndex = 54
         '
         'Account
         '

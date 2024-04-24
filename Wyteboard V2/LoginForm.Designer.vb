@@ -31,8 +31,10 @@ Partial Class LoginForm
         Me.tglKeepSigned = New Guna.UI2.WinForms.Guna2ToggleSwitch()
         Me.txtPassword = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.lblWelcome = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.picBlue = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.lblPassword = New System.Windows.Forms.Label()
         Me.lblEmail = New System.Windows.Forms.Label()
@@ -45,14 +47,15 @@ Partial Class LoginForm
         Me.picLogo = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2Panel2.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picBlue, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel3.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnLogin
@@ -168,16 +171,18 @@ Partial Class LoginForm
         Me.Guna2Panel2.Size = New System.Drawing.Size(633, 697)
         Me.Guna2Panel2.TabIndex = 16
         '
-        'Guna2PictureBox1
+        'Label2
         '
-        Me.Guna2PictureBox1.Image = Global.Wyteboard_V2.My.Resources.Resources.Aesthetic_Minimal_Laptop_On_Table_Mockup_Instagram_Post__1_
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(60, 248)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(513, 414)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2PictureBox1.TabIndex = 3
-        Me.Guna2PictureBox1.TabStop = False
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Label2.Font = New System.Drawing.Font("Montserrat", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(287, 156)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(75, 40)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "and"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'lblWelcome
         '
@@ -191,6 +196,30 @@ Partial Class LoginForm
         Me.lblWelcome.TabIndex = 1
         Me.lblWelcome.Text = "Your All-in-One Gradebook"
         Me.lblWelcome.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Label1.Font = New System.Drawing.Font("Montserrat", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(146, 193)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(337, 40)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "Performance Tracker"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.Image = Global.Wyteboard_V2.My.Resources.Resources.Aesthetic_Minimal_Laptop_On_Table_Mockup_Instagram_Post__1_
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(60, 248)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(513, 414)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox1.TabIndex = 3
+        Me.Guna2PictureBox1.TabStop = False
         '
         'picBlue
         '
@@ -357,44 +386,45 @@ Partial Class LoginForm
         '
         'Guna2Panel4
         '
+        Me.Guna2Panel4.Controls.Add(Me.Guna2ControlBox2)
+        Me.Guna2Panel4.Controls.Add(Me.Guna2ControlBox1)
+        Me.Guna2Panel4.Controls.Add(Me.Guna2Panel2)
         Me.Guna2Panel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Guna2Panel4.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel4.Name = "Guna2Panel4"
         Me.Guna2Panel4.Size = New System.Drawing.Size(1280, 720)
         Me.Guna2Panel4.TabIndex = 17
         '
-        'Label1
+        'Guna2ControlBox1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.Label1.Font = New System.Drawing.Font("Montserrat", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(146, 193)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(337, 40)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Performance Tracker"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Guna2ControlBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2ControlBox1.BackColor = System.Drawing.SystemColors.Control
+        Me.Guna2ControlBox1.FillColor = System.Drawing.SystemColors.Control
+        Me.Guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.Red
+        Me.Guna2ControlBox1.IconColor = System.Drawing.Color.DimGray
+        Me.Guna2ControlBox1.Location = New System.Drawing.Point(1235, 0)
+        Me.Guna2ControlBox1.Name = "Guna2ControlBox1"
+        Me.Guna2ControlBox1.Size = New System.Drawing.Size(45, 29)
+        Me.Guna2ControlBox1.TabIndex = 15
         '
-        'Label2
+        'Guna2ControlBox2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.Label2.Font = New System.Drawing.Font("Montserrat", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(287, 156)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(75, 40)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "and"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Guna2ControlBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2ControlBox2.BackColor = System.Drawing.SystemColors.Control
+        Me.Guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
+        Me.Guna2ControlBox2.FillColor = System.Drawing.SystemColors.Control
+        Me.Guna2ControlBox2.ForeColor = System.Drawing.Color.DimGray
+        Me.Guna2ControlBox2.IconColor = System.Drawing.Color.DimGray
+        Me.Guna2ControlBox2.Location = New System.Drawing.Point(1188, 1)
+        Me.Guna2ControlBox2.Name = "Guna2ControlBox2"
+        Me.Guna2ControlBox2.Size = New System.Drawing.Size(45, 29)
+        Me.Guna2ControlBox2.TabIndex = 17
         '
         'LoginForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1280, 720)
-        Me.Controls.Add(Me.Guna2Panel2)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.Guna2Panel4)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -410,6 +440,7 @@ Partial Class LoginForm
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel4.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -436,4 +467,6 @@ Partial Class LoginForm
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents Guna2ControlBox1 As Guna.UI2.WinForms.Guna2ControlBox
+    Friend WithEvents Guna2ControlBox2 As Guna.UI2.WinForms.Guna2ControlBox
 End Class

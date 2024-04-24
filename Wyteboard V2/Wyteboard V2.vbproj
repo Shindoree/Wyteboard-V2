@@ -206,6 +206,12 @@
     <Compile Include="Account.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AddStudentForm.Designer.vb">
+      <DependentUpon>AddStudentForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddStudentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AdminForm.Designer.vb">
       <DependentUpon>AdminForm.vb</DependentUpon>
     </Compile>
@@ -222,6 +228,12 @@
       <DependentUpon>CourseProfessorForm.vb</DependentUpon>
     </Compile>
     <Compile Include="CourseProfessorForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnrollmentForm.Designer.vb">
+      <DependentUpon>EnrollmentForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EnrollmentForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ForgotPasswordForm.Designer.vb">
@@ -294,6 +306,9 @@
     <EmbeddedResource Include="Account.resx">
       <DependentUpon>Account.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddStudentForm.resx">
+      <DependentUpon>AddStudentForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -302,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CourseProfessorForm.resx">
       <DependentUpon>CourseProfessorForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrollmentForm.resx">
+      <DependentUpon>EnrollmentForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForgotPasswordForm.resx">
       <DependentUpon>ForgotPasswordForm.vb</DependentUpon>
@@ -406,6 +424,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Visual-Studio-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aesthetic Minimal Laptop On Table Mockup Instagram Post.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aesthetic Minimal Laptop On Table Mockup Instagram Post %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

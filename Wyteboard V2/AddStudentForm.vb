@@ -2,12 +2,13 @@
 Imports MySql.Data.MySqlClient
 Imports MySql.Data.MySqlClient.X.XDevAPI.Common
 
-Public Class CourseProfessorForm
+
+Public Class AddStudentForm
     Public Property Username As String
     Public Property FirstName As String
     Private isLoadingData As Boolean = False
 
-    Private Sub CourseProfessorForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub AddStudentForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Form load code here
         LoadDataIntoDataGridView(Username)
         lblUser.Text = "Hello " & FirstName & "!"
@@ -19,9 +20,39 @@ Public Class CourseProfessorForm
             If subjectArray.Length > 0 Then
                 TabPage1.Text = subjectArray(0) ' Set the Text property to the first subject
             End If
+
+            ' Populate cbxSubject with the subjects handled by the professor
+            For Each subject As String In subjectArray
+                cbxSubject.Items.Add(subject.Trim())
+            Next
         End If
     End Sub
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        Dim schoolID As String = txtSchoolID.Text
+        Dim email As String = txtEmail.Text
+        Dim subject As String = If(cbxSubject.SelectedItem IsNot Nothing, cbxSubject.SelectedItem.ToString(), "")
 
+        ' Debugging output
+        MessageBox.Show($"Email: {email}, School ID: {schoolID}, Subject: {subject}", "Debug", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        ' Validate inputs
+        If String.IsNullOrEmpty(schoolID) OrElse String.IsNullOrEmpty(email) OrElse String.IsNullOrEmpty(subject) Then
+            MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
+
+        ' Check if the email and school ID exist in tb_user
+        If Not UserExists(email, schoolID) Then
+            MessageBox.Show("User with the provided email and school ID does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
+
+        ' If all inputs are valid and user exists, insert email and school ID into tb_course
+        If InsertUserIntoCourse(email, schoolID, subject) Then
+            ' Reload the data in the DataGridView
+            LoadDataIntoDataGridView(Username)
+        End If
+    End Sub
     Private Function GetFullNameFromUser(email As String, schoolID As String) As String
         Dim query As String = "SELECT CONCAT(firstname, ' ', lastname) AS fullname FROM tb_user WHERE email = @email AND schoolID = @schoolID"
         Dim connectionString As String = "Database=wyteboard;Data Source=localhost;User id=admin;Password=IamFinal0904;Port=3306;Command Timeout=600;"
@@ -430,32 +461,6 @@ Public Class CourseProfessorForm
             Return ""
         End Try
     End Function
-    Private Sub btnDeleteTask_Click(sender As Object, e As EventArgs)
-        ' Get the column type from the user
-        Dim columnType As String = InputBox("Enter the column type (OE or PT):", "Enter Column Type")
-
-        ' Check if the user entered a column type
-        If String.IsNullOrEmpty(columnType.Trim()) Then
-            MessageBox.Show("Please enter the column type (OE or PT).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return
-        End If
-
-        ' Get the column name from the user
-        Dim columnName As String = InputBox($"Enter the name of the {columnType.ToUpper()} column to delete:", $"Delete {columnType.ToUpper()} Column")
-
-        ' Check if the user entered a column name
-        If String.IsNullOrEmpty(columnName.Trim()) Then
-            MessageBox.Show($"Please enter the name of the {columnType.ToUpper()} column to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return
-        End If
-
-        ' Call the method to delete the column
-        If DeleteColumn(columnName, columnType.ToLower()) Then
-            ' Refresh the DataGridView and chart after successful deletion
-            LoadDataIntoDataGridView(Username)
-            UpdateChartData()
-        End If
-    End Sub
 
     Private Function DeleteColumn(columnName As String, columnType As String) As Boolean
         Try
@@ -486,7 +491,7 @@ Public Class CourseProfessorForm
         End Try
     End Function
 
-    Private Sub btnDeleteStudent_Click(sender As Object, e As EventArgs)
+    Private Sub btnDeleteStudent_Click(sender As Object, e As EventArgs) Handles btnDeleteStudent.Click
         ' Check if any row is selected
         If dgViewGrade.SelectedRows.Count = 0 Then
             MessageBox.Show("Please select a student row to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -544,44 +549,16 @@ Public Class CourseProfessorForm
         End Try
     End Function
 
+    Public Sub UpdateDataGridView()
+        ' Reload or refresh data in DataGridView
+        LoadDataIntoDataGridView(Username)
+    End Sub
+
     Private Sub lblUser_Click(sender As Object, e As EventArgs) Handles lblUser.Click
 
     End Sub
 
     Private Sub Guna2Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel3.Paint
 
-    End Sub
-
-    Private Sub dgViewGrade_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgViewGrade.CellContentClick
-
-    End Sub
-
-    Public Sub UpdateDataGridView()
-        ' Reload or refresh data in DataGridView
-        LoadDataIntoDataGridView(Username)
-    End Sub
-
-    Private Sub btnUpdate_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-
-    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
-        Dim searchText As String = txtSearch.Text
-        SearchTransactions(searchText)
-    End Sub
-
-    Private Sub SearchTransactions(ByVal searchText As String)
-        If dgViewGrade.DataSource Is Nothing Then
-            Return ' Exit the event handler if the data source is null
-        End If
-
-        Dim dataTable As DataTable = CType(dgViewGrade.DataSource, DataTable) ' Get the DataTable bound to the DataGridView
-        If String.IsNullOrEmpty(searchText) Then
-            dataTable.DefaultView.RowFilter = ""
-            Exit Sub ' Exit the event handler
-        End If
-        Dim filterExpression As String = $"fullname LIKE '%{searchText}%'"
-        dataTable.DefaultView.RowFilter = filterExpression
     End Sub
 End Class

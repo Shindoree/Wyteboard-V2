@@ -4,6 +4,10 @@
     Public Property LoginAttempts As DataTable
     Private account As Account ' Field to store the AccountForm instance
     Private CourseProfessorForm As CourseProfessorForm ' Update the variable type
+    Private Property AddStudentForm As AddStudentForm
+    Private Property SummaryForm As SummaryForm
+
+
     Private Sub btnSlider_Click(sender As Object, e As EventArgs) Handles btnSlider.Click
         If pnlMenu.Width > 60 Then
             pnlMenu.Width = 60 ' Set the panel width to a smaller value instantly
@@ -11,13 +15,12 @@
             pnlMenu.Width = 183 ' Set the panel width to a larger value instantly
         End If
     End Sub
-    Private Sub btnOpenChildForm_Click(sender As Object, e As EventArgs) Handles btnSummary.Click, btnCourse.Click, btnAccount.Click, btnHome.Click
-
+    Private Sub btnOpenChildForm_Click(sender As Object, e As EventArgs) Handles btnSummary.Click, btnCourse.Click, btnAccount.Click, btnHome.Click, btnEnroll.Click
         Console.WriteLine("Button clicked: " & DirectCast(sender, Button).Name)
         Dim btn As Button = DirectCast(sender, Button)
-        Dim childForm As Form = Nothing
 
         ' Determine which child form to open based on the button clicked
+        Dim childForm As Form = Nothing
         Select Case btn.Name
             Case "btnAccount"
                 If account Is Nothing Then
@@ -28,7 +31,14 @@
                 account.LoadUserData(account.Username)
                 childForm = account
             Case "btnSummary"
-                childForm = New SummaryForm()
+                If SummaryForm Is Nothing Then
+                    SummaryForm = New SummaryForm()
+                    SummaryForm.FirstName = Me.FirstName ' Pass the first name to CourseProfessorForm
+                    SummaryForm.Username = Me.Username ' Pass the username to CourseProfessorForm
+                End If
+                ' Always load user data when opening the CourseProfessorForm
+                SummaryForm.LoadDataIntoDataGridView(Me.Username)
+                childForm = SummaryForm ' Use the existing CourseProfessorForm instance
             Case "btnCourse"
                 If CourseProfessorForm Is Nothing Then
                     CourseProfessorForm = New CourseProfessorForm()
@@ -43,6 +53,15 @@
                 homeForm.Username = Me.Username ' Pass the username to HomeForm
                 homeForm.FirstName = Me.FirstName ' Pass the first name to HomeForm
                 childForm = homeForm
+            Case "btnEnroll"
+                If AddStudentForm Is Nothing Then
+                    AddStudentForm = New AddStudentForm()
+                    AddStudentForm.FirstName = Me.FirstName ' Pass the first name to CourseProfessorForm
+                    AddStudentForm.Username = Me.Username ' Pass the username to CourseProfessorForm
+                End If
+                ' Always load user data when opening the CourseProfessorForm
+                AddStudentForm.LoadDataIntoDataGridView(Me.Username)
+                childForm = AddStudentForm ' Use the existing CourseProfessorForm instance
         End Select
 
         ' Open the selected child form
@@ -62,19 +81,30 @@
             btnLogout.Text = ""
             btnCourse.Text = ""
             btnHome.Text = ""
+            btnEnroll.Text = ""
         Else
             btnAccount.Text = "Account"
-            btnSummary.Text = "Summary"
+            btnSummary.Text = "Activities"
             btnLogout.Text = "Logout"
-            btnCourse.Text = "Course"
+            btnCourse.Text = "Evaluation"
             btnHome.Text = "Home"
+            btnEnroll.Text = "Enroll"
         End If
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        Me.Hide()
-        Dim LoginForm As New LoginForm()
-        LoginForm.Show()
+        ' Display a confirmation dialog
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to log out?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        ' Check if the user confirmed the logout
+        If result = DialogResult.Yes Then
+            ' Hide the current form
+            Me.Hide()
+
+            ' Show the login form
+            Dim loginForm As New LoginForm()
+            loginForm.Show()
+        End If
     End Sub
     Private Sub pnlDisplay_Paint(sender As Object, e As PaintEventArgs) Handles pnlDisplay.Paint
         lblUser.Text = "Welcome, " & FirstName & " !"
@@ -129,4 +159,5 @@
             label.ForeColor = Color.Red
         End If
     End Sub
+
 End Class

@@ -75,9 +75,18 @@
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        Me.Hide()
-        Dim LoginForm As New LoginForm()
-        LoginForm.Show()
+        ' Display a confirmation dialog
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to log out?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        ' Check if the user confirmed the logout
+        If result = DialogResult.Yes Then
+            ' Hide the current form
+            Me.Hide()
+
+            ' Show the login form
+            Dim loginForm As New LoginForm()
+            loginForm.Show()
+        End If
     End Sub
 
     Private Sub pnlDisplay_Paint(sender As Object, e As PaintEventArgs) Handles pnlDisplay.Paint

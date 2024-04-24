@@ -63,6 +63,26 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property Aesthetic_Minimal_Laptop_On_Table_Mockup_Instagram_Post() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Aesthetic Minimal Laptop On Table Mockup Instagram Post", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Aesthetic_Minimal_Laptop_On_Table_Mockup_Instagram_Post__1_() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Aesthetic Minimal Laptop On Table Mockup Instagram Post (1)", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property icons8_account_32__1_() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("icons8-account-32 (1)", resourceCulture)

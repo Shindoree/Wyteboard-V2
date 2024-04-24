@@ -101,7 +101,7 @@ Public Class LoginForm
     End Sub
 
     Private Sub HandleLoginSuccess(email As String, userType As String)
-        If userType = "Admin" OrElse userType = "Professor" Then
+        If userType = "Professor" Then
             Me.Hide()
             Dim professorForm As New ProfessorForm()
             professorForm.Username = email ' Pass the username to ProfessorForm
@@ -116,6 +116,13 @@ Public Class LoginForm
             studentForm.FirstName = GetFirstName(email) ' Pass the first name to StudentForm
             LoginForm.Username = email ' Set the username property in the LoginForm
             studentForm.Show()
+        ElseIf userType = "Admin" Then
+            Me.Hide()
+            Dim adminForm As New AdminForm()
+            adminForm.Username = email ' Pass the username to AdminForm
+            adminForm.FirstName = GetFirstName(email) ' Pass the first name to AdminForm
+            LoginForm.Username = email ' Set the username property in the LoginForm
+            adminForm.Show()
         End If
     End Sub
 
@@ -192,19 +199,24 @@ Public Class LoginForm
             btnLogin.PerformClick()
         End If
     End Sub
-    Private Sub txtEmail_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEmail.KeyPress
-        If e.KeyChar = ChrW(Keys.Enter) Then
-            btnLogin.PerformClick()
+    Private Sub txtEmail_MouseDown(sender As Object, e As MouseEventArgs) Handles txtEmail.MouseDown
+        ' Disable right-click
+        If e.Button = MouseButtons.Right Then
+            txtEmail.ContextMenuStrip = New ContextMenuStrip()
         End If
     End Sub
 
-    Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPassword.KeyPress
-        If e.KeyChar = ChrW(Keys.Enter) Then
-            btnLogin.PerformClick()
+    Private Sub txtPassword_MouseDown(sender As Object, e As MouseEventArgs) Handles txtPassword.MouseDown
+        ' Disable right-click
+        If e.Button = MouseButtons.Right Then
+            txtPassword.ContextMenuStrip = New ContextMenuStrip()
         End If
     End Sub
-
     Private Sub Guna2Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel4.Paint
+
+    End Sub
+
+    Private Sub lblWelcome_Click(sender As Object, e As EventArgs) Handles lblWelcome.Click
 
     End Sub
 End Class

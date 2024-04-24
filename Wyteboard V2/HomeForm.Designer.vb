@@ -73,10 +73,10 @@ Partial Class HomeForm
         '
         Me.lblUser.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblUser.AutoSize = True
-        Me.lblUser.Font = New System.Drawing.Font("Montserrat ExtraBold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUser.Location = New System.Drawing.Point(11, 18)
+        Me.lblUser.Font = New System.Drawing.Font("Inter SemiBold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUser.Location = New System.Drawing.Point(11, 26)
         Me.lblUser.Name = "lblUser"
-        Me.lblUser.Size = New System.Drawing.Size(223, 51)
+        Me.lblUser.Size = New System.Drawing.Size(204, 45)
         Me.lblUser.TabIndex = 10
         Me.lblUser.Text = "Good Day,"
         Me.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter

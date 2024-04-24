@@ -233,12 +233,12 @@ Partial Class AddStudentForm
         Me.lblInfo.AutoSize = True
         Me.lblInfo.BackColor = System.Drawing.SystemColors.Control
         Me.lblInfo.Font = New System.Drawing.Font("Inter", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(163, Byte), Integer))
-        Me.lblInfo.Location = New System.Drawing.Point(11, 74)
+        Me.lblInfo.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.lblInfo.Location = New System.Drawing.Point(11, 75)
         Me.lblInfo.Name = "lblInfo"
-        Me.lblInfo.Size = New System.Drawing.Size(205, 16)
+        Me.lblInfo.Size = New System.Drawing.Size(216, 16)
         Me.lblInfo.TabIndex = 60
-        Me.lblInfo.Text = "Add new student to the course"
+        Me.lblInfo.Text = "Add a new student to the course"
         '
         'cbxSubject
         '
@@ -287,10 +287,10 @@ Partial Class AddStudentForm
         '
         Me.lblUser.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblUser.AutoSize = True
-        Me.lblUser.Font = New System.Drawing.Font("Montserrat ExtraBold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUser.Location = New System.Drawing.Point(3, 9)
+        Me.lblUser.Font = New System.Drawing.Font("Inter SemiBold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUser.Location = New System.Drawing.Point(3, 14)
         Me.lblUser.Name = "lblUser"
-        Me.lblUser.Size = New System.Drawing.Size(223, 51)
+        Me.lblUser.Size = New System.Drawing.Size(204, 45)
         Me.lblUser.TabIndex = 14
         Me.lblUser.Text = "Good Day,"
         Me.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter

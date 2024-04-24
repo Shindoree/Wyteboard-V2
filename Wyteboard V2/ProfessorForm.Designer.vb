@@ -370,7 +370,7 @@ Partial Class ProfessorForm
         Me.lblUser.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblUser.AutoSize = True
         Me.lblUser.Font = New System.Drawing.Font("Inter SemiBold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUser.Location = New System.Drawing.Point(20, 26)
+        Me.lblUser.Location = New System.Drawing.Point(20, 30)
         Me.lblUser.Name = "lblUser"
         Me.lblUser.Size = New System.Drawing.Size(204, 45)
         Me.lblUser.TabIndex = 10

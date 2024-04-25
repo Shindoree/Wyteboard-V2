@@ -561,4 +561,8 @@ Public Class AddStudentForm
     Private Sub Guna2Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel3.Paint
 
     End Sub
+
+    Private Sub dgViewGrade_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgViewGrade.CellContentClick
+
+    End Sub
 End Class
